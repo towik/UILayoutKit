@@ -5,6 +5,9 @@
 //  Created by Tom Quist on 06.12.14.
 //  Copyright (c) 2014 Tom Quist. All rights reserved.
 //
+//  Modified by towik on 19.07.16.
+//  Copyright (c) 2016 towik. All rights reserved.
+//
 
 #import "ULKCollectionViewCell.h"
 #import "ULKLayoutBridge.h"
