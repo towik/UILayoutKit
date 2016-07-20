@@ -7,84 +7,90 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B5DEB9F1D3F963F00E13C76 /* drawable_button_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5DEAD81D3F963F00E13C76 /* drawable_button_normal.png */; };
+		2B5DEBA01D3F963F00E13C76 /* drawable_button_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5DEAD91D3F963F00E13C76 /* drawable_button_pressed.png */; };
+		2B5DEBA11D3F963F00E13C76 /* layout_example.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5DEADA1D3F963F00E13C76 /* layout_example.png */; };
+		2B5DEBA21D3F963F00E13C76 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 2B5DEAE11D3F963F00E13C76 /* LICENSE */; };
+		2B5DEBA31D3F963F00E13C76 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEAE21D3F963F00E13C76 /* README.md */; };
+		2B5DEBA41D3F963F00E13C76 /* ULKFrameLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEAEB1D3F963F00E13C76 /* ULKFrameLayout.m */; };
+		2B5DEBA51D3F963F00E13C76 /* ULKFrameLayoutParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEAED1D3F963F00E13C76 /* ULKFrameLayoutParams.m */; };
+		2B5DEBA61D3F963F00E13C76 /* ULKLayoutBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEAF01D3F963F00E13C76 /* ULKLayoutBridge.m */; };
+		2B5DEBA71D3F963F00E13C76 /* ULKLinearLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEAF31D3F963F00E13C76 /* ULKLinearLayout.m */; };
+		2B5DEBA81D3F963F00E13C76 /* ULKLinearLayoutParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEAF51D3F963F00E13C76 /* ULKLinearLayoutParams.m */; };
+		2B5DEBA91D3F963F00E13C76 /* ULKDependencyGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEAF81D3F963F00E13C76 /* ULKDependencyGraph.m */; };
+		2B5DEBAA1D3F963F00E13C76 /* ULKDependencyGraphNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEAFA1D3F963F00E13C76 /* ULKDependencyGraphNode.m */; };
+		2B5DEBAB1D3F963F00E13C76 /* ULKRelativeLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEAFC1D3F963F00E13C76 /* ULKRelativeLayout.m */; };
+		2B5DEBAC1D3F963F00E13C76 /* ULKRelativeLayoutParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEAFE1D3F963F00E13C76 /* ULKRelativeLayoutParams.m */; };
+		2B5DEBAD1D3F963F00E13C76 /* UIScrollView+ULK_ViewGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB011D3F963F00E13C76 /* UIScrollView+ULK_ViewGroup.m */; };
+		2B5DEBAE1D3F963F00E13C76 /* UIView+ULK_ViewGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB031D3F963F00E13C76 /* UIView+ULK_ViewGroup.m */; };
+		2B5DEBAF1D3F963F00E13C76 /* ULKLayoutParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB051D3F963F00E13C76 /* ULKLayoutParams.m */; };
+		2B5DEBB01D3F963F00E13C76 /* ULKViewGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB081D3F963F00E13C76 /* ULKViewGroup.m */; };
+		2B5DEBB11D3F963F00E13C76 /* UIView+ULKDrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB0C1D3F963F00E13C76 /* UIView+ULKDrawable.m */; };
+		2B5DEBB21D3F963F00E13C76 /* ULKBitmapDrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB0E1D3F963F00E13C76 /* ULKBitmapDrawable.m */; };
+		2B5DEBB31D3F963F00E13C76 /* ULKClipDrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB101D3F963F00E13C76 /* ULKClipDrawable.m */; };
+		2B5DEBB41D3F963F00E13C76 /* ULKColorDrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB121D3F963F00E13C76 /* ULKColorDrawable.m */; };
+		2B5DEBB51D3F963F00E13C76 /* ULKDrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB151D3F963F00E13C76 /* ULKDrawable.m */; };
+		2B5DEBB61D3F963F00E13C76 /* ULKDrawableContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB181D3F963F00E13C76 /* ULKDrawableContainer.m */; };
+		2B5DEBB71D3F963F00E13C76 /* ULKDrawableLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB1A1D3F963F00E13C76 /* ULKDrawableLayer.m */; };
+		2B5DEBB81D3F963F00E13C76 /* ULKGradientDrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB1C1D3F963F00E13C76 /* ULKGradientDrawable.m */; };
+		2B5DEBB91D3F963F00E13C76 /* ULKInsetDrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB1E1D3F963F00E13C76 /* ULKInsetDrawable.m */; };
+		2B5DEBBA1D3F963F00E13C76 /* ULKLayerDrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB201D3F963F00E13C76 /* ULKLayerDrawable.m */; };
+		2B5DEBBB1D3F963F00E13C76 /* ULKNinePatchDrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB221D3F963F00E13C76 /* ULKNinePatchDrawable.m */; };
+		2B5DEBBC1D3F963F00E13C76 /* ULKRotateDrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB241D3F963F00E13C76 /* ULKRotateDrawable.m */; };
+		2B5DEBBD1D3F963F00E13C76 /* ULKShadowDrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB261D3F963F00E13C76 /* ULKShadowDrawable.m */; };
+		2B5DEBBE1D3F963F00E13C76 /* ULKStateListDrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB281D3F963F00E13C76 /* ULKStateListDrawable.m */; };
+		2B5DEBBF1D3F963F00E13C76 /* NSDictionary+ULK_ResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB2A1D3F963F00E13C76 /* NSDictionary+ULK_ResourceManager.m */; };
+		2B5DEBC01D3F963F00E13C76 /* ULKColorStateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB2E1D3F963F00E13C76 /* ULKColorStateItem.m */; };
+		2B5DEBC11D3F963F00E13C76 /* ULKColorStateList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB301D3F963F00E13C76 /* ULKColorStateList.m */; };
+		2B5DEBC21D3F963F00E13C76 /* ULKDrawableStateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB331D3F963F00E13C76 /* ULKDrawableStateItem.m */; };
+		2B5DEBC31D3F963F00E13C76 /* ULKDrawableStateList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB351D3F963F00E13C76 /* ULKDrawableStateList.m */; };
+		2B5DEBC41D3F963F00E13C76 /* ULKResourceStateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB381D3F963F00E13C76 /* ULKResourceStateItem.m */; };
+		2B5DEBC51D3F963F00E13C76 /* ULKResourceStateList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB3B1D3F963F00E13C76 /* ULKResourceStateList.m */; };
+		2B5DEBC61D3F963F00E13C76 /* ULKResourceManager+Drawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB3E1D3F963F00E13C76 /* ULKResourceManager+Drawable.m */; };
+		2B5DEBC71D3F963F00E13C76 /* ULKResourceManager+String.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB401D3F963F00E13C76 /* ULKResourceManager+String.m */; };
+		2B5DEBC81D3F963F00E13C76 /* ULKResourceManager+ULKIDL_Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB421D3F963F00E13C76 /* ULKResourceManager+ULKIDL_Internal.m */; };
+		2B5DEBC91D3F963F00E13C76 /* ULKResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB441D3F963F00E13C76 /* ULKResourceManager.m */; };
+		2B5DEBCA1D3F963F00E13C76 /* ULKXMLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB461D3F963F00E13C76 /* ULKXMLCache.m */; };
+		2B5DEBCB1D3F963F00E13C76 /* ULKResourceValueSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB491D3F963F00E13C76 /* ULKResourceValueSet.m */; };
+		2B5DEBCC1D3F963F00E13C76 /* ULKStringArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB4B1D3F963F00E13C76 /* ULKStringArray.m */; };
+		2B5DEBCD1D3F963F00E13C76 /* ULKStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB4E1D3F963F00E13C76 /* ULKStyle.m */; };
+		2B5DEBCE1D3F963F00E13C76 /* NSObject+ULK_KVOObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB521D3F963F00E13C76 /* NSObject+ULK_KVOObserver.m */; };
+		2B5DEBCF1D3F963F00E13C76 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB551D3F963F00E13C76 /* TBXML.m */; };
+		2B5DEBD01D3F963F00E13C76 /* TBXML+ULK.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB571D3F963F00E13C76 /* TBXML+ULK.m */; };
+		2B5DEBD11D3F963F00E13C76 /* UIColor+ULK_ColorParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB591D3F963F00E13C76 /* UIColor+ULK_ColorParser.m */; };
+		2B5DEBD21D3F963F00E13C76 /* UIImage+ULK_FromColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB5B1D3F963F00E13C76 /* UIImage+ULK_FromColor.m */; };
+		2B5DEBD31D3F963F00E13C76 /* UIImage+ULKNinePatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB5D1D3F963F00E13C76 /* UIImage+ULKNinePatch.m */; };
+		2B5DEBD41D3F963F00E13C76 /* ULKFinitePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB5F1D3F963F00E13C76 /* ULKFinitePool.m */; };
+		2B5DEBD51D3F963F00E13C76 /* ULKPools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB641D3F963F00E13C76 /* ULKPools.m */; };
+		2B5DEBD61D3F963F00E13C76 /* ULKSynchronizedPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB661D3F963F00E13C76 /* ULKSynchronizedPool.m */; };
+		2B5DEBD71D3F963F00E13C76 /* ULKBaseViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB6A1D3F963F00E13C76 /* ULKBaseViewFactory.m */; };
+		2B5DEBD81D3F963F00E13C76 /* ULKLayoutInflater.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB6C1D3F963F00E13C76 /* ULKLayoutInflater.m */; };
+		2B5DEBD91D3F963F00E13C76 /* UIView+ULK_Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB6F1D3F963F00E13C76 /* UIView+ULK_Layout.m */; };
+		2B5DEBDA1D3F963F00E13C76 /* ULKCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB711D3F963F00E13C76 /* ULKCollectionViewCell.m */; };
+		2B5DEBDB1D3F963F00E13C76 /* ULKGravity.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB731D3F963F00E13C76 /* ULKGravity.m */; };
+		2B5DEBDC1D3F963F00E13C76 /* ULKTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB751D3F963F00E13C76 /* ULKTableViewCell.m */; };
+		2B5DEBDD1D3F963F00E13C76 /* ULKLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB781D3F963F00E13C76 /* ULKLayoutViewController.m */; };
+		2B5DEBDE1D3F963F00E13C76 /* UIButton+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB7C1D3F963F00E13C76 /* UIButton+ULK_View.m */; };
+		2B5DEBDF1D3F963F00E13C76 /* UIControl+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB7E1D3F963F00E13C76 /* UIControl+ULK_View.m */; };
+		2B5DEBE01D3F964000E13C76 /* UIImageView+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB801D3F963F00E13C76 /* UIImageView+ULK_View.m */; };
+		2B5DEBE11D3F964000E13C76 /* UILabel+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB821D3F963F00E13C76 /* UILabel+ULK_View.m */; };
+		2B5DEBE21D3F964000E13C76 /* UINavigationBar+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB841D3F963F00E13C76 /* UINavigationBar+ULK_View.m */; };
+		2B5DEBE31D3F964000E13C76 /* UISearchBar+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB861D3F963F00E13C76 /* UISearchBar+ULK_View.m */; };
+		2B5DEBE41D3F964000E13C76 /* UISwitch+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB881D3F963F00E13C76 /* UISwitch+ULK_View.m */; };
+		2B5DEBE51D3F964000E13C76 /* UITextView+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB8A1D3F963F00E13C76 /* UITextView+ULK_View.m */; };
+		2B5DEBE61D3F964000E13C76 /* UIToolbar+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB8C1D3F963F00E13C76 /* UIToolbar+ULK_View.m */; };
+		2B5DEBE71D3F964000E13C76 /* UIWebView+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB8E1D3F963F00E13C76 /* UIWebView+ULK_View.m */; };
+		2B5DEBE81D3F964000E13C76 /* ULKButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB901D3F963F00E13C76 /* ULKButton.m */; };
+		2B5DEBE91D3F964000E13C76 /* ULKEditText.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB921D3F963F00E13C76 /* ULKEditText.m */; };
+		2B5DEBEA1D3F964000E13C76 /* ULKTextArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB941D3F963F00E13C76 /* ULKTextArea.m */; };
+		2B5DEBEB1D3F964000E13C76 /* ULKTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB961D3F963F00E13C76 /* ULKTextView.m */; };
+		2B5DEBEC1D3F964000E13C76 /* UILayoutKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 2B5DEB971D3F963F00E13C76 /* UILayoutKit.podspec */; };
 		2BEB75661D3F666300672260 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75651D3F666300672260 /* main.m */; };
 		2BEB75691D3F666300672260 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75681D3F666300672260 /* AppDelegate.m */; };
 		2BEB756C1D3F666300672260 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB756B1D3F666300672260 /* ViewController.m */; };
 		2BEB756F1D3F666300672260 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BEB756D1D3F666300672260 /* Main.storyboard */; };
 		2BEB75711D3F666300672260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BEB75701D3F666300672260 /* Assets.xcassets */; };
 		2BEB75741D3F666300672260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BEB75721D3F666300672260 /* LaunchScreen.storyboard */; };
-		2BEB762B1D3F66E000672260 /* ULKFrameLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB757F1D3F66E000672260 /* ULKFrameLayout.m */; };
-		2BEB762C1D3F66E000672260 /* ULKFrameLayoutParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75811D3F66E000672260 /* ULKFrameLayoutParams.m */; };
-		2BEB762D1D3F66E000672260 /* ULKLayoutBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75841D3F66E000672260 /* ULKLayoutBridge.m */; };
-		2BEB762E1D3F66E000672260 /* ULKLinearLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75871D3F66E000672260 /* ULKLinearLayout.m */; };
-		2BEB762F1D3F66E000672260 /* ULKLinearLayoutParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75891D3F66E000672260 /* ULKLinearLayoutParams.m */; };
-		2BEB76301D3F66E000672260 /* ULKDependencyGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB758C1D3F66E000672260 /* ULKDependencyGraph.m */; };
-		2BEB76311D3F66E000672260 /* ULKDependencyGraphNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB758E1D3F66E000672260 /* ULKDependencyGraphNode.m */; };
-		2BEB76321D3F66E000672260 /* ULKRelativeLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75901D3F66E000672260 /* ULKRelativeLayout.m */; };
-		2BEB76331D3F66E000672260 /* ULKRelativeLayoutParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75921D3F66E000672260 /* ULKRelativeLayoutParams.m */; };
-		2BEB76341D3F66E000672260 /* UIScrollView+ULK_ViewGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75951D3F66E000672260 /* UIScrollView+ULK_ViewGroup.m */; };
-		2BEB76351D3F66E000672260 /* UIView+ULK_ViewGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75971D3F66E000672260 /* UIView+ULK_ViewGroup.m */; };
-		2BEB76361D3F66E000672260 /* ULKLayoutParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75991D3F66E000672260 /* ULKLayoutParams.m */; };
-		2BEB76371D3F66E000672260 /* ULKViewGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB759C1D3F66E000672260 /* ULKViewGroup.m */; };
-		2BEB76381D3F66E000672260 /* UIView+ULKDrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75A01D3F66E000672260 /* UIView+ULKDrawable.m */; };
-		2BEB76391D3F66E000672260 /* ULKBitmapDrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75A21D3F66E000672260 /* ULKBitmapDrawable.m */; };
-		2BEB763A1D3F66E000672260 /* ULKClipDrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75A41D3F66E000672260 /* ULKClipDrawable.m */; };
-		2BEB763B1D3F66E000672260 /* ULKColorDrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75A61D3F66E000672260 /* ULKColorDrawable.m */; };
-		2BEB763C1D3F66E000672260 /* ULKDrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75A91D3F66E000672260 /* ULKDrawable.m */; };
-		2BEB763D1D3F66E000672260 /* ULKDrawableContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75AC1D3F66E000672260 /* ULKDrawableContainer.m */; };
-		2BEB763E1D3F66E000672260 /* ULKDrawableLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75AE1D3F66E000672260 /* ULKDrawableLayer.m */; };
-		2BEB763F1D3F66E000672260 /* ULKGradientDrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75B01D3F66E000672260 /* ULKGradientDrawable.m */; };
-		2BEB76401D3F66E000672260 /* ULKInsetDrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75B21D3F66E000672260 /* ULKInsetDrawable.m */; };
-		2BEB76411D3F66E000672260 /* ULKLayerDrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75B41D3F66E000672260 /* ULKLayerDrawable.m */; };
-		2BEB76421D3F66E000672260 /* ULKNinePatchDrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75B61D3F66E000672260 /* ULKNinePatchDrawable.m */; };
-		2BEB76431D3F66E000672260 /* ULKRotateDrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75B81D3F66E000672260 /* ULKRotateDrawable.m */; };
-		2BEB76441D3F66E000672260 /* ULKShadowDrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75BA1D3F66E000672260 /* ULKShadowDrawable.m */; };
-		2BEB76451D3F66E000672260 /* ULKStateListDrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75BC1D3F66E000672260 /* ULKStateListDrawable.m */; };
-		2BEB76461D3F66E000672260 /* NSDictionary+ULK_ResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75BE1D3F66E000672260 /* NSDictionary+ULK_ResourceManager.m */; };
-		2BEB76471D3F66E000672260 /* ULKColorStateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75C21D3F66E000672260 /* ULKColorStateItem.m */; };
-		2BEB76481D3F66E000672260 /* ULKColorStateList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75C41D3F66E000672260 /* ULKColorStateList.m */; };
-		2BEB76491D3F66E000672260 /* ULKDrawableStateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75C71D3F66E000672260 /* ULKDrawableStateItem.m */; };
-		2BEB764A1D3F66E000672260 /* ULKDrawableStateList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75C91D3F66E000672260 /* ULKDrawableStateList.m */; };
-		2BEB764B1D3F66E000672260 /* ULKResourceStateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75CC1D3F66E000672260 /* ULKResourceStateItem.m */; };
-		2BEB764C1D3F66E000672260 /* ULKResourceStateList.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75CF1D3F66E000672260 /* ULKResourceStateList.m */; };
-		2BEB764D1D3F66E000672260 /* ULKResourceManager+Drawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75D21D3F66E000672260 /* ULKResourceManager+Drawable.m */; };
-		2BEB764E1D3F66E000672260 /* ULKResourceManager+String.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75D41D3F66E000672260 /* ULKResourceManager+String.m */; };
-		2BEB764F1D3F66E000672260 /* ULKResourceManager+ULKIDL_Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75D61D3F66E000672260 /* ULKResourceManager+ULKIDL_Internal.m */; };
-		2BEB76501D3F66E000672260 /* ULKResourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75D81D3F66E000672260 /* ULKResourceManager.m */; };
-		2BEB76511D3F66E000672260 /* ULKXMLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75DA1D3F66E000672260 /* ULKXMLCache.m */; };
-		2BEB76521D3F66E000672260 /* ULKResourceValueSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75DD1D3F66E000672260 /* ULKResourceValueSet.m */; };
-		2BEB76531D3F66E000672260 /* ULKStringArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75DF1D3F66E000672260 /* ULKStringArray.m */; };
-		2BEB76541D3F66E000672260 /* ULKStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75E21D3F66E000672260 /* ULKStyle.m */; };
-		2BEB76551D3F66E000672260 /* NSObject+ULK_KVOObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75E61D3F66E000672260 /* NSObject+ULK_KVOObserver.m */; };
-		2BEB76561D3F66E000672260 /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75E91D3F66E000672260 /* TBXML.m */; };
-		2BEB76571D3F66E000672260 /* TBXML+ULK.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75EB1D3F66E000672260 /* TBXML+ULK.m */; };
-		2BEB76581D3F66E000672260 /* UIColor+ULK_ColorParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75ED1D3F66E000672260 /* UIColor+ULK_ColorParser.m */; };
-		2BEB76591D3F66E000672260 /* UIImage+ULK_FromColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75EF1D3F66E000672260 /* UIImage+ULK_FromColor.m */; };
-		2BEB765A1D3F66E000672260 /* UIImage+ULKNinePatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75F11D3F66E000672260 /* UIImage+ULKNinePatch.m */; };
-		2BEB765B1D3F66E000672260 /* ULKFinitePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75F31D3F66E000672260 /* ULKFinitePool.m */; };
-		2BEB765C1D3F66E000672260 /* ULKPools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75F81D3F66E000672260 /* ULKPools.m */; };
-		2BEB765D1D3F66E000672260 /* ULKSynchronizedPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75FA1D3F66E000672260 /* ULKSynchronizedPool.m */; };
-		2BEB765E1D3F66E000672260 /* ULKBaseViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75FE1D3F66E000672260 /* ULKBaseViewFactory.m */; };
-		2BEB765F1D3F66E000672260 /* ULKLayoutInflater.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB76001D3F66E000672260 /* ULKLayoutInflater.m */; };
-		2BEB76601D3F66E000672260 /* UIView+ULK_Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB76031D3F66E000672260 /* UIView+ULK_Layout.m */; };
-		2BEB76611D3F66E000672260 /* ULKCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB76051D3F66E000672260 /* ULKCollectionViewCell.m */; };
-		2BEB76621D3F66E000672260 /* ULKGravity.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB76071D3F66E000672260 /* ULKGravity.m */; };
-		2BEB76631D3F66E000672260 /* ULKTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB76091D3F66E000672260 /* ULKTableViewCell.m */; };
-		2BEB76641D3F66E000672260 /* ULKLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB760C1D3F66E000672260 /* ULKLayoutViewController.m */; };
-		2BEB76651D3F66E000672260 /* UIButton+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB76101D3F66E000672260 /* UIButton+ULK_View.m */; };
-		2BEB76661D3F66E000672260 /* UIControl+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB76121D3F66E000672260 /* UIControl+ULK_View.m */; };
-		2BEB76671D3F66E000672260 /* UIImageView+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB76141D3F66E000672260 /* UIImageView+ULK_View.m */; };
-		2BEB76681D3F66E000672260 /* UILabel+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB76161D3F66E000672260 /* UILabel+ULK_View.m */; };
-		2BEB76691D3F66E000672260 /* UINavigationBar+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB76181D3F66E000672260 /* UINavigationBar+ULK_View.m */; };
-		2BEB766A1D3F66E000672260 /* UISearchBar+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB761A1D3F66E000672260 /* UISearchBar+ULK_View.m */; };
-		2BEB766B1D3F66E000672260 /* UISwitch+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB761C1D3F66E000672260 /* UISwitch+ULK_View.m */; };
-		2BEB766C1D3F66E000672260 /* UITextView+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB761E1D3F66E000672260 /* UITextView+ULK_View.m */; };
-		2BEB766D1D3F66E000672260 /* UIToolbar+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB76201D3F66E000672260 /* UIToolbar+ULK_View.m */; };
-		2BEB766E1D3F66E000672260 /* UIWebView+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB76221D3F66E000672260 /* UIWebView+ULK_View.m */; };
-		2BEB766F1D3F66E000672260 /* ULKButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB76241D3F66E000672260 /* ULKButton.m */; };
-		2BEB76701D3F66E000672260 /* ULKEditText.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB76261D3F66E000672260 /* ULKEditText.m */; };
-		2BEB76711D3F66E000672260 /* ULKTextArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB76281D3F66E000672260 /* ULKTextArea.m */; };
-		2BEB76721D3F66E000672260 /* ULKTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB762A1D3F66E000672260 /* ULKTextView.m */; };
 		2BEB76A11D3F66E800672260 /* CollectionViewExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB76751D3F66E800672260 /* CollectionViewExampleViewController.m */; };
 		2BEB76A21D3F66E800672260 /* CollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB76771D3F66E800672260 /* CollectionViewItem.m */; };
 		2BEB76A31D3F66E800672260 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BEB76781D3F66E800672260 /* InfoPlist.strings */; };
@@ -119,6 +125,170 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B5DEAD81D3F963F00E13C76 /* drawable_button_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drawable_button_normal.png; sourceTree = "<group>"; };
+		2B5DEAD91D3F963F00E13C76 /* drawable_button_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drawable_button_pressed.png; sourceTree = "<group>"; };
+		2B5DEADA1D3F963F00E13C76 /* layout_example.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = layout_example.png; sourceTree = "<group>"; };
+		2B5DEAE11D3F963F00E13C76 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		2B5DEAE21D3F963F00E13C76 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2B5DEAEA1D3F963F00E13C76 /* ULKFrameLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKFrameLayout.h; sourceTree = "<group>"; };
+		2B5DEAEB1D3F963F00E13C76 /* ULKFrameLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKFrameLayout.m; sourceTree = "<group>"; };
+		2B5DEAEC1D3F963F00E13C76 /* ULKFrameLayoutParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKFrameLayoutParams.h; sourceTree = "<group>"; };
+		2B5DEAED1D3F963F00E13C76 /* ULKFrameLayoutParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKFrameLayoutParams.m; sourceTree = "<group>"; };
+		2B5DEAEF1D3F963F00E13C76 /* ULKLayoutBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKLayoutBridge.h; sourceTree = "<group>"; };
+		2B5DEAF01D3F963F00E13C76 /* ULKLayoutBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKLayoutBridge.m; sourceTree = "<group>"; };
+		2B5DEAF21D3F963F00E13C76 /* ULKLinearLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKLinearLayout.h; sourceTree = "<group>"; };
+		2B5DEAF31D3F963F00E13C76 /* ULKLinearLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKLinearLayout.m; sourceTree = "<group>"; };
+		2B5DEAF41D3F963F00E13C76 /* ULKLinearLayoutParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKLinearLayoutParams.h; sourceTree = "<group>"; };
+		2B5DEAF51D3F963F00E13C76 /* ULKLinearLayoutParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKLinearLayoutParams.m; sourceTree = "<group>"; };
+		2B5DEAF71D3F963F00E13C76 /* ULKDependencyGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKDependencyGraph.h; sourceTree = "<group>"; };
+		2B5DEAF81D3F963F00E13C76 /* ULKDependencyGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKDependencyGraph.m; sourceTree = "<group>"; };
+		2B5DEAF91D3F963F00E13C76 /* ULKDependencyGraphNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKDependencyGraphNode.h; sourceTree = "<group>"; };
+		2B5DEAFA1D3F963F00E13C76 /* ULKDependencyGraphNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKDependencyGraphNode.m; sourceTree = "<group>"; };
+		2B5DEAFB1D3F963F00E13C76 /* ULKRelativeLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKRelativeLayout.h; sourceTree = "<group>"; };
+		2B5DEAFC1D3F963F00E13C76 /* ULKRelativeLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKRelativeLayout.m; sourceTree = "<group>"; };
+		2B5DEAFD1D3F963F00E13C76 /* ULKRelativeLayoutParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKRelativeLayoutParams.h; sourceTree = "<group>"; };
+		2B5DEAFE1D3F963F00E13C76 /* ULKRelativeLayoutParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKRelativeLayoutParams.m; sourceTree = "<group>"; };
+		2B5DEB001D3F963F00E13C76 /* UIScrollView+ULK_ViewGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+ULK_ViewGroup.h"; sourceTree = "<group>"; };
+		2B5DEB011D3F963F00E13C76 /* UIScrollView+ULK_ViewGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+ULK_ViewGroup.m"; sourceTree = "<group>"; };
+		2B5DEB021D3F963F00E13C76 /* UIView+ULK_ViewGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ULK_ViewGroup.h"; sourceTree = "<group>"; };
+		2B5DEB031D3F963F00E13C76 /* UIView+ULK_ViewGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ULK_ViewGroup.m"; sourceTree = "<group>"; };
+		2B5DEB041D3F963F00E13C76 /* ULKLayoutParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKLayoutParams.h; sourceTree = "<group>"; };
+		2B5DEB051D3F963F00E13C76 /* ULKLayoutParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKLayoutParams.m; sourceTree = "<group>"; };
+		2B5DEB061D3F963F00E13C76 /* ULKLayouts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKLayouts.h; sourceTree = "<group>"; };
+		2B5DEB071D3F963F00E13C76 /* ULKViewGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKViewGroup.h; sourceTree = "<group>"; };
+		2B5DEB081D3F963F00E13C76 /* ULKViewGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKViewGroup.m; sourceTree = "<group>"; };
+		2B5DEB0B1D3F963F00E13C76 /* UIView+ULKDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ULKDrawable.h"; sourceTree = "<group>"; };
+		2B5DEB0C1D3F963F00E13C76 /* UIView+ULKDrawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ULKDrawable.m"; sourceTree = "<group>"; };
+		2B5DEB0D1D3F963F00E13C76 /* ULKBitmapDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKBitmapDrawable.h; sourceTree = "<group>"; };
+		2B5DEB0E1D3F963F00E13C76 /* ULKBitmapDrawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKBitmapDrawable.m; sourceTree = "<group>"; };
+		2B5DEB0F1D3F963F00E13C76 /* ULKClipDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKClipDrawable.h; sourceTree = "<group>"; };
+		2B5DEB101D3F963F00E13C76 /* ULKClipDrawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKClipDrawable.m; sourceTree = "<group>"; };
+		2B5DEB111D3F963F00E13C76 /* ULKColorDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKColorDrawable.h; sourceTree = "<group>"; };
+		2B5DEB121D3F963F00E13C76 /* ULKColorDrawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKColorDrawable.m; sourceTree = "<group>"; };
+		2B5DEB131D3F963F00E13C76 /* ULKDrawable+ULK_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ULKDrawable+ULK_Internal.h"; sourceTree = "<group>"; };
+		2B5DEB141D3F963F00E13C76 /* ULKDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKDrawable.h; sourceTree = "<group>"; };
+		2B5DEB151D3F963F00E13C76 /* ULKDrawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKDrawable.m; sourceTree = "<group>"; };
+		2B5DEB161D3F963F00E13C76 /* ULKDrawableContainer+ULK_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ULKDrawableContainer+ULK_Internal.h"; sourceTree = "<group>"; };
+		2B5DEB171D3F963F00E13C76 /* ULKDrawableContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKDrawableContainer.h; sourceTree = "<group>"; };
+		2B5DEB181D3F963F00E13C76 /* ULKDrawableContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKDrawableContainer.m; sourceTree = "<group>"; };
+		2B5DEB191D3F963F00E13C76 /* ULKDrawableLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKDrawableLayer.h; sourceTree = "<group>"; };
+		2B5DEB1A1D3F963F00E13C76 /* ULKDrawableLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKDrawableLayer.m; sourceTree = "<group>"; };
+		2B5DEB1B1D3F963F00E13C76 /* ULKGradientDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKGradientDrawable.h; sourceTree = "<group>"; };
+		2B5DEB1C1D3F963F00E13C76 /* ULKGradientDrawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKGradientDrawable.m; sourceTree = "<group>"; };
+		2B5DEB1D1D3F963F00E13C76 /* ULKInsetDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKInsetDrawable.h; sourceTree = "<group>"; };
+		2B5DEB1E1D3F963F00E13C76 /* ULKInsetDrawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKInsetDrawable.m; sourceTree = "<group>"; };
+		2B5DEB1F1D3F963F00E13C76 /* ULKLayerDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKLayerDrawable.h; sourceTree = "<group>"; };
+		2B5DEB201D3F963F00E13C76 /* ULKLayerDrawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKLayerDrawable.m; sourceTree = "<group>"; };
+		2B5DEB211D3F963F00E13C76 /* ULKNinePatchDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKNinePatchDrawable.h; sourceTree = "<group>"; };
+		2B5DEB221D3F963F00E13C76 /* ULKNinePatchDrawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKNinePatchDrawable.m; sourceTree = "<group>"; };
+		2B5DEB231D3F963F00E13C76 /* ULKRotateDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKRotateDrawable.h; sourceTree = "<group>"; };
+		2B5DEB241D3F963F00E13C76 /* ULKRotateDrawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKRotateDrawable.m; sourceTree = "<group>"; };
+		2B5DEB251D3F963F00E13C76 /* ULKShadowDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKShadowDrawable.h; sourceTree = "<group>"; };
+		2B5DEB261D3F963F00E13C76 /* ULKShadowDrawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKShadowDrawable.m; sourceTree = "<group>"; };
+		2B5DEB271D3F963F00E13C76 /* ULKStateListDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKStateListDrawable.h; sourceTree = "<group>"; };
+		2B5DEB281D3F963F00E13C76 /* ULKStateListDrawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKStateListDrawable.m; sourceTree = "<group>"; };
+		2B5DEB291D3F963F00E13C76 /* NSDictionary+ULK_ResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ULK_ResourceManager.h"; sourceTree = "<group>"; };
+		2B5DEB2A1D3F963F00E13C76 /* NSDictionary+ULK_ResourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ULK_ResourceManager.m"; sourceTree = "<group>"; };
+		2B5DEB2C1D3F963F00E13C76 /* ULKColorStateItem+ULK_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ULKColorStateItem+ULK_Internal.h"; sourceTree = "<group>"; };
+		2B5DEB2D1D3F963F00E13C76 /* ULKColorStateItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKColorStateItem.h; sourceTree = "<group>"; };
+		2B5DEB2E1D3F963F00E13C76 /* ULKColorStateItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKColorStateItem.m; sourceTree = "<group>"; };
+		2B5DEB2F1D3F963F00E13C76 /* ULKColorStateList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKColorStateList.h; sourceTree = "<group>"; };
+		2B5DEB301D3F963F00E13C76 /* ULKColorStateList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKColorStateList.m; sourceTree = "<group>"; };
+		2B5DEB311D3F963F00E13C76 /* ULKDrawableStateItem+ULK_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ULKDrawableStateItem+ULK_Internal.h"; sourceTree = "<group>"; };
+		2B5DEB321D3F963F00E13C76 /* ULKDrawableStateItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKDrawableStateItem.h; sourceTree = "<group>"; };
+		2B5DEB331D3F963F00E13C76 /* ULKDrawableStateItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKDrawableStateItem.m; sourceTree = "<group>"; };
+		2B5DEB341D3F963F00E13C76 /* ULKDrawableStateList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKDrawableStateList.h; sourceTree = "<group>"; };
+		2B5DEB351D3F963F00E13C76 /* ULKDrawableStateList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKDrawableStateList.m; sourceTree = "<group>"; };
+		2B5DEB361D3F963F00E13C76 /* ULKResourceStateItem+ULK_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ULKResourceStateItem+ULK_Internal.h"; sourceTree = "<group>"; };
+		2B5DEB371D3F963F00E13C76 /* ULKResourceStateItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKResourceStateItem.h; sourceTree = "<group>"; };
+		2B5DEB381D3F963F00E13C76 /* ULKResourceStateItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKResourceStateItem.m; sourceTree = "<group>"; };
+		2B5DEB391D3F963F00E13C76 /* ULKResourceStateList+ULK_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ULKResourceStateList+ULK_Internal.h"; sourceTree = "<group>"; };
+		2B5DEB3A1D3F963F00E13C76 /* ULKResourceStateList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKResourceStateList.h; sourceTree = "<group>"; };
+		2B5DEB3B1D3F963F00E13C76 /* ULKResourceStateList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKResourceStateList.m; sourceTree = "<group>"; };
+		2B5DEB3C1D3F963F00E13C76 /* ULKResourceManager+Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ULKResourceManager+Core.h"; sourceTree = "<group>"; };
+		2B5DEB3D1D3F963F00E13C76 /* ULKResourceManager+Drawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ULKResourceManager+Drawable.h"; sourceTree = "<group>"; };
+		2B5DEB3E1D3F963F00E13C76 /* ULKResourceManager+Drawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ULKResourceManager+Drawable.m"; sourceTree = "<group>"; };
+		2B5DEB3F1D3F963F00E13C76 /* ULKResourceManager+String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ULKResourceManager+String.h"; sourceTree = "<group>"; };
+		2B5DEB401D3F963F00E13C76 /* ULKResourceManager+String.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ULKResourceManager+String.m"; sourceTree = "<group>"; };
+		2B5DEB411D3F963F00E13C76 /* ULKResourceManager+ULK_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ULKResourceManager+ULK_Internal.h"; sourceTree = "<group>"; };
+		2B5DEB421D3F963F00E13C76 /* ULKResourceManager+ULKIDL_Internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ULKResourceManager+ULKIDL_Internal.m"; sourceTree = "<group>"; };
+		2B5DEB431D3F963F00E13C76 /* ULKResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKResourceManager.h; sourceTree = "<group>"; };
+		2B5DEB441D3F963F00E13C76 /* ULKResourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKResourceManager.m; sourceTree = "<group>"; };
+		2B5DEB451D3F963F00E13C76 /* ULKXMLCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKXMLCache.h; sourceTree = "<group>"; };
+		2B5DEB461D3F963F00E13C76 /* ULKXMLCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKXMLCache.m; sourceTree = "<group>"; };
+		2B5DEB481D3F963F00E13C76 /* ULKResourceValueSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKResourceValueSet.h; sourceTree = "<group>"; };
+		2B5DEB491D3F963F00E13C76 /* ULKResourceValueSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKResourceValueSet.m; sourceTree = "<group>"; };
+		2B5DEB4A1D3F963F00E13C76 /* ULKStringArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKStringArray.h; sourceTree = "<group>"; };
+		2B5DEB4B1D3F963F00E13C76 /* ULKStringArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKStringArray.m; sourceTree = "<group>"; };
+		2B5DEB4C1D3F963F00E13C76 /* ULKStyle+ULK_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ULKStyle+ULK_Internal.h"; sourceTree = "<group>"; };
+		2B5DEB4D1D3F963F00E13C76 /* ULKStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKStyle.h; sourceTree = "<group>"; };
+		2B5DEB4E1D3F963F00E13C76 /* ULKStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKStyle.m; sourceTree = "<group>"; };
+		2B5DEB4F1D3F963F00E13C76 /* UILayoutKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILayoutKit.h; sourceTree = "<group>"; };
+		2B5DEB511D3F963F00E13C76 /* NSObject+ULK_KVOObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ULK_KVOObserver.h"; sourceTree = "<group>"; };
+		2B5DEB521D3F963F00E13C76 /* NSObject+ULK_KVOObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ULK_KVOObserver.m"; sourceTree = "<group>"; };
+		2B5DEB541D3F963F00E13C76 /* TBXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBXML.h; sourceTree = "<group>"; };
+		2B5DEB551D3F963F00E13C76 /* TBXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBXML.m; sourceTree = "<group>"; };
+		2B5DEB561D3F963F00E13C76 /* TBXML+ULK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TBXML+ULK.h"; sourceTree = "<group>"; };
+		2B5DEB571D3F963F00E13C76 /* TBXML+ULK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TBXML+ULK.m"; sourceTree = "<group>"; };
+		2B5DEB581D3F963F00E13C76 /* UIColor+ULK_ColorParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ULK_ColorParser.h"; sourceTree = "<group>"; };
+		2B5DEB591D3F963F00E13C76 /* UIColor+ULK_ColorParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ULK_ColorParser.m"; sourceTree = "<group>"; };
+		2B5DEB5A1D3F963F00E13C76 /* UIImage+ULK_FromColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ULK_FromColor.h"; sourceTree = "<group>"; };
+		2B5DEB5B1D3F963F00E13C76 /* UIImage+ULK_FromColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ULK_FromColor.m"; sourceTree = "<group>"; };
+		2B5DEB5C1D3F963F00E13C76 /* UIImage+ULKNinePatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ULKNinePatch.h"; sourceTree = "<group>"; };
+		2B5DEB5D1D3F963F00E13C76 /* UIImage+ULKNinePatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ULKNinePatch.m"; sourceTree = "<group>"; };
+		2B5DEB5E1D3F963F00E13C76 /* ULKFinitePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKFinitePool.h; sourceTree = "<group>"; };
+		2B5DEB5F1D3F963F00E13C76 /* ULKFinitePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKFinitePool.m; sourceTree = "<group>"; };
+		2B5DEB601D3F963F00E13C76 /* ULKPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKPool.h; sourceTree = "<group>"; };
+		2B5DEB611D3F963F00E13C76 /* ULKPoolable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKPoolable.h; sourceTree = "<group>"; };
+		2B5DEB621D3F963F00E13C76 /* ULKPoolableManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKPoolableManager.h; sourceTree = "<group>"; };
+		2B5DEB631D3F963F00E13C76 /* ULKPools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKPools.h; sourceTree = "<group>"; };
+		2B5DEB641D3F963F00E13C76 /* ULKPools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKPools.m; sourceTree = "<group>"; };
+		2B5DEB651D3F963F00E13C76 /* ULKSynchronizedPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKSynchronizedPool.h; sourceTree = "<group>"; };
+		2B5DEB661D3F963F00E13C76 /* ULKSynchronizedPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKSynchronizedPool.m; sourceTree = "<group>"; };
+		2B5DEB691D3F963F00E13C76 /* ULKBaseViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKBaseViewFactory.h; sourceTree = "<group>"; };
+		2B5DEB6A1D3F963F00E13C76 /* ULKBaseViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKBaseViewFactory.m; sourceTree = "<group>"; };
+		2B5DEB6B1D3F963F00E13C76 /* ULKLayoutInflater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKLayoutInflater.h; sourceTree = "<group>"; };
+		2B5DEB6C1D3F963F00E13C76 /* ULKLayoutInflater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKLayoutInflater.m; sourceTree = "<group>"; };
+		2B5DEB6D1D3F963F00E13C76 /* ULKViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKViewFactory.h; sourceTree = "<group>"; };
+		2B5DEB6E1D3F963F00E13C76 /* UIView+ULK_Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ULK_Layout.h"; sourceTree = "<group>"; };
+		2B5DEB6F1D3F963F00E13C76 /* UIView+ULK_Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ULK_Layout.m"; sourceTree = "<group>"; };
+		2B5DEB701D3F963F00E13C76 /* ULKCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKCollectionViewCell.h; sourceTree = "<group>"; };
+		2B5DEB711D3F963F00E13C76 /* ULKCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKCollectionViewCell.m; sourceTree = "<group>"; };
+		2B5DEB721D3F963F00E13C76 /* ULKGravity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKGravity.h; sourceTree = "<group>"; };
+		2B5DEB731D3F963F00E13C76 /* ULKGravity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKGravity.m; sourceTree = "<group>"; };
+		2B5DEB741D3F963F00E13C76 /* ULKTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKTableViewCell.h; sourceTree = "<group>"; };
+		2B5DEB751D3F963F00E13C76 /* ULKTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKTableViewCell.m; sourceTree = "<group>"; };
+		2B5DEB771D3F963F00E13C76 /* ULKLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKLayoutViewController.h; sourceTree = "<group>"; };
+		2B5DEB781D3F963F00E13C76 /* ULKLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKLayoutViewController.m; sourceTree = "<group>"; };
+		2B5DEB7B1D3F963F00E13C76 /* UIButton+ULK_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ULK_View.h"; sourceTree = "<group>"; };
+		2B5DEB7C1D3F963F00E13C76 /* UIButton+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ULK_View.m"; sourceTree = "<group>"; };
+		2B5DEB7D1D3F963F00E13C76 /* UIControl+ULK_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+ULK_View.h"; sourceTree = "<group>"; };
+		2B5DEB7E1D3F963F00E13C76 /* UIControl+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+ULK_View.m"; sourceTree = "<group>"; };
+		2B5DEB7F1D3F963F00E13C76 /* UIImageView+ULK_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ULK_View.h"; sourceTree = "<group>"; };
+		2B5DEB801D3F963F00E13C76 /* UIImageView+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ULK_View.m"; sourceTree = "<group>"; };
+		2B5DEB811D3F963F00E13C76 /* UILabel+ULK_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ULK_View.h"; sourceTree = "<group>"; };
+		2B5DEB821D3F963F00E13C76 /* UILabel+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ULK_View.m"; sourceTree = "<group>"; };
+		2B5DEB831D3F963F00E13C76 /* UINavigationBar+ULK_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+ULK_View.h"; sourceTree = "<group>"; };
+		2B5DEB841D3F963F00E13C76 /* UINavigationBar+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+ULK_View.m"; sourceTree = "<group>"; };
+		2B5DEB851D3F963F00E13C76 /* UISearchBar+ULK_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+ULK_View.h"; sourceTree = "<group>"; };
+		2B5DEB861D3F963F00E13C76 /* UISearchBar+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+ULK_View.m"; sourceTree = "<group>"; };
+		2B5DEB871D3F963F00E13C76 /* UISwitch+ULK_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISwitch+ULK_View.h"; sourceTree = "<group>"; };
+		2B5DEB881D3F963F00E13C76 /* UISwitch+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISwitch+ULK_View.m"; sourceTree = "<group>"; };
+		2B5DEB891D3F963F00E13C76 /* UITextView+ULK_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+ULK_View.h"; sourceTree = "<group>"; };
+		2B5DEB8A1D3F963F00E13C76 /* UITextView+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+ULK_View.m"; sourceTree = "<group>"; };
+		2B5DEB8B1D3F963F00E13C76 /* UIToolbar+ULK_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIToolbar+ULK_View.h"; sourceTree = "<group>"; };
+		2B5DEB8C1D3F963F00E13C76 /* UIToolbar+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIToolbar+ULK_View.m"; sourceTree = "<group>"; };
+		2B5DEB8D1D3F963F00E13C76 /* UIWebView+ULK_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+ULK_View.h"; sourceTree = "<group>"; };
+		2B5DEB8E1D3F963F00E13C76 /* UIWebView+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+ULK_View.m"; sourceTree = "<group>"; };
+		2B5DEB8F1D3F963F00E13C76 /* ULKButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKButton.h; sourceTree = "<group>"; };
+		2B5DEB901D3F963F00E13C76 /* ULKButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKButton.m; sourceTree = "<group>"; };
+		2B5DEB911D3F963F00E13C76 /* ULKEditText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKEditText.h; sourceTree = "<group>"; };
+		2B5DEB921D3F963F00E13C76 /* ULKEditText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKEditText.m; sourceTree = "<group>"; };
+		2B5DEB931D3F963F00E13C76 /* ULKTextArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKTextArea.h; sourceTree = "<group>"; };
+		2B5DEB941D3F963F00E13C76 /* ULKTextArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKTextArea.m; sourceTree = "<group>"; };
+		2B5DEB951D3F963F00E13C76 /* ULKTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKTextView.h; sourceTree = "<group>"; };
+		2B5DEB961D3F963F00E13C76 /* ULKTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKTextView.m; sourceTree = "<group>"; };
+		2B5DEB971D3F963F00E13C76 /* UILayoutKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UILayoutKit.podspec; sourceTree = "<group>"; };
 		2BEB75611D3F666300672260 /* UILayoutKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UILayoutKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BEB75651D3F666300672260 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2BEB75671D3F666300672260 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -129,164 +299,6 @@
 		2BEB75701D3F666300672260 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BEB75731D3F666300672260 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2BEB75751D3F666300672260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2BEB757E1D3F66E000672260 /* ULKFrameLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKFrameLayout.h; sourceTree = "<group>"; };
-		2BEB757F1D3F66E000672260 /* ULKFrameLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKFrameLayout.m; sourceTree = "<group>"; };
-		2BEB75801D3F66E000672260 /* ULKFrameLayoutParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKFrameLayoutParams.h; sourceTree = "<group>"; };
-		2BEB75811D3F66E000672260 /* ULKFrameLayoutParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKFrameLayoutParams.m; sourceTree = "<group>"; };
-		2BEB75831D3F66E000672260 /* ULKLayoutBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKLayoutBridge.h; sourceTree = "<group>"; };
-		2BEB75841D3F66E000672260 /* ULKLayoutBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKLayoutBridge.m; sourceTree = "<group>"; };
-		2BEB75861D3F66E000672260 /* ULKLinearLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKLinearLayout.h; sourceTree = "<group>"; };
-		2BEB75871D3F66E000672260 /* ULKLinearLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKLinearLayout.m; sourceTree = "<group>"; };
-		2BEB75881D3F66E000672260 /* ULKLinearLayoutParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKLinearLayoutParams.h; sourceTree = "<group>"; };
-		2BEB75891D3F66E000672260 /* ULKLinearLayoutParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKLinearLayoutParams.m; sourceTree = "<group>"; };
-		2BEB758B1D3F66E000672260 /* ULKDependencyGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKDependencyGraph.h; sourceTree = "<group>"; };
-		2BEB758C1D3F66E000672260 /* ULKDependencyGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKDependencyGraph.m; sourceTree = "<group>"; };
-		2BEB758D1D3F66E000672260 /* ULKDependencyGraphNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKDependencyGraphNode.h; sourceTree = "<group>"; };
-		2BEB758E1D3F66E000672260 /* ULKDependencyGraphNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKDependencyGraphNode.m; sourceTree = "<group>"; };
-		2BEB758F1D3F66E000672260 /* ULKRelativeLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKRelativeLayout.h; sourceTree = "<group>"; };
-		2BEB75901D3F66E000672260 /* ULKRelativeLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKRelativeLayout.m; sourceTree = "<group>"; };
-		2BEB75911D3F66E000672260 /* ULKRelativeLayoutParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKRelativeLayoutParams.h; sourceTree = "<group>"; };
-		2BEB75921D3F66E000672260 /* ULKRelativeLayoutParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKRelativeLayoutParams.m; sourceTree = "<group>"; };
-		2BEB75941D3F66E000672260 /* UIScrollView+ULK_ViewGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+ULK_ViewGroup.h"; sourceTree = "<group>"; };
-		2BEB75951D3F66E000672260 /* UIScrollView+ULK_ViewGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+ULK_ViewGroup.m"; sourceTree = "<group>"; };
-		2BEB75961D3F66E000672260 /* UIView+ULK_ViewGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ULK_ViewGroup.h"; sourceTree = "<group>"; };
-		2BEB75971D3F66E000672260 /* UIView+ULK_ViewGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ULK_ViewGroup.m"; sourceTree = "<group>"; };
-		2BEB75981D3F66E000672260 /* ULKLayoutParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKLayoutParams.h; sourceTree = "<group>"; };
-		2BEB75991D3F66E000672260 /* ULKLayoutParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKLayoutParams.m; sourceTree = "<group>"; };
-		2BEB759A1D3F66E000672260 /* ULKLayouts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKLayouts.h; sourceTree = "<group>"; };
-		2BEB759B1D3F66E000672260 /* ULKViewGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKViewGroup.h; sourceTree = "<group>"; };
-		2BEB759C1D3F66E000672260 /* ULKViewGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKViewGroup.m; sourceTree = "<group>"; };
-		2BEB759F1D3F66E000672260 /* UIView+ULKDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ULKDrawable.h"; sourceTree = "<group>"; };
-		2BEB75A01D3F66E000672260 /* UIView+ULKDrawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ULKDrawable.m"; sourceTree = "<group>"; };
-		2BEB75A11D3F66E000672260 /* ULKBitmapDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKBitmapDrawable.h; sourceTree = "<group>"; };
-		2BEB75A21D3F66E000672260 /* ULKBitmapDrawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKBitmapDrawable.m; sourceTree = "<group>"; };
-		2BEB75A31D3F66E000672260 /* ULKClipDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKClipDrawable.h; sourceTree = "<group>"; };
-		2BEB75A41D3F66E000672260 /* ULKClipDrawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKClipDrawable.m; sourceTree = "<group>"; };
-		2BEB75A51D3F66E000672260 /* ULKColorDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKColorDrawable.h; sourceTree = "<group>"; };
-		2BEB75A61D3F66E000672260 /* ULKColorDrawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKColorDrawable.m; sourceTree = "<group>"; };
-		2BEB75A71D3F66E000672260 /* ULKDrawable+ULK_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ULKDrawable+ULK_Internal.h"; sourceTree = "<group>"; };
-		2BEB75A81D3F66E000672260 /* ULKDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKDrawable.h; sourceTree = "<group>"; };
-		2BEB75A91D3F66E000672260 /* ULKDrawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKDrawable.m; sourceTree = "<group>"; };
-		2BEB75AA1D3F66E000672260 /* ULKDrawableContainer+ULK_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ULKDrawableContainer+ULK_Internal.h"; sourceTree = "<group>"; };
-		2BEB75AB1D3F66E000672260 /* ULKDrawableContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKDrawableContainer.h; sourceTree = "<group>"; };
-		2BEB75AC1D3F66E000672260 /* ULKDrawableContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKDrawableContainer.m; sourceTree = "<group>"; };
-		2BEB75AD1D3F66E000672260 /* ULKDrawableLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKDrawableLayer.h; sourceTree = "<group>"; };
-		2BEB75AE1D3F66E000672260 /* ULKDrawableLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKDrawableLayer.m; sourceTree = "<group>"; };
-		2BEB75AF1D3F66E000672260 /* ULKGradientDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKGradientDrawable.h; sourceTree = "<group>"; };
-		2BEB75B01D3F66E000672260 /* ULKGradientDrawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKGradientDrawable.m; sourceTree = "<group>"; };
-		2BEB75B11D3F66E000672260 /* ULKInsetDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKInsetDrawable.h; sourceTree = "<group>"; };
-		2BEB75B21D3F66E000672260 /* ULKInsetDrawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKInsetDrawable.m; sourceTree = "<group>"; };
-		2BEB75B31D3F66E000672260 /* ULKLayerDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKLayerDrawable.h; sourceTree = "<group>"; };
-		2BEB75B41D3F66E000672260 /* ULKLayerDrawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKLayerDrawable.m; sourceTree = "<group>"; };
-		2BEB75B51D3F66E000672260 /* ULKNinePatchDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKNinePatchDrawable.h; sourceTree = "<group>"; };
-		2BEB75B61D3F66E000672260 /* ULKNinePatchDrawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKNinePatchDrawable.m; sourceTree = "<group>"; };
-		2BEB75B71D3F66E000672260 /* ULKRotateDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKRotateDrawable.h; sourceTree = "<group>"; };
-		2BEB75B81D3F66E000672260 /* ULKRotateDrawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKRotateDrawable.m; sourceTree = "<group>"; };
-		2BEB75B91D3F66E000672260 /* ULKShadowDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKShadowDrawable.h; sourceTree = "<group>"; };
-		2BEB75BA1D3F66E000672260 /* ULKShadowDrawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKShadowDrawable.m; sourceTree = "<group>"; };
-		2BEB75BB1D3F66E000672260 /* ULKStateListDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKStateListDrawable.h; sourceTree = "<group>"; };
-		2BEB75BC1D3F66E000672260 /* ULKStateListDrawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKStateListDrawable.m; sourceTree = "<group>"; };
-		2BEB75BD1D3F66E000672260 /* NSDictionary+ULK_ResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ULK_ResourceManager.h"; sourceTree = "<group>"; };
-		2BEB75BE1D3F66E000672260 /* NSDictionary+ULK_ResourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ULK_ResourceManager.m"; sourceTree = "<group>"; };
-		2BEB75C01D3F66E000672260 /* ULKColorStateItem+ULK_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ULKColorStateItem+ULK_Internal.h"; sourceTree = "<group>"; };
-		2BEB75C11D3F66E000672260 /* ULKColorStateItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKColorStateItem.h; sourceTree = "<group>"; };
-		2BEB75C21D3F66E000672260 /* ULKColorStateItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKColorStateItem.m; sourceTree = "<group>"; };
-		2BEB75C31D3F66E000672260 /* ULKColorStateList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKColorStateList.h; sourceTree = "<group>"; };
-		2BEB75C41D3F66E000672260 /* ULKColorStateList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKColorStateList.m; sourceTree = "<group>"; };
-		2BEB75C51D3F66E000672260 /* ULKDrawableStateItem+ULK_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ULKDrawableStateItem+ULK_Internal.h"; sourceTree = "<group>"; };
-		2BEB75C61D3F66E000672260 /* ULKDrawableStateItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKDrawableStateItem.h; sourceTree = "<group>"; };
-		2BEB75C71D3F66E000672260 /* ULKDrawableStateItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKDrawableStateItem.m; sourceTree = "<group>"; };
-		2BEB75C81D3F66E000672260 /* ULKDrawableStateList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKDrawableStateList.h; sourceTree = "<group>"; };
-		2BEB75C91D3F66E000672260 /* ULKDrawableStateList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKDrawableStateList.m; sourceTree = "<group>"; };
-		2BEB75CA1D3F66E000672260 /* ULKResourceStateItem+ULK_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ULKResourceStateItem+ULK_Internal.h"; sourceTree = "<group>"; };
-		2BEB75CB1D3F66E000672260 /* ULKResourceStateItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKResourceStateItem.h; sourceTree = "<group>"; };
-		2BEB75CC1D3F66E000672260 /* ULKResourceStateItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKResourceStateItem.m; sourceTree = "<group>"; };
-		2BEB75CD1D3F66E000672260 /* ULKResourceStateList+ULK_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ULKResourceStateList+ULK_Internal.h"; sourceTree = "<group>"; };
-		2BEB75CE1D3F66E000672260 /* ULKResourceStateList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKResourceStateList.h; sourceTree = "<group>"; };
-		2BEB75CF1D3F66E000672260 /* ULKResourceStateList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKResourceStateList.m; sourceTree = "<group>"; };
-		2BEB75D01D3F66E000672260 /* ULKResourceManager+Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ULKResourceManager+Core.h"; sourceTree = "<group>"; };
-		2BEB75D11D3F66E000672260 /* ULKResourceManager+Drawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ULKResourceManager+Drawable.h"; sourceTree = "<group>"; };
-		2BEB75D21D3F66E000672260 /* ULKResourceManager+Drawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ULKResourceManager+Drawable.m"; sourceTree = "<group>"; };
-		2BEB75D31D3F66E000672260 /* ULKResourceManager+String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ULKResourceManager+String.h"; sourceTree = "<group>"; };
-		2BEB75D41D3F66E000672260 /* ULKResourceManager+String.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ULKResourceManager+String.m"; sourceTree = "<group>"; };
-		2BEB75D51D3F66E000672260 /* ULKResourceManager+ULK_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ULKResourceManager+ULK_Internal.h"; sourceTree = "<group>"; };
-		2BEB75D61D3F66E000672260 /* ULKResourceManager+ULKIDL_Internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ULKResourceManager+ULKIDL_Internal.m"; sourceTree = "<group>"; };
-		2BEB75D71D3F66E000672260 /* ULKResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKResourceManager.h; sourceTree = "<group>"; };
-		2BEB75D81D3F66E000672260 /* ULKResourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKResourceManager.m; sourceTree = "<group>"; };
-		2BEB75D91D3F66E000672260 /* ULKXMLCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKXMLCache.h; sourceTree = "<group>"; };
-		2BEB75DA1D3F66E000672260 /* ULKXMLCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKXMLCache.m; sourceTree = "<group>"; };
-		2BEB75DC1D3F66E000672260 /* ULKResourceValueSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKResourceValueSet.h; sourceTree = "<group>"; };
-		2BEB75DD1D3F66E000672260 /* ULKResourceValueSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKResourceValueSet.m; sourceTree = "<group>"; };
-		2BEB75DE1D3F66E000672260 /* ULKStringArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKStringArray.h; sourceTree = "<group>"; };
-		2BEB75DF1D3F66E000672260 /* ULKStringArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKStringArray.m; sourceTree = "<group>"; };
-		2BEB75E01D3F66E000672260 /* ULKStyle+ULK_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ULKStyle+ULK_Internal.h"; sourceTree = "<group>"; };
-		2BEB75E11D3F66E000672260 /* ULKStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKStyle.h; sourceTree = "<group>"; };
-		2BEB75E21D3F66E000672260 /* ULKStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKStyle.m; sourceTree = "<group>"; };
-		2BEB75E31D3F66E000672260 /* UILayoutKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILayoutKit.h; sourceTree = "<group>"; };
-		2BEB75E51D3F66E000672260 /* NSObject+ULK_KVOObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ULK_KVOObserver.h"; sourceTree = "<group>"; };
-		2BEB75E61D3F66E000672260 /* NSObject+ULK_KVOObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ULK_KVOObserver.m"; sourceTree = "<group>"; };
-		2BEB75E81D3F66E000672260 /* TBXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBXML.h; sourceTree = "<group>"; };
-		2BEB75E91D3F66E000672260 /* TBXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBXML.m; sourceTree = "<group>"; };
-		2BEB75EA1D3F66E000672260 /* TBXML+ULK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TBXML+ULK.h"; sourceTree = "<group>"; };
-		2BEB75EB1D3F66E000672260 /* TBXML+ULK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TBXML+ULK.m"; sourceTree = "<group>"; };
-		2BEB75EC1D3F66E000672260 /* UIColor+ULK_ColorParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ULK_ColorParser.h"; sourceTree = "<group>"; };
-		2BEB75ED1D3F66E000672260 /* UIColor+ULK_ColorParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ULK_ColorParser.m"; sourceTree = "<group>"; };
-		2BEB75EE1D3F66E000672260 /* UIImage+ULK_FromColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ULK_FromColor.h"; sourceTree = "<group>"; };
-		2BEB75EF1D3F66E000672260 /* UIImage+ULK_FromColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ULK_FromColor.m"; sourceTree = "<group>"; };
-		2BEB75F01D3F66E000672260 /* UIImage+ULKNinePatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ULKNinePatch.h"; sourceTree = "<group>"; };
-		2BEB75F11D3F66E000672260 /* UIImage+ULKNinePatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ULKNinePatch.m"; sourceTree = "<group>"; };
-		2BEB75F21D3F66E000672260 /* ULKFinitePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKFinitePool.h; sourceTree = "<group>"; };
-		2BEB75F31D3F66E000672260 /* ULKFinitePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKFinitePool.m; sourceTree = "<group>"; };
-		2BEB75F41D3F66E000672260 /* ULKPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKPool.h; sourceTree = "<group>"; };
-		2BEB75F51D3F66E000672260 /* ULKPoolable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKPoolable.h; sourceTree = "<group>"; };
-		2BEB75F61D3F66E000672260 /* ULKPoolableManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKPoolableManager.h; sourceTree = "<group>"; };
-		2BEB75F71D3F66E000672260 /* ULKPools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKPools.h; sourceTree = "<group>"; };
-		2BEB75F81D3F66E000672260 /* ULKPools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKPools.m; sourceTree = "<group>"; };
-		2BEB75F91D3F66E000672260 /* ULKSynchronizedPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKSynchronizedPool.h; sourceTree = "<group>"; };
-		2BEB75FA1D3F66E000672260 /* ULKSynchronizedPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKSynchronizedPool.m; sourceTree = "<group>"; };
-		2BEB75FD1D3F66E000672260 /* ULKBaseViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKBaseViewFactory.h; sourceTree = "<group>"; };
-		2BEB75FE1D3F66E000672260 /* ULKBaseViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKBaseViewFactory.m; sourceTree = "<group>"; };
-		2BEB75FF1D3F66E000672260 /* ULKLayoutInflater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKLayoutInflater.h; sourceTree = "<group>"; };
-		2BEB76001D3F66E000672260 /* ULKLayoutInflater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKLayoutInflater.m; sourceTree = "<group>"; };
-		2BEB76011D3F66E000672260 /* ULKViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKViewFactory.h; sourceTree = "<group>"; };
-		2BEB76021D3F66E000672260 /* UIView+ULK_Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ULK_Layout.h"; sourceTree = "<group>"; };
-		2BEB76031D3F66E000672260 /* UIView+ULK_Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ULK_Layout.m"; sourceTree = "<group>"; };
-		2BEB76041D3F66E000672260 /* ULKCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKCollectionViewCell.h; sourceTree = "<group>"; };
-		2BEB76051D3F66E000672260 /* ULKCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKCollectionViewCell.m; sourceTree = "<group>"; };
-		2BEB76061D3F66E000672260 /* ULKGravity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKGravity.h; sourceTree = "<group>"; };
-		2BEB76071D3F66E000672260 /* ULKGravity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKGravity.m; sourceTree = "<group>"; };
-		2BEB76081D3F66E000672260 /* ULKTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKTableViewCell.h; sourceTree = "<group>"; };
-		2BEB76091D3F66E000672260 /* ULKTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKTableViewCell.m; sourceTree = "<group>"; };
-		2BEB760B1D3F66E000672260 /* ULKLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKLayoutViewController.h; sourceTree = "<group>"; };
-		2BEB760C1D3F66E000672260 /* ULKLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKLayoutViewController.m; sourceTree = "<group>"; };
-		2BEB760F1D3F66E000672260 /* UIButton+ULK_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ULK_View.h"; sourceTree = "<group>"; };
-		2BEB76101D3F66E000672260 /* UIButton+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ULK_View.m"; sourceTree = "<group>"; };
-		2BEB76111D3F66E000672260 /* UIControl+ULK_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+ULK_View.h"; sourceTree = "<group>"; };
-		2BEB76121D3F66E000672260 /* UIControl+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+ULK_View.m"; sourceTree = "<group>"; };
-		2BEB76131D3F66E000672260 /* UIImageView+ULK_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ULK_View.h"; sourceTree = "<group>"; };
-		2BEB76141D3F66E000672260 /* UIImageView+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ULK_View.m"; sourceTree = "<group>"; };
-		2BEB76151D3F66E000672260 /* UILabel+ULK_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ULK_View.h"; sourceTree = "<group>"; };
-		2BEB76161D3F66E000672260 /* UILabel+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ULK_View.m"; sourceTree = "<group>"; };
-		2BEB76171D3F66E000672260 /* UINavigationBar+ULK_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+ULK_View.h"; sourceTree = "<group>"; };
-		2BEB76181D3F66E000672260 /* UINavigationBar+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+ULK_View.m"; sourceTree = "<group>"; };
-		2BEB76191D3F66E000672260 /* UISearchBar+ULK_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+ULK_View.h"; sourceTree = "<group>"; };
-		2BEB761A1D3F66E000672260 /* UISearchBar+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+ULK_View.m"; sourceTree = "<group>"; };
-		2BEB761B1D3F66E000672260 /* UISwitch+ULK_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISwitch+ULK_View.h"; sourceTree = "<group>"; };
-		2BEB761C1D3F66E000672260 /* UISwitch+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISwitch+ULK_View.m"; sourceTree = "<group>"; };
-		2BEB761D1D3F66E000672260 /* UITextView+ULK_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+ULK_View.h"; sourceTree = "<group>"; };
-		2BEB761E1D3F66E000672260 /* UITextView+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+ULK_View.m"; sourceTree = "<group>"; };
-		2BEB761F1D3F66E000672260 /* UIToolbar+ULK_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIToolbar+ULK_View.h"; sourceTree = "<group>"; };
-		2BEB76201D3F66E000672260 /* UIToolbar+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIToolbar+ULK_View.m"; sourceTree = "<group>"; };
-		2BEB76211D3F66E000672260 /* UIWebView+ULK_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+ULK_View.h"; sourceTree = "<group>"; };
-		2BEB76221D3F66E000672260 /* UIWebView+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+ULK_View.m"; sourceTree = "<group>"; };
-		2BEB76231D3F66E000672260 /* ULKButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKButton.h; sourceTree = "<group>"; };
-		2BEB76241D3F66E000672260 /* ULKButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKButton.m; sourceTree = "<group>"; };
-		2BEB76251D3F66E000672260 /* ULKEditText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKEditText.h; sourceTree = "<group>"; };
-		2BEB76261D3F66E000672260 /* ULKEditText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKEditText.m; sourceTree = "<group>"; };
-		2BEB76271D3F66E000672260 /* ULKTextArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKTextArea.h; sourceTree = "<group>"; };
-		2BEB76281D3F66E000672260 /* ULKTextArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKTextArea.m; sourceTree = "<group>"; };
-		2BEB76291D3F66E000672260 /* ULKTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKTextView.h; sourceTree = "<group>"; };
-		2BEB762A1D3F66E000672260 /* ULKTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKTextView.m; sourceTree = "<group>"; };
 		2BEB76741D3F66E800672260 /* CollectionViewExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewExampleViewController.h; sourceTree = "<group>"; };
 		2BEB76751D3F66E800672260 /* CollectionViewExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewExampleViewController.m; sourceTree = "<group>"; };
 		2BEB76761D3F66E800672260 /* CollectionViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewItem.h; sourceTree = "<group>"; };
@@ -342,9 +354,469 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B5DEAD61D3F963F00E13C76 /* UILayoutKit */ = {
+			isa = PBXGroup;
+			children = (
+				2B5DEAD71D3F963F00E13C76 /* Documentation */,
+				2B5DEADB1D3F963F00E13C76 /* Layout */,
+				2B5DEAE11D3F963F00E13C76 /* LICENSE */,
+				2B5DEAE21D3F963F00E13C76 /* README.md */,
+				2B5DEAE31D3F963F00E13C76 /* Resources */,
+				2B5DEAE71D3F963F00E13C76 /* UILayoutKit */,
+				2B5DEB971D3F963F00E13C76 /* UILayoutKit.podspec */,
+				2B5DEB981D3F963F00E13C76 /* Utils */,
+				2B5DEB9A1D3F963F00E13C76 /* View */,
+				2B5DEB9C1D3F963F00E13C76 /* ViewController */,
+				2B5DEB9D1D3F963F00E13C76 /* Widgets */,
+			);
+			path = UILayoutKit;
+			sourceTree = "<group>";
+		};
+		2B5DEAD71D3F963F00E13C76 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				2B5DEAD81D3F963F00E13C76 /* drawable_button_normal.png */,
+				2B5DEAD91D3F963F00E13C76 /* drawable_button_pressed.png */,
+				2B5DEADA1D3F963F00E13C76 /* layout_example.png */,
+			);
+			path = Documentation;
+			sourceTree = "<group>";
+		};
+		2B5DEADB1D3F963F00E13C76 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				2B5DEADC1D3F963F00E13C76 /* FrameLayout */,
+				2B5DEADD1D3F963F00E13C76 /* LayoutBridge */,
+				2B5DEADE1D3F963F00E13C76 /* LinearLayout */,
+				2B5DEADF1D3F963F00E13C76 /* RelativeLayout */,
+				2B5DEAE01D3F963F00E13C76 /* UIScrollView */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		2B5DEADC1D3F963F00E13C76 /* FrameLayout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FrameLayout;
+			sourceTree = "<group>";
+		};
+		2B5DEADD1D3F963F00E13C76 /* LayoutBridge */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LayoutBridge;
+			sourceTree = "<group>";
+		};
+		2B5DEADE1D3F963F00E13C76 /* LinearLayout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LinearLayout;
+			sourceTree = "<group>";
+		};
+		2B5DEADF1D3F963F00E13C76 /* RelativeLayout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RelativeLayout;
+			sourceTree = "<group>";
+		};
+		2B5DEAE01D3F963F00E13C76 /* UIScrollView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIScrollView;
+			sourceTree = "<group>";
+		};
+		2B5DEAE31D3F963F00E13C76 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2B5DEAE41D3F963F00E13C76 /* Drawable */,
+				2B5DEAE51D3F963F00E13C76 /* StateList */,
+				2B5DEAE61D3F963F00E13C76 /* Values */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2B5DEAE41D3F963F00E13C76 /* Drawable */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Drawable;
+			sourceTree = "<group>";
+		};
+		2B5DEAE51D3F963F00E13C76 /* StateList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StateList;
+			sourceTree = "<group>";
+		};
+		2B5DEAE61D3F963F00E13C76 /* Values */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Values;
+			sourceTree = "<group>";
+		};
+		2B5DEAE71D3F963F00E13C76 /* UILayoutKit */ = {
+			isa = PBXGroup;
+			children = (
+				2B5DEAE81D3F963F00E13C76 /* Layout */,
+				2B5DEB091D3F963F00E13C76 /* Resources */,
+				2B5DEB4F1D3F963F00E13C76 /* UILayoutKit.h */,
+				2B5DEB501D3F963F00E13C76 /* Utils */,
+				2B5DEB671D3F963F00E13C76 /* View */,
+				2B5DEB761D3F963F00E13C76 /* ViewController */,
+				2B5DEB791D3F963F00E13C76 /* Widgets */,
+			);
+			path = UILayoutKit;
+			sourceTree = "<group>";
+		};
+		2B5DEAE81D3F963F00E13C76 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				2B5DEAE91D3F963F00E13C76 /* FrameLayout */,
+				2B5DEAEE1D3F963F00E13C76 /* LayoutBridge */,
+				2B5DEAF11D3F963F00E13C76 /* LinearLayout */,
+				2B5DEAF61D3F963F00E13C76 /* RelativeLayout */,
+				2B5DEAFF1D3F963F00E13C76 /* UIScrollView */,
+				2B5DEB021D3F963F00E13C76 /* UIView+ULK_ViewGroup.h */,
+				2B5DEB031D3F963F00E13C76 /* UIView+ULK_ViewGroup.m */,
+				2B5DEB041D3F963F00E13C76 /* ULKLayoutParams.h */,
+				2B5DEB051D3F963F00E13C76 /* ULKLayoutParams.m */,
+				2B5DEB061D3F963F00E13C76 /* ULKLayouts.h */,
+				2B5DEB071D3F963F00E13C76 /* ULKViewGroup.h */,
+				2B5DEB081D3F963F00E13C76 /* ULKViewGroup.m */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		2B5DEAE91D3F963F00E13C76 /* FrameLayout */ = {
+			isa = PBXGroup;
+			children = (
+				2B5DEAEA1D3F963F00E13C76 /* ULKFrameLayout.h */,
+				2B5DEAEB1D3F963F00E13C76 /* ULKFrameLayout.m */,
+				2B5DEAEC1D3F963F00E13C76 /* ULKFrameLayoutParams.h */,
+				2B5DEAED1D3F963F00E13C76 /* ULKFrameLayoutParams.m */,
+			);
+			path = FrameLayout;
+			sourceTree = "<group>";
+		};
+		2B5DEAEE1D3F963F00E13C76 /* LayoutBridge */ = {
+			isa = PBXGroup;
+			children = (
+				2B5DEAEF1D3F963F00E13C76 /* ULKLayoutBridge.h */,
+				2B5DEAF01D3F963F00E13C76 /* ULKLayoutBridge.m */,
+			);
+			path = LayoutBridge;
+			sourceTree = "<group>";
+		};
+		2B5DEAF11D3F963F00E13C76 /* LinearLayout */ = {
+			isa = PBXGroup;
+			children = (
+				2B5DEAF21D3F963F00E13C76 /* ULKLinearLayout.h */,
+				2B5DEAF31D3F963F00E13C76 /* ULKLinearLayout.m */,
+				2B5DEAF41D3F963F00E13C76 /* ULKLinearLayoutParams.h */,
+				2B5DEAF51D3F963F00E13C76 /* ULKLinearLayoutParams.m */,
+			);
+			path = LinearLayout;
+			sourceTree = "<group>";
+		};
+		2B5DEAF61D3F963F00E13C76 /* RelativeLayout */ = {
+			isa = PBXGroup;
+			children = (
+				2B5DEAF71D3F963F00E13C76 /* ULKDependencyGraph.h */,
+				2B5DEAF81D3F963F00E13C76 /* ULKDependencyGraph.m */,
+				2B5DEAF91D3F963F00E13C76 /* ULKDependencyGraphNode.h */,
+				2B5DEAFA1D3F963F00E13C76 /* ULKDependencyGraphNode.m */,
+				2B5DEAFB1D3F963F00E13C76 /* ULKRelativeLayout.h */,
+				2B5DEAFC1D3F963F00E13C76 /* ULKRelativeLayout.m */,
+				2B5DEAFD1D3F963F00E13C76 /* ULKRelativeLayoutParams.h */,
+				2B5DEAFE1D3F963F00E13C76 /* ULKRelativeLayoutParams.m */,
+			);
+			path = RelativeLayout;
+			sourceTree = "<group>";
+		};
+		2B5DEAFF1D3F963F00E13C76 /* UIScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				2B5DEB001D3F963F00E13C76 /* UIScrollView+ULK_ViewGroup.h */,
+				2B5DEB011D3F963F00E13C76 /* UIScrollView+ULK_ViewGroup.m */,
+			);
+			path = UIScrollView;
+			sourceTree = "<group>";
+		};
+		2B5DEB091D3F963F00E13C76 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2B5DEB0A1D3F963F00E13C76 /* Drawable */,
+				2B5DEB291D3F963F00E13C76 /* NSDictionary+ULK_ResourceManager.h */,
+				2B5DEB2A1D3F963F00E13C76 /* NSDictionary+ULK_ResourceManager.m */,
+				2B5DEB2B1D3F963F00E13C76 /* StateList */,
+				2B5DEB3C1D3F963F00E13C76 /* ULKResourceManager+Core.h */,
+				2B5DEB3D1D3F963F00E13C76 /* ULKResourceManager+Drawable.h */,
+				2B5DEB3E1D3F963F00E13C76 /* ULKResourceManager+Drawable.m */,
+				2B5DEB3F1D3F963F00E13C76 /* ULKResourceManager+String.h */,
+				2B5DEB401D3F963F00E13C76 /* ULKResourceManager+String.m */,
+				2B5DEB411D3F963F00E13C76 /* ULKResourceManager+ULK_Internal.h */,
+				2B5DEB421D3F963F00E13C76 /* ULKResourceManager+ULKIDL_Internal.m */,
+				2B5DEB431D3F963F00E13C76 /* ULKResourceManager.h */,
+				2B5DEB441D3F963F00E13C76 /* ULKResourceManager.m */,
+				2B5DEB451D3F963F00E13C76 /* ULKXMLCache.h */,
+				2B5DEB461D3F963F00E13C76 /* ULKXMLCache.m */,
+				2B5DEB471D3F963F00E13C76 /* Values */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2B5DEB0A1D3F963F00E13C76 /* Drawable */ = {
+			isa = PBXGroup;
+			children = (
+				2B5DEB0B1D3F963F00E13C76 /* UIView+ULKDrawable.h */,
+				2B5DEB0C1D3F963F00E13C76 /* UIView+ULKDrawable.m */,
+				2B5DEB0D1D3F963F00E13C76 /* ULKBitmapDrawable.h */,
+				2B5DEB0E1D3F963F00E13C76 /* ULKBitmapDrawable.m */,
+				2B5DEB0F1D3F963F00E13C76 /* ULKClipDrawable.h */,
+				2B5DEB101D3F963F00E13C76 /* ULKClipDrawable.m */,
+				2B5DEB111D3F963F00E13C76 /* ULKColorDrawable.h */,
+				2B5DEB121D3F963F00E13C76 /* ULKColorDrawable.m */,
+				2B5DEB131D3F963F00E13C76 /* ULKDrawable+ULK_Internal.h */,
+				2B5DEB141D3F963F00E13C76 /* ULKDrawable.h */,
+				2B5DEB151D3F963F00E13C76 /* ULKDrawable.m */,
+				2B5DEB161D3F963F00E13C76 /* ULKDrawableContainer+ULK_Internal.h */,
+				2B5DEB171D3F963F00E13C76 /* ULKDrawableContainer.h */,
+				2B5DEB181D3F963F00E13C76 /* ULKDrawableContainer.m */,
+				2B5DEB191D3F963F00E13C76 /* ULKDrawableLayer.h */,
+				2B5DEB1A1D3F963F00E13C76 /* ULKDrawableLayer.m */,
+				2B5DEB1B1D3F963F00E13C76 /* ULKGradientDrawable.h */,
+				2B5DEB1C1D3F963F00E13C76 /* ULKGradientDrawable.m */,
+				2B5DEB1D1D3F963F00E13C76 /* ULKInsetDrawable.h */,
+				2B5DEB1E1D3F963F00E13C76 /* ULKInsetDrawable.m */,
+				2B5DEB1F1D3F963F00E13C76 /* ULKLayerDrawable.h */,
+				2B5DEB201D3F963F00E13C76 /* ULKLayerDrawable.m */,
+				2B5DEB211D3F963F00E13C76 /* ULKNinePatchDrawable.h */,
+				2B5DEB221D3F963F00E13C76 /* ULKNinePatchDrawable.m */,
+				2B5DEB231D3F963F00E13C76 /* ULKRotateDrawable.h */,
+				2B5DEB241D3F963F00E13C76 /* ULKRotateDrawable.m */,
+				2B5DEB251D3F963F00E13C76 /* ULKShadowDrawable.h */,
+				2B5DEB261D3F963F00E13C76 /* ULKShadowDrawable.m */,
+				2B5DEB271D3F963F00E13C76 /* ULKStateListDrawable.h */,
+				2B5DEB281D3F963F00E13C76 /* ULKStateListDrawable.m */,
+			);
+			path = Drawable;
+			sourceTree = "<group>";
+		};
+		2B5DEB2B1D3F963F00E13C76 /* StateList */ = {
+			isa = PBXGroup;
+			children = (
+				2B5DEB2C1D3F963F00E13C76 /* ULKColorStateItem+ULK_Internal.h */,
+				2B5DEB2D1D3F963F00E13C76 /* ULKColorStateItem.h */,
+				2B5DEB2E1D3F963F00E13C76 /* ULKColorStateItem.m */,
+				2B5DEB2F1D3F963F00E13C76 /* ULKColorStateList.h */,
+				2B5DEB301D3F963F00E13C76 /* ULKColorStateList.m */,
+				2B5DEB311D3F963F00E13C76 /* ULKDrawableStateItem+ULK_Internal.h */,
+				2B5DEB321D3F963F00E13C76 /* ULKDrawableStateItem.h */,
+				2B5DEB331D3F963F00E13C76 /* ULKDrawableStateItem.m */,
+				2B5DEB341D3F963F00E13C76 /* ULKDrawableStateList.h */,
+				2B5DEB351D3F963F00E13C76 /* ULKDrawableStateList.m */,
+				2B5DEB361D3F963F00E13C76 /* ULKResourceStateItem+ULK_Internal.h */,
+				2B5DEB371D3F963F00E13C76 /* ULKResourceStateItem.h */,
+				2B5DEB381D3F963F00E13C76 /* ULKResourceStateItem.m */,
+				2B5DEB391D3F963F00E13C76 /* ULKResourceStateList+ULK_Internal.h */,
+				2B5DEB3A1D3F963F00E13C76 /* ULKResourceStateList.h */,
+				2B5DEB3B1D3F963F00E13C76 /* ULKResourceStateList.m */,
+			);
+			path = StateList;
+			sourceTree = "<group>";
+		};
+		2B5DEB471D3F963F00E13C76 /* Values */ = {
+			isa = PBXGroup;
+			children = (
+				2B5DEB481D3F963F00E13C76 /* ULKResourceValueSet.h */,
+				2B5DEB491D3F963F00E13C76 /* ULKResourceValueSet.m */,
+				2B5DEB4A1D3F963F00E13C76 /* ULKStringArray.h */,
+				2B5DEB4B1D3F963F00E13C76 /* ULKStringArray.m */,
+				2B5DEB4C1D3F963F00E13C76 /* ULKStyle+ULK_Internal.h */,
+				2B5DEB4D1D3F963F00E13C76 /* ULKStyle.h */,
+				2B5DEB4E1D3F963F00E13C76 /* ULKStyle.m */,
+			);
+			path = Values;
+			sourceTree = "<group>";
+		};
+		2B5DEB501D3F963F00E13C76 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2B5DEB511D3F963F00E13C76 /* NSObject+ULK_KVOObserver.h */,
+				2B5DEB521D3F963F00E13C76 /* NSObject+ULK_KVOObserver.m */,
+				2B5DEB531D3F963F00E13C76 /* TBXML */,
+				2B5DEB561D3F963F00E13C76 /* TBXML+ULK.h */,
+				2B5DEB571D3F963F00E13C76 /* TBXML+ULK.m */,
+				2B5DEB581D3F963F00E13C76 /* UIColor+ULK_ColorParser.h */,
+				2B5DEB591D3F963F00E13C76 /* UIColor+ULK_ColorParser.m */,
+				2B5DEB5A1D3F963F00E13C76 /* UIImage+ULK_FromColor.h */,
+				2B5DEB5B1D3F963F00E13C76 /* UIImage+ULK_FromColor.m */,
+				2B5DEB5C1D3F963F00E13C76 /* UIImage+ULKNinePatch.h */,
+				2B5DEB5D1D3F963F00E13C76 /* UIImage+ULKNinePatch.m */,
+				2B5DEB5E1D3F963F00E13C76 /* ULKFinitePool.h */,
+				2B5DEB5F1D3F963F00E13C76 /* ULKFinitePool.m */,
+				2B5DEB601D3F963F00E13C76 /* ULKPool.h */,
+				2B5DEB611D3F963F00E13C76 /* ULKPoolable.h */,
+				2B5DEB621D3F963F00E13C76 /* ULKPoolableManager.h */,
+				2B5DEB631D3F963F00E13C76 /* ULKPools.h */,
+				2B5DEB641D3F963F00E13C76 /* ULKPools.m */,
+				2B5DEB651D3F963F00E13C76 /* ULKSynchronizedPool.h */,
+				2B5DEB661D3F963F00E13C76 /* ULKSynchronizedPool.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2B5DEB531D3F963F00E13C76 /* TBXML */ = {
+			isa = PBXGroup;
+			children = (
+				2B5DEB541D3F963F00E13C76 /* TBXML.h */,
+				2B5DEB551D3F963F00E13C76 /* TBXML.m */,
+			);
+			path = TBXML;
+			sourceTree = "<group>";
+		};
+		2B5DEB671D3F963F00E13C76 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B5DEB681D3F963F00E13C76 /* Inflater */,
+				2B5DEB6E1D3F963F00E13C76 /* UIView+ULK_Layout.h */,
+				2B5DEB6F1D3F963F00E13C76 /* UIView+ULK_Layout.m */,
+				2B5DEB701D3F963F00E13C76 /* ULKCollectionViewCell.h */,
+				2B5DEB711D3F963F00E13C76 /* ULKCollectionViewCell.m */,
+				2B5DEB721D3F963F00E13C76 /* ULKGravity.h */,
+				2B5DEB731D3F963F00E13C76 /* ULKGravity.m */,
+				2B5DEB741D3F963F00E13C76 /* ULKTableViewCell.h */,
+				2B5DEB751D3F963F00E13C76 /* ULKTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B5DEB681D3F963F00E13C76 /* Inflater */ = {
+			isa = PBXGroup;
+			children = (
+				2B5DEB691D3F963F00E13C76 /* ULKBaseViewFactory.h */,
+				2B5DEB6A1D3F963F00E13C76 /* ULKBaseViewFactory.m */,
+				2B5DEB6B1D3F963F00E13C76 /* ULKLayoutInflater.h */,
+				2B5DEB6C1D3F963F00E13C76 /* ULKLayoutInflater.m */,
+				2B5DEB6D1D3F963F00E13C76 /* ULKViewFactory.h */,
+			);
+			path = Inflater;
+			sourceTree = "<group>";
+		};
+		2B5DEB761D3F963F00E13C76 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2B5DEB771D3F963F00E13C76 /* ULKLayoutViewController.h */,
+				2B5DEB781D3F963F00E13C76 /* ULKLayoutViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2B5DEB791D3F963F00E13C76 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				2B5DEB7A1D3F963F00E13C76 /* Categories */,
+				2B5DEB8F1D3F963F00E13C76 /* ULKButton.h */,
+				2B5DEB901D3F963F00E13C76 /* ULKButton.m */,
+				2B5DEB911D3F963F00E13C76 /* ULKEditText.h */,
+				2B5DEB921D3F963F00E13C76 /* ULKEditText.m */,
+				2B5DEB931D3F963F00E13C76 /* ULKTextArea.h */,
+				2B5DEB941D3F963F00E13C76 /* ULKTextArea.m */,
+				2B5DEB951D3F963F00E13C76 /* ULKTextView.h */,
+				2B5DEB961D3F963F00E13C76 /* ULKTextView.m */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		2B5DEB7A1D3F963F00E13C76 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				2B5DEB7B1D3F963F00E13C76 /* UIButton+ULK_View.h */,
+				2B5DEB7C1D3F963F00E13C76 /* UIButton+ULK_View.m */,
+				2B5DEB7D1D3F963F00E13C76 /* UIControl+ULK_View.h */,
+				2B5DEB7E1D3F963F00E13C76 /* UIControl+ULK_View.m */,
+				2B5DEB7F1D3F963F00E13C76 /* UIImageView+ULK_View.h */,
+				2B5DEB801D3F963F00E13C76 /* UIImageView+ULK_View.m */,
+				2B5DEB811D3F963F00E13C76 /* UILabel+ULK_View.h */,
+				2B5DEB821D3F963F00E13C76 /* UILabel+ULK_View.m */,
+				2B5DEB831D3F963F00E13C76 /* UINavigationBar+ULK_View.h */,
+				2B5DEB841D3F963F00E13C76 /* UINavigationBar+ULK_View.m */,
+				2B5DEB851D3F963F00E13C76 /* UISearchBar+ULK_View.h */,
+				2B5DEB861D3F963F00E13C76 /* UISearchBar+ULK_View.m */,
+				2B5DEB871D3F963F00E13C76 /* UISwitch+ULK_View.h */,
+				2B5DEB881D3F963F00E13C76 /* UISwitch+ULK_View.m */,
+				2B5DEB891D3F963F00E13C76 /* UITextView+ULK_View.h */,
+				2B5DEB8A1D3F963F00E13C76 /* UITextView+ULK_View.m */,
+				2B5DEB8B1D3F963F00E13C76 /* UIToolbar+ULK_View.h */,
+				2B5DEB8C1D3F963F00E13C76 /* UIToolbar+ULK_View.m */,
+				2B5DEB8D1D3F963F00E13C76 /* UIWebView+ULK_View.h */,
+				2B5DEB8E1D3F963F00E13C76 /* UIWebView+ULK_View.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		2B5DEB981D3F963F00E13C76 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2B5DEB991D3F963F00E13C76 /* TBXML */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2B5DEB991D3F963F00E13C76 /* TBXML */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TBXML;
+			sourceTree = "<group>";
+		};
+		2B5DEB9A1D3F963F00E13C76 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B5DEB9B1D3F963F00E13C76 /* Inflater */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B5DEB9B1D3F963F00E13C76 /* Inflater */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Inflater;
+			sourceTree = "<group>";
+		};
+		2B5DEB9C1D3F963F00E13C76 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2B5DEB9D1D3F963F00E13C76 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				2B5DEB9E1D3F963F00E13C76 /* Categories */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		2B5DEB9E1D3F963F00E13C76 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		2BEB75581D3F666300672260 = {
 			isa = PBXGroup;
 			children = (
+				2B5DEAD61D3F963F00E13C76 /* UILayoutKit */,
 				2BEB75631D3F666300672260 /* UILayoutKitExample */,
 				2BEB75621D3F666300672260 /* Products */,
 				CA1C4190FD5F55F41E5A7A0E /* Pods */,
@@ -368,7 +840,6 @@
 				2BEB756A1D3F666300672260 /* ViewController.h */,
 				2BEB756B1D3F666300672260 /* ViewController.m */,
 				2BEB756D1D3F666300672260 /* Main.storyboard */,
-				2BEB757B1D3F66E000672260 /* UILayoutKit */,
 				2BEB76731D3F66E800672260 /* UILayoutKitExample */,
 				2BEB75701D3F666300672260 /* Assets.xcassets */,
 				2BEB75721D3F666300672260 /* LaunchScreen.storyboard */,
@@ -384,307 +855,6 @@
 				2BEB75651D3F666300672260 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		2BEB757B1D3F66E000672260 /* UILayoutKit */ = {
-			isa = PBXGroup;
-			children = (
-				2BEB757C1D3F66E000672260 /* Layout */,
-				2BEB759D1D3F66E000672260 /* Resources */,
-				2BEB75E31D3F66E000672260 /* UILayoutKit.h */,
-				2BEB75E41D3F66E000672260 /* Utils */,
-				2BEB75FB1D3F66E000672260 /* View */,
-				2BEB760A1D3F66E000672260 /* ViewController */,
-				2BEB760D1D3F66E000672260 /* Widgets */,
-			);
-			path = UILayoutKit;
-			sourceTree = "<group>";
-		};
-		2BEB757C1D3F66E000672260 /* Layout */ = {
-			isa = PBXGroup;
-			children = (
-				2BEB757D1D3F66E000672260 /* FrameLayout */,
-				2BEB75821D3F66E000672260 /* LayoutBridge */,
-				2BEB75851D3F66E000672260 /* LinearLayout */,
-				2BEB758A1D3F66E000672260 /* RelativeLayout */,
-				2BEB75931D3F66E000672260 /* UIScrollView */,
-				2BEB75961D3F66E000672260 /* UIView+ULK_ViewGroup.h */,
-				2BEB75971D3F66E000672260 /* UIView+ULK_ViewGroup.m */,
-				2BEB75981D3F66E000672260 /* ULKLayoutParams.h */,
-				2BEB75991D3F66E000672260 /* ULKLayoutParams.m */,
-				2BEB759A1D3F66E000672260 /* ULKLayouts.h */,
-				2BEB759B1D3F66E000672260 /* ULKViewGroup.h */,
-				2BEB759C1D3F66E000672260 /* ULKViewGroup.m */,
-			);
-			path = Layout;
-			sourceTree = "<group>";
-		};
-		2BEB757D1D3F66E000672260 /* FrameLayout */ = {
-			isa = PBXGroup;
-			children = (
-				2BEB757E1D3F66E000672260 /* ULKFrameLayout.h */,
-				2BEB757F1D3F66E000672260 /* ULKFrameLayout.m */,
-				2BEB75801D3F66E000672260 /* ULKFrameLayoutParams.h */,
-				2BEB75811D3F66E000672260 /* ULKFrameLayoutParams.m */,
-			);
-			path = FrameLayout;
-			sourceTree = "<group>";
-		};
-		2BEB75821D3F66E000672260 /* LayoutBridge */ = {
-			isa = PBXGroup;
-			children = (
-				2BEB75831D3F66E000672260 /* ULKLayoutBridge.h */,
-				2BEB75841D3F66E000672260 /* ULKLayoutBridge.m */,
-			);
-			path = LayoutBridge;
-			sourceTree = "<group>";
-		};
-		2BEB75851D3F66E000672260 /* LinearLayout */ = {
-			isa = PBXGroup;
-			children = (
-				2BEB75861D3F66E000672260 /* ULKLinearLayout.h */,
-				2BEB75871D3F66E000672260 /* ULKLinearLayout.m */,
-				2BEB75881D3F66E000672260 /* ULKLinearLayoutParams.h */,
-				2BEB75891D3F66E000672260 /* ULKLinearLayoutParams.m */,
-			);
-			path = LinearLayout;
-			sourceTree = "<group>";
-		};
-		2BEB758A1D3F66E000672260 /* RelativeLayout */ = {
-			isa = PBXGroup;
-			children = (
-				2BEB758B1D3F66E000672260 /* ULKDependencyGraph.h */,
-				2BEB758C1D3F66E000672260 /* ULKDependencyGraph.m */,
-				2BEB758D1D3F66E000672260 /* ULKDependencyGraphNode.h */,
-				2BEB758E1D3F66E000672260 /* ULKDependencyGraphNode.m */,
-				2BEB758F1D3F66E000672260 /* ULKRelativeLayout.h */,
-				2BEB75901D3F66E000672260 /* ULKRelativeLayout.m */,
-				2BEB75911D3F66E000672260 /* ULKRelativeLayoutParams.h */,
-				2BEB75921D3F66E000672260 /* ULKRelativeLayoutParams.m */,
-			);
-			path = RelativeLayout;
-			sourceTree = "<group>";
-		};
-		2BEB75931D3F66E000672260 /* UIScrollView */ = {
-			isa = PBXGroup;
-			children = (
-				2BEB75941D3F66E000672260 /* UIScrollView+ULK_ViewGroup.h */,
-				2BEB75951D3F66E000672260 /* UIScrollView+ULK_ViewGroup.m */,
-			);
-			path = UIScrollView;
-			sourceTree = "<group>";
-		};
-		2BEB759D1D3F66E000672260 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				2BEB759E1D3F66E000672260 /* Drawable */,
-				2BEB75BD1D3F66E000672260 /* NSDictionary+ULK_ResourceManager.h */,
-				2BEB75BE1D3F66E000672260 /* NSDictionary+ULK_ResourceManager.m */,
-				2BEB75BF1D3F66E000672260 /* StateList */,
-				2BEB75D01D3F66E000672260 /* ULKResourceManager+Core.h */,
-				2BEB75D11D3F66E000672260 /* ULKResourceManager+Drawable.h */,
-				2BEB75D21D3F66E000672260 /* ULKResourceManager+Drawable.m */,
-				2BEB75D31D3F66E000672260 /* ULKResourceManager+String.h */,
-				2BEB75D41D3F66E000672260 /* ULKResourceManager+String.m */,
-				2BEB75D51D3F66E000672260 /* ULKResourceManager+ULK_Internal.h */,
-				2BEB75D61D3F66E000672260 /* ULKResourceManager+ULKIDL_Internal.m */,
-				2BEB75D71D3F66E000672260 /* ULKResourceManager.h */,
-				2BEB75D81D3F66E000672260 /* ULKResourceManager.m */,
-				2BEB75D91D3F66E000672260 /* ULKXMLCache.h */,
-				2BEB75DA1D3F66E000672260 /* ULKXMLCache.m */,
-				2BEB75DB1D3F66E000672260 /* Values */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		2BEB759E1D3F66E000672260 /* Drawable */ = {
-			isa = PBXGroup;
-			children = (
-				2BEB759F1D3F66E000672260 /* UIView+ULKDrawable.h */,
-				2BEB75A01D3F66E000672260 /* UIView+ULKDrawable.m */,
-				2BEB75A11D3F66E000672260 /* ULKBitmapDrawable.h */,
-				2BEB75A21D3F66E000672260 /* ULKBitmapDrawable.m */,
-				2BEB75A31D3F66E000672260 /* ULKClipDrawable.h */,
-				2BEB75A41D3F66E000672260 /* ULKClipDrawable.m */,
-				2BEB75A51D3F66E000672260 /* ULKColorDrawable.h */,
-				2BEB75A61D3F66E000672260 /* ULKColorDrawable.m */,
-				2BEB75A71D3F66E000672260 /* ULKDrawable+ULK_Internal.h */,
-				2BEB75A81D3F66E000672260 /* ULKDrawable.h */,
-				2BEB75A91D3F66E000672260 /* ULKDrawable.m */,
-				2BEB75AA1D3F66E000672260 /* ULKDrawableContainer+ULK_Internal.h */,
-				2BEB75AB1D3F66E000672260 /* ULKDrawableContainer.h */,
-				2BEB75AC1D3F66E000672260 /* ULKDrawableContainer.m */,
-				2BEB75AD1D3F66E000672260 /* ULKDrawableLayer.h */,
-				2BEB75AE1D3F66E000672260 /* ULKDrawableLayer.m */,
-				2BEB75AF1D3F66E000672260 /* ULKGradientDrawable.h */,
-				2BEB75B01D3F66E000672260 /* ULKGradientDrawable.m */,
-				2BEB75B11D3F66E000672260 /* ULKInsetDrawable.h */,
-				2BEB75B21D3F66E000672260 /* ULKInsetDrawable.m */,
-				2BEB75B31D3F66E000672260 /* ULKLayerDrawable.h */,
-				2BEB75B41D3F66E000672260 /* ULKLayerDrawable.m */,
-				2BEB75B51D3F66E000672260 /* ULKNinePatchDrawable.h */,
-				2BEB75B61D3F66E000672260 /* ULKNinePatchDrawable.m */,
-				2BEB75B71D3F66E000672260 /* ULKRotateDrawable.h */,
-				2BEB75B81D3F66E000672260 /* ULKRotateDrawable.m */,
-				2BEB75B91D3F66E000672260 /* ULKShadowDrawable.h */,
-				2BEB75BA1D3F66E000672260 /* ULKShadowDrawable.m */,
-				2BEB75BB1D3F66E000672260 /* ULKStateListDrawable.h */,
-				2BEB75BC1D3F66E000672260 /* ULKStateListDrawable.m */,
-			);
-			path = Drawable;
-			sourceTree = "<group>";
-		};
-		2BEB75BF1D3F66E000672260 /* StateList */ = {
-			isa = PBXGroup;
-			children = (
-				2BEB75C01D3F66E000672260 /* ULKColorStateItem+ULK_Internal.h */,
-				2BEB75C11D3F66E000672260 /* ULKColorStateItem.h */,
-				2BEB75C21D3F66E000672260 /* ULKColorStateItem.m */,
-				2BEB75C31D3F66E000672260 /* ULKColorStateList.h */,
-				2BEB75C41D3F66E000672260 /* ULKColorStateList.m */,
-				2BEB75C51D3F66E000672260 /* ULKDrawableStateItem+ULK_Internal.h */,
-				2BEB75C61D3F66E000672260 /* ULKDrawableStateItem.h */,
-				2BEB75C71D3F66E000672260 /* ULKDrawableStateItem.m */,
-				2BEB75C81D3F66E000672260 /* ULKDrawableStateList.h */,
-				2BEB75C91D3F66E000672260 /* ULKDrawableStateList.m */,
-				2BEB75CA1D3F66E000672260 /* ULKResourceStateItem+ULK_Internal.h */,
-				2BEB75CB1D3F66E000672260 /* ULKResourceStateItem.h */,
-				2BEB75CC1D3F66E000672260 /* ULKResourceStateItem.m */,
-				2BEB75CD1D3F66E000672260 /* ULKResourceStateList+ULK_Internal.h */,
-				2BEB75CE1D3F66E000672260 /* ULKResourceStateList.h */,
-				2BEB75CF1D3F66E000672260 /* ULKResourceStateList.m */,
-			);
-			path = StateList;
-			sourceTree = "<group>";
-		};
-		2BEB75DB1D3F66E000672260 /* Values */ = {
-			isa = PBXGroup;
-			children = (
-				2BEB75DC1D3F66E000672260 /* ULKResourceValueSet.h */,
-				2BEB75DD1D3F66E000672260 /* ULKResourceValueSet.m */,
-				2BEB75DE1D3F66E000672260 /* ULKStringArray.h */,
-				2BEB75DF1D3F66E000672260 /* ULKStringArray.m */,
-				2BEB75E01D3F66E000672260 /* ULKStyle+ULK_Internal.h */,
-				2BEB75E11D3F66E000672260 /* ULKStyle.h */,
-				2BEB75E21D3F66E000672260 /* ULKStyle.m */,
-			);
-			path = Values;
-			sourceTree = "<group>";
-		};
-		2BEB75E41D3F66E000672260 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				2BEB75E51D3F66E000672260 /* NSObject+ULK_KVOObserver.h */,
-				2BEB75E61D3F66E000672260 /* NSObject+ULK_KVOObserver.m */,
-				2BEB75E71D3F66E000672260 /* TBXML */,
-				2BEB75EA1D3F66E000672260 /* TBXML+ULK.h */,
-				2BEB75EB1D3F66E000672260 /* TBXML+ULK.m */,
-				2BEB75EC1D3F66E000672260 /* UIColor+ULK_ColorParser.h */,
-				2BEB75ED1D3F66E000672260 /* UIColor+ULK_ColorParser.m */,
-				2BEB75EE1D3F66E000672260 /* UIImage+ULK_FromColor.h */,
-				2BEB75EF1D3F66E000672260 /* UIImage+ULK_FromColor.m */,
-				2BEB75F01D3F66E000672260 /* UIImage+ULKNinePatch.h */,
-				2BEB75F11D3F66E000672260 /* UIImage+ULKNinePatch.m */,
-				2BEB75F21D3F66E000672260 /* ULKFinitePool.h */,
-				2BEB75F31D3F66E000672260 /* ULKFinitePool.m */,
-				2BEB75F41D3F66E000672260 /* ULKPool.h */,
-				2BEB75F51D3F66E000672260 /* ULKPoolable.h */,
-				2BEB75F61D3F66E000672260 /* ULKPoolableManager.h */,
-				2BEB75F71D3F66E000672260 /* ULKPools.h */,
-				2BEB75F81D3F66E000672260 /* ULKPools.m */,
-				2BEB75F91D3F66E000672260 /* ULKSynchronizedPool.h */,
-				2BEB75FA1D3F66E000672260 /* ULKSynchronizedPool.m */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		2BEB75E71D3F66E000672260 /* TBXML */ = {
-			isa = PBXGroup;
-			children = (
-				2BEB75E81D3F66E000672260 /* TBXML.h */,
-				2BEB75E91D3F66E000672260 /* TBXML.m */,
-			);
-			path = TBXML;
-			sourceTree = "<group>";
-		};
-		2BEB75FB1D3F66E000672260 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				2BEB75FC1D3F66E000672260 /* Inflater */,
-				2BEB76021D3F66E000672260 /* UIView+ULK_Layout.h */,
-				2BEB76031D3F66E000672260 /* UIView+ULK_Layout.m */,
-				2BEB76041D3F66E000672260 /* ULKCollectionViewCell.h */,
-				2BEB76051D3F66E000672260 /* ULKCollectionViewCell.m */,
-				2BEB76061D3F66E000672260 /* ULKGravity.h */,
-				2BEB76071D3F66E000672260 /* ULKGravity.m */,
-				2BEB76081D3F66E000672260 /* ULKTableViewCell.h */,
-				2BEB76091D3F66E000672260 /* ULKTableViewCell.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		2BEB75FC1D3F66E000672260 /* Inflater */ = {
-			isa = PBXGroup;
-			children = (
-				2BEB75FD1D3F66E000672260 /* ULKBaseViewFactory.h */,
-				2BEB75FE1D3F66E000672260 /* ULKBaseViewFactory.m */,
-				2BEB75FF1D3F66E000672260 /* ULKLayoutInflater.h */,
-				2BEB76001D3F66E000672260 /* ULKLayoutInflater.m */,
-				2BEB76011D3F66E000672260 /* ULKViewFactory.h */,
-			);
-			path = Inflater;
-			sourceTree = "<group>";
-		};
-		2BEB760A1D3F66E000672260 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				2BEB760B1D3F66E000672260 /* ULKLayoutViewController.h */,
-				2BEB760C1D3F66E000672260 /* ULKLayoutViewController.m */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		2BEB760D1D3F66E000672260 /* Widgets */ = {
-			isa = PBXGroup;
-			children = (
-				2BEB760E1D3F66E000672260 /* Categories */,
-				2BEB76231D3F66E000672260 /* ULKButton.h */,
-				2BEB76241D3F66E000672260 /* ULKButton.m */,
-				2BEB76251D3F66E000672260 /* ULKEditText.h */,
-				2BEB76261D3F66E000672260 /* ULKEditText.m */,
-				2BEB76271D3F66E000672260 /* ULKTextArea.h */,
-				2BEB76281D3F66E000672260 /* ULKTextArea.m */,
-				2BEB76291D3F66E000672260 /* ULKTextView.h */,
-				2BEB762A1D3F66E000672260 /* ULKTextView.m */,
-			);
-			path = Widgets;
-			sourceTree = "<group>";
-		};
-		2BEB760E1D3F66E000672260 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				2BEB760F1D3F66E000672260 /* UIButton+ULK_View.h */,
-				2BEB76101D3F66E000672260 /* UIButton+ULK_View.m */,
-				2BEB76111D3F66E000672260 /* UIControl+ULK_View.h */,
-				2BEB76121D3F66E000672260 /* UIControl+ULK_View.m */,
-				2BEB76131D3F66E000672260 /* UIImageView+ULK_View.h */,
-				2BEB76141D3F66E000672260 /* UIImageView+ULK_View.m */,
-				2BEB76151D3F66E000672260 /* UILabel+ULK_View.h */,
-				2BEB76161D3F66E000672260 /* UILabel+ULK_View.m */,
-				2BEB76171D3F66E000672260 /* UINavigationBar+ULK_View.h */,
-				2BEB76181D3F66E000672260 /* UINavigationBar+ULK_View.m */,
-				2BEB76191D3F66E000672260 /* UISearchBar+ULK_View.h */,
-				2BEB761A1D3F66E000672260 /* UISearchBar+ULK_View.m */,
-				2BEB761B1D3F66E000672260 /* UISwitch+ULK_View.h */,
-				2BEB761C1D3F66E000672260 /* UISwitch+ULK_View.m */,
-				2BEB761D1D3F66E000672260 /* UITextView+ULK_View.h */,
-				2BEB761E1D3F66E000672260 /* UITextView+ULK_View.m */,
-				2BEB761F1D3F66E000672260 /* UIToolbar+ULK_View.h */,
-				2BEB76201D3F66E000672260 /* UIToolbar+ULK_View.m */,
-				2BEB76211D3F66E000672260 /* UIWebView+ULK_View.h */,
-				2BEB76221D3F66E000672260 /* UIWebView+ULK_View.m */,
-			);
-			path = Categories;
 			sourceTree = "<group>";
 		};
 		2BEB76731D3F66E800672260 /* UILayoutKitExample */ = {
@@ -861,12 +1031,15 @@
 				2BEB75741D3F666300672260 /* LaunchScreen.storyboard in Resources */,
 				2BEB76AE1D3F66E800672260 /* background1.xml in Resources */,
 				2BEB76B11D3F66E800672260 /* button_normal.9@2x.png in Resources */,
+				2B5DEBA21D3F963F00E13C76 /* LICENSE in Resources */,
 				2BEB76B51D3F66E800672260 /* formular.xml in Resources */,
 				2BEB76B41D3F66E800672260 /* collectionViewCell.xml in Resources */,
 				2BEB76AC1D3F66E800672260 /* button_color.xml in Resources */,
 				2BEB76B91D3F66E800672260 /* includeContainer.xml in Resources */,
 				2BEB76B31D3F66E800672260 /* animations.xml in Resources */,
 				2BEB76BD1D3F66E800672260 /* values.xml in Resources */,
+				2B5DEBA11D3F963F00E13C76 /* layout_example.png in Resources */,
+				2B5DEB9F1D3F963F00E13C76 /* drawable_button_normal.png in Resources */,
 				2BEB76AF1D3F66E800672260 /* button_background.xml in Resources */,
 				2BEB76A31D3F66E800672260 /* InfoPlist.strings in Resources */,
 				2BEB76AD1D3F66E800672260 /* android.jpg in Resources */,
@@ -876,12 +1049,14 @@
 				2BEB76A81D3F66E800672260 /* Images.xcassets in Resources */,
 				2BEB76BE1D3F66E800672260 /* LayoutFromIB.xib in Resources */,
 				2BEB76B01D3F66E800672260 /* button_disabled.9@2x.png in Resources */,
+				2B5DEBA01D3F963F00E13C76 /* drawable_button_pressed.png in Resources */,
 				2BEB75711D3F666300672260 /* Assets.xcassets in Resources */,
 				2BEB76BC1D3F66E800672260 /* scrollviews.xml in Resources */,
 				2BEB76B71D3F66E800672260 /* includeChild1.xml in Resources */,
 				2BEB76BA1D3F66E800672260 /* layoutFromIB.xml in Resources */,
 				2BEB756F1D3F666300672260 /* Main.storyboard in Resources */,
 				2BEB76B21D3F66E800672260 /* button_pressed.9@2x.png in Resources */,
+				2B5DEBEC1D3F964000E13C76 /* UILayoutKit.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -940,89 +1115,90 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BEB76411D3F66E000672260 /* ULKLayerDrawable.m in Sources */,
-				2BEB76361D3F66E000672260 /* ULKLayoutParams.m in Sources */,
+				2B5DEBAB1D3F963F00E13C76 /* ULKRelativeLayout.m in Sources */,
+				2B5DEBAE1D3F963F00E13C76 /* UIView+ULK_ViewGroup.m in Sources */,
+				2B5DEBBA1D3F963F00E13C76 /* ULKLayerDrawable.m in Sources */,
 				2BEB76A21D3F66E800672260 /* CollectionViewItem.m in Sources */,
-				2BEB762B1D3F66E000672260 /* ULKFrameLayout.m in Sources */,
-				2BEB76461D3F66E000672260 /* NSDictionary+ULK_ResourceManager.m in Sources */,
-				2BEB76481D3F66E000672260 /* ULKColorStateList.m in Sources */,
-				2BEB763B1D3F66E000672260 /* ULKColorDrawable.m in Sources */,
-				2BEB76501D3F66E000672260 /* ULKResourceManager.m in Sources */,
-				2BEB76681D3F66E000672260 /* UILabel+ULK_View.m in Sources */,
-				2BEB765A1D3F66E000672260 /* UIImage+ULKNinePatch.m in Sources */,
-				2BEB76441D3F66E000672260 /* ULKShadowDrawable.m in Sources */,
-				2BEB76541D3F66E000672260 /* ULKStyle.m in Sources */,
+				2B5DEBC51D3F963F00E13C76 /* ULKResourceStateList.m in Sources */,
+				2B5DEBDD1D3F963F00E13C76 /* ULKLayoutViewController.m in Sources */,
+				2B5DEBC11D3F963F00E13C76 /* ULKColorStateList.m in Sources */,
+				2B5DEBA71D3F963F00E13C76 /* ULKLinearLayout.m in Sources */,
+				2B5DEBE01D3F964000E13C76 /* UIImageView+ULK_View.m in Sources */,
+				2B5DEBE91D3F964000E13C76 /* ULKEditText.m in Sources */,
+				2B5DEBD31D3F963F00E13C76 /* UIImage+ULKNinePatch.m in Sources */,
+				2B5DEBC41D3F963F00E13C76 /* ULKResourceStateItem.m in Sources */,
+				2B5DEBE51D3F964000E13C76 /* UITextView+ULK_View.m in Sources */,
+				2B5DEBD81D3F963F00E13C76 /* ULKLayoutInflater.m in Sources */,
+				2B5DEBD71D3F963F00E13C76 /* ULKBaseViewFactory.m in Sources */,
+				2B5DEBDA1D3F963F00E13C76 /* ULKCollectionViewCell.m in Sources */,
+				2B5DEBC91D3F963F00E13C76 /* ULKResourceManager.m in Sources */,
+				2B5DEBEA1D3F964000E13C76 /* ULKTextArea.m in Sources */,
 				2BEB76A51D3F66E800672260 /* FormularViewController.m in Sources */,
-				2BEB764C1D3F66E000672260 /* ULKResourceStateList.m in Sources */,
-				2BEB763A1D3F66E000672260 /* ULKClipDrawable.m in Sources */,
+				2B5DEBB61D3F963F00E13C76 /* ULKDrawableContainer.m in Sources */,
 				2BEB756C1D3F666300672260 /* ViewController.m in Sources */,
+				2B5DEBB31D3F963F00E13C76 /* ULKClipDrawable.m in Sources */,
+				2B5DEBE21D3F964000E13C76 /* UINavigationBar+ULK_View.m in Sources */,
+				2B5DEBBF1D3F963F00E13C76 /* NSDictionary+ULK_ResourceManager.m in Sources */,
+				2B5DEBB41D3F963F00E13C76 /* ULKColorDrawable.m in Sources */,
+				2B5DEBE71D3F964000E13C76 /* UIWebView+ULK_View.m in Sources */,
+				2B5DEBDC1D3F963F00E13C76 /* ULKTableViewCell.m in Sources */,
+				2B5DEBE81D3F964000E13C76 /* ULKButton.m in Sources */,
+				2B5DEBEB1D3F964000E13C76 /* ULKTextView.m in Sources */,
+				2B5DEBAA1D3F963F00E13C76 /* ULKDependencyGraphNode.m in Sources */,
+				2B5DEBBC1D3F963F00E13C76 /* ULKRotateDrawable.m in Sources */,
 				2BEB76A61D3F66E800672260 /* IDLAppDelegate.m in Sources */,
-				2BEB764F1D3F66E000672260 /* ULKResourceManager+ULKIDL_Internal.m in Sources */,
-				2BEB76351D3F66E000672260 /* UIView+ULK_ViewGroup.m in Sources */,
-				2BEB76641D3F66E000672260 /* ULKLayoutViewController.m in Sources */,
+				2B5DEBAD1D3F963F00E13C76 /* UIScrollView+ULK_ViewGroup.m in Sources */,
+				2B5DEBD51D3F963F00E13C76 /* ULKPools.m in Sources */,
+				2B5DEBC81D3F963F00E13C76 /* ULKResourceManager+ULKIDL_Internal.m in Sources */,
+				2B5DEBBE1D3F963F00E13C76 /* ULKStateListDrawable.m in Sources */,
+				2B5DEBCB1D3F963F00E13C76 /* ULKResourceValueSet.m in Sources */,
+				2B5DEBD61D3F963F00E13C76 /* ULKSynchronizedPool.m in Sources */,
+				2B5DEBD91D3F963F00E13C76 /* UIView+ULK_Layout.m in Sources */,
+				2B5DEBD41D3F963F00E13C76 /* ULKFinitePool.m in Sources */,
+				2B5DEBB11D3F963F00E13C76 /* UIView+ULKDrawable.m in Sources */,
+				2B5DEBE31D3F964000E13C76 /* UISearchBar+ULK_View.m in Sources */,
+				2B5DEBC21D3F963F00E13C76 /* ULKDrawableStateItem.m in Sources */,
 				2BEB76AB1D3F66E800672260 /* MainViewController.m in Sources */,
-				2BEB766D1D3F66E000672260 /* UIToolbar+ULK_View.m in Sources */,
-				2BEB76471D3F66E000672260 /* ULKColorStateItem.m in Sources */,
-				2BEB76561D3F66E000672260 /* TBXML.m in Sources */,
-				2BEB764A1D3F66E000672260 /* ULKDrawableStateList.m in Sources */,
-				2BEB76621D3F66E000672260 /* ULKGravity.m in Sources */,
-				2BEB76381D3F66E000672260 /* UIView+ULKDrawable.m in Sources */,
-				2BEB763E1D3F66E000672260 /* ULKDrawableLayer.m in Sources */,
-				2BEB76521D3F66E000672260 /* ULKResourceValueSet.m in Sources */,
-				2BEB765F1D3F66E000672260 /* ULKLayoutInflater.m in Sources */,
-				2BEB76401D3F66E000672260 /* ULKInsetDrawable.m in Sources */,
-				2BEB76611D3F66E000672260 /* ULKCollectionViewCell.m in Sources */,
-				2BEB762C1D3F66E000672260 /* ULKFrameLayoutParams.m in Sources */,
-				2BEB765B1D3F66E000672260 /* ULKFinitePool.m in Sources */,
-				2BEB765D1D3F66E000672260 /* ULKSynchronizedPool.m in Sources */,
-				2BEB762F1D3F66E000672260 /* ULKLinearLayoutParams.m in Sources */,
-				2BEB76671D3F66E000672260 /* UIImageView+ULK_View.m in Sources */,
-				2BEB765C1D3F66E000672260 /* ULKPools.m in Sources */,
-				2BEB764E1D3F66E000672260 /* ULKResourceManager+String.m in Sources */,
-				2BEB76391D3F66E000672260 /* ULKBitmapDrawable.m in Sources */,
-				2BEB76601D3F66E000672260 /* UIView+ULK_Layout.m in Sources */,
-				2BEB76311D3F66E000672260 /* ULKDependencyGraphNode.m in Sources */,
-				2BEB76691D3F66E000672260 /* UINavigationBar+ULK_View.m in Sources */,
+				2B5DEBDB1D3F963F00E13C76 /* ULKGravity.m in Sources */,
+				2B5DEBB81D3F963F00E13C76 /* ULKGradientDrawable.m in Sources */,
+				2B5DEBA81D3F963F00E13C76 /* ULKLinearLayoutParams.m in Sources */,
+				2B5DEBA61D3F963F00E13C76 /* ULKLayoutBridge.m in Sources */,
+				2B5DEBDF1D3F963F00E13C76 /* UIControl+ULK_View.m in Sources */,
+				2B5DEBE41D3F964000E13C76 /* UISwitch+ULK_View.m in Sources */,
+				2B5DEBCC1D3F963F00E13C76 /* ULKStringArray.m in Sources */,
+				2B5DEBD11D3F963F00E13C76 /* UIColor+ULK_ColorParser.m in Sources */,
 				2BEB76A91D3F66E800672260 /* LayoutAnimationsViewController.m in Sources */,
-				2BEB76321D3F66E000672260 /* ULKRelativeLayout.m in Sources */,
+				2B5DEBD01D3F963F00E13C76 /* TBXML+ULK.m in Sources */,
+				2B5DEBA51D3F963F00E13C76 /* ULKFrameLayoutParams.m in Sources */,
+				2B5DEBA31D3F963F00E13C76 /* README.md in Sources */,
+				2B5DEBC01D3F963F00E13C76 /* ULKColorStateItem.m in Sources */,
 				2BEB76A41D3F66E800672260 /* ExampleCollectionViewCell.m in Sources */,
-				2BEB76531D3F66E000672260 /* ULKStringArray.m in Sources */,
-				2BEB76431D3F66E000672260 /* ULKRotateDrawable.m in Sources */,
-				2BEB763D1D3F66E000672260 /* ULKDrawableContainer.m in Sources */,
-				2BEB76661D3F66E000672260 /* UIControl+ULK_View.m in Sources */,
-				2BEB76331D3F66E000672260 /* ULKRelativeLayoutParams.m in Sources */,
 				2BEB75691D3F666300672260 /* AppDelegate.m in Sources */,
-				2BEB76631D3F66E000672260 /* ULKTableViewCell.m in Sources */,
-				2BEB763C1D3F66E000672260 /* ULKDrawable.m in Sources */,
-				2BEB766A1D3F66E000672260 /* UISearchBar+ULK_View.m in Sources */,
-				2BEB76511D3F66E000672260 /* ULKXMLCache.m in Sources */,
-				2BEB76591D3F66E000672260 /* UIImage+ULK_FromColor.m in Sources */,
+				2B5DEBB51D3F963F00E13C76 /* ULKDrawable.m in Sources */,
 				2BEB76AA1D3F66E800672260 /* main.m in Sources */,
-				2BEB76551D3F66E000672260 /* NSObject+ULK_KVOObserver.m in Sources */,
-				2BEB76581D3F66E000672260 /* UIColor+ULK_ColorParser.m in Sources */,
+				2B5DEBE11D3F964000E13C76 /* UILabel+ULK_View.m in Sources */,
+				2B5DEBB01D3F963F00E13C76 /* ULKViewGroup.m in Sources */,
+				2B5DEBE61D3F964000E13C76 /* UIToolbar+ULK_View.m in Sources */,
+				2B5DEBB71D3F963F00E13C76 /* ULKDrawableLayer.m in Sources */,
+				2B5DEBBD1D3F963F00E13C76 /* ULKShadowDrawable.m in Sources */,
+				2B5DEBB91D3F963F00E13C76 /* ULKInsetDrawable.m in Sources */,
+				2B5DEBCF1D3F963F00E13C76 /* TBXML.m in Sources */,
+				2B5DEBCE1D3F963F00E13C76 /* NSObject+ULK_KVOObserver.m in Sources */,
+				2B5DEBAF1D3F963F00E13C76 /* ULKLayoutParams.m in Sources */,
 				2BEB75661D3F666300672260 /* main.m in Sources */,
+				2B5DEBC71D3F963F00E13C76 /* ULKResourceManager+String.m in Sources */,
+				2B5DEBD21D3F963F00E13C76 /* UIImage+ULK_FromColor.m in Sources */,
+				2B5DEBDE1D3F963F00E13C76 /* UIButton+ULK_View.m in Sources */,
+				2B5DEBCD1D3F963F00E13C76 /* ULKStyle.m in Sources */,
+				2B5DEBA41D3F963F00E13C76 /* ULKFrameLayout.m in Sources */,
+				2B5DEBAC1D3F963F00E13C76 /* ULKRelativeLayoutParams.m in Sources */,
+				2B5DEBA91D3F963F00E13C76 /* ULKDependencyGraph.m in Sources */,
+				2B5DEBC31D3F963F00E13C76 /* ULKDrawableStateList.m in Sources */,
+				2B5DEBBB1D3F963F00E13C76 /* ULKNinePatchDrawable.m in Sources */,
+				2B5DEBB21D3F963F00E13C76 /* ULKBitmapDrawable.m in Sources */,
+				2B5DEBC61D3F963F00E13C76 /* ULKResourceManager+Drawable.m in Sources */,
 				2BEB76A11D3F66E800672260 /* CollectionViewExampleViewController.m in Sources */,
-				2BEB766C1D3F66E000672260 /* UITextView+ULK_View.m in Sources */,
-				2BEB76571D3F66E000672260 /* TBXML+ULK.m in Sources */,
-				2BEB76651D3F66E000672260 /* UIButton+ULK_View.m in Sources */,
-				2BEB766B1D3F66E000672260 /* UISwitch+ULK_View.m in Sources */,
-				2BEB762E1D3F66E000672260 /* ULKLinearLayout.m in Sources */,
-				2BEB76301D3F66E000672260 /* ULKDependencyGraph.m in Sources */,
-				2BEB76711D3F66E000672260 /* ULKTextArea.m in Sources */,
-				2BEB763F1D3F66E000672260 /* ULKGradientDrawable.m in Sources */,
-				2BEB76371D3F66E000672260 /* ULKViewGroup.m in Sources */,
-				2BEB76491D3F66E000672260 /* ULKDrawableStateItem.m in Sources */,
-				2BEB765E1D3F66E000672260 /* ULKBaseViewFactory.m in Sources */,
-				2BEB764D1D3F66E000672260 /* ULKResourceManager+Drawable.m in Sources */,
-				2BEB76451D3F66E000672260 /* ULKStateListDrawable.m in Sources */,
-				2BEB76421D3F66E000672260 /* ULKNinePatchDrawable.m in Sources */,
-				2BEB764B1D3F66E000672260 /* ULKResourceStateItem.m in Sources */,
-				2BEB766E1D3F66E000672260 /* UIWebView+ULK_View.m in Sources */,
-				2BEB76721D3F66E000672260 /* ULKTextView.m in Sources */,
-				2BEB76341D3F66E000672260 /* UIScrollView+ULK_ViewGroup.m in Sources */,
-				2BEB76701D3F66E000672260 /* ULKEditText.m in Sources */,
-				2BEB766F1D3F66E000672260 /* ULKButton.m in Sources */,
-				2BEB762D1D3F66E000672260 /* ULKLayoutBridge.m in Sources */,
+				2B5DEBCA1D3F963F00E13C76 /* ULKXMLCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
