@@ -4,12 +4,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "IDLCollectionViewCell.h"
+#import "ULKCollectionViewCell.h"
 
 @class CollectionViewItem;
 
 
-@interface ExampleCollectionViewCell : IDLCollectionViewCell
+@interface ExampleCollectionViewCell : ULKCollectionViewCell
 
 - (void)setItem:(CollectionViewItem *)item;
 

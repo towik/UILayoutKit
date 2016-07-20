@@ -1,5 +1,5 @@
 //
-//  IDLAppDelegate.h
+//  ULKAppDelegate.h
 //  iDroidLayout
 //
 //  Created by Tom Quist on 22.07.12.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IDLAppDelegate : UIResponder <UIApplicationDelegate>
+@interface ULKAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

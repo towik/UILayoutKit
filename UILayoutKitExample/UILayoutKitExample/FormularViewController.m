@@ -8,7 +8,7 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import "FormularViewController.h"
-#import "iDroidLayout.h"
+#import "UILayoutKit.h"
 
 @implementation FormularViewController
 
@@ -18,11 +18,11 @@
 }
 
 - (void)didPressSubmitButton {
-    UIButton *submitButton = (UIButton *)[self.view findViewById:@"submitButton"];
+    UIButton *submitButton = (UIButton *)[self.view ulk_findViewById:@"submitButton"];
     submitButton.selected = TRUE;
-    UILabel *username = (UILabel *)[self.view findViewById:@"username"];
-    UILabel *password = (UILabel *)[self.view findViewById:@"password"];
-    UITextView *freeText = (UITextView *)[self.view findViewById:@"freeText"];
+    UILabel *username = (UILabel *)[self.view ulk_findViewById:@"username"];
+    UILabel *password = (UILabel *)[self.view ulk_findViewById:@"password"];
+    UITextView *freeText = (UITextView *)[self.view ulk_findViewById:@"freeText"];
     [username resignFirstResponder];
     [password resignFirstResponder];
     [freeText resignFirstResponder];
@@ -32,22 +32,22 @@
 }
 
 - (void)didPressToggleButton {
-    UIView *androidView = [self.view findViewById:@"android"];
-    if (androidView.visibility == IDLViewVisibilityVisible) {
-        IDLLinearLayoutLayoutParams *lp = (IDLLinearLayoutLayoutParams *)androidView.layoutParams;
-        if (lp.gravity == IDLViewContentGravityLeft) {
-            lp.gravity = IDLViewContentGravityCenterHorizontal;
-        } else if (lp.gravity == IDLViewContentGravityCenterHorizontal) {
-            lp.gravity = IDLViewContentGravityRight;
+    UIView *androidView = [self.view ulk_findViewById:@"android"];
+    if (androidView.ulk_visibility == ULKViewVisibilityVisible) {
+        ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *)androidView.layoutParams;
+        if (lp.gravity == ULKViewContentGravityLeft) {
+            lp.gravity = ULKViewContentGravityCenterHorizontal;
+        } else if (lp.gravity == ULKViewContentGravityCenterHorizontal) {
+            lp.gravity = ULKViewContentGravityRight;
         } else {
-            lp.gravity = IDLViewContentGravityLeft;
-            androidView.visibility = IDLViewVisibilityInvisible;
+            lp.gravity = ULKViewContentGravityLeft;
+            androidView.ulk_visibility = ULKViewVisibilityInvisible;
         }
         androidView.layoutParams = lp;
-    } else if (androidView.visibility == IDLViewVisibilityInvisible) {
-        androidView.visibility = IDLViewVisibilityGone;
+    } else if (androidView.ulk_visibility == ULKViewVisibilityInvisible) {
+        androidView.ulk_visibility = ULKViewVisibilityGone;
     } else {
-        androidView.visibility = IDLViewVisibilityVisible;
+        androidView.ulk_visibility = ULKViewVisibilityVisible;
     }
     [UIView animateWithDuration:0.5 animations:^{
         [self.view layoutIfNeeded];
@@ -56,30 +56,30 @@
 }
 
 - (void)updateAndroidStatus {
-    UILabel *label = (UILabel *)[self.view findViewById:@"androidStatus"];
-    UIView *androidView = [self.view findViewById:@"android"];
-    NSString *visibility;
-    switch (androidView.visibility) {
-        case IDLViewVisibilityVisible:
-            visibility = @"visible";
+    UILabel *label = (UILabel *)[self.view ulk_findViewById:@"androidStatus"];
+    UIView *androidView = [self.view ulk_findViewById:@"android"];
+    NSString *ulk_visibility;
+    switch (androidView.ulk_visibility) {
+        case ULKViewVisibilityVisible:
+            ulk_visibility = @"visible";
             break;
-        case IDLViewVisibilityInvisible:
-            visibility = @"invisible";
+        case ULKViewVisibilityInvisible:
+            ulk_visibility = @"invisible";
             break;
-        case IDLViewVisibilityGone:
-            visibility = @"gone";
+        case ULKViewVisibilityGone:
+            ulk_visibility = @"gone";
             break;
     }
     NSString *gravity = @"";
-    IDLLinearLayoutLayoutParams *lp = (IDLLinearLayoutLayoutParams *)androidView.layoutParams;
+    ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *)androidView.layoutParams;
     switch (lp.gravity) {
-        case IDLViewContentGravityLeft:
+        case ULKViewContentGravityLeft:
             gravity = @"left";
             break;
-        case IDLViewContentGravityCenterHorizontal:
+        case ULKViewContentGravityCenterHorizontal:
             gravity = @"center_horizontal";
             break;
-        case IDLViewContentGravityRight:
+        case ULKViewContentGravityRight:
             gravity = @"right";
             break;
         default:
@@ -87,7 +87,7 @@
             break;
     }
     
-    label.text = [NSString stringWithFormat:@"andrdoid[visibility=%@,layout_gravity=%@]", visibility, gravity];
+    label.text = [NSString stringWithFormat:@"andrdoid[ulk_visibility=%@,layout_gravity=%@]", ulk_visibility, gravity];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {

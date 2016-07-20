@@ -5,7 +5,7 @@
 
 #import "ExampleCollectionViewCell.h"
 #import "CollectionViewItem.h"
-#import "IDLLayoutBridge.h"
+#import "ULKLayoutBridge.h"
 
 
 @implementation ExampleCollectionViewCell {
@@ -17,9 +17,9 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithLayoutResource:@"collectionViewCell.xml"];
     if (self) {
-        _titleLabel = (UILabel *)[self.layoutBridge findViewById:@"title"];
-        _subtitleLabel = (UILabel *)[self.layoutBridge findViewById:@"subtitle"];
-        _descriptionLabel = (UILabel *)[self.layoutBridge findViewById:@"description"];
+        _titleLabel = (UILabel *)[self.layoutBridge ulk_findViewById:@"title"];
+        _subtitleLabel = (UILabel *)[self.layoutBridge ulk_findViewById:@"subtitle"];
+        _descriptionLabel = (UILabel *)[self.layoutBridge ulk_findViewById:@"description"];
     }
     return self;
 }

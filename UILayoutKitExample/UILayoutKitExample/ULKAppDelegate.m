@@ -1,15 +1,15 @@
 //
-//  IDLAppDelegate.m
+//  ULKAppDelegate.m
 //  iDroidLayout
 //
 //  Created by Tom Quist on 22.07.12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "IDLAppDelegate.h"
+#import "ULKAppDelegate.h"
 #import "MainViewController.h"
 
-@implementation IDLAppDelegate
+@implementation ULKAppDelegate
 
 @synthesize window = _window;
 

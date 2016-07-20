@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "IDLLayoutViewController.h"
+#import "ULKLayoutViewController.h"
 
-@interface LayoutAnimationsViewController : IDLLayoutViewController
+@interface LayoutAnimationsViewController : ULKLayoutViewController
 
 @end

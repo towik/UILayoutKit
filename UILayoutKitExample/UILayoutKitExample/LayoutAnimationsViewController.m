@@ -8,18 +8,18 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import "LayoutAnimationsViewController.h"
-#import "iDroidLayout.h"
+#import "UILayoutKit.h"
 
 @implementation LayoutAnimationsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UILabel *otherLabel = (UILabel *)[self.view findViewById:@"otherText"];
+    UILabel *otherLabel = (UILabel *)[self.view ulk_findViewById:@"otherText"];
     otherLabel.contentMode = UIViewContentModeScaleToFill;
 }
 
 - (void)didPressButton {
-    UILabel *textLabel = (UILabel *)[self.view findViewById:@"text"];
+    UILabel *textLabel = (UILabel *)[self.view ulk_findViewById:@"text"];
     if ([textLabel.text isEqualToString:@"Short text"]) {
         textLabel.text = @"Very long long text";
     } else {

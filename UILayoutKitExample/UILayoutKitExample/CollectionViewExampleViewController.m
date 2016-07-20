@@ -4,8 +4,8 @@
 //
 
 #import "CollectionViewExampleViewController.h"
-#import "IDLCollectionViewCell.h"
-#import "UIView+IDL_Layout.h"
+#import "ULKCollectionViewCell.h"
+#import "UIView+ULK_Layout.h"
 #import "ExampleCollectionViewCell.h"
 #import "CollectionViewItem.h"
 

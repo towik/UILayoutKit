@@ -85,19 +85,12 @@
 		2B5DEBEA1D3F964000E13C76 /* ULKTextArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB941D3F963F00E13C76 /* ULKTextArea.m */; };
 		2B5DEBEB1D3F964000E13C76 /* ULKTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB961D3F963F00E13C76 /* ULKTextView.m */; };
 		2B5DEBEC1D3F964000E13C76 /* UILayoutKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 2B5DEB971D3F963F00E13C76 /* UILayoutKit.podspec */; };
-		2BEB75661D3F666300672260 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75651D3F666300672260 /* main.m */; };
-		2BEB75691D3F666300672260 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB75681D3F666300672260 /* AppDelegate.m */; };
-		2BEB756C1D3F666300672260 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB756B1D3F666300672260 /* ViewController.m */; };
-		2BEB756F1D3F666300672260 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BEB756D1D3F666300672260 /* Main.storyboard */; };
-		2BEB75711D3F666300672260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BEB75701D3F666300672260 /* Assets.xcassets */; };
-		2BEB75741D3F666300672260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BEB75721D3F666300672260 /* LaunchScreen.storyboard */; };
 		2BEB76A11D3F66E800672260 /* CollectionViewExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB76751D3F66E800672260 /* CollectionViewExampleViewController.m */; };
 		2BEB76A21D3F66E800672260 /* CollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB76771D3F66E800672260 /* CollectionViewItem.m */; };
 		2BEB76A31D3F66E800672260 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BEB76781D3F66E800672260 /* InfoPlist.strings */; };
 		2BEB76A41D3F66E800672260 /* ExampleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB767B1D3F66E800672260 /* ExampleCollectionViewCell.m */; };
 		2BEB76A51D3F66E800672260 /* FormularViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB767D1D3F66E800672260 /* FormularViewController.m */; };
-		2BEB76A61D3F66E800672260 /* IDLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB767F1D3F66E800672260 /* IDLAppDelegate.m */; };
-		2BEB76A71D3F66E800672260 /* iDroidLayout-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BEB76801D3F66E800672260 /* iDroidLayout-Info.plist */; };
+		2BEB76A61D3F66E800672260 /* ULKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB767F1D3F66E800672260 /* ULKAppDelegate.m */; };
 		2BEB76A81D3F66E800672260 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BEB76821D3F66E800672260 /* Images.xcassets */; };
 		2BEB76A91D3F66E800672260 /* LayoutAnimationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB76841D3F66E800672260 /* LayoutAnimationsViewController.m */; };
 		2BEB76AA1D3F66E800672260 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BEB76851D3F66E800672260 /* main.m */; };
@@ -290,14 +283,6 @@
 		2B5DEB961D3F963F00E13C76 /* ULKTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKTextView.m; sourceTree = "<group>"; };
 		2B5DEB971D3F963F00E13C76 /* UILayoutKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UILayoutKit.podspec; sourceTree = "<group>"; };
 		2BEB75611D3F666300672260 /* UILayoutKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UILayoutKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2BEB75651D3F666300672260 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2BEB75671D3F666300672260 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		2BEB75681D3F666300672260 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2BEB756A1D3F666300672260 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2BEB756B1D3F666300672260 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		2BEB756E1D3F666300672260 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2BEB75701D3F666300672260 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2BEB75731D3F666300672260 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2BEB75751D3F666300672260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BEB76741D3F66E800672260 /* CollectionViewExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewExampleViewController.h; sourceTree = "<group>"; };
 		2BEB76751D3F66E800672260 /* CollectionViewExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewExampleViewController.m; sourceTree = "<group>"; };
@@ -308,9 +293,8 @@
 		2BEB767B1D3F66E800672260 /* ExampleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleCollectionViewCell.m; sourceTree = "<group>"; };
 		2BEB767C1D3F66E800672260 /* FormularViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormularViewController.h; sourceTree = "<group>"; };
 		2BEB767D1D3F66E800672260 /* FormularViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormularViewController.m; sourceTree = "<group>"; };
-		2BEB767E1D3F66E800672260 /* IDLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDLAppDelegate.h; sourceTree = "<group>"; };
-		2BEB767F1D3F66E800672260 /* IDLAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDLAppDelegate.m; sourceTree = "<group>"; };
-		2BEB76801D3F66E800672260 /* iDroidLayout-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iDroidLayout-Info.plist"; sourceTree = "<group>"; };
+		2BEB767E1D3F66E800672260 /* ULKAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKAppDelegate.h; sourceTree = "<group>"; };
+		2BEB767F1D3F66E800672260 /* ULKAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKAppDelegate.m; sourceTree = "<group>"; };
 		2BEB76811D3F66E800672260 /* iDroidLayout-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iDroidLayout-Prefix.pch"; sourceTree = "<group>"; };
 		2BEB76821D3F66E800672260 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2BEB76831D3F66E800672260 /* LayoutAnimationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutAnimationsViewController.h; sourceTree = "<group>"; };
@@ -835,14 +819,7 @@
 		2BEB75631D3F666300672260 /* UILayoutKitExample */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB75671D3F666300672260 /* AppDelegate.h */,
-				2BEB75681D3F666300672260 /* AppDelegate.m */,
-				2BEB756A1D3F666300672260 /* ViewController.h */,
-				2BEB756B1D3F666300672260 /* ViewController.m */,
-				2BEB756D1D3F666300672260 /* Main.storyboard */,
 				2BEB76731D3F66E800672260 /* UILayoutKitExample */,
-				2BEB75701D3F666300672260 /* Assets.xcassets */,
-				2BEB75721D3F666300672260 /* LaunchScreen.storyboard */,
 				2BEB75751D3F666300672260 /* Info.plist */,
 				2BEB75641D3F666300672260 /* Supporting Files */,
 			);
@@ -852,7 +829,6 @@
 		2BEB75641D3F666300672260 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2BEB75651D3F666300672260 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -869,9 +845,8 @@
 				2BEB767B1D3F66E800672260 /* ExampleCollectionViewCell.m */,
 				2BEB767C1D3F66E800672260 /* FormularViewController.h */,
 				2BEB767D1D3F66E800672260 /* FormularViewController.m */,
-				2BEB767E1D3F66E800672260 /* IDLAppDelegate.h */,
-				2BEB767F1D3F66E800672260 /* IDLAppDelegate.m */,
-				2BEB76801D3F66E800672260 /* iDroidLayout-Info.plist */,
+				2BEB767E1D3F66E800672260 /* ULKAppDelegate.h */,
+				2BEB767F1D3F66E800672260 /* ULKAppDelegate.m */,
 				2BEB76811D3F66E800672260 /* iDroidLayout-Prefix.pch */,
 				2BEB76821D3F66E800672260 /* Images.xcassets */,
 				2BEB76831D3F66E800672260 /* LayoutAnimationsViewController.h */,
@@ -1028,7 +1003,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BEB76BB1D3F66E800672260 /* mainCell.xml in Resources */,
-				2BEB75741D3F666300672260 /* LaunchScreen.storyboard in Resources */,
 				2BEB76AE1D3F66E800672260 /* background1.xml in Resources */,
 				2BEB76B11D3F66E800672260 /* button_normal.9@2x.png in Resources */,
 				2B5DEBA21D3F963F00E13C76 /* LICENSE in Resources */,
@@ -1043,18 +1017,15 @@
 				2BEB76AF1D3F66E800672260 /* button_background.xml in Resources */,
 				2BEB76A31D3F66E800672260 /* InfoPlist.strings in Resources */,
 				2BEB76AD1D3F66E800672260 /* android.jpg in Resources */,
-				2BEB76A71D3F66E800672260 /* iDroidLayout-Info.plist in Resources */,
 				2BEB76B81D3F66E800672260 /* includeChild2.xml in Resources */,
 				2BEB76B61D3F66E800672260 /* formular~ipad.xml in Resources */,
 				2BEB76A81D3F66E800672260 /* Images.xcassets in Resources */,
 				2BEB76BE1D3F66E800672260 /* LayoutFromIB.xib in Resources */,
 				2BEB76B01D3F66E800672260 /* button_disabled.9@2x.png in Resources */,
 				2B5DEBA01D3F963F00E13C76 /* drawable_button_pressed.png in Resources */,
-				2BEB75711D3F666300672260 /* Assets.xcassets in Resources */,
 				2BEB76BC1D3F66E800672260 /* scrollviews.xml in Resources */,
 				2BEB76B71D3F66E800672260 /* includeChild1.xml in Resources */,
 				2BEB76BA1D3F66E800672260 /* layoutFromIB.xml in Resources */,
-				2BEB756F1D3F666300672260 /* Main.storyboard in Resources */,
 				2BEB76B21D3F66E800672260 /* button_pressed.9@2x.png in Resources */,
 				2B5DEBEC1D3F964000E13C76 /* UILayoutKit.podspec in Resources */,
 			);
@@ -1135,7 +1106,6 @@
 				2B5DEBEA1D3F964000E13C76 /* ULKTextArea.m in Sources */,
 				2BEB76A51D3F66E800672260 /* FormularViewController.m in Sources */,
 				2B5DEBB61D3F963F00E13C76 /* ULKDrawableContainer.m in Sources */,
-				2BEB756C1D3F666300672260 /* ViewController.m in Sources */,
 				2B5DEBB31D3F963F00E13C76 /* ULKClipDrawable.m in Sources */,
 				2B5DEBE21D3F964000E13C76 /* UINavigationBar+ULK_View.m in Sources */,
 				2B5DEBBF1D3F963F00E13C76 /* NSDictionary+ULK_ResourceManager.m in Sources */,
@@ -1146,7 +1116,7 @@
 				2B5DEBEB1D3F964000E13C76 /* ULKTextView.m in Sources */,
 				2B5DEBAA1D3F963F00E13C76 /* ULKDependencyGraphNode.m in Sources */,
 				2B5DEBBC1D3F963F00E13C76 /* ULKRotateDrawable.m in Sources */,
-				2BEB76A61D3F66E800672260 /* IDLAppDelegate.m in Sources */,
+				2BEB76A61D3F66E800672260 /* ULKAppDelegate.m in Sources */,
 				2B5DEBAD1D3F963F00E13C76 /* UIScrollView+ULK_ViewGroup.m in Sources */,
 				2B5DEBD51D3F963F00E13C76 /* ULKPools.m in Sources */,
 				2B5DEBC81D3F963F00E13C76 /* ULKResourceManager+ULKIDL_Internal.m in Sources */,
@@ -1173,7 +1143,6 @@
 				2B5DEBA31D3F963F00E13C76 /* README.md in Sources */,
 				2B5DEBC01D3F963F00E13C76 /* ULKColorStateItem.m in Sources */,
 				2BEB76A41D3F66E800672260 /* ExampleCollectionViewCell.m in Sources */,
-				2BEB75691D3F666300672260 /* AppDelegate.m in Sources */,
 				2B5DEBB51D3F963F00E13C76 /* ULKDrawable.m in Sources */,
 				2BEB76AA1D3F66E800672260 /* main.m in Sources */,
 				2B5DEBE11D3F964000E13C76 /* UILabel+ULK_View.m in Sources */,
@@ -1185,7 +1154,6 @@
 				2B5DEBCF1D3F963F00E13C76 /* TBXML.m in Sources */,
 				2B5DEBCE1D3F963F00E13C76 /* NSObject+ULK_KVOObserver.m in Sources */,
 				2B5DEBAF1D3F963F00E13C76 /* ULKLayoutParams.m in Sources */,
-				2BEB75661D3F666300672260 /* main.m in Sources */,
 				2B5DEBC71D3F963F00E13C76 /* ULKResourceManager+String.m in Sources */,
 				2B5DEBD21D3F963F00E13C76 /* UIImage+ULK_FromColor.m in Sources */,
 				2B5DEBDE1D3F963F00E13C76 /* UIButton+ULK_View.m in Sources */,
@@ -1205,22 +1173,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2BEB756D1D3F666300672260 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2BEB756E1D3F666300672260 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2BEB75721D3F666300672260 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2BEB75731D3F666300672260 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		2BEB76781D3F66E800672260 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

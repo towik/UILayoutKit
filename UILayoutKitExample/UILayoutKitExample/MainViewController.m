@@ -7,10 +7,10 @@
 //
 
 #import "MainViewController.h"
-#import "iDroidLayout.h" // iDroidLayout
+#import "UILayoutKit.h" // iDroidLayout
 #import "FormularViewController.h"
 #import "LayoutAnimationsViewController.h"
-#import "IDLResourceManager.h"
+#import "ULKResourceManager.h"
 #import "CollectionViewExampleViewController.h"
 
 @implementation MainViewController
@@ -35,8 +35,8 @@
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
     
-    _titles = [[IDLResourceManager currentResourceManager] stringArrayForIdentifier:@"@array/values.main_menu_titles"];
-    _descriptions = [[IDLResourceManager currentResourceManager] stringArrayForIdentifier:@"@array/values.main_menu_descriptions"];
+    _titles = [[ULKResourceManager currentResourceManager] stringArrayForIdentifier:@"@array/values.main_menu_titles"];
+    _descriptions = [[ULKResourceManager currentResourceManager] stringArrayForIdentifier:@"@array/values.main_menu_descriptions"];
 }
 
 - (void)viewDidUnload {
@@ -47,9 +47,9 @@
     _descriptions = nil;
 }
 
-- (void)setupCell:(IDLTableViewCell *)cell forRow:(NSInteger)row {
-    UILabel *titleLabel = (UILabel *)[cell.layoutBridge findViewById:@"title"];
-    UILabel *descriptionLabel = (UILabel *)[cell.layoutBridge findViewById:@"description"];
+- (void)setupCell:(ULKTableViewCell *)cell forRow:(NSInteger)row {
+    UILabel *titleLabel = (UILabel *)[cell.layoutBridge ulk_findViewById:@"title"];
+    UILabel *descriptionLabel = (UILabel *)[cell.layoutBridge ulk_findViewById:@"description"];
     titleLabel.text = [_titles objectAtIndex:row];
     descriptionLabel.text = [_descriptions objectAtIndex:row];
 }
@@ -62,9 +62,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
-    IDLTableViewCell *cell = (IDLTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    ULKTableViewCell *cell = (ULKTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[IDLTableViewCell alloc] initWithLayoutURL:_tableCellLayoutURL reuseIdentifier:CellIdentifier];
+        cell = [[ULKTableViewCell alloc] initWithLayoutURL:_tableCellLayoutURL reuseIdentifier:CellIdentifier];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     [self setupCell:cell forRow:indexPath.row];
@@ -74,10 +74,10 @@
 #pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static IDLTableViewCell *prototypeCell;
+    static ULKTableViewCell *prototypeCell;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        prototypeCell = [[IDLTableViewCell alloc] initWithLayoutURL:_tableCellLayoutURL reuseIdentifier:nil];
+        prototypeCell = [[ULKTableViewCell alloc] initWithLayoutURL:_tableCellLayoutURL reuseIdentifier:nil];
         prototypeCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     });
     [self setupCell:prototypeCell forRow:indexPath.row];
@@ -95,8 +95,8 @@
             vc = [[LayoutAnimationsViewController alloc] initWithLayoutName:@"animations" bundle:nil];
             break;
         case 2: {
-            vc = [[IDLLayoutViewController alloc] initWithLayoutName:@"scrollviews" bundle:nil];
-            UIButton *toggleButton = (UIButton *)[vc.view findViewById:@"toggleButton"];
+            vc = [[ULKLayoutViewController alloc] initWithLayoutName:@"scrollviews" bundle:nil];
+            UIButton *toggleButton = (UIButton *)[vc.view ulk_findViewById:@"toggleButton"];
             toggleButton.titleLabel.numberOfLines = 0;
             [toggleButton addTarget:self action:@selector(didPressToggleButton:) forControlEvents:UIControlEventTouchUpInside];
             break;
@@ -105,7 +105,7 @@
             vc = [[UIViewController alloc] initWithNibName:@"LayoutFromIB" bundle:nil];
             break;
         case 4:
-            vc = [[IDLLayoutViewController alloc] initWithLayoutName:@"includeContainer" bundle:nil];
+            vc = [[ULKLayoutViewController alloc] initWithLayoutName:@"includeContainer" bundle:nil];
             break;
         case 5: {
             UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
@@ -122,13 +122,13 @@
 }
 
 - (void)didPressToggleButton:(UIButton *)button {
-    IDLTextView *textView = (IDLTextView *)[button.superview findViewById:@"toggleText"];
+    ULKTextView *textView = (ULKTextView *)[button.superview ulk_findViewById:@"toggleText"];
     
-    IDLLinearLayoutLayoutParams *lp = (IDLLinearLayoutLayoutParams *) textView.layoutParams;
-    if (lp.height == IDLLayoutParamsSizeWrapContent) {
+    ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *) textView.layoutParams;
+    if (lp.height == ULKLayoutParamsSizeWrapContent) {
         lp.height = 44;
     } else {
-        lp.height = IDLLayoutParamsSizeWrapContent;
+        lp.height = ULKLayoutParamsSizeWrapContent;
     }
     textView.layoutParams = lp;
     [UIView animateWithDuration:0.5 animations:^{
