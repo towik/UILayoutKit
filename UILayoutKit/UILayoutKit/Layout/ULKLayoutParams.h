@@ -9,6 +9,8 @@
 //  Copyright (c) 2016 towik. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+
 enum ULKLayoutParamsSize {
     ULKLayoutParamsSizeMatchParent = -1,
     ULKLayoutParamsSizeWrapContent = -2
