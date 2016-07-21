@@ -49,9 +49,8 @@ static char matchParentChildrenKey;
 
 + (void)onFrameLayoutMeasure:(UIView *)measureView widthMeasureSpec:(ULKLayoutMeasureSpec)widthMeasureSpec
                              heightMeasureSpec:(ULKLayoutMeasureSpec)heightMeasureSpec {
-    
-    NSInteger count = [measureView.subviews count];
-    
+    NSInteger count = MIN(1, [measureView.subviews count]);
+
     BOOL measureMatchParentChildren = widthMeasureSpec.mode != ULKLayoutMeasureSpecModeExactly || heightMeasureSpec.mode != ULKLayoutMeasureSpecModeExactly;
     NSMutableArray *matchParentChildren = [ULKFrameLayout matchParentChildren:measureView];
     [matchParentChildren removeAllObjects];
@@ -151,7 +150,7 @@ static char matchParentChildrenKey;
 }
 
 + (CGSize)onFrameLayoutLayout:(UIView *)measureView frame:(CGRect)frame didFrameChange:(BOOL)changed {
-    NSInteger count = [measureView.subviews count];
+    NSInteger count = MIN(1, [measureView.subviews count]);
     
     UIEdgeInsets padding = measureView.ulk_padding;
     CGFloat parentLeft = padding.left;
