@@ -1,5 +1,5 @@
 //
-//  ULKTextArea.m
+//  ULKTextView.m
 //  UILayoutKit
 //
 //  Created by Tom Quist on 03.01.13.
@@ -9,11 +9,11 @@
 //  Copyright (c) 2016 towik. All rights reserved.
 //
 
-#import "ULKTextArea.h"
+#import "ULKTextView.h"
 #import "UIView+ULK_Layout.h"
 #import "UILabel+ULK_View.h"
 
-@implementation ULKTextArea
+@implementation ULKTextView
 
 - (void)setText:(NSString *)text {
     [super setText:text];

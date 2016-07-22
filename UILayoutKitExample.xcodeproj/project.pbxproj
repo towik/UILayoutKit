@@ -81,8 +81,8 @@
 		2B5DEBE61D3F964000E13C76 /* UIToolbar+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB8C1D3F963F00E13C76 /* UIToolbar+ULK_View.m */; };
 		2B5DEBE71D3F964000E13C76 /* UIWebView+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB8E1D3F963F00E13C76 /* UIWebView+ULK_View.m */; };
 		2B5DEBE81D3F964000E13C76 /* ULKButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB901D3F963F00E13C76 /* ULKButton.m */; };
-		2B5DEBE91D3F964000E13C76 /* ULKEditText.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB921D3F963F00E13C76 /* ULKEditText.m */; };
-		2B5DEBEA1D3F964000E13C76 /* ULKTextArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB941D3F963F00E13C76 /* ULKTextArea.m */; };
+		2B5DEBE91D3F964000E13C76 /* ULKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB921D3F963F00E13C76 /* ULKTextField.m */; };
+		2B5DEBEA1D3F964000E13C76 /* ULKTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB941D3F963F00E13C76 /* ULKTextView.m */; };
 		2B5DEBEB1D3F964000E13C76 /* ULKLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEB961D3F963F00E13C76 /* ULKLabel.m */; };
 		2B5DEBEC1D3F964000E13C76 /* UILayoutKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 2B5DEB971D3F963F00E13C76 /* UILayoutKit.podspec */; };
 		2B5DEC201D3F997E00E13C76 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B5DEBF51D3F997E00E13C76 /* InfoPlist.strings */; };
@@ -276,10 +276,10 @@
 		2B5DEB8E1D3F963F00E13C76 /* UIWebView+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+ULK_View.m"; sourceTree = "<group>"; };
 		2B5DEB8F1D3F963F00E13C76 /* ULKButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKButton.h; sourceTree = "<group>"; };
 		2B5DEB901D3F963F00E13C76 /* ULKButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKButton.m; sourceTree = "<group>"; };
-		2B5DEB911D3F963F00E13C76 /* ULKEditText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKEditText.h; sourceTree = "<group>"; };
-		2B5DEB921D3F963F00E13C76 /* ULKEditText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKEditText.m; sourceTree = "<group>"; };
-		2B5DEB931D3F963F00E13C76 /* ULKTextArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKTextArea.h; sourceTree = "<group>"; };
-		2B5DEB941D3F963F00E13C76 /* ULKTextArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKTextArea.m; sourceTree = "<group>"; };
+		2B5DEB911D3F963F00E13C76 /* ULKTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKTextField.h; sourceTree = "<group>"; };
+		2B5DEB921D3F963F00E13C76 /* ULKTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKTextField.m; sourceTree = "<group>"; };
+		2B5DEB931D3F963F00E13C76 /* ULKTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKTextView.h; sourceTree = "<group>"; };
+		2B5DEB941D3F963F00E13C76 /* ULKTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKTextView.m; sourceTree = "<group>"; };
 		2B5DEB951D3F963F00E13C76 /* ULKLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKLabel.h; sourceTree = "<group>"; };
 		2B5DEB961D3F963F00E13C76 /* ULKLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKLabel.m; sourceTree = "<group>"; };
 		2B5DEB971D3F963F00E13C76 /* UILayoutKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UILayoutKit.podspec; sourceTree = "<group>"; };
@@ -625,10 +625,10 @@
 				2B5DEB7A1D3F963F00E13C76 /* Categories */,
 				2B5DEB8F1D3F963F00E13C76 /* ULKButton.h */,
 				2B5DEB901D3F963F00E13C76 /* ULKButton.m */,
-				2B5DEB911D3F963F00E13C76 /* ULKEditText.h */,
-				2B5DEB921D3F963F00E13C76 /* ULKEditText.m */,
-				2B5DEB931D3F963F00E13C76 /* ULKTextArea.h */,
-				2B5DEB941D3F963F00E13C76 /* ULKTextArea.m */,
+				2B5DEB911D3F963F00E13C76 /* ULKTextField.h */,
+				2B5DEB921D3F963F00E13C76 /* ULKTextField.m */,
+				2B5DEB931D3F963F00E13C76 /* ULKTextView.h */,
+				2B5DEB941D3F963F00E13C76 /* ULKTextView.m */,
 				2B5DEB951D3F963F00E13C76 /* ULKLabel.h */,
 				2B5DEB961D3F963F00E13C76 /* ULKLabel.m */,
 			);
@@ -969,7 +969,7 @@
 				2B5DEBC11D3F963F00E13C76 /* ULKColorStateList.m in Sources */,
 				2B5DEBA71D3F963F00E13C76 /* ULKLinearLayout.m in Sources */,
 				2B5DEBE01D3F964000E13C76 /* UIImageView+ULK_View.m in Sources */,
-				2B5DEBE91D3F964000E13C76 /* ULKEditText.m in Sources */,
+				2B5DEBE91D3F964000E13C76 /* ULKTextField.m in Sources */,
 				2B5DEBD31D3F963F00E13C76 /* UIImage+ULKNinePatch.m in Sources */,
 				2B5DEBC41D3F963F00E13C76 /* ULKResourceStateItem.m in Sources */,
 				2B5DEC501D3F9A3200E13C76 /* FormularViewController.m in Sources */,
@@ -978,7 +978,7 @@
 				2B5DEBD71D3F963F00E13C76 /* ULKBaseViewFactory.m in Sources */,
 				2B5DEBDA1D3F963F00E13C76 /* ULKCollectionViewCell.m in Sources */,
 				2B5DEBC91D3F963F00E13C76 /* ULKResourceManager.m in Sources */,
-				2B5DEBEA1D3F964000E13C76 /* ULKTextArea.m in Sources */,
+				2B5DEBEA1D3F964000E13C76 /* ULKTextView.m in Sources */,
 				2B5DEBB61D3F963F00E13C76 /* ULKDrawableContainer.m in Sources */,
 				2B5DEBB31D3F963F00E13C76 /* ULKClipDrawable.m in Sources */,
 				2B5DEBE21D3F964000E13C76 /* UINavigationBar+ULK_View.m in Sources */,

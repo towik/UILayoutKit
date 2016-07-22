@@ -1,5 +1,5 @@
 //
-//  ULKEditText.m
+//  ULKTextField.m
 //  UILayoutKit
 //
 //  Created by Tom Quist on 03.01.13.
@@ -9,11 +9,11 @@
 //  Copyright (c) 2016 towik. All rights reserved.
 //
 
-#import "ULKEditText.h"
+#import "ULKTextField.h"
 #import "UIView+ULK_Layout.h"
 #import "UILabel+ULK_View.h"
 
-@implementation ULKEditText
+@implementation ULKTextField
 
 @synthesize contentVerticalAlignment = _contentVerticalAlignment;
 
