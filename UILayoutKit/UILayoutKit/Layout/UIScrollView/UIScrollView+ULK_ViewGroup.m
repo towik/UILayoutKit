@@ -63,20 +63,20 @@
     [child ulk_measureWithWidthMeasureSpec:childWidthMeasureSpec heightMeasureSpec:childHeightMeasureSpec];
 }
 
-- (void)ulk_measureChildWithMargins:(UIView *)child parentWidthMeasureSpec:(ULKLayoutMeasureSpec)parentWidthMeasureSpec widthUsed:(CGFloat)widthUsed parentHeightMeasureSpec:(ULKLayoutMeasureSpec)parentHeightMeasureSpec heightUsed:(CGFloat)heightUsed {
-    if ([NSStringFromClass([child class]) isEqualToString:@"UIWebDocumentView"]) {
-        return;
-    }
-    ULKLayoutParams *lp = (ULKLayoutParams *)child.layoutParams;
-    UIEdgeInsets lpMargin = lp.margin;
-    UIEdgeInsets padding = self.ulk_padding;
-    ULKLayoutMeasureSpec childWidthMeasureSpec = [self ulk_childMeasureSpecWithMeasureSpec:parentWidthMeasureSpec padding:(padding.left + padding.right + lpMargin.left + lpMargin.right + widthUsed) childDimension:lp.width];
-    ULKLayoutMeasureSpec childHeightMeasureSpec;
-    childHeightMeasureSpec.size = lpMargin.top + lpMargin.bottom + parentHeightMeasureSpec.size;
-    childHeightMeasureSpec.mode = ULKLayoutMeasureSpecModeUnspecified;
-    
-    [child ulk_measureWithWidthMeasureSpec:childWidthMeasureSpec heightMeasureSpec:childHeightMeasureSpec];
-}
+//- (void)ulk_measureChildWithMargins:(UIView *)child parentWidthMeasureSpec:(ULKLayoutMeasureSpec)parentWidthMeasureSpec widthUsed:(CGFloat)widthUsed parentHeightMeasureSpec:(ULKLayoutMeasureSpec)parentHeightMeasureSpec heightUsed:(CGFloat)heightUsed {
+//    if ([NSStringFromClass([child class]) isEqualToString:@"UIWebDocumentView"]) {
+//        return;
+//    }
+//    ULKLayoutParams *lp = (ULKLayoutParams *)child.layoutParams;
+//    UIEdgeInsets lpMargin = lp.margin;
+//    UIEdgeInsets padding = self.ulk_padding;
+//    ULKLayoutMeasureSpec childWidthMeasureSpec = [self ulk_childMeasureSpecWithMeasureSpec:parentWidthMeasureSpec padding:(padding.left + padding.right + lpMargin.left + lpMargin.right + widthUsed) childDimension:lp.width];
+//    ULKLayoutMeasureSpec childHeightMeasureSpec;
+//    childHeightMeasureSpec.size = lpMargin.top + lpMargin.bottom + parentHeightMeasureSpec.size;
+//    childHeightMeasureSpec.mode = ULKLayoutMeasureSpecModeUnspecified;
+//    
+//    [child ulk_measureWithWidthMeasureSpec:childWidthMeasureSpec heightMeasureSpec:childHeightMeasureSpec];
+//}
 
 - (BOOL)ulk_isViewGroup {
     BOOL ret = FALSE;
