@@ -148,7 +148,7 @@ static ULKResourceManager *currentResourceManager;
             identifier.cachedObject = ret;
         }
     } else {
-        NSLog(@"Could not create image from resource identifier %@: Invalid resource type", identifierString);
+        NSAssert(0, @"Could not create image from resource identifier %@: Invalid resource type", identifierString);
     }
     return ret;
 }

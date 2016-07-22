@@ -153,9 +153,9 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     if (!CGRectEqualToRect(self.frame, _lastFrame) || self.ulk_isLayoutRequested) {
-#ifdef DEBUG
-        CFTimeInterval methodStart = CACurrentMediaTime();
-#endif
+//#ifdef DEBUG
+//        CFTimeInterval methodStart = CACurrentMediaTime();
+//#endif
         _lastFrame = self.frame;
         ULKLayoutMeasureSpec widthMeasureSpec;
         ULKLayoutMeasureSpec heightMeasureSpec;
@@ -165,11 +165,11 @@
         heightMeasureSpec.mode = ULKLayoutMeasureSpecModeExactly;
         [self ulk_measureWithWidthMeasureSpec:widthMeasureSpec heightMeasureSpec:heightMeasureSpec];
         [self ulk_layoutWithFrame:self.frame];
-#ifdef DEBUG
-        NSTimeInterval methodFinish = CACurrentMediaTime();
-        NSTimeInterval executionTime = methodFinish - methodStart;
-        NSLog(@"Relayout took %.2fms", executionTime*1000);
-#endif
+//#ifdef DEBUG
+//        NSTimeInterval methodFinish = CACurrentMediaTime();
+//        NSTimeInterval executionTime = methodFinish - methodStart;
+//        NSLog(@"Relayout took %.2fms", executionTime*1000);
+//#endif
     }
 }
 

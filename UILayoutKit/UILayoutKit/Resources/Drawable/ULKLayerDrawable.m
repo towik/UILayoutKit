@@ -194,7 +194,7 @@
             } else if (child->firstChild != NULL) {
                 drawable = [ULKDrawable createFromXMLElement:child->firstChild];
             } else {
-                NSLog(@"<item> tag requires a 'drawable' attribute or child tag defining a drawable");
+                NSAssert(0, @"<item> tag requires a 'drawable' attribute or child tag defining a drawable");
             }
             if (drawable != nil) {
                 [self.internalConstantState addLayer:drawable insets:insets owner:self];

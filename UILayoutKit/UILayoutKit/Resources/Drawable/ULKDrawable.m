@@ -188,7 +188,7 @@ NSUInteger const ULKDrawableMaxLevel = 10000;
     if (error == nil) {
         ret = [self createFromXMLElement:xml.rootXMLElement];
     } else {
-        NSLog(@"Could not parse drawable: %@", error);
+        NSAssert(0, @"Could not parse drawable: %@", error);
     }
     return ret;
 }
@@ -198,7 +198,7 @@ NSUInteger const ULKDrawableMaxLevel = 10000;
     TBXML *xml = [[ULKResourceManager currentResourceManager].xmlCache xmlForUrl:url error:&error];
     ULKDrawable *ret = nil;
     if (xml == nil || error != nil) {
-        NSLog(@"Could not parse drawable %@: %@", [url absoluteString], error);
+        NSAssert(0, @"Could not parse drawable %@: %@", [url absoluteString], error);
     } else {
         ret = [self createFromXMLElement:xml.rootXMLElement];
     }

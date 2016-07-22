@@ -60,10 +60,10 @@
     if (self) {
         NSString *widthAttr = attrs[@"layout_width"];
         NSString *heightAttr = attrs[@"layout_height"];
-        if (widthAttr == nil || heightAttr == nil) {
-            NSLog(@"You have to set the layout_width and layout_height parameters.");
-            return nil;
-        }
+//        if (widthAttr == nil || heightAttr == nil) {
+//            NSAssert(0, @"You have to set the layout_width and layout_height parameters.");
+//            return nil;
+//        }
         _width = [ULKLayoutParams sizeForLayoutSizeAttribute:widthAttr];
         _height = [ULKLayoutParams sizeForLayoutSizeAttribute:heightAttr];
         

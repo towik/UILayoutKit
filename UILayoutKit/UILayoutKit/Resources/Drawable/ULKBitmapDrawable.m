@@ -139,7 +139,7 @@
         UIImage *image = [resMgr imageForIdentifier:bitmapIdentifier];
         state.image = image;
     } else {
-        NSLog(@"<bitmap> requires a valid src attribute");
+        NSAssert(0, @"<bitmap> requires a valid src attribute");
     }
     
     NSString *gravityValue = dictionary[@"gravity"];

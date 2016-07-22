@@ -94,7 +94,7 @@
     if (error == nil) {
         ret = [self inflateParser:xml];
     } else {
-        NSLog(@"Could not parse resource state list: %@", error);
+        NSAssert(0, @"Could not parse resource state list: %@", error);
     }
     return ret;
 }

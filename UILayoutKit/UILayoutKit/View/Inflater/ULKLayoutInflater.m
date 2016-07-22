@@ -68,7 +68,7 @@
         ret = [self.viewFactory onCreateViewWithName:name attributes:attrs];
     }
     @catch (NSException *exception) {
-        NSLog(@"Warning!!!!! Could not initialize class for view with name %@. Creating UIView instead: %@", name, exception);
+        NSAssert(0, @"Warning!!!!! Could not initialize class for view with name %@. Creating UIView instead: %@", name, exception);
         ret = [self.viewFactory onCreateViewWithName:@"UIView" attributes:attrs];
     }
     return ret;
@@ -76,23 +76,23 @@
 
 - (void)parseIncludeWithXmlElement:(TBXMLElement *)element parentView:(UIView *)parentView attributes:(NSMutableDictionary *)attrs {
     if (!parentView.ulk_isViewGroup) {
-        NSLog(@"<include /> can only be used in view groups");
+        NSAssert(0, @"<include /> can only be used in view groups");
         return;
     }
     
     NSString *layoutToInclude = attrs[INCLUDE_ATTRIBUTE_LAYOUT];
     NSError *error = nil;
     if (layoutToInclude == nil) {
-        NSLog(@"You must specifiy a layout in the include tag: <include layout=\"@layout/layoutName\" />");
+        NSAssert(0, @"You must specifiy a layout in the include tag: <include layout=\"@layout/layoutName\" />");
     } else {
         NSURL *url = [[ULKResourceManager currentResourceManager] layoutURLForIdentifier:layoutToInclude];
         if (url == nil) {
-            NSLog(@"You must specifiy a valid layout reference. The layout ID %@ is not valid.", layoutToInclude);
+            NSAssert(0, @"You must specifiy a valid layout reference. The layout ID %@ is not valid.", layoutToInclude);
         } else {
             TBXML *xml = [[ULKResourceManager currentResourceManager].xmlCache xmlForUrl:url error:&error];
             //[TBXML newTBXMLWithXMLData:[NSData dataWithContentsOfURL:url] error:&error];
             if (error) {
-                NSLog(@"Cannot include layout %@: %@ %@", layoutToInclude, [error localizedDescription], [error userInfo]);
+                NSAssert(0, @"Cannot include layout %@: %@ %@", layoutToInclude, [error localizedDescription], [error userInfo]);
             } else {
                 TBXMLElement *rootElement = xml.rootXMLElement;
                 NSString *elementName = [TBXML elementName:rootElement];
@@ -177,7 +177,7 @@
 - (UIView *)inflateParser:(TBXML *)parser intoRootView:(UIView *)rootView attachToRoot:(BOOL)attachToRoot {
     UIView *ret = nil;
     if (rootView != nil && !rootView.ulk_isViewGroup) {
-        NSLog(@"rootView must be ViewGroup");
+        NSAssert(0, @"rootView must be ViewGroup");
         return nil;
     }
     
@@ -186,7 +186,7 @@
     NSMutableDictionary *attrs = [ULKLayoutInflater attributesFromXMLElement:rootElement reuseDictionary:nil actionTarget:self.actionTarget];
     if ([elementName isEqualToString:TAG_MERGE]) {
         if (rootView == nil || !attachToRoot) {
-            NSLog(@"<merge /> can be used only with a valid ViewGroup root and attachToRoot=true");
+            NSAssert(0, @"<merge /> can be used only with a valid ViewGroup root and attachToRoot=true");
             return nil;;
         } else if (rootElement->firstChild != NULL) {
             [self rInflateWithXmlElement:rootElement->firstChild parentView:rootView attributes:attrs finishInflate:TRUE];
@@ -218,18 +218,18 @@
 }
 
 - (UIView *)inflateURL:(NSURL *)url intoRootView:(UIView *)rootView attachToRoot:(BOOL)attachToRoot {
-    CFTimeInterval methodStart = CACurrentMediaTime();
+//    CFTimeInterval methodStart = CACurrentMediaTime();
     NSError *error = nil;
     TBXML *xml = [[ULKResourceManager currentResourceManager].xmlCache xmlForUrl:url error:&error];
     //[[TBXML newTBXMLWithXMLData:[NSData dataWithContentsOfURL:url] error:&error] autorelease];
     if (error) {
-        NSLog(@"%@ %@", [error localizedDescription], [error userInfo]);
+        NSAssert(0, @"%@ %@", [error localizedDescription], [error userInfo]);
         return nil;
     }
     UIView *ret = [self inflateParser:xml intoRootView:rootView attachToRoot:attachToRoot];
-    NSTimeInterval methodFinish = CACurrentMediaTime();
-    NSTimeInterval executionTime = methodFinish - methodStart;
-    NSLog(@"Inflation of %@ took %.2fms", [url absoluteString], executionTime*1000);
+//    NSTimeInterval methodFinish = CACurrentMediaTime();
+//    NSTimeInterval executionTime = methodFinish - methodStart;
+//    NSLog(@"Inflation of %@ took %.2fms", [url absoluteString], executionTime*1000);
     return ret;
 
 }
@@ -238,7 +238,7 @@
     NSError *error = nil;
     TBXML *xml = [TBXML tbxmlWithXMLFile:resource error:&error];
     if (error) {
-        NSLog(@"%@ %@", [error localizedDescription], [error userInfo]);
+        NSAssert(0, @"%@ %@", [error localizedDescription], [error userInfo]);
         return nil;
     }
     return [self inflateParser:xml intoRootView:rootView attachToRoot:attachToRoot];

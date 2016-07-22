@@ -51,7 +51,7 @@
     ULKDrawableStateItem *ret = nil;
     NSString *drawableIdentifier = [TBXML valueOfAttributeNamed:@"drawable" forElement:element];
     if (drawableIdentifier == nil) {
-        NSLog(@"<item> tag requires a 'drawable' attribute. I'm ignoring this drawable state item.");
+        NSAssert(0, @"<item> tag requires a 'drawable' attribute. I'm ignoring this drawable state item.");
     } else {
         ret = [[ULKDrawableStateItem alloc] initWithControlState:controlState drawableResourceIdentifier:drawableIdentifier];
     }

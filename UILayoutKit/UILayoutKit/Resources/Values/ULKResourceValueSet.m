@@ -78,7 +78,7 @@
     if (error == nil) {
         ret = [self inflateParser:xml];
     } else {
-        NSLog(@"Could not parse resource value set: %@", error);
+        NSAssert(0, @"Could not parse resource value set: %@", error);
     }
     return ret;
 }

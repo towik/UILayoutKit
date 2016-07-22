@@ -30,7 +30,7 @@
     ULKColorStateItem *ret = nil;
     NSString *colorIdentifier = [TBXML valueOfAttributeNamed:@"color" forElement:element];
     if (colorIdentifier == nil) {
-        NSLog(@"<item> tag requires a 'color' attribute. I'm ignoring this color state item.");
+        NSAssert(0, @"<item> tag requires a 'color' attribute. I'm ignoring this color state item.");
     } else {
         ret = [[ULKColorStateItem alloc] initWithControlState:controlState colorResourceIdentifier:colorIdentifier];
     }
