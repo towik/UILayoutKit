@@ -2,7 +2,7 @@
     layout_width="match_parent"
     layout_height="wrap_content"
     layout_margin="10">
-    <TextView
+    <Label
         id="title"
         layout_width="match_parent"
         layout_height="wrap_content"
@@ -10,7 +10,7 @@
         gravity="top|left"
         lines="1"
         font="Helvetica-Bold"/>
-    <TextView
+    <Label
         id="description"
         layout_width="match_parent"
         layout_height="wrap_content"

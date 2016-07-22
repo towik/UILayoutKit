@@ -1,5 +1,5 @@
 //
-//  TextView.m
+//  ULKLabel.m
 //  UILayoutKit
 //
 //  Created by Tom Quist on 22.07.12.
@@ -9,12 +9,12 @@
 //  Copyright (c) 2016 towik. All rights reserved.
 //
 
-#import "ULKTextView.h"
+#import "ULKLabel.h"
 #import "UIView+ULK_Layout.h"
 #import "UILabel+ULK_View.h"
 #import "UIView+ULKDrawable.h"
 
-@implementation ULKTextView
+@implementation ULKLabel
 
 - (void)ulk_onMeasureWithWidthMeasureSpec:(ULKLayoutMeasureSpec)widthMeasureSpec heightMeasureSpec:(ULKLayoutMeasureSpec)heightMeasureSpec {
     ULKLayoutMeasureSpecMode widthMode = widthMeasureSpec.mode;

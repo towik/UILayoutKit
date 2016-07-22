@@ -1,5 +1,5 @@
 //
-//  TextView.h
+//  ULKLabel.h
 //  UILayoutKit
 //
 //  Created by Tom Quist on 22.07.12.
@@ -11,7 +11,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ULKTextView : UILabel {
+@interface ULKLabel : UILabel {
     UIControlContentVerticalAlignment _contentVerticalAlignment;
 }
 

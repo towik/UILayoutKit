@@ -4,7 +4,7 @@
     orientation="vertical"
     gravity="center"
     padding="10">
-    <TextView
+    <Label
         id="title"
         layout_width="wrap_content"
         layout_height="wrap_content"
@@ -13,7 +13,7 @@
         textColor="#ffffff"
         font="Helvetica-Bold"
         text="This label is loaded from an XML file and has all the layouting advantages"/>
-    <TextView
+    <Label
         id="title"
         layout_width="wrap_content"
         layout_height="wrap_content"

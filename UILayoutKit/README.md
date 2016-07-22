@@ -49,7 +49,7 @@ Defining and using a layout with UILayoutKit can be done in two simple steps:
                 layout_width="match_parent"
                 layout_height="wrap_content"
                 orientation="horizontal">
-                <TextView
+                <Label
                     id="text"
                     layout_width="wrap_content"
                     layout_height="wrap_content"
@@ -57,7 +57,7 @@ Defining and using a layout with UILayoutKit can be done in two simple steps:
                     text="Some text"
                     textColor="#ffffff"
                     background="#80000000"/>
-                <TextView
+                <Label
                     id="otherText"
                     layout_width="match_parent"
                     layout_height="match_parent"
@@ -214,7 +214,7 @@ Similar to the android layouting system, you can embed other layouts within a la
         
         <include layout="@layout/layoutToInclude"/>
         
-        <TextView
+        <Label
             layout_width="match_parent"
             layout_height="wrap_content"
             text="Some text"/>
@@ -235,11 +235,11 @@ XML files always need a single root element. If you have to include multiple vie
 
 ```xml
     <merge>
-        <TextView
+        <Label
             layout_width="match_parent"
             layout_height="wrap_content"
             text="First text view"/>
-        <TextView
+        <Label
             layout_width="match_parent"
             layout_height="wrap_content"
             text="Second text view"/>

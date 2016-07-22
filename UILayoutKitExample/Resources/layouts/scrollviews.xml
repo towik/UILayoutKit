@@ -60,17 +60,17 @@
 			layout_width="match_parent"
 			layout_height="wrap_content"
 			orientation="vertical">
-			<TextView
+			<Label
                 layout_width="match_parent"
                 layout_height="wrap_content"
                 background="#ff0000"
                 padding="20"
-                text="TextView1"/>
-			<TextView
+                text="Label1"/>
+			<Label
                 layout_width="match_parent"
                 layout_height="wrap_content"
                 style="@style/values.test"
-                text="TextView2"/>
+                text="Label2"/>
             <LinearLayout
                 layout_width="match_parent"
                 layout_height="wrap_content"
@@ -78,7 +78,7 @@
                 layout_marginLeft="10"
                 layout_marginRight="10"
                 orientation="vertical">
-                <TextView
+                <Label
                     id="toggleText"
                     layout_width="match_parent"
                     layout_height="44"
@@ -90,41 +90,41 @@
                         layout_width="20"
                         layout_height="20"/>
                 </LinearLayout>
-			<TextView
+			<Label
                 layout_width="match_parent"
                 layout_height="wrap_content"
                 style="@style/values.test"
-                text="TextView3"/>
-			<TextView
+                text="Label3"/>
+			<Label
                 layout_width="match_parent"
                 layout_height="wrap_content"
                 style="@style/values.test"
-                text="TextView4"/>
-			<TextView
+                text="Label4"/>
+			<Label
                 layout_width="match_parent"
                 layout_height="wrap_content"
                 style="@style/values.test"
-                text="TextView5"/>
-			<TextView
+                text="Label5"/>
+			<Label
                 layout_width="match_parent"
                 layout_height="wrap_content"
                 style="@style/values.test"
-                text="TextView6"/>
-			<TextView
+                text="Label6"/>
+			<Label
                 layout_width="match_parent"
                 layout_height="wrap_content"
                 style="@style/values.test"
-                text="TextView7"/>
-			<TextView
+                text="Label7"/>
+			<Label
                 layout_width="match_parent"
                 layout_height="wrap_content"
                 style="@style/values.test"
-                text="TextView8"/>
-			<TextView
+                text="Label8"/>
+			<Label
                 layout_width="match_parent"
                 layout_height="wrap_content"
                 style="@style/values.test"
-                text="TextView9"/>
+                text="Label9"/>
 		</LinearLayout>
 	</UIScrollView>
 </RelativeLayout>
