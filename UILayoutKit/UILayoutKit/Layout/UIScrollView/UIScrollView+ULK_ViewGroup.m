@@ -24,18 +24,18 @@
 
 @implementation UIScrollView (ULK_ViewGroup)
 
-+ (void)load {
-    Class c = self;
-    SEL origSEL = @selector(drawRect:);
-    SEL overrideSEL = @selector(ulk_drawRect:);
-    Method origMethod = class_getInstanceMethod(c, origSEL);
-    Method overrideMethod = class_getInstanceMethod(c, overrideSEL);
-    if(class_addMethod(c, origSEL, method_getImplementation(overrideMethod), method_getTypeEncoding(overrideMethod))) {
-        class_replaceMethod(c, overrideSEL, method_getImplementation(origMethod), method_getTypeEncoding(origMethod));
-    } else {
-        method_exchangeImplementations(origMethod, overrideMethod);
-    }
-}
+//+ (void)load {
+//    Class c = self;
+//    SEL origSEL = @selector(drawRect:);
+//    SEL overrideSEL = @selector(ulk_drawRect:);
+//    Method origMethod = class_getInstanceMethod(c, origSEL);
+//    Method overrideMethod = class_getInstanceMethod(c, overrideSEL);
+//    if(class_addMethod(c, origSEL, method_getImplementation(overrideMethod), method_getTypeEncoding(overrideMethod))) {
+//        class_replaceMethod(c, overrideSEL, method_getImplementation(origMethod), method_getTypeEncoding(origMethod));
+//    } else {
+//        method_exchangeImplementations(origMethod, overrideMethod);
+//    }
+//}
 
 - (void)ulk_onMeasureWithWidthMeasureSpec:(ULKLayoutMeasureSpec)widthMeasureSpec heightMeasureSpec:(ULKLayoutMeasureSpec)heightMeasureSpec {
     [ULKFrameLayout onFrameLayoutMeasure:self widthMeasureSpec:widthMeasureSpec heightMeasureSpec:heightMeasureSpec];
@@ -114,25 +114,25 @@
     [self setNeedsDisplay];
 }
 
-- (void)ulk_drawRect:(CGRect)rect {
-    ULKDrawable *drawable = self.ulk_backgroundDrawable;
-    if (drawable != nil) {
-        CGContextRef context = UIGraphicsGetCurrentContext();
-        CGContextSaveGState(context);
-        drawable.bounds = self.bounds;
-        [drawable drawInContext:context];
-        CGContextRestoreGState(context);
-    } else {
-        if (self.isOpaque) {
-            UIColor *color = self.backgroundColor;
-            if (color == nil) color = [UIColor whiteColor];
-            CGContextRef context = UIGraphicsGetCurrentContext();
-            CGContextSetFillColorWithColor(context, [color CGColor]);
-            CGContextFillRect(context, self.bounds);
-        }
-    }
-    [self ulk_drawRect:rect];
-}
+//- (void)ulk_drawRect:(CGRect)rect {
+//    ULKDrawable *drawable = self.ulk_backgroundDrawable;
+//    if (drawable != nil) {
+//        CGContextRef context = UIGraphicsGetCurrentContext();
+//        CGContextSaveGState(context);
+//        drawable.bounds = self.bounds;
+//        [drawable drawInContext:context];
+//        CGContextRestoreGState(context);
+//    } else {
+//        if (self.isOpaque) {
+//            UIColor *color = self.backgroundColor;
+//            if (color == nil) color = [UIColor whiteColor];
+//            CGContextRef context = UIGraphicsGetCurrentContext();
+//            CGContextSetFillColorWithColor(context, [color CGColor]);
+//            CGContextFillRect(context, self.bounds);
+//        }
+//    }
+//    [self ulk_drawRect:rect];
+//}
 
 - (void)ulk_drawableDidInvalidate:(ULKDrawable *)drawable {
     [self setNeedsDisplay];

@@ -23,18 +23,18 @@
 
 @implementation UILabel (Layout)
 
-+ (void)load {
-    Class c = self;
-    SEL origSEL = @selector(drawRect:);
-    SEL overrideSEL = @selector(ulk_drawRect:);
-    Method origMethod = class_getInstanceMethod(c, origSEL);
-    Method overrideMethod = class_getInstanceMethod(c, overrideSEL);
-    if(class_addMethod(c, origSEL, method_getImplementation(overrideMethod), method_getTypeEncoding(overrideMethod))) {
-        class_replaceMethod(c, overrideSEL, method_getImplementation(origMethod), method_getTypeEncoding(origMethod));
-    } else {
-        method_exchangeImplementations(origMethod, overrideMethod);
-    }
-}
+//+ (void)load {
+//    Class c = self;
+//    SEL origSEL = @selector(drawRect:);
+//    SEL overrideSEL = @selector(ulk_drawRect:);
+//    Method origMethod = class_getInstanceMethod(c, origSEL);
+//    Method overrideMethod = class_getInstanceMethod(c, overrideSEL);
+//    if(class_addMethod(c, origSEL, method_getImplementation(overrideMethod), method_getTypeEncoding(overrideMethod))) {
+//        class_replaceMethod(c, overrideSEL, method_getImplementation(origMethod), method_getTypeEncoding(origMethod));
+//    } else {
+//        method_exchangeImplementations(origMethod, overrideMethod);
+//    }
+//}
 
 - (void)ulk_setupFromAttributes:(NSDictionary *)attrs {
     [super ulk_setupFromAttributes:attrs];
@@ -172,15 +172,15 @@
     [self setNeedsDisplay];
 }
 
-- (void)ulk_drawRect:(CGRect)rect {
-    ULKDrawable *drawable = self.ulk_backgroundDrawable;
-    if (drawable != nil) {
-        CGContextRef context = UIGraphicsGetCurrentContext();
-        drawable.bounds = rect;
-        [drawable drawInContext:context];
-    }
-    [self ulk_drawRect:rect];
-}
+//- (void)ulk_drawRect:(CGRect)rect {
+//    ULKDrawable *drawable = self.ulk_backgroundDrawable;
+//    if (drawable != nil) {
+//        CGContextRef context = UIGraphicsGetCurrentContext();
+//        drawable.bounds = rect;
+//        [drawable drawInContext:context];
+//    }
+//    [self ulk_drawRect:rect];
+//}
 
 - (void)ulk_drawableDidInvalidate:(ULKDrawable *)drawable {
     [self setNeedsDisplay];
