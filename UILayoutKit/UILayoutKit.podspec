@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name          = "UILayoutKit"
-  s.version       = "0.0.1"
+  s.version       = "0.0.3"
   s.summary       = "UILayoutKit is a port of Androids layout system and its drawable and resources framework to iOS."
 
   s.description   = <<-DESC
@@ -17,15 +17,8 @@ In Android layouts can be defined in XML. Views automatically adjust their size 
 
   s.platform      = :ios, "7.0"
   s.source        = { :git => "https://github.com/towik/UILayoutKit.git", :tag => "#{s.version}" }
-  non_arc_files   = 'iDroidLayout/Utils/NSObject+IDL_KVOObserver.{h,m}'
   s.source_files  = 'UILayoutKit', 'UILayoutKit/**/*.{h,m}'
-  s.exclude_files = non_arc_files
   s.framework     = 'QuartzCore', 'UIKit', 'CoreGraphics'
   s.requires_arc  = true
-
-  s.subspec 'no-arc' do |sna|
-    sna.requires_arc = false
-    sna.source_files = non_arc_files
-  end
 
 end
