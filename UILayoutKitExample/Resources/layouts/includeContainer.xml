@@ -2,7 +2,7 @@
     layout_width="match_parent"
     layout_height="match_parent"
     orientation="vertical"
-    background="#ffffff"
+    backgroundColor="#ffffff"
     paddingTop="64">
     <include
         layout="@layout/includeChild1"

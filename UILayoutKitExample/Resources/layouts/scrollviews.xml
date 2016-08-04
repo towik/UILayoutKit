@@ -5,10 +5,10 @@
 		id="button_bar_scroll_view"
 		layout_width="match_parent"
 		layout_height="44"
-        background="#00ffffff"
+        backgroundColor="#00ffffff"
 		layout_alignParentBottom="true">
 		<LinearLayout
-            background="#00ffffff"
+            backgroundColor="#00ffffff"
 			layout_width="wrap_content"
 			layout_height="match_parent"
 			orientation="horizontal">
@@ -63,7 +63,7 @@
 			<Label
                 layout_width="match_parent"
                 layout_height="wrap_content"
-                background="#ff0000"
+                backgroundColor="#ff0000"
                 padding="20"
                 text="Label1"/>
 			<Label

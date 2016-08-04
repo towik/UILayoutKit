@@ -66,11 +66,11 @@ static char visibilityKey;
     NSString *visibilityString = attrs[@"visibility"];
     self.ulk_visibility = ULKViewVisibilityFromString(visibilityString);
     
-    // background
-    /*UIColor *background = [attrs colorFromIDLValueForKey:@"background"];
-    if (background != nil) {
-        self.backgroundColor = background;
-    }*/
+    // backgroundColor
+    UIColor *backgroundColor = [attrs ulk_colorFromIDLValueForKey:@"backgroundColor"];
+    if (backgroundColor != nil) {
+        self.backgroundColor = backgroundColor;
+    }
     
     // padding
     NSString *paddingString = attrs[@"padding"];

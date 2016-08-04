@@ -2,13 +2,13 @@
     <Label
         layout_width="match_parent"
         layout_height="wrap_content"
-        background="#ff0000"
+        backgroundColor="#ff0000"
         textColor="#0ßffff"
         text="And we are included"/>
     <Label
         layout_width="match_parent"
         layout_height="wrap_content"
-        background="#0000ff"
+        backgroundColor="#0000ff"
         textColor="#ffffff"
         text="from layout includeChild2.xml"/>
 </merge>

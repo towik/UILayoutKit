@@ -56,20 +56,20 @@ Defining and using a layout with UILayoutKit can be done in two simple steps:
                     padding="10"
                     text="Some text"
                     textColor="#ffffff"
-                    background="#80000000"/>
+                    backgroundColor="#80000000"/>
                 <Label
                     id="otherText"
                     layout_width="match_parent"
                     layout_height="match_parent"
                     padding="10"
                     textColor="#ffffff"
-                    background="#ff0000"
+                    backgroundColor="#ff0000"
                     gravity="right"
                     text="Some other text"/>
             </LinearLayout>
             <UIButton
                 id="button"
-                background="#ff0000"
+                backgroundColor="#ff0000"
                 layout_width="100"
                 layout_height="30"
                 layout_gravity="center_horizontal"

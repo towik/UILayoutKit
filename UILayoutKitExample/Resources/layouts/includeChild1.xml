@@ -3,5 +3,5 @@
     layout_height="wrap_content"
     paddingLeft="10"
     paddingRight="10"
-    background="#00ff00"
+    backgroundColor="#00ff00"
     text="I'm included from layout includeChild1.xml"/>
