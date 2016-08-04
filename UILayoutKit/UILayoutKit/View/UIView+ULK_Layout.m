@@ -14,7 +14,6 @@
 #import "UIColor+ULK_ColorParser.h"
 #import "UIView+ULK_ViewGroup.h"
 #import "NSDictionary+ULK_ResourceManager.h"
-#import "UIView+ULKDrawable.h"
 #import "ULKResourceManager.h"
 
 #pragma mark - import libs
@@ -72,10 +71,6 @@ static char visibilityKey;
     if (background != nil) {
         self.backgroundColor = background;
     }*/
-    NSString *backgroundString = attrs[@"background"];
-    if (backgroundString != nil) {
-        self.ulk_backgroundDrawable = [[ULKResourceManager currentResourceManager] drawableForIdentifier:backgroundString];
-    }
     
     // padding
     NSString *paddingString = attrs[@"padding"];

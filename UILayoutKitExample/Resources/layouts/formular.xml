@@ -17,7 +17,7 @@
             layout_width="match_parent"
             layout_height="wrap_content"
             layout_marginBottom="10">
-            <TextView
+            <Label
                 id="username_label"
                 layout_width="100"
                 layout_height="40"
@@ -26,7 +26,7 @@
                 gravity="left|center_vertical"
                 font="Helvetica-Bold"
                 text="@string/values.username_label"/>
-            <EditText
+            <TextField
                 id="username"
                 background="@drawable/background1"
                 layout_width="match_parent"
@@ -38,7 +38,7 @@
             layout_width="match_parent"
             layout_height="wrap_content"
             layout_marginBottom="10">
-            <TextView
+            <Label
                 id="password_label"
                 layout_width="100"
                 layout_height="40"
@@ -47,7 +47,7 @@
                 gravity="left|center_vertical"
                 font="Helvetica-Bold"
                 text="@string/values.password_label"/>
-            <EditText
+            <TextField
                 id="password"
                 background="@drawable/background1"
                 layout_width="match_parent"
@@ -55,20 +55,20 @@
                 layout_toRightOf="password_label"
                 layout_alignParentRight="true"/>    
         </RelativeLayout>
-        <TextView
+        <Label
             layout_width="wrap_content"
             layout_height="wrap_content"
             layout_gravity="right"
             text="@string/values.formular_hint"
             textSize="10"
             textColor="#aaaaaa"/>
-        <TextArea
+        <TextView
             id="freeText"
             background="@drawable/background1"
             layout_width="match_parent"
             layout_height="200"
             layout_marginBottom="10"/>
-        <TextView
+        <Label
             id="androidStatus"
             layout_width="match_parent"
             layout_height="wrap_content"

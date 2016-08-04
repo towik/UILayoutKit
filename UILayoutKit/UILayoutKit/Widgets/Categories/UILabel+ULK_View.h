@@ -11,9 +11,8 @@
 
 #import <UIKit/UIKit.h>
 #import "ULKGravity.h"
-#import "ULKDrawable.h"
 
-@interface UILabel (ULK_View) <ULKDrawableDelegate>
+@interface UILabel (ULK_View)
 
 @property (nonatomic, assign) ULKViewContentGravity ulk_gravity;
 

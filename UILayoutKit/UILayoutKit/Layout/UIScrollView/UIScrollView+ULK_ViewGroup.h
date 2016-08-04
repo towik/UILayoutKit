@@ -10,10 +10,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ULKDrawable.h"
 #import "ULKFrameLayoutParams.h"
 
 
-@interface UIScrollView (ULK_ViewGroup) <ULKDrawableDelegate>
+@interface UIScrollView (ULK_ViewGroup)
 
 @end

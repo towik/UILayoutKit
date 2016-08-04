@@ -13,7 +13,6 @@
 #import "UIView+ULK_Layout.h"
 #import "ULKLayoutParams.h"
 #import "UIView+ULK_ViewGroup.h"
-#import "UIView+ULKDrawable.h"
 #import "NSObject+ULK_KVOObserver.h"
 #import "ULKFrameLayout.h"
 
@@ -84,58 +83,6 @@
         ret = TRUE;
     }
     return ret;
-}
-
-- (void)setUlk_backgroundDrawable:(ULKDrawable *)backgroundDrawable {
-    self.ulk_backgroundDrawable.delegate = nil;
-    [super setUlk_backgroundDrawable:backgroundDrawable];
-}
-
-- (void)ulk_onBackgroundDrawableChanged {
-    static NSString *BackgroundDrawableFrameTag = @"backgroundDrawableFrame";
-    ULKDrawable *drawable = self.ulk_backgroundDrawable;
-    if (drawable != nil) {
-        drawable.delegate = self;
-        drawable.state = UIControlStateNormal;
-        drawable.bounds = self.bounds;
-        self.backgroundColor = [UIColor clearColor];
-
-        if (![self ulk_hasObserverWithIdentifier:BackgroundDrawableFrameTag]) {
-            __weak UIView *selfRef = self;
-            [self ulk_addObserver:^(NSString *keyPath, id object, NSDictionary *change) {
-                selfRef.ulk_backgroundDrawable.bounds = selfRef.bounds;
-                [selfRef setNeedsDisplay];
-            } withIdentifier:BackgroundDrawableFrameTag forKeyPaths:@[@"frame"] options:NSKeyValueObservingOptionNew];
-        }
-    } else {
-        [self ulk_removeObserverWithIdentifier:BackgroundDrawableFrameTag];
-    }
-    
-    [self setNeedsDisplay];
-}
-
-//- (void)ulk_drawRect:(CGRect)rect {
-//    ULKDrawable *drawable = self.ulk_backgroundDrawable;
-//    if (drawable != nil) {
-//        CGContextRef context = UIGraphicsGetCurrentContext();
-//        CGContextSaveGState(context);
-//        drawable.bounds = self.bounds;
-//        [drawable drawInContext:context];
-//        CGContextRestoreGState(context);
-//    } else {
-//        if (self.isOpaque) {
-//            UIColor *color = self.backgroundColor;
-//            if (color == nil) color = [UIColor whiteColor];
-//            CGContextRef context = UIGraphicsGetCurrentContext();
-//            CGContextSetFillColorWithColor(context, [color CGColor]);
-//            CGContextFillRect(context, self.bounds);
-//        }
-//    }
-//    [self ulk_drawRect:rect];
-//}
-
-- (void)ulk_drawableDidInvalidate:(ULKDrawable *)drawable {
-    [self setNeedsDisplay];
 }
 
 - (BOOL)ulk_checkLayoutParams:(ULKLayoutParams *)layoutParams {

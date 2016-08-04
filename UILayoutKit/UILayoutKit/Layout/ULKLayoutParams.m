@@ -102,10 +102,10 @@ static char layoutParamsKey;
 - (ULKLayoutParams *)layoutParams {
     ULKLayoutParams *layoutParams = objc_getAssociatedObject(self, &layoutParamsKey);
     
-    if (![layoutParams isKindOfClass:[ULKLayoutParams class]]) {
-        layoutParams = [[ULKLayoutParams alloc] initWithLayoutParams:layoutParams];
-        self.layoutParams = layoutParams;
-    }
+//    if (![layoutParams isKindOfClass:[ULKLayoutParams class]]) {
+//        layoutParams = [[ULKLayoutParams alloc] initWithLayoutParams:layoutParams];
+//        self.layoutParams = layoutParams;
+//    }
     
     return (ULKLayoutParams *)layoutParams;
 }

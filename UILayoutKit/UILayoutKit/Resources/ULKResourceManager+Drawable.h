@@ -17,6 +17,5 @@
 @interface ULKResourceManager (Drawable)
 
 - (ULKDrawableStateList *)drawableStateListForIdentifier:(NSString *)identifierString;
-- (ULKDrawable *)drawableForIdentifier:(NSString *)identifier;
 
 @end

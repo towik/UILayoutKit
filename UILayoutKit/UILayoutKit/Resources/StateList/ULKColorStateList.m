@@ -15,8 +15,6 @@
 #import "UIColor+ULK_ColorParser.h"
 #import "ULKColorStateItem+ULK_Internal.h"
 #import "ULKResourceStateList+ULK_Internal.h"
-#import "ULKStateListDrawable.h"
-#import "ULKColorDrawable.h"
 
 @interface ULKColorStateList ()
 
@@ -67,11 +65,6 @@
 
 - (UIColor *)colorForControlState:(UIControlState)controlState {
     return [self colorForControlState:controlState defaultColor:nil];
-}
-
-- (ULKDrawable *)convertToDrawable {
-    ULKStateListDrawable *drawable = [[ULKStateListDrawable alloc] initWithColorStateListe:self];
-    return drawable;
 }
 
 @end

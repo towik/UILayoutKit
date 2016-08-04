@@ -14,9 +14,7 @@
 #import "UIColor+ULK_ColorParser.h"
 #import "ULKResourceManager.h"
 #import "NSDictionary+ULK_ResourceManager.h"
-#import "UIView+ULKDrawable.h"
 #import "NSObject+ULK_KVOObserver.h"
-#import "ULKColorDrawable.h"
 
 #include "objc/runtime.h"
 #include "objc/message.h"
@@ -144,46 +142,6 @@
     measuredSize.height.size = MAX(measuredSize.height.size, minSize.height);
     
     [self ulk_setMeasuredDimensionSize:measuredSize];
-}
-
-- (void)setUlk_backgroundDrawable:(ULKDrawable *)backgroundDrawable {
-    self.ulk_backgroundDrawable.delegate = nil;
-    [super setUlk_backgroundDrawable:backgroundDrawable];
-}
-
-- (void)ulk_onBackgroundDrawableChanged {
-    static NSString *BackgroundDrawableFrameTag = @"backgroundDrawableFrame";
-    ULKDrawable *drawable = self.ulk_backgroundDrawable;
-    if (drawable != nil) {
-        drawable.delegate = self;
-        drawable.state = UIControlStateNormal;
-        self.backgroundColor = [UIColor clearColor];
-        
-        if (![self ulk_hasObserverWithIdentifier:BackgroundDrawableFrameTag]) {
-            __weak UIView *selfRef = self;
-            [self ulk_addObserver:^(NSString *keyPath, id object, NSDictionary *change) {
-                selfRef.ulk_backgroundDrawable.bounds = selfRef.bounds;
-                [selfRef setNeedsDisplay];
-            } withIdentifier:BackgroundDrawableFrameTag forKeyPaths:@[@"frame"] options:NSKeyValueObservingOptionNew];
-        }
-    } else {
-        [self ulk_removeObserverWithIdentifier:BackgroundDrawableFrameTag];
-    }
-    [self setNeedsDisplay];
-}
-
-//- (void)ulk_drawRect:(CGRect)rect {
-//    ULKDrawable *drawable = self.ulk_backgroundDrawable;
-//    if (drawable != nil) {
-//        CGContextRef context = UIGraphicsGetCurrentContext();
-//        drawable.bounds = rect;
-//        [drawable drawInContext:context];
-//    }
-//    [self ulk_drawRect:rect];
-//}
-
-- (void)ulk_drawableDidInvalidate:(ULKDrawable *)drawable {
-    [self setNeedsDisplay];
 }
 
 @end

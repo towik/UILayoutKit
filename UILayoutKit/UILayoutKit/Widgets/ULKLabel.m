@@ -12,7 +12,6 @@
 #import "ULKLabel.h"
 #import "UIView+ULK_Layout.h"
 #import "UILabel+ULK_View.h"
-#import "UIView+ULKDrawable.h"
 
 @implementation ULKLabel
 

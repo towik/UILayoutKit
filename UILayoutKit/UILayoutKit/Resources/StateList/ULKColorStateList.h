@@ -11,13 +11,11 @@
 
 #import "ULKResourceStateList.h"
 #import "ULKColorStateItem.h"
-#import "ULKDrawable.h"
 
 @interface ULKColorStateList : ULKResourceStateList
 
 - (UIColor *)colorForControlState:(UIControlState)controlState defaultColor:(UIColor *)defaultColor;
 - (UIColor *)colorForControlState:(UIControlState)controlState;
-- (ULKDrawable *)convertToDrawable;
 
 + (instancetype)createFromXMLData:(NSData *)data;
 + (instancetype)createFromXMLURL:(NSURL *)url;
