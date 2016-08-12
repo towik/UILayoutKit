@@ -13,4 +13,7 @@
 
 @interface UITextView (ULK_View)
 
+- (void)ulk_setText:(NSString *)text;
+- (void)ulk_setFont:(UIFont *)font;
+
 @end

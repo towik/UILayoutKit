@@ -122,7 +122,7 @@
 }
 
 - (void)didPressToggleButton:(UIButton *)button {
-    ULKLabel *textView = (ULKLabel *)[button.superview ulk_findViewById:@"toggleText"];
+    UILabel *textView = (UILabel *)[button.superview ulk_findViewById:@"toggleText"];
     
     ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *) textView.layoutParams;
     if (lp.height == ULKLayoutParamsSizeWrapContent) {
