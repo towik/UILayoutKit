@@ -112,6 +112,7 @@ static char layoutParamsKey;
 
 - (void)setLayoutWidth:(CGFloat)layoutWidth {
     self.layoutParams.width = layoutWidth;
+    [self ulk_requestLayout];
 }
 
 - (CGFloat)layoutWidth {
@@ -120,6 +121,7 @@ static char layoutParamsKey;
 
 - (void)setLayoutHeight:(CGFloat)layoutHeight {
     self.layoutParams.height = layoutHeight;
+    [self ulk_requestLayout];
 }
 
 - (CGFloat)layoutHeight {
@@ -128,6 +130,7 @@ static char layoutParamsKey;
 
 - (void)setLayoutMargin:(UIEdgeInsets)layoutMargin {
     self.layoutParams.margin = layoutMargin;
+    [self ulk_requestLayout];
 }
 
 - (UIEdgeInsets)layoutMargin {

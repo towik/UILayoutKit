@@ -55,6 +55,7 @@
 
 - (void)setUlk_layoutGravity:(ULKViewContentGravity)layoutGravity {
     self.frameLayoutParams.gravity = layoutGravity;
+    [self ulk_requestLayout];
 }
 
 - (ULKViewContentGravity)ulk_layoutGravity {

@@ -64,6 +64,7 @@
 
 - (void)setLayoutWeight:(float)layoutWeight {
     self.linearLayoutParams.weight = layoutWeight;
+    [self ulk_requestLayout];
 }
 
 - (float)layoutWeight {
