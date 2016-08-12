@@ -1,5 +1,5 @@
 //
-//  ULKTextField.h
+//  UITextField+ULK_View.h
 //  UILayoutKit
 //
 //  Created by Tom Quist on 03.01.13.
@@ -11,8 +11,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ULKTextField : UITextField
+@interface UITextField (ULK_View)
 
-@property (nonatomic, assign) UIControlContentVerticalAlignment contentVerticalAlignment;
+- (void)ulk_setText:(NSString *)text;
+- (void)ulk_setFont:(UIFont *)font;
 
 @end
