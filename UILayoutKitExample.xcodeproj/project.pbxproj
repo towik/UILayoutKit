@@ -392,7 +392,6 @@
 			children = (
 				2B1ACEE91D60908200303BFC /* UILayoutKit.h */,
 				2B1ACEAA1D60908200303BFC /* FrameLayout */,
-				2B1ACEAF1D60908200303BFC /* LayoutBridge */,
 				2B1ACEB01D60908200303BFC /* LinearLayout */,
 				2B1ACEB51D60908200303BFC /* RelativeLayout */,
 				2B1ACEC81D60908200303BFC /* UIKitExtension */,
@@ -410,13 +409,6 @@
 				2B1ACEAE1D60908200303BFC /* ULKFrameLayoutParams.m */,
 			);
 			path = FrameLayout;
-			sourceTree = "<group>";
-		};
-		2B1ACEAF1D60908200303BFC /* LayoutBridge */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LayoutBridge;
 			sourceTree = "<group>";
 		};
 		2B1ACEB01D60908200303BFC /* LinearLayout */ = {
@@ -472,7 +464,6 @@
 				2B1ACEE51D60908200303BFC /* ULKLayoutParams.m */,
 				2B1ACEE61D60908200303BFC /* ULKViewGroup.h */,
 				2B1ACEE71D60908200303BFC /* ULKViewGroup.m */,
-				2B1ACEE81D60908200303BFC /* ViewController */,
 			);
 			path = UIKitExtension;
 			sourceTree = "<group>";
@@ -506,13 +497,6 @@
 				2B1ACEE11D60908200303BFC /* UIView+ULK_ViewGroup.m */,
 			);
 			path = Categories;
-			sourceTree = "<group>";
-		};
-		2B1ACEE81D60908200303BFC /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		2B1ACEEA1D60908200303BFC /* UIScrollView */ = {
