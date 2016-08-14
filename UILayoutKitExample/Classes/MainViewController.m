@@ -7,7 +7,8 @@
 //
 
 #import "MainViewController.h"
-#import "UILayoutKit.h" // iDroidLayout
+#import "UILayoutKit.h"
+#import "UILayoutKitXmlParser.h"
 #import "FormularViewController.h"
 #import "LayoutAnimationsViewController.h"
 #import "ULKResourceManager.h"

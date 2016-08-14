@@ -1,5 +1,5 @@
 //
-//  UILayoutKit.h
+//  ULKLayouts.h
 //  UILayoutKit
 //
 //  Created by Tom Quist on 22.07.12.
@@ -15,16 +15,14 @@
 #import "ULKViewGroup.h"
 
 // Layout
-#import "ULKLayouts.h"
+#import "ULKLayoutBridge.h"
+#import "UIScrollView+ULK_ViewGroup.h"
+#import "ULKFrameLayout.h"
+#import "ULKLinearLayout.h"
+#import "ULKRelativeLayout.h"
 
 // Views
 #import "UILabel+ULK_View.h"
-#import "UIControl+ULK_View.h" 
+#import "UIControl+ULK_View.h"
 
-// XMLParser
-#import "ULKLayoutInflater.h"
-#import "ULKResourceManager.h"
-#import "ULKStyle.h"
-#import "ULKLayoutBridge.h"
-#import "ULKTableViewCell.h"
-#import "ULKLayoutViewController.h"
+
