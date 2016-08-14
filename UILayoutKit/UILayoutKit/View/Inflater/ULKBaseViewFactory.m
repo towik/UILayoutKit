@@ -12,7 +12,7 @@
 #import "ULKBaseViewFactory.h"
 #import "UIView+ULK_Layout.h"
 
-@interface UIButton () 
+@interface UIButton ()
 
 - (void)ulk_setupFromAttributes:(NSDictionary *)attrs;
 
@@ -47,12 +47,15 @@
 }
 
 - (UIView *)onCreateViewWithName:(NSString *)name attributes:(NSDictionary *)attrs {
-    if ([name isEqualToString:@"UIButton"]) {
+    if ([name isEqualToString:@"Button"]) {
         return [self onCreateUIButtonWithAttributes:attrs];
     }
     Class viewClass = NSClassFromString(name);
     if (viewClass == NULL) {
         viewClass = NSClassFromString([NSString stringWithFormat:@"ULK%@", name]);
+    }
+    if (viewClass == NULL) {
+        viewClass = NSClassFromString([NSString stringWithFormat:@"UI%@", name]);
     }
     if (viewClass == NULL) {
         @throw [NSException exceptionWithName:@"ClassNotFoundException" reason:[NSString stringWithFormat:@"Class %@ could not be found", name] userInfo:nil];

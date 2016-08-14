@@ -10,27 +10,9 @@
 //
 
 #import "UISearchBar+ULK_View.h"
-#import "UIToolbar+ULK_View.h"
 #import "UIView+ULK_Layout.h"
-#import "NSDictionary+ULK_ResourceManager.h"
 
 @implementation UISearchBar (ULK_View)
-
-- (void)ulk_setupFromAttributes:(NSDictionary *)attrs {
-    [super ulk_setupFromAttributes:attrs];
-    UIColor *tintColor = [attrs ulk_colorFromIDLValueForKey:@"tintColor"];
-    if (tintColor != nil) {
-        self.tintColor = tintColor;
-    }
-    NSString *barStyle = attrs[@"barStyle"];
-    if (barStyle != nil) {
-        self.barStyle = ULKUIBarStyleFromString(barStyle);
-    }
-    NSString *translucent = attrs[@"translucent"];
-    if (translucent != nil) {
-        self.translucent = ULKBOOLFromString(translucent);
-    }
-}
 
 - (void)ulk_onMeasureWithWidthMeasureSpec:(ULKLayoutMeasureSpec)widthMeasureSpec heightMeasureSpec:(ULKLayoutMeasureSpec)heightMeasureSpec {
     ULKLayoutMeasureSpecMode widthMode = widthMeasureSpec.mode;

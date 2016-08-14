@@ -17,7 +17,7 @@
 		2B1AC7751D5DD97100303BFC /* UITextField+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1AC7671D5DD97100303BFC /* UITextField+ULK_View.m */; };
 		2B1AC7761D5DD97100303BFC /* UITextView+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1AC7691D5DD97100303BFC /* UITextView+ULK_View.m */; };
 		2B1AC7771D5DD97100303BFC /* UIToolbar+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1AC76B1D5DD97100303BFC /* UIToolbar+ULK_View.m */; };
-		2B1AC7781D5DD97100303BFC /* UIWebView+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1AC76D1D5DD97100303BFC /* UIWebView+ULK_View.m */; };
+		2B1AC77E1D60725500303BFC /* UIKit+ULK_XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1AC77D1D60725500303BFC /* UIKit+ULK_XMLParser.m */; };
 		2B5DEB9F1D3F963F00E13C76 /* drawable_button_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5DEAD81D3F963F00E13C76 /* drawable_button_normal.png */; };
 		2B5DEBA01D3F963F00E13C76 /* drawable_button_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5DEAD91D3F963F00E13C76 /* drawable_button_pressed.png */; };
 		2B5DEBA11D3F963F00E13C76 /* layout_example.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5DEADA1D3F963F00E13C76 /* layout_example.png */; };
@@ -122,8 +122,8 @@
 		2B1AC7691D5DD97100303BFC /* UITextView+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+ULK_View.m"; sourceTree = "<group>"; };
 		2B1AC76A1D5DD97100303BFC /* UIToolbar+ULK_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIToolbar+ULK_View.h"; sourceTree = "<group>"; };
 		2B1AC76B1D5DD97100303BFC /* UIToolbar+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIToolbar+ULK_View.m"; sourceTree = "<group>"; };
-		2B1AC76C1D5DD97100303BFC /* UIWebView+ULK_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+ULK_View.h"; sourceTree = "<group>"; };
-		2B1AC76D1D5DD97100303BFC /* UIWebView+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+ULK_View.m"; sourceTree = "<group>"; };
+		2B1AC77C1D60725500303BFC /* UIKit+ULK_XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIKit+ULK_XMLParser.h"; sourceTree = "<group>"; };
+		2B1AC77D1D60725500303BFC /* UIKit+ULK_XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIKit+ULK_XMLParser.m"; sourceTree = "<group>"; };
 		2B5DEAD81D3F963F00E13C76 /* drawable_button_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drawable_button_normal.png; sourceTree = "<group>"; };
 		2B5DEAD91D3F963F00E13C76 /* drawable_button_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drawable_button_pressed.png; sourceTree = "<group>"; };
 		2B5DEADA1D3F963F00E13C76 /* layout_example.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = layout_example.png; sourceTree = "<group>"; };
@@ -309,8 +309,6 @@
 				2B1AC7691D5DD97100303BFC /* UITextView+ULK_View.m */,
 				2B1AC76A1D5DD97100303BFC /* UIToolbar+ULK_View.h */,
 				2B1AC76B1D5DD97100303BFC /* UIToolbar+ULK_View.m */,
-				2B1AC76C1D5DD97100303BFC /* UIWebView+ULK_View.h */,
-				2B1AC76D1D5DD97100303BFC /* UIWebView+ULK_View.m */,
 			);
 			name = Categories;
 			path = ViewController/Categories;
@@ -540,6 +538,8 @@
 		2B5DEB681D3F963F00E13C76 /* Inflater */ = {
 			isa = PBXGroup;
 			children = (
+				2B1AC77C1D60725500303BFC /* UIKit+ULK_XMLParser.h */,
+				2B1AC77D1D60725500303BFC /* UIKit+ULK_XMLParser.m */,
 				2B5DEB691D3F963F00E13C76 /* ULKBaseViewFactory.h */,
 				2B5DEB6A1D3F963F00E13C76 /* ULKBaseViewFactory.m */,
 				2B5DEB6B1D3F963F00E13C76 /* ULKLayoutInflater.h */,
@@ -879,9 +879,9 @@
 				2B5DEBDC1D3F963F00E13C76 /* ULKTableViewCell.m in Sources */,
 				2B5DEBAA1D3F963F00E13C76 /* ULKDependencyGraphNode.m in Sources */,
 				2B5DEBAD1D3F963F00E13C76 /* UIScrollView+ULK_ViewGroup.m in Sources */,
-				2B1AC7781D5DD97100303BFC /* UIWebView+ULK_View.m in Sources */,
 				2B5DEBD51D3F963F00E13C76 /* ULKPools.m in Sources */,
 				2B5DEBC81D3F963F00E13C76 /* ULKResourceManager+ULKIDL_Internal.m in Sources */,
+				2B1AC77E1D60725500303BFC /* UIKit+ULK_XMLParser.m in Sources */,
 				2B5DEBCB1D3F963F00E13C76 /* ULKResourceValueSet.m in Sources */,
 				2B5DEBD61D3F963F00E13C76 /* ULKSynchronizedPool.m in Sources */,
 				2B5DEBD91D3F963F00E13C76 /* UIView+ULK_Layout.m in Sources */,

@@ -11,15 +11,8 @@
 
 #import "UILabel+ULK_View.h"
 #import "UIView+ULK_Layout.h"
-#import "UIColor+ULK_ColorParser.h"
-#import "ULKResourceManager.h"
-#import "NSDictionary+ULK_ResourceManager.h"
-#import "NSObject+ULK_KVOObserver.h"
 
-#include "objc/runtime.h"
-#include "objc/message.h"
-
-@implementation UILabel (Layout)
+@implementation UILabel (ULK_View)
 
 //+ (void)load {
 //    Class c = self;
@@ -33,41 +26,6 @@
 //        method_exchangeImplementations(origMethod, overrideMethod);
 //    }
 //}
-
-- (void)ulk_setupFromAttributes:(NSDictionary *)attrs {
-    [super ulk_setupFromAttributes:attrs];
-    
-    self.text = [attrs ulk_stringFromIDLValueForKey:@"text"];
-    
-    self.ulk_gravity = [ULKGravity gravityFromAttribute:attrs[@"gravity"]];
-    NSString *lines = attrs[@"lines"];
-    self.numberOfLines = [lines integerValue];
-    
-    ULKColorStateList *textColorStateList = [attrs ulk_colorStateListFromIDLValueForKey:@"textColor"];
-    if (textColorStateList != nil) {
-        self.textColor = [textColorStateList colorForControlState:UIControlStateNormal];
-        UIColor *highlightedColor = [textColorStateList colorForControlState:UIControlStateHighlighted];
-        if (highlightedColor != nil) {
-            self.highlightedTextColor = highlightedColor;
-        }
-    } else {
-        UIColor *color = [attrs ulk_colorFromIDLValueForKey:@"textColor"];
-        if (color != nil) {
-            self.textColor = color;
-        }
-    }
-    
-    NSString *fontName = attrs[@"font"];
-    NSString *textSize = attrs[@"textSize"];
-    if (fontName != nil) {
-        CGFloat size = self.font.pointSize;
-        if (textSize != nil) size = [textSize floatValue];
-        self.font = [UIFont fontWithName:fontName size:size];
-    } else if (textSize != nil) {
-        CGFloat size = [textSize floatValue];
-        self.font = [UIFont systemFontOfSize:size];
-    }
-}
 
 - (ULKViewContentGravity)ulk_gravity {
     ULKViewContentGravity ret;

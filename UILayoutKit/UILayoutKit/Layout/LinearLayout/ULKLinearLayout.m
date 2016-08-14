@@ -28,17 +28,6 @@
     BOOL _useLargestChild;
 }
 
-- (void)ulk_setupFromAttributes:(NSDictionary *)attrs {
-    [super ulk_setupFromAttributes:attrs];
-    _gravity = [ULKGravity gravityFromAttribute:attrs[@"gravity"]];
-    NSString *orientationString = attrs[@"orientation"];
-    if ([orientationString isEqualToString:@"horizontal"]) {
-        _orientation = LinearLayoutOrientationHorizontal;
-    } else {
-        _orientation = LinearLayoutOrientationVertical;
-    }
-}
-
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {

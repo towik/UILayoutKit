@@ -34,12 +34,6 @@
     BOOL _hasBaselineAlignedChild;
 }
 
-- (void)ulk_setupFromAttributes:(NSDictionary *)attrs {
-    [super ulk_setupFromAttributes:attrs];
-    _gravity = [ULKGravity gravityFromAttribute:attrs[@"gravity"]];
-    _ignoreGravity = attrs[@"ignoreGravity"];
-}
-
 - (instancetype)initUlk_WithAttributes:(NSDictionary *)attrs {
     self = [super initUlk_WithAttributes:attrs];
     if (self) {

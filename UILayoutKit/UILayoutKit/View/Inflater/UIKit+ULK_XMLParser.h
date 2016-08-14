@@ -1,5 +1,5 @@
 //
-//  UIWebView+ULK_View.h
+//  UIKit+ULK_XMLParser.h
 //  UILayoutKit
 //
 //  Created by Tom Quist on 22.07.12.
@@ -11,6 +11,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIWebView (ULK_View)
+@interface UIView (ULK_XMLParser)
+
+- (void)ulk_setupFromAttributes:(NSDictionary *)attrs;
+- (instancetype)initUlk_WithAttributes:(NSDictionary *)attrs;
 
 @end

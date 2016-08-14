@@ -25,15 +25,6 @@
     return self;
 }
 
-- (instancetype)initUlk_WithAttributes:(NSDictionary *)attrs {
-    self = [super initUlk_WithAttributes:attrs];
-    if (self) {
-        NSString *gravityString = attrs[@"layout_gravity"];
-        _gravity = [ULKGravity gravityFromAttribute:gravityString];
-    }
-    return self;
-}
-
 @end
 
 

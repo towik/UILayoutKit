@@ -73,9 +73,6 @@ BOOL ULKBOOLFromString(NSString *boolString);
 @property (nonatomic, assign) NSString *ulk_identifier;
 @property (nonatomic, assign) ULKViewVisibility ulk_visibility;
 
-- (instancetype)initUlk_WithAttributes:(NSDictionary *)attrs;
-- (void)ulk_setupFromAttributes:(NSDictionary *)attrs;
-
 - (void)ulk_onMeasureWithWidthMeasureSpec:(ULKLayoutMeasureSpec)widthMeasureSpec heightMeasureSpec:(ULKLayoutMeasureSpec)heightMeasureSpec;
 - (void)ulk_measureWithWidthMeasureSpec:(ULKLayoutMeasureSpec)widthMeasureSpec heightMeasureSpec:(ULKLayoutMeasureSpec)heightMeasureSpec;
 - (void)ulk_onLayoutWithFrame:(CGRect)frame didFrameChange:(BOOL)changed;

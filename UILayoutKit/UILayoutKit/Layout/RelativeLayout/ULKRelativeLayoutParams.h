@@ -90,8 +90,15 @@ typedef NS_ENUM(NSUInteger ,ULKRelativeLayoutRule) {
 
 @interface ULKRelativeLayoutParams : ULKLayoutParams
 
-@property (nonatomic, readonly) NSArray *rules;
+@property (nonatomic, strong) NSArray *rules;
 @property (nonatomic, assign) BOOL alignWithParent;
+@property (nonatomic, assign) BOOL alignParentLeft;
+@property (nonatomic, assign) BOOL alignParentTop;
+@property (nonatomic, assign) BOOL alignParentRight;
+@property (nonatomic, assign) BOOL alignParentBottom;
+@property (nonatomic, assign) BOOL centerInParent;
+@property (nonatomic, assign) BOOL centerHorizontal;
+@property (nonatomic, assign) BOOL centerVertical;
 
 @end
 

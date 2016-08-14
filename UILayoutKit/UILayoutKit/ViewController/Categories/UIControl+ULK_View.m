@@ -11,26 +11,8 @@
 
 #import "UIControl+ULK_View.h"
 #import "UIView+ULK_Layout.h"
-#import "NSDictionary+ULK_ResourceManager.h"
 
 @implementation UIControl (ULK_View)
-
-- (void)ulk_setupFromAttributes:(NSDictionary *)attrs {
-    [super ulk_setupFromAttributes:attrs];
-    id delegate = attrs[ULKViewAttributeActionTarget];
-    if (delegate != nil) {
-        NSString *onClickKeyPath = [attrs ulk_stringFromIDLValueForKey:@"onClickKeyPath"];
-        NSString *onClickSelector = [attrs ulk_stringFromIDLValueForKey:@"onClick"];
-        SEL selector = NULL;
-        if (onClickSelector != nil && (selector = NSSelectorFromString(onClickSelector)) != NULL) {
-            if ([onClickKeyPath length] > 0) {
-                [self addTarget:[delegate valueForKeyPath:onClickKeyPath] action:selector forControlEvents:UIControlEventTouchUpInside];
-            } else {
-                [self addTarget:delegate action:selector forControlEvents:UIControlEventTouchUpInside];
-            }
-        }
-    }
-}
 
 - (void)setUlk_gravity:(ULKViewContentGravity)gravity {
     if ((gravity & ULKViewContentGravityTop) == ULKViewContentGravityTop) {

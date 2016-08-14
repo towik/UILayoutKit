@@ -11,52 +11,8 @@
 
 #import "UIImageView+ULK_View.h"
 #import "UIView+ULK_Layout.h"
-#import "ULKResourceManager.h"
 
-@implementation UIImageView (Layout)
-
-- (void)ulk_setupFromAttributes:(NSDictionary *)attrs {
-    [super ulk_setupFromAttributes:attrs];
-    NSString *imageRes = attrs[@"src"];
-    ULKDrawableStateList *drawableStateList = [[ULKResourceManager currentResourceManager] drawableStateListForIdentifier:imageRes];
-    if (drawableStateList != nil) {
-        self.image = [drawableStateList imageForControlState:UIControlStateNormal];
-        UIImage *highlightedImage = [drawableStateList imageForControlState:UIControlStateHighlighted];
-        if (highlightedImage != nil) {
-            self.highlightedImage = highlightedImage;
-        }
-    }
-    
-    NSString *scaleType = attrs[@"scaleType"];
-    if (scaleType != nil) {
-        if ([scaleType isEqualToString:@"center"]) {
-            self.contentMode = UIViewContentModeCenter;
-        } else if ([scaleType isEqualToString:@"centerCrop"]) {
-            self.contentMode = UIViewContentModeScaleAspectFill;
-            self.clipsToBounds = TRUE;
-        } else if ([scaleType isEqualToString:@"centerInside"]) {
-            self.contentMode = UIViewContentModeScaleAspectFit;
-        } else if ([scaleType isEqualToString:@"fitXY"]) {
-            self.contentMode = UIViewContentModeScaleToFill;
-        } else if ([scaleType isEqualToString:@"top"]) {
-            self.contentMode = UIViewContentModeTop;
-        } else if ([scaleType isEqualToString:@"topLeft"]) {
-            self.contentMode = UIViewContentModeTopLeft;
-        } else if ([scaleType isEqualToString:@"topRight"]) {
-            self.contentMode = UIViewContentModeTopRight;
-        } else if ([scaleType isEqualToString:@"left"]) {
-            self.contentMode = UIViewContentModeLeft;
-        } else if ([scaleType isEqualToString:@"right"]) {
-            self.contentMode = UIViewContentModeRight;
-        } else if ([scaleType isEqualToString:@"bottom"]) {
-            self.contentMode = UIViewContentModeBottom;
-        } else if ([scaleType isEqualToString:@"bottomLeft"]) {
-            self.contentMode = UIViewContentModeBottomLeft;
-        } else if ([scaleType isEqualToString:@"bottomRight"]) {
-            self.contentMode = UIViewContentModeBottomRight;
-        }
-    }
-}
+@implementation UIImageView (ULK_View)
 
 - (BOOL)ulk_isImageScaling {
     return self.contentMode == UIViewContentModeScaleAspectFill || self.contentMode == UIViewContentModeScaleAspectFit || self.contentMode == UIViewContentModeScaleToFill;

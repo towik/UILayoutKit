@@ -34,15 +34,6 @@
     return self;
 }
 
-- (instancetype)initUlk_WithAttributes:(NSDictionary *)attrs {
-    self = [super initUlk_WithAttributes:attrs];
-    if (self) {
-        _weight = [attrs[@"layout_weight"] floatValue];
-    }
-    return self;
-}
-
-
 @end
 
 
