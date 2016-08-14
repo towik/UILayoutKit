@@ -21,12 +21,10 @@
 #import "UILabel+ULK_View.h"
 #import "UIControl+ULK_View.h" 
 
-// Utils
-#import "ULKLayoutBridge.h"
-#import "ULKTableViewCell.h"
-#import "ULKLayoutViewController.h"
-
-// Resources
+// XMLParser
 #import "ULKLayoutInflater.h"
 #import "ULKResourceManager.h"
 #import "ULKStyle.h"
+#import "ULKLayoutBridge.h"
+#import "ULKTableViewCell.h"
+#import "ULKLayoutViewController.h"

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2B1ACA911D607E0C00303BFC /* ULKFrameLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACA0A1D607E0C00303BFC /* ULKFrameLayout.m */; };
 		2B1ACA921D607E0C00303BFC /* ULKFrameLayoutParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACA0C1D607E0C00303BFC /* ULKFrameLayoutParams.m */; };
-		2B1ACA931D607E0C00303BFC /* ULKLayoutBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACA0F1D607E0C00303BFC /* ULKLayoutBridge.m */; };
 		2B1ACA941D607E0C00303BFC /* ULKLinearLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACA121D607E0C00303BFC /* ULKLinearLayout.m */; };
 		2B1ACA951D607E0C00303BFC /* ULKLinearLayoutParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACA141D607E0C00303BFC /* ULKLinearLayoutParams.m */; };
 		2B1ACA961D607E0C00303BFC /* ULKDependencyGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACA171D607E0C00303BFC /* ULKDependencyGraph.m */; };
@@ -91,7 +90,8 @@
 		2B1ACE931D60898B00303BFC /* ULKGravity.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACE7E1D60898B00303BFC /* ULKGravity.m */; };
 		2B1ACE941D60898B00303BFC /* ULKLayoutParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACE801D60898B00303BFC /* ULKLayoutParams.m */; };
 		2B1ACE951D60898B00303BFC /* ULKViewGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACE831D60898B00303BFC /* ULKViewGroup.m */; };
-		2B1ACE961D60898B00303BFC /* ULKLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACE861D60898B00303BFC /* ULKLayoutViewController.m */; };
+		2B1ACE9A1D608CC400303BFC /* ULKLayoutBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACE991D608CC400303BFC /* ULKLayoutBridge.m */; };
+		2B1ACE9E1D608CCC00303BFC /* ULKLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACE9D1D608CCC00303BFC /* ULKLayoutViewController.m */; };
 		2B5DEB9F1D3F963F00E13C76 /* drawable_button_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5DEAD81D3F963F00E13C76 /* drawable_button_normal.png */; };
 		2B5DEBA01D3F963F00E13C76 /* drawable_button_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5DEAD91D3F963F00E13C76 /* drawable_button_pressed.png */; };
 		2B5DEBA11D3F963F00E13C76 /* layout_example.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5DEADA1D3F963F00E13C76 /* layout_example.png */; };
@@ -106,8 +106,6 @@
 		2B1ACA0A1D607E0C00303BFC /* ULKFrameLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKFrameLayout.m; sourceTree = "<group>"; };
 		2B1ACA0B1D607E0C00303BFC /* ULKFrameLayoutParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKFrameLayoutParams.h; sourceTree = "<group>"; };
 		2B1ACA0C1D607E0C00303BFC /* ULKFrameLayoutParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKFrameLayoutParams.m; sourceTree = "<group>"; };
-		2B1ACA0E1D607E0C00303BFC /* ULKLayoutBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKLayoutBridge.h; sourceTree = "<group>"; };
-		2B1ACA0F1D607E0C00303BFC /* ULKLayoutBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKLayoutBridge.m; sourceTree = "<group>"; };
 		2B1ACA111D607E0C00303BFC /* ULKLinearLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKLinearLayout.h; sourceTree = "<group>"; };
 		2B1ACA121D607E0C00303BFC /* ULKLinearLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKLinearLayout.m; sourceTree = "<group>"; };
 		2B1ACA131D607E0C00303BFC /* ULKLinearLayoutParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKLinearLayoutParams.h; sourceTree = "<group>"; };
@@ -260,8 +258,10 @@
 		2B1ACE801D60898B00303BFC /* ULKLayoutParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKLayoutParams.m; sourceTree = "<group>"; };
 		2B1ACE821D60898B00303BFC /* ULKViewGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKViewGroup.h; sourceTree = "<group>"; };
 		2B1ACE831D60898B00303BFC /* ULKViewGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKViewGroup.m; sourceTree = "<group>"; };
-		2B1ACE851D60898B00303BFC /* ULKLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKLayoutViewController.h; sourceTree = "<group>"; };
-		2B1ACE861D60898B00303BFC /* ULKLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKLayoutViewController.m; sourceTree = "<group>"; };
+		2B1ACE981D608CC400303BFC /* ULKLayoutBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKLayoutBridge.h; sourceTree = "<group>"; };
+		2B1ACE991D608CC400303BFC /* ULKLayoutBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKLayoutBridge.m; sourceTree = "<group>"; };
+		2B1ACE9C1D608CCC00303BFC /* ULKLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKLayoutViewController.h; sourceTree = "<group>"; };
+		2B1ACE9D1D608CCC00303BFC /* ULKLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKLayoutViewController.m; sourceTree = "<group>"; };
 		2B5DEAD81D3F963F00E13C76 /* drawable_button_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drawable_button_normal.png; sourceTree = "<group>"; };
 		2B5DEAD91D3F963F00E13C76 /* drawable_button_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drawable_button_pressed.png; sourceTree = "<group>"; };
 		2B5DEADA1D3F963F00E13C76 /* layout_example.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = layout_example.png; sourceTree = "<group>"; };
@@ -291,7 +291,6 @@
 			children = (
 				2B1ACA461D607E0C00303BFC /* ULKLayouts.h */,
 				2B1ACE631D60898B00303BFC /* UIKitExtension */,
-				2B1ACA0D1D607E0C00303BFC /* LayoutBridge */,
 				2B1ACA3F1D607E0C00303BFC /* UIScrollView */,
 				2B1ACA081D607E0C00303BFC /* FrameLayout */,
 				2B1ACA101D607E0C00303BFC /* LinearLayout */,
@@ -309,15 +308,6 @@
 				2B1ACA0C1D607E0C00303BFC /* ULKFrameLayoutParams.m */,
 			);
 			path = FrameLayout;
-			sourceTree = "<group>";
-		};
-		2B1ACA0D1D607E0C00303BFC /* LayoutBridge */ = {
-			isa = PBXGroup;
-			children = (
-				2B1ACA0E1D607E0C00303BFC /* ULKLayoutBridge.h */,
-				2B1ACA0F1D607E0C00303BFC /* ULKLayoutBridge.m */,
-			);
-			path = LayoutBridge;
 			sourceTree = "<group>";
 		};
 		2B1ACA101D607E0C00303BFC /* LinearLayout */ = {
@@ -359,6 +349,8 @@
 		2B1ACA4A1D607E0C00303BFC /* XMLParser */ = {
 			isa = PBXGroup;
 			children = (
+				2B1ACE971D608CC400303BFC /* LayoutBridge */,
+				2B1ACE9B1D608CCC00303BFC /* ViewController */,
 				2B1ACA4B1D607E0C00303BFC /* Inflater */,
 				2B1ACA531D607E0C00303BFC /* Resources */,
 				2B1ACA7A1D607E0C00303BFC /* Utils */,
@@ -597,7 +589,6 @@
 				2B1ACE821D60898B00303BFC /* ULKViewGroup.h */,
 				2B1ACE831D60898B00303BFC /* ULKViewGroup.m */,
 				2B1ACE641D60898B00303BFC /* Categories */,
-				2B1ACE841D60898B00303BFC /* ViewController */,
 			);
 			path = UIKitExtension;
 			sourceTree = "<group>";
@@ -633,13 +624,23 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
-		2B1ACE841D60898B00303BFC /* ViewController */ = {
+		2B1ACE971D608CC400303BFC /* LayoutBridge */ = {
 			isa = PBXGroup;
 			children = (
-				2B1ACE851D60898B00303BFC /* ULKLayoutViewController.h */,
-				2B1ACE861D60898B00303BFC /* ULKLayoutViewController.m */,
+				2B1ACE981D608CC400303BFC /* ULKLayoutBridge.h */,
+				2B1ACE991D608CC400303BFC /* ULKLayoutBridge.m */,
 			);
-			path = ViewController;
+			path = LayoutBridge;
+			sourceTree = "<group>";
+		};
+		2B1ACE9B1D608CCC00303BFC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2B1ACE9C1D608CCC00303BFC /* ULKLayoutViewController.h */,
+				2B1ACE9D1D608CCC00303BFC /* ULKLayoutViewController.m */,
+			);
+			name = ViewController;
+			path = LayoutBridge/ViewController;
 			sourceTree = "<group>";
 		};
 		2B5DEAD61D3F963F00E13C76 /* UILayoutKit */ = {
@@ -863,6 +864,7 @@
 				2B1ACAA91D607E0C00303BFC /* UIScrollView+ULK_ViewGroup.m in Sources */,
 				2B1ACE911D60898B00303BFC /* UIView+ULK_Layout.m in Sources */,
 				2B1ACA921D607E0C00303BFC /* ULKFrameLayoutParams.m in Sources */,
+				2B1ACE9A1D608CC400303BFC /* ULKLayoutBridge.m in Sources */,
 				2B1ACAC01D607E0C00303BFC /* TBXML.m in Sources */,
 				2B1ACABC1D607E0C00303BFC /* ULKResourceValueSet.m in Sources */,
 				2B1ACE611D6088AC00303BFC /* ULKCollectionViewCell.m in Sources */,
@@ -883,8 +885,8 @@
 				2B1ACAC21D607E0C00303BFC /* UIColor+ULK_ColorParser.m in Sources */,
 				2B1ACE621D6088AC00303BFC /* ULKTableViewCell.m in Sources */,
 				2B1ACE8F1D60898B00303BFC /* UITextView+ULK_View.m in Sources */,
+				2B1ACE9E1D608CCC00303BFC /* ULKLayoutViewController.m in Sources */,
 				2B1ACE901D60898B00303BFC /* UIToolbar+ULK_View.m in Sources */,
-				2B1ACE961D60898B00303BFC /* ULKLayoutViewController.m in Sources */,
 				2B1ACA941D607E0C00303BFC /* ULKLinearLayout.m in Sources */,
 				2B1ACE931D60898B00303BFC /* ULKGravity.m in Sources */,
 				2B1ACAB01D607E0C00303BFC /* NSDictionary+ULK_ResourceManager.m in Sources */,
@@ -916,7 +918,6 @@
 				2B1ACABD1D607E0C00303BFC /* ULKStringArray.m in Sources */,
 				2B1ACABB1D607E0C00303BFC /* ULKXMLCache.m in Sources */,
 				2B1ACC521D6081DC00303BFC /* CollectionViewExampleViewController.m in Sources */,
-				2B1ACA931D607E0C00303BFC /* ULKLayoutBridge.m in Sources */,
 				2B1ACC5B1D6081DC00303BFC /* main.m in Sources */,
 				2B1ACE8D1D60898B00303BFC /* UISwitch+ULK_View.m in Sources */,
 			);
