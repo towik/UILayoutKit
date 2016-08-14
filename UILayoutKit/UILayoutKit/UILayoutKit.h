@@ -22,11 +22,11 @@
 #import "UIControl+ULK_View.h" 
 
 // Utils
-#import "ULKLayoutInflater.h"
 #import "ULKLayoutBridge.h"
 #import "ULKTableViewCell.h"
 #import "ULKLayoutViewController.h"
 
 // Resources
+#import "ULKLayoutInflater.h"
 #import "ULKResourceManager.h"
 #import "ULKStyle.h"

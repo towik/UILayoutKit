@@ -11,10 +11,7 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import "UIView+ULK_Layout.h"
-#import "UIColor+ULK_ColorParser.h"
 #import "UIView+ULK_ViewGroup.h"
-#import "NSDictionary+ULK_ResourceManager.h"
-#import "ULKResourceManager.h"
 
 #pragma mark - import libs
 #include <objc/runtime.h>
