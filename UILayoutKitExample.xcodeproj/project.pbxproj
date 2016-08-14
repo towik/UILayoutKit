@@ -91,7 +91,7 @@
 		2B1ACE941D60898B00303BFC /* ULKLayoutParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACE801D60898B00303BFC /* ULKLayoutParams.m */; };
 		2B1ACE951D60898B00303BFC /* ULKViewGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACE831D60898B00303BFC /* ULKViewGroup.m */; };
 		2B1ACE9A1D608CC400303BFC /* ULKLayoutBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACE991D608CC400303BFC /* ULKLayoutBridge.m */; };
-		2B1ACE9E1D608CCC00303BFC /* ULKLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACE9D1D608CCC00303BFC /* ULKLayoutViewController.m */; };
+		2B1ACEA61D608DED00303BFC /* ULKLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACEA51D608DED00303BFC /* ULKLayoutViewController.m */; };
 		2B5DEB9F1D3F963F00E13C76 /* drawable_button_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5DEAD81D3F963F00E13C76 /* drawable_button_normal.png */; };
 		2B5DEBA01D3F963F00E13C76 /* drawable_button_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5DEAD91D3F963F00E13C76 /* drawable_button_pressed.png */; };
 		2B5DEBA11D3F963F00E13C76 /* layout_example.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5DEADA1D3F963F00E13C76 /* layout_example.png */; };
@@ -260,8 +260,8 @@
 		2B1ACE831D60898B00303BFC /* ULKViewGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKViewGroup.m; sourceTree = "<group>"; };
 		2B1ACE981D608CC400303BFC /* ULKLayoutBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKLayoutBridge.h; sourceTree = "<group>"; };
 		2B1ACE991D608CC400303BFC /* ULKLayoutBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKLayoutBridge.m; sourceTree = "<group>"; };
-		2B1ACE9C1D608CCC00303BFC /* ULKLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKLayoutViewController.h; sourceTree = "<group>"; };
-		2B1ACE9D1D608CCC00303BFC /* ULKLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKLayoutViewController.m; sourceTree = "<group>"; };
+		2B1ACEA41D608DED00303BFC /* ULKLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKLayoutViewController.h; sourceTree = "<group>"; };
+		2B1ACEA51D608DED00303BFC /* ULKLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKLayoutViewController.m; sourceTree = "<group>"; };
 		2B5DEAD81D3F963F00E13C76 /* drawable_button_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drawable_button_normal.png; sourceTree = "<group>"; };
 		2B5DEAD91D3F963F00E13C76 /* drawable_button_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drawable_button_pressed.png; sourceTree = "<group>"; };
 		2B5DEADA1D3F963F00E13C76 /* layout_example.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = layout_example.png; sourceTree = "<group>"; };
@@ -349,8 +349,8 @@
 		2B1ACA4A1D607E0C00303BFC /* XMLParser */ = {
 			isa = PBXGroup;
 			children = (
+				2B1ACEA31D608DED00303BFC /* ViewController */,
 				2B1ACE971D608CC400303BFC /* LayoutBridge */,
-				2B1ACE9B1D608CCC00303BFC /* ViewController */,
 				2B1ACA4B1D607E0C00303BFC /* Inflater */,
 				2B1ACA531D607E0C00303BFC /* Resources */,
 				2B1ACA7A1D607E0C00303BFC /* Utils */,
@@ -633,14 +633,13 @@
 			path = LayoutBridge;
 			sourceTree = "<group>";
 		};
-		2B1ACE9B1D608CCC00303BFC /* ViewController */ = {
+		2B1ACEA31D608DED00303BFC /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				2B1ACE9C1D608CCC00303BFC /* ULKLayoutViewController.h */,
-				2B1ACE9D1D608CCC00303BFC /* ULKLayoutViewController.m */,
+				2B1ACEA41D608DED00303BFC /* ULKLayoutViewController.h */,
+				2B1ACEA51D608DED00303BFC /* ULKLayoutViewController.m */,
 			);
-			name = ViewController;
-			path = LayoutBridge/ViewController;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		2B5DEAD61D3F963F00E13C76 /* UILayoutKit */ = {
@@ -885,7 +884,7 @@
 				2B1ACAC21D607E0C00303BFC /* UIColor+ULK_ColorParser.m in Sources */,
 				2B1ACE621D6088AC00303BFC /* ULKTableViewCell.m in Sources */,
 				2B1ACE8F1D60898B00303BFC /* UITextView+ULK_View.m in Sources */,
-				2B1ACE9E1D608CCC00303BFC /* ULKLayoutViewController.m in Sources */,
+				2B1ACEA61D608DED00303BFC /* ULKLayoutViewController.m in Sources */,
 				2B1ACE901D60898B00303BFC /* UIToolbar+ULK_View.m in Sources */,
 				2B1ACA941D607E0C00303BFC /* ULKLinearLayout.m in Sources */,
 				2B1ACE931D60898B00303BFC /* ULKGravity.m in Sources */,
