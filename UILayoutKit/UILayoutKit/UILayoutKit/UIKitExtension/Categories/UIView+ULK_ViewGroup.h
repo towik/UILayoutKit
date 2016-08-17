@@ -25,23 +25,6 @@
 - (UIView *)ulk_findViewTraversal:(NSString *)identifier;
 
 /**
- * Adds a child view with the specified layout parameters.
- *
- * @param child the child view to add
- * @param index the position at which to add the child
- * @param lp the layout parameters to set on the child
- */
-- (void)ulk_addView:(UIView *)child atIndex:(NSInteger)index withLayoutParams:(ULKLayoutParams *)lp;
-
-- (void)ulk_addView:(UIView *)child atIndex:(NSInteger)index;
-/**
- * Adds a child view with the specified layout parameters.
- *
- * @param child the child view to add
- * @param lp the layout parameters to set on the child
- */
-- (void)ulk_addView:(UIView *)child withLayoutParams:(ULKLayoutParams *)lp;
-/**
  * Adds a child view. If no layout parameters are already set on the child, the
  * default parameters for this ViewGroup are set on the child.
  *
@@ -52,32 +35,11 @@
 - (void)ulk_addView:(UIView *)child;
 
 /**
- * Adds a child view with this ViewGroup's default layout parameters and the
- * specified width and height.
- *
- * @param child the child view to add
- */
-- (void)ulk_addView:(UIView *)child withSize:(CGSize)size;
-
-/**
  * Removes the specified child from the group.
  * 
  * @param view to remove from the group
  */
 - (void)ulk_removeView:(UIView *)view;
-
-/**
- * Removes the view at the specified position in the group.
- *
- * @param index the position in the group of the view to remove
- */
-- (void)ulk_removeViewAtIndex:(NSUInteger)index;
-
-/**
- * Is called whenever a view has been removed through the 
- * ulk_removeView methods.
- */
-- (void)ulk_onViewRemoved:(UIView *)view;
 
 @property (nonatomic, readonly) BOOL ulk_isViewGroup;
 
