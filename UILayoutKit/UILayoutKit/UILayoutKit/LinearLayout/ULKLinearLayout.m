@@ -877,10 +877,6 @@
     return 0;
 }
 
-- (void)setChildFrameOfChild:(UIView *)child withFrame:(CGRect)frame {
-    [child ulk_layoutWithFrame:frame];
-}
-
 /**
  * Position the children during a layout pass if the orientation of this
  * LinearLayout is set to LinearLayoutOrientationVertical.
@@ -949,7 +945,7 @@
             }
             
             childTop += lpMargin.top;
-            [self setChildFrameOfChild:child withFrame:CGRectMake(childLeft, childTop + [self locationOffsetOfChild:child], childSize.width, childSize.height)];
+            [child ulk_layoutWithFrame:CGRectMake(childLeft, childTop + [self locationOffsetOfChild:child], childSize.width, childSize.height)];
             childTop += childSize.height + lpMargin.bottom + [self nextLocationOffsetOfChild:child];
             
             i += [self childrenSkipCountAfterChild:child atIndex:i];
@@ -1041,7 +1037,7 @@
             }
             
             childLeft += lpMargin.left;
-            [self setChildFrameOfChild:child withFrame:CGRectMake(childLeft + [self locationOffsetOfChild:child], childTop,
+            [child ulk_layoutWithFrame:CGRectMake(childLeft + [self locationOffsetOfChild:child], childTop,
                                                                   childSize.width, childSize.height)];
             childLeft += childSize.width + lpMargin.right + [self nextLocationOffsetOfChild:child];
             
