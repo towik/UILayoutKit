@@ -22,19 +22,6 @@
 
 @implementation UIScrollView (ULK_ViewGroup)
 
-//+ (void)load {
-//    Class c = self;
-//    SEL origSEL = @selector(drawRect:);
-//    SEL overrideSEL = @selector(ulk_drawRect:);
-//    Method origMethod = class_getInstanceMethod(c, origSEL);
-//    Method overrideMethod = class_getInstanceMethod(c, overrideSEL);
-//    if(class_addMethod(c, origSEL, method_getImplementation(overrideMethod), method_getTypeEncoding(overrideMethod))) {
-//        class_replaceMethod(c, overrideSEL, method_getImplementation(origMethod), method_getTypeEncoding(origMethod));
-//    } else {
-//        method_exchangeImplementations(origMethod, overrideMethod);
-//    }
-//}
-
 - (void)ulk_onMeasureWithWidthMeasureSpec:(ULKLayoutMeasureSpec)widthMeasureSpec heightMeasureSpec:(ULKLayoutMeasureSpec)heightMeasureSpec {
     [ULKFrameLayout onFrameLayoutMeasure:self widthMeasureSpec:widthMeasureSpec heightMeasureSpec:heightMeasureSpec];
 }
@@ -60,21 +47,6 @@
     
     [child ulk_measureWithWidthMeasureSpec:childWidthMeasureSpec heightMeasureSpec:childHeightMeasureSpec];
 }
-
-//- (void)ulk_measureChildWithMargins:(UIView *)child parentWidthMeasureSpec:(ULKLayoutMeasureSpec)parentWidthMeasureSpec widthUsed:(CGFloat)widthUsed parentHeightMeasureSpec:(ULKLayoutMeasureSpec)parentHeightMeasureSpec heightUsed:(CGFloat)heightUsed {
-//    if ([NSStringFromClass([child class]) isEqualToString:@"UIWebDocumentView"]) {
-//        return;
-//    }
-//    ULKLayoutParams *lp = (ULKLayoutParams *)child.layoutParams;
-//    UIEdgeInsets lpMargin = lp.margin;
-//    UIEdgeInsets padding = self.ulk_padding;
-//    ULKLayoutMeasureSpec childWidthMeasureSpec = [self ulk_childMeasureSpecWithMeasureSpec:parentWidthMeasureSpec padding:(padding.left + padding.right + lpMargin.left + lpMargin.right + widthUsed) childDimension:lp.width];
-//    ULKLayoutMeasureSpec childHeightMeasureSpec;
-//    childHeightMeasureSpec.size = lpMargin.top + lpMargin.bottom + parentHeightMeasureSpec.size;
-//    childHeightMeasureSpec.mode = ULKLayoutMeasureSpecModeUnspecified;
-//    
-//    [child ulk_measureWithWidthMeasureSpec:childWidthMeasureSpec heightMeasureSpec:childHeightMeasureSpec];
-//}
 
 - (BOOL)ulk_isViewGroup {
     BOOL ret = FALSE;
