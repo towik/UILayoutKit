@@ -22,30 +22,29 @@
 
 @implementation UIScrollView (ULK_ViewGroup)
 
-- (void)ulk_onMeasureWithWidthMeasureSpec:(ULKLayoutMeasureSpec)widthMeasureSpec heightMeasureSpec:(ULKLayoutMeasureSpec)heightMeasureSpec {
-    [ULKFrameLayout onFrameLayoutMeasure:self widthMeasureSpec:widthMeasureSpec heightMeasureSpec:heightMeasureSpec];
+- (void)ulk_onMeasureWithWidthMeasureSpec:(ULKLayoutMeasureSpec)widthMeasureSpec heightMeasureSpec:(ULKLayoutMeasureSpec)heightMeasureSpec
+{
+    if (self.subviews.count > 0) {
+        UIView *child = self.subviews[0];
+        CGFloat width = child.ulk_measuredSize.width;
+        CGFloat height = child.ulk_measuredSize.height;
+        
+        [self ulk_measureChildWithMargins:child parentWidthMeasureSpec:widthMeasureSpec widthUsed:0 parentHeightMeasureSpec:heightMeasureSpec heightUsed:0];
+        
+        ULKLayoutMeasuredSize measuredSize = ULKLayoutMeasuredSizeMake([UIView ulk_resolveSizeAndStateForSize:width measureSpec:widthMeasureSpec childMeasureState:ULKLayoutMeasuredStateNone], [UIView ulk_resolveSizeAndStateForSize:height measureSpec:heightMeasureSpec childMeasureState:ULKLayoutMeasuredStateNone]);
+        [self ulk_setMeasuredDimensionSize:measuredSize];
+    }
 }
 
 - (void)ulk_onLayoutWithFrame:(CGRect)frame didFrameChange:(BOOL)changed {
-    self.contentSize = [ULKFrameLayout onFrameLayoutLayout:self frame:frame didFrameChange:changed];
-}
-
-- (void)ulk_measureChild:(UIView *)child withParentWidthMeasureSpec:(ULKLayoutMeasureSpec)parentWidthMeasureSpec parentHeightMeasureSpec:(ULKLayoutMeasureSpec)parentHeightMeasureSpec {
-    if ([NSStringFromClass([child class]) isEqualToString:@"UIWebDocumentView"]) {
-        return;
+    if (self.subviews.count > 0) {
+        UIView *child = self.subviews[0];
+        CGFloat width = child.ulk_measuredSize.width;
+        CGFloat height = child.ulk_measuredSize.height;
+        
+        [child ulk_layoutWithFrame:CGRectMake(0, 0, width, height)];
+        self.contentSize = CGSizeMake(width, height);
     }
-    ULKLayoutParams *lp = child.layoutParams;
-    
-    ULKLayoutMeasureSpec childWidthMeasureSpec;
-    ULKLayoutMeasureSpec childHeightMeasureSpec;
-    
-    UIEdgeInsets padding = self.ulk_padding;
-    childWidthMeasureSpec = [self ulk_childMeasureSpecWithMeasureSpec:parentWidthMeasureSpec padding:padding.left + padding.right childDimension:lp.width];
-    
-    childHeightMeasureSpec.size = 0;
-    childHeightMeasureSpec.mode = ULKLayoutMeasureSpecModeUnspecified;
-    
-    [child ulk_measureWithWidthMeasureSpec:childWidthMeasureSpec heightMeasureSpec:childHeightMeasureSpec];
 }
 
 - (BOOL)ulk_isViewGroup {
@@ -54,18 +53,6 @@
         ret = TRUE;
     }
     return ret;
-}
-
-- (BOOL)ulk_checkLayoutParams:(ULKLayoutParams *)layoutParams {
-    return [layoutParams isKindOfClass:[ULKFrameLayoutParams class]];
-}
-
-- (ULKLayoutParams *)ulk_generateDefaultLayoutParams {
-    return [[ULKFrameLayoutParams alloc] initWithWidth:ULKLayoutParamsSizeMatchParent height:ULKLayoutParamsSizeMatchParent];
-}
-
--(ULKLayoutParams *)ulk_generateLayoutParamsFromLayoutParams:(ULKLayoutParams *)layoutParams {
-    return [[ULKFrameLayoutParams alloc] initWithLayoutParams:layoutParams];
 }
 
 @end
