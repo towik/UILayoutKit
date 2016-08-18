@@ -16,7 +16,6 @@
 
 // Layout
 #import "ULKLayoutBridge.h"
-#import "UIScrollView+ULK_ViewGroup.h"
 #import "ULKFrameLayout.h"
 #import "ULKLinearLayout.h"
 #import "ULKRelativeLayout.h"
@@ -24,5 +23,6 @@
 // Views
 #import "UILabel+ULK_View.h"
 #import "UIControl+ULK_View.h"
+#import "UIScrollView+ULK_ViewGroup.h"
 
 
