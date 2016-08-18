@@ -109,25 +109,21 @@
     return result;
 }
 
-- (void)ulk_onLayoutWithFrame:(CGRect)frame didFrameChange:(BOOL)changed {
-    @throw [NSException exceptionWithName:@"UnimplementedMethodException" reason:@"ulk_onLayoutWithFrame:didFrameChange: has to be implemented in a ViewGroup subclass" userInfo:nil];
-}
-
-
 - (BOOL)ulk_isViewGroup {
     return TRUE;
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    /*ULKLayoutMeasureSpec widthMeasureSpec;
-     ULKLayoutMeasureSpec heightMeasureSpec;
-     widthMeasureSpec.size = self.frame.size.width;
-     heightMeasureSpec.size = self.frame.size.height;
-     widthMeasureSpec.mode = ULKLayoutMeasureSpecModeExactly;
-     heightMeasureSpec.mode = ULKLayoutMeasureSpecModeExactly;
-     [self ulk_measureWithWidthMeasureSpec:widthMeasureSpec heightMeasureSpec:heightMeasureSpec];
-     [self ulk_layoutWithFrame:self.frame];*/
+    
+    ULKLayoutMeasureSpec widthMeasureSpec;
+    ULKLayoutMeasureSpec heightMeasureSpec;
+    widthMeasureSpec.size = self.frame.size.width;
+    heightMeasureSpec.size = self.frame.size.height;
+    widthMeasureSpec.mode = ULKLayoutMeasureSpecModeExactly;
+    heightMeasureSpec.mode = ULKLayoutMeasureSpecModeExactly;
+    [self ulk_measureWithWidthMeasureSpec:widthMeasureSpec heightMeasureSpec:heightMeasureSpec];
+    [self ulk_layoutWithFrame:self.frame];
 }
 
 - (void)didAddSubview:(UIView *)child {

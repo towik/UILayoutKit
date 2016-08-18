@@ -267,7 +267,8 @@ static char visibilityKey;
     return frame;
 }
 
-- (void)ulk_layoutWithFrame:(CGRect)frame {
+- (BOOL)ulk_setFrame:(CGRect)frame
+{
     [self setUlk_isLayoutRequested:FALSE];
     CGRect oldFrame = self.frame;
     CGRect newFrame = [self ulk_roundFrame:frame];
@@ -276,18 +277,18 @@ static char visibilityKey;
         self.frame = newFrame;
     }
     
-    //if (changed) {
+    return changed;
+}
+
+- (void)ulk_layoutWithFrame:(CGRect)frame {
+    BOOL changed = [self ulk_setFrame:frame];
     [self ulk_onLayoutWithFrame:frame didFrameChange:changed];
-    //}
     if (changed) {
         NSString *identifier = self.ulk_identifier;
         if (identifier != nil) {
-            //NSLog(@"%@ (%@) changed size: ", NSStringFromClass([self class]), identifier);
-        } else {
-            //NSLog(@"%@ changed size: ", NSStringFromClass([self class]));
         }
-        //NSLog(@"OldRect: %@", NSStringFromCGRect(oldFrame));
-        //NSLog(@"NewRect: %@", NSStringFromCGRect(newFrame));
+        else {
+        }
     }
 }
 

@@ -741,7 +741,7 @@
         
         if (child.ulk_visibility != ULKViewVisibilityGone) {
             ULKRelativeLayoutParams *st = (ULKRelativeLayoutParams *)child.layoutParams;
-            [child ulk_layoutWithFrame:CGRectMake(st.left, st.top, st.right-st.left, st.bottom - st.top)];
+            [child ulk_setFrame:CGRectMake(st.left, st.top, st.right-st.left, st.bottom - st.top)];
         }
     }
 }

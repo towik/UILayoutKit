@@ -76,6 +76,7 @@ BOOL ULKBOOLFromString(NSString *boolString);
 - (void)ulk_onMeasureWithWidthMeasureSpec:(ULKLayoutMeasureSpec)widthMeasureSpec heightMeasureSpec:(ULKLayoutMeasureSpec)heightMeasureSpec;
 - (void)ulk_measureWithWidthMeasureSpec:(ULKLayoutMeasureSpec)widthMeasureSpec heightMeasureSpec:(ULKLayoutMeasureSpec)heightMeasureSpec;
 - (void)ulk_onLayoutWithFrame:(CGRect)frame didFrameChange:(BOOL)changed;
+- (BOOL)ulk_setFrame:(CGRect)frame;
 - (void)ulk_layoutWithFrame:(CGRect)frame;
 
 - (void)ulk_setMeasuredDimensionSize:(ULKLayoutMeasuredSize)size;

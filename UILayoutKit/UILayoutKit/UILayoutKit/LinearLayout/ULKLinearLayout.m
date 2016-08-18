@@ -945,7 +945,7 @@
             }
             
             childTop += lpMargin.top;
-            [child ulk_layoutWithFrame:CGRectMake(childLeft, childTop + [self locationOffsetOfChild:child], childSize.width, childSize.height)];
+            [child ulk_setFrame:CGRectMake(childLeft, childTop + [self locationOffsetOfChild:child], childSize.width, childSize.height)];
             childTop += childSize.height + lpMargin.bottom + [self nextLocationOffsetOfChild:child];
             
             i += [self childrenSkipCountAfterChild:child atIndex:i];
@@ -1037,7 +1037,7 @@
             }
             
             childLeft += lpMargin.left;
-            [child ulk_layoutWithFrame:CGRectMake(childLeft + [self locationOffsetOfChild:child], childTop,
+            [child ulk_setFrame:CGRectMake(childLeft + [self locationOffsetOfChild:child], childTop,
                                                                   childSize.width, childSize.height)];
             childLeft += childSize.width + lpMargin.right + [self nextLocationOffsetOfChild:child];
             

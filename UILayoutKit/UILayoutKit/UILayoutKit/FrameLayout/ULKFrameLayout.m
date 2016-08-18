@@ -209,7 +209,7 @@ static char matchParentChildrenKey;
                     childTop = parentTop + lpMargin.top;
             }
             
-            [child ulk_layoutWithFrame:CGRectMake(childLeft, childTop, width, height)];
+            [child ulk_setFrame:CGRectMake(childLeft, childTop, width, height)];
             maxX = MAX(maxX, childLeft + width);
             maxY = MAX(maxY, childTop + height);
         }

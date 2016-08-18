@@ -17,6 +17,19 @@
 
 @implementation UIScrollView (ULK_ViewGroup)
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    ULKLayoutMeasureSpec widthMeasureSpec;
+    ULKLayoutMeasureSpec heightMeasureSpec;
+    widthMeasureSpec.size = self.frame.size.width;
+    heightMeasureSpec.size = self.frame.size.height;
+    widthMeasureSpec.mode = ULKLayoutMeasureSpecModeExactly;
+    heightMeasureSpec.mode = ULKLayoutMeasureSpecModeExactly;
+    [self ulk_measureWithWidthMeasureSpec:widthMeasureSpec heightMeasureSpec:heightMeasureSpec];
+    [self ulk_layoutWithFrame:self.frame];
+}
+
 - (void)ulk_onMeasureWithWidthMeasureSpec:(ULKLayoutMeasureSpec)widthMeasureSpec heightMeasureSpec:(ULKLayoutMeasureSpec)heightMeasureSpec
 {
     if (self.subviews.count > 0) {
@@ -37,7 +50,7 @@
         CGFloat width = child.ulk_measuredSize.width;
         CGFloat height = child.ulk_measuredSize.height;
         
-        [child ulk_layoutWithFrame:CGRectMake(0, 0, width, height)];
+        [child ulk_setFrame:CGRectMake(0, 0, width, height)];
         self.contentSize = CGSizeMake(width, height);
     }
 }
