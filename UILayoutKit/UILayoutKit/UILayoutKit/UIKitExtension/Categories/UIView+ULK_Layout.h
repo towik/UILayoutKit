@@ -70,7 +70,6 @@ BOOL ULKBOOLFromString(NSString *boolString);
 @property (nonatomic, readonly) BOOL ulk_hadMeasured;
 @property (nonatomic, readonly) ULKLayoutMeasuredWidthHeightState ulk_measuredState;
 @property (nonatomic, readonly) CGFloat ulk_baseline;
-@property (nonatomic, readonly) BOOL ulk_isLayoutRequested;
 @property (nonatomic, assign) NSString *ulk_identifier;
 @property (nonatomic, assign) ULKViewVisibility ulk_visibility;
 

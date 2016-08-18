@@ -234,18 +234,6 @@ static char visibilityKey;
     return ret;
 }
 
-- (BOOL)ulk_isLayoutRequested {
-    NSNumber *value = objc_getAssociatedObject(self, &isLayoutRequestedKey);
-    return [value boolValue];
-}
-
-- (void)setUlk_isLayoutRequested:(BOOL)isRequested {
-    objc_setAssociatedObject(self,
-                             &isLayoutRequestedKey,
-                             @(isRequested),
-                             OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
 - (CGSize)ulk_measuredSize {
     ULKLayoutMeasuredSize size = [self ulk_measuredDimensionSize];
     return CGSizeMake(size.width.size, size.height.size);
@@ -282,7 +270,6 @@ static char visibilityKey;
 
 - (BOOL)ulk_setFrame:(CGRect)frame
 {
-    [self setUlk_isLayoutRequested:FALSE];
     CGRect oldFrame = self.frame;
     CGRect newFrame = [self ulk_roundFrame:frame];
     BOOL changed = !CGRectEqualToRect(oldFrame, newFrame);
@@ -343,12 +330,11 @@ static char visibilityKey;
 
 - (void)ulk_requestLayout {
     [self setNeedsLayout];
-    [self setUlk_isLayoutRequested:TRUE];
     [self ulk_clearMeasuredDimensionSize];
-    if (self.superview != nil) {
-        if (!self.superview.ulk_isLayoutRequested) {
-            [self.superview ulk_requestLayout];
-        }
+    if (self.superview != nil
+        && (self.superview.layoutWidth == ULKLayoutParamsSizeWrapContent
+            || self.superview.layoutHeight == ULKLayoutParamsSizeWrapContent)) {
+        [self.superview ulk_requestLayout];
     }
 }
 
