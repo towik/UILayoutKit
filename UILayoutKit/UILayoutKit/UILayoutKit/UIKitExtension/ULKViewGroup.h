@@ -20,4 +20,21 @@
 
 - (instancetype)initUlk_WithAttributes:(NSDictionary *)attrs NS_DESIGNATED_INITIALIZER;
 
+/**
+ * Did add a child view. If no layout parameters are already set on the child, the
+ * default parameters for this ViewGroup are set on the child.
+ *
+ * @param child the child view to add
+ *
+ * @see ulk_generateDefaultLayoutParams
+ */
+- (void)didAddSubview:(UIView *)subview;
+
+/**
+ * Will remove the specified child from the group.
+ *
+ * @param view to remove from the group
+ */
+- (void)willRemoveSubview:(UIView *)subview;
+
 @end

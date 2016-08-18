@@ -149,42 +149,4 @@
     return nil;
 }
 
-- (void)ulk_addView:(UIView *)child {
-    ULKLayoutParams *params = child.layoutParams;
-    if (params == nil) {
-        params = [self ulk_generateDefaultLayoutParams];
-        if (params == nil) {
-            @throw [NSException exceptionWithName:@"IllegalArgumentException" reason:@"ulk_generateDefaultLayoutParams() cannot return nil" userInfo:nil];
-        }
-    }
-    
-    if (!self.ulk_isViewGroup) {
-        @throw [NSException exceptionWithName:@"UnsuportedOperationException" reason:@"Views can only be added on ViewGroup objects" userInfo:nil];
-    }
-    if (![self ulk_checkLayoutParams:params]) {
-        if (params != nil) {
-            params = [self ulk_generateLayoutParamsFromLayoutParams:params];
-        }
-        if (params == nil || ![self ulk_checkLayoutParams:params]) {
-            params = [self ulk_generateDefaultLayoutParams];
-        }
-    }
-    child.layoutParams = params;
-    [self addSubview:child];
-
-    [self ulk_requestLayout];
-}
-
-- (void)ulk_removeView:(UIView *)view {
-    if (!self.ulk_isViewGroup) {
-        @throw [NSException exceptionWithName:@"UnsuportedOperationException" reason:@"Views can only be removed from ViewGroup objects" userInfo:nil];
-    }
-    if (view.superview == self) {
-        [view removeFromSuperview];
-    }
-    
-    [self ulk_requestLayout];
-    [self setNeedsDisplay];
-}
-
 @end

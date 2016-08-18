@@ -130,4 +130,38 @@
      [self ulk_layoutWithFrame:self.frame];*/
 }
 
+- (void)didAddSubview:(UIView *)child {
+    ULKLayoutParams *params = child.layoutParams;
+    if (params == nil) {
+        params = [self ulk_generateDefaultLayoutParams];
+        if (params == nil) {
+            @throw [NSException exceptionWithName:@"IllegalArgumentException" reason:@"ulk_generateDefaultLayoutParams() cannot return nil" userInfo:nil];
+        }
+    }
+    
+    if (!self.ulk_isViewGroup) {
+        @throw [NSException exceptionWithName:@"UnsuportedOperationException" reason:@"Views can only be added on ViewGroup objects" userInfo:nil];
+    }
+    if (![self ulk_checkLayoutParams:params]) {
+        if (params != nil) {
+            params = [self ulk_generateLayoutParamsFromLayoutParams:params];
+        }
+        if (params == nil || ![self ulk_checkLayoutParams:params]) {
+            params = [self ulk_generateDefaultLayoutParams];
+        }
+    }
+    child.layoutParams = params;
+    
+    [self ulk_requestLayout];
+}
+
+- (void)willRemoveSubview:(UIView *)view {
+    if (!self.ulk_isViewGroup) {
+        @throw [NSException exceptionWithName:@"UnsuportedOperationException" reason:@"Views can only be removed from ViewGroup objects" userInfo:nil];
+    }
+    
+    [self ulk_requestLayout];
+    [self setNeedsDisplay];
+}
+
 @end

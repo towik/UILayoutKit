@@ -168,7 +168,7 @@
             if (element->firstChild != NULL) {
                 [self rInflateWithXmlElement:element->firstChild parentView:view attributes:attrs finishInflate:TRUE];
             }
-            [parentView ulk_addView:view];
+            [parentView addSubview:view];
         }
     } while ((element = element->nextSibling));
     if (finishInflate) [parentView ulk_onFinishInflate];

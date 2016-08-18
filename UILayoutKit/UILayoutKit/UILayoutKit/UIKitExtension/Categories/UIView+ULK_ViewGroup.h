@@ -24,23 +24,6 @@
 -(void)ulk_measureChild:(UIView *)child withParentWidthMeasureSpec:(ULKLayoutMeasureSpec)parentWidthMeasureSpec parentHeightMeasureSpec:(ULKLayoutMeasureSpec)parentHeightMeasureSpec;
 - (UIView *)ulk_findViewTraversal:(NSString *)identifier;
 
-/**
- * Adds a child view. If no layout parameters are already set on the child, the
- * default parameters for this ViewGroup are set on the child.
- *
- * @param child the child view to add
- *
- * @see ulk_generateDefaultLayoutParams
- */
-- (void)ulk_addView:(UIView *)child;
-
-/**
- * Removes the specified child from the group.
- * 
- * @param view to remove from the group
- */
-- (void)ulk_removeView:(UIView *)view;
-
 @property (nonatomic, readonly) BOOL ulk_isViewGroup;
 
 @end
