@@ -219,6 +219,14 @@ static char visibilityKey;
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
+- (void)ulk_clearMeasuredDimensionSize
+{
+    objc_setAssociatedObject(self,
+                             &measuredSizeKey,
+                             nil,
+                             OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
 - (ULKLayoutMeasuredSize)ulk_measuredDimensionSize {
     NSValue *value = objc_getAssociatedObject(self, &measuredSizeKey);
     ULKLayoutMeasuredSize ret;
@@ -241,6 +249,11 @@ static char visibilityKey;
 - (CGSize)ulk_measuredSize {
     ULKLayoutMeasuredSize size = [self ulk_measuredDimensionSize];
     return CGSizeMake(size.width.size, size.height.size);
+}
+
+- (BOOL)ulk_hadMeasured {
+    NSValue *value = objc_getAssociatedObject(self, &measuredSizeKey);
+    return value != nil;
 }
 
 - (void)ulk_onMeasureWithWidthMeasureSpec:(ULKLayoutMeasureSpec)widthMeasureSpec heightMeasureSpec:(ULKLayoutMeasureSpec)heightMeasureSpec {
@@ -331,6 +344,7 @@ static char visibilityKey;
 - (void)ulk_requestLayout {
     [self setNeedsLayout];
     [self setUlk_isLayoutRequested:TRUE];
+    [self ulk_clearMeasuredDimensionSize];
     if (self.superview != nil) {
         if (!self.superview.ulk_isLayoutRequested) {
             [self.superview ulk_requestLayout];

@@ -67,6 +67,7 @@ BOOL ULKBOOLFromString(NSString *boolString);
 @property (nonatomic, assign) CGSize ulk_minSize;
 @property (nonatomic, assign) UIEdgeInsets ulk_padding;
 @property (nonatomic, readonly) CGSize ulk_measuredSize;
+@property (nonatomic, readonly) BOOL ulk_hadMeasured;
 @property (nonatomic, readonly) ULKLayoutMeasuredWidthHeightState ulk_measuredState;
 @property (nonatomic, readonly) CGFloat ulk_baseline;
 @property (nonatomic, readonly) BOOL ulk_isLayoutRequested;
@@ -80,6 +81,8 @@ BOOL ULKBOOLFromString(NSString *boolString);
 - (void)ulk_layoutWithFrame:(CGRect)frame;
 
 - (void)ulk_setMeasuredDimensionSize:(ULKLayoutMeasuredSize)size;
+- (void)ulk_clearMeasuredDimensionSize;
+
 - (void)ulk_requestLayout;
 - (void)ulk_onFinishInflate;
 - (UIView *)ulk_findViewById:(NSString *)identifier;
