@@ -12,7 +12,6 @@
 #import "ULKLayoutInflater.h"
 #import "ULKXMLCache.h"
 #import "UIView+ULK_Layout.h"
-#import "UIView+ULK_ViewGroup.h"
 #import "TBXML.h"
 #import "ULKLayoutParams.h"
 #import "ULKBaseViewFactory.h"

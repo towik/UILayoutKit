@@ -10,7 +10,7 @@
 //
 
 #import "UITextView+ULK_View.h"
-#import "UIView+ULK_ViewGroup.h"
+#import "UIView+ULK_Layout.h"
 
 @implementation UITextView (ULK_View)
 
