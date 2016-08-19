@@ -13,7 +13,6 @@
             id="text"
             layout_width="wrap_content"
             layout_height="wrap_content"
-            padding="10"
             text="Short text"
             textColor="#ffffff"
             backgroundColor="#80000000"/>
@@ -21,7 +20,6 @@
             id="otherText"
             layout_width="match_parent"
             layout_height="match_parent"
-            padding="10"
             textColor="#ffffff"
             backgroundColor="#ff0000"
             gravity="right"

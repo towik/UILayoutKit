@@ -66,8 +66,8 @@
     ULKLayoutMeasuredSize measuredSize;
     measuredSize.width.state = ULKLayoutMeasuredStateNone;
     measuredSize.height.state = ULKLayoutMeasuredStateNone;
-    UIEdgeInsets padding = self.ulk_padding;
-    
+//    UIEdgeInsets padding = self.ulk_padding;
+    UIEdgeInsets padding = UIEdgeInsetsZero;
     
     if (widthMode == ULKLayoutMeasureSpecModeExactly) {
         measuredSize.width.size = widthSize;

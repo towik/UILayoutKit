@@ -64,7 +64,6 @@
                 layout_width="match_parent"
                 layout_height="wrap_content"
                 backgroundColor="#ff0000"
-                padding="20"
                 text="Label1"/>
 			<Label
                 layout_width="match_parent"
