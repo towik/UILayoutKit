@@ -12,16 +12,6 @@
 #import "UIToolbar+ULK_View.h"
 #import "UIView+ULK_Layout.h"
 
-UIBarStyle ULKUIBarStyleFromString(NSString *barStyle) {
-    UIBarStyle ret = UIBarStyleDefault;
-    if ([barStyle isEqualToString:@"black"]) {
-        ret = UIBarStyleBlack;
-    } else if ([barStyle isEqualToString:@"default"]) {
-        ret = UIBarStyleDefault;
-    }
-    return ret;
-}
-
 @implementation UIToolbar (ULK_View)
 
 - (void)ulk_onMeasureWithWidthMeasureSpec:(ULKLayoutMeasureSpec)widthMeasureSpec heightMeasureSpec:(ULKLayoutMeasureSpec)heightMeasureSpec {

@@ -357,6 +357,15 @@
 
 @end
 
+UIBarStyle ULKUIBarStyleFromString(NSString *barStyle) {
+    UIBarStyle ret = UIBarStyleDefault;
+    if ([barStyle isEqualToString:@"black"]) {
+        ret = UIBarStyleBlack;
+    } else if ([barStyle isEqualToString:@"default"]) {
+        ret = UIBarStyleDefault;
+    }
+    return ret;
+}
 
 @implementation UINavigationBar (ULK_XMLParser)
 

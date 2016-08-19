@@ -11,7 +11,6 @@
 
 #import <UIKit/UIKit.h>
 
-UIBarStyle ULKUIBarStyleFromString(NSString *barStyle);
 
 @interface UIToolbar (ULK_View)
 
