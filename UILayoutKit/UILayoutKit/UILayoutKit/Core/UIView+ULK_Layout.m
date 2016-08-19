@@ -17,35 +17,31 @@
 
 #pragma mark -
 
-NSString *const ULKViewAttributeActionTarget = @"__actionTarget";
 
-ULKLayoutMeasureSpec ULKLayoutMeasureSpecMake(CGFloat size, ULKLayoutMeasureSpecMode mode) {
-    ULKLayoutMeasureSpec measureSpec;
-    measureSpec.size = size;
-    measureSpec.mode = mode;
-    return measureSpec;
-}
 
-ULKViewVisibility ULKViewVisibilityFromString(NSString *visibilityString) {
-    ULKViewVisibility visibility = ULKViewVisibilityVisible;
-    if ([visibilityString isEqualToString:@"visible"]) {
-        visibility = ULKViewVisibilityVisible;
-    } else if ([visibilityString isEqualToString:@"invisible"]) {
-        visibility = ULKViewVisibilityInvisible;
-    } else if ([visibilityString isEqualToString:@"gone"]) {
-        visibility = ULKViewVisibilityGone;
+@implementation ULKLayoutParams
+
+- (instancetype)initWithWidth:(CGFloat)width height:(CGFloat)height {
+    self = [super init];
+    if (self) {
+        _width = width;
+        _height = height;
     }
-    return visibility;
+    return self;
 }
 
-ULKLayoutMeasuredSize ULKLayoutMeasuredSizeMake(ULKLayoutMeasuredDimension width, ULKLayoutMeasuredDimension height) {
-    ULKLayoutMeasuredSize ret = {width, height};
-    return ret;
+- (instancetype)initWithLayoutParams:(ULKLayoutParams *)layoutParams {
+    self = [super init];
+    if (self) {
+        _width = layoutParams.width;
+        _height = layoutParams.height;
+        _margin = layoutParams.margin;
+    }
+    return self;
 }
 
-BOOL ULKBOOLFromString(NSString *boolString) {
-    return [boolString isEqualToString:@"true"] || [boolString isEqualToString:@"TRUE"] || [boolString isEqualToString:@"yes"] || [boolString isEqualToString:@"YES"] || [boolString boolValue];
-}
+@end
+
 
 @implementation UIView (ULK_Layout)
 
@@ -344,6 +340,10 @@ static char visibilityKey;
     return ret;
 }
 
+@end
+
+
+@implementation UIView (ULK_Layout_ViewGroup)
 
 - (ULKLayoutParams *)ulk_generateDefaultLayoutParams {
     return [[ULKLayoutParams alloc] initWithWidth:ULKLayoutParamsSizeWrapContent height:ULKLayoutParamsSizeWrapContent];
@@ -351,10 +351,6 @@ static char visibilityKey;
 
 - (ULKLayoutParams *)ulk_generateLayoutParamsFromLayoutParams:(ULKLayoutParams *)lp {
     return lp;
-}
-
-- (ULKLayoutParams *)ulk_generateLayoutParamsFromAttributes:(NSDictionary *)attrs {
-    return [[ULKLayoutParams alloc] initUlk_WithAttributes:attrs];
 }
 
 - (BOOL)ulk_checkLayoutParams:(ULKLayoutParams *)layoutParams {
@@ -437,7 +433,7 @@ static char visibilityKey;
 - (void)ulk_measureChildWithMargins:(UIView *)child parentWidthMeasureSpec:(ULKLayoutMeasureSpec)parentWidthMeasureSpec widthUsed:(CGFloat)widthUsed parentHeightMeasureSpec:(ULKLayoutMeasureSpec)parentHeightMeasureSpec heightUsed:(CGFloat)heightUsed {
     ULKLayoutParams *lp = (ULKLayoutParams *) child.layoutParams;
     UIEdgeInsets lpMargin = lp.margin;
-//    UIEdgeInsets padding = self.ulk_padding;
+    //    UIEdgeInsets padding = self.ulk_padding;
     UIEdgeInsets padding = UIEdgeInsetsZero;
     ULKLayoutMeasureSpec childWidthMeasureSpec = [self ulk_childMeasureSpecWithMeasureSpec:parentWidthMeasureSpec padding:padding.left + padding.right + lpMargin.left + lpMargin.right + widthUsed childDimension:lp.width];
     ULKLayoutMeasureSpec childHeightMeasureSpec = [self ulk_childMeasureSpecWithMeasureSpec:parentHeightMeasureSpec padding:padding.top + padding.bottom + lpMargin.top + lpMargin.bottom + heightUsed childDimension:lp.height];
@@ -456,7 +452,7 @@ static char visibilityKey;
  */
 -(void)ulk_measureChild:(UIView *)child withParentWidthMeasureSpec:(ULKLayoutMeasureSpec)parentWidthMeasureSpec parentHeightMeasureSpec:(ULKLayoutMeasureSpec)parentHeightMeasureSpec {
     ULKLayoutParams *lp = child.layoutParams;
-//    UIEdgeInsets padding = self.ulk_padding;
+    //    UIEdgeInsets padding = self.ulk_padding;
     UIEdgeInsets padding = UIEdgeInsetsZero;
     ULKLayoutMeasureSpec childWidthMeasureSpec = [self ulk_childMeasureSpecWithMeasureSpec:parentWidthMeasureSpec padding:(padding.left + padding.right) childDimension:lp.width];
     ULKLayoutMeasureSpec childHeightMeasureSpec = [self ulk_childMeasureSpecWithMeasureSpec:parentHeightMeasureSpec padding:(padding.top + padding.bottom) childDimension:lp.height];
@@ -480,6 +476,61 @@ static char visibilityKey;
         }
     }
     return nil;
+}
+
+@end
+
+
+@implementation UIView (ULKLayoutParams)
+
+static char layoutParamsKey;
+
+
+- (void)setLayoutParams:(ULKLayoutParams *)layoutParams {
+    objc_setAssociatedObject(self,
+                             &layoutParamsKey,
+                             layoutParams,
+                             OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [self ulk_requestLayout];
+    
+}
+
+- (ULKLayoutParams *)layoutParams {
+    ULKLayoutParams *layoutParams = objc_getAssociatedObject(self, &layoutParamsKey);
+    
+    //    if (![layoutParams isKindOfClass:[ULKLayoutParams class]]) {
+    //        layoutParams = [[ULKLayoutParams alloc] initWithLayoutParams:layoutParams];
+    //        self.layoutParams = layoutParams;
+    //    }
+    
+    return (ULKLayoutParams *)layoutParams;
+}
+
+- (void)setLayoutWidth:(CGFloat)layoutWidth {
+    self.layoutParams.width = layoutWidth;
+    [self ulk_requestLayout];
+}
+
+- (CGFloat)layoutWidth {
+    return self.layoutParams.width;
+}
+
+- (void)setLayoutHeight:(CGFloat)layoutHeight {
+    self.layoutParams.height = layoutHeight;
+    [self ulk_requestLayout];
+}
+
+- (CGFloat)layoutHeight {
+    return self.layoutParams.height;
+}
+
+- (void)setLayoutMargin:(UIEdgeInsets)layoutMargin {
+    self.layoutParams.margin = layoutMargin;
+    [self ulk_requestLayout];
+}
+
+- (UIEdgeInsets)layoutMargin {
+    return self.layoutParams.margin;
 }
 
 @end

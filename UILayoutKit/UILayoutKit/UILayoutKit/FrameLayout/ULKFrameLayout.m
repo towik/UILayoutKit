@@ -276,8 +276,4 @@ static char matchParentChildrenKey;
     return [[ULKFrameLayoutParams alloc] initWithLayoutParams:layoutParams];
 }
 
-- (ULKLayoutParams *)ulk_generateLayoutParamsFromAttributes:(NSDictionary *)attrs {
-    return [[ULKFrameLayoutParams alloc] initUlk_WithAttributes:attrs];
-}
-
 @end

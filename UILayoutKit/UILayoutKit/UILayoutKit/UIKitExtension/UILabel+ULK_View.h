@@ -10,7 +10,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ULKGravity.h"
 
 @interface UILabel (ULK_View)
 

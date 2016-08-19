@@ -1135,8 +1135,4 @@
     return [[ULKLinearLayoutParams alloc] initWithLayoutParams:layoutParams];
 }
 
-- (ULKLayoutParams *)ulk_generateLayoutParamsFromAttributes:(NSDictionary *)attrs {
-    return [[ULKLinearLayoutParams alloc] initUlk_WithAttributes:attrs];
-}
-
 @end

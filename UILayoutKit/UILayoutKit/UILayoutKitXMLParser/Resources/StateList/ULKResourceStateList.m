@@ -14,6 +14,7 @@
 #import "ULKResourceStateList+ULK_Internal.h"
 #import "TBXML.h"
 #import "UIView+ULK_Layout.h"
+#import "UIKit+ULK_XMLParser.h"
 
 @interface ULKResourceStateList ()
 

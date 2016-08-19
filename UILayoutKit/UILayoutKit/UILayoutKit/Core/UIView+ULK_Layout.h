@@ -10,57 +10,20 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ULKLayoutParams.h"
+#import "ULKDefine.h"
 
-/**
- * This is used by the layout-inflater to pass an action target to a UIControl
- */
-FOUNDATION_EXPORT NSString *const ULKViewAttributeActionTarget;
 
-typedef NS_ENUM(NSInteger, ULKLayoutMeasureSpecMode) {
-    ULKLayoutMeasureSpecModeUnspecified,
-    ULKLayoutMeasureSpecModeExactly,
-    ULKLayoutMeasureSpecModeAtMost
-};
+@interface ULKLayoutParams : NSObject
 
-typedef struct ULKLayoutMeasureSpec {
-    CGFloat size;
-    ULKLayoutMeasureSpecMode mode;
-} ULKLayoutMeasureSpec;
+@property (nonatomic, assign) CGFloat width;
+@property (nonatomic, assign) CGFloat height;
+@property (nonatomic, assign) UIEdgeInsets margin;
 
-ULKLayoutMeasureSpec ULKLayoutMeasureSpecMake(CGFloat size, ULKLayoutMeasureSpecMode mode);
+- (instancetype)initWithWidth:(CGFloat)width height:(CGFloat)height NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithLayoutParams:(ULKLayoutParams *)layoutParams;
 
-typedef NS_OPTIONS(NSInteger, ULKLayoutMeasuredState) {
-    ULKLayoutMeasuredStateNone = 0x0,
-    ULKLayoutMeasuredStateTooSmall = 0x1
-};
+@end
 
-typedef struct ULKLayoutMeasuredDimension {
-    CGFloat size;
-    ULKLayoutMeasuredState state;
-} ULKLayoutMeasuredDimension;
-
-typedef struct ULKLayoutMeasuredSize {
-    ULKLayoutMeasuredDimension width;
-    ULKLayoutMeasuredDimension height;
-} ULKLayoutMeasuredSize;
-
-typedef struct ULKLayoutMeasuredWidthHeightState {
-    ULKLayoutMeasuredState widthState;
-    ULKLayoutMeasuredState heightState;
-} ULKLayoutMeasuredWidthHeightState;
-
-typedef NS_OPTIONS(NSInteger, ULKViewVisibility) {
-    ULKViewVisibilityVisible = 0x00000000,
-    ULKViewVisibilityInvisible = 0x00000004,
-    ULKViewVisibilityGone = 0x00000008
-};
-
-ULKViewVisibility ULKViewVisibilityFromString(NSString *visibilityString);
-
-ULKLayoutMeasuredSize ULKLayoutMeasuredSizeMake(ULKLayoutMeasuredDimension width, ULKLayoutMeasuredDimension height);
-
-BOOL ULKBOOLFromString(NSString *boolString);
 
 @interface UIView (ULK_Layout)
 
@@ -89,10 +52,13 @@ BOOL ULKBOOLFromString(NSString *boolString);
 + (ULKLayoutMeasuredDimension)ulk_resolveSizeAndStateForSize:(CGFloat)size measureSpec:(ULKLayoutMeasureSpec)measureSpec childMeasureState:(ULKLayoutMeasuredState)childMeasuredState;
 + (CGFloat)ulk_resolveSizeForSize:(CGFloat)size measureSpec:(ULKLayoutMeasureSpec)measureSpec;
 
+@end
+
+
+@interface UIView (ULK_Layout_ViewGroup)
 
 - (ULKLayoutParams *)ulk_generateDefaultLayoutParams;
 - (ULKLayoutParams *)ulk_generateLayoutParamsFromLayoutParams:(ULKLayoutParams *)lp;
-- (ULKLayoutParams *)ulk_generateLayoutParamsFromAttributes:(NSDictionary *)attrs;
 - (BOOL)ulk_checkLayoutParams:(ULKLayoutParams *)layoutParams;
 - (ULKLayoutMeasureSpec)ulk_childMeasureSpecWithMeasureSpec:(ULKLayoutMeasureSpec)spec padding:(CGFloat)padding childDimension:(CGFloat)childDimension;
 
@@ -103,3 +69,14 @@ BOOL ULKBOOLFromString(NSString *boolString);
 @property (nonatomic, readonly) BOOL ulk_isViewGroup;
 
 @end
+
+
+@interface UIView (ULKLayoutParams)
+
+@property (nonatomic, assign) CGFloat layoutWidth;
+@property (nonatomic, assign) CGFloat layoutHeight;
+@property (nonatomic, assign) UIEdgeInsets layoutMargin;
+@property (nonatomic, strong) ULKLayoutParams *layoutParams;
+
+@end
+

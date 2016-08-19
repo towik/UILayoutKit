@@ -11,7 +11,19 @@
 
 #import <UIKit/UIKit.h>
 
+BOOL ULKBOOLFromString(NSString *boolString);
+ULKViewVisibility ULKViewVisibilityFromString(NSString *visibilityString);
+
+@interface ULKLayoutParams (ULK_XMLParser)
+
+- (instancetype)initUlk_WithAttributes:(NSDictionary *)attrs;
+
+@end
+
+
 @interface UIView (ULK_XMLParser)
+
+- (ULKLayoutParams *)ulk_generateLayoutParamsFromAttributes:(NSDictionary *)attrs;
 
 - (void)ulk_setupFromAttributes:(NSDictionary *)attrs;
 - (instancetype)initUlk_WithAttributes:(NSDictionary *)attrs;

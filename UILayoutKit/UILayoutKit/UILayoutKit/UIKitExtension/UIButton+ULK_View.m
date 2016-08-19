@@ -11,7 +11,7 @@
 
 #import "UIButton+ULK_View.h"
 #import "UIView+ULK_Layout.h"
-#import "ULKGravity.h"
+#import "ULKDefine.h"
 
 @implementation UIButton (ULK_View)
 

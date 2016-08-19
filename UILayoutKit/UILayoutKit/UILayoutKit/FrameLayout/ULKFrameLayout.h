@@ -10,7 +10,7 @@
 //
 
 #import "ULKViewGroup.h"
-#import "ULKGravity.h"
+#import "ULKDefine.h"
 
 @interface ULKFrameLayoutParams : ULKLayoutParams
 

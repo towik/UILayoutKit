@@ -15,12 +15,72 @@
 #import "UILabel+ULK_View.h"
 #import "UIView+ULK_Layout.h"
 #import "UIToolbar+ULK_View.h"
+#import "ULKLayoutBridge.h"
 #import "ULKLinearLayout.h"
-#import "ULKGravity.h"
+#import "ULKDefine.h"
 #import "UIColor+ULK_ColorParser.h"
 #import "UIImage+ULK_FromColor.h"
 #import "ULKResourceManager.h"
 #import "NSDictionary+ULK_ResourceManager.h"
+#import "UIKit+ULK_XMLParser.h"
+
+#define LAYOUT_SIZE_MATCH_PARENT @"match_parent"
+#define LAYOUT_SIZE_FILL_PARENT @"fill_parent"
+#define LAYOUT_SIZE_WRAP_CONTENT @"wrap_content"
+
+BOOL ULKBOOLFromString(NSString *boolString) {
+    return [boolString isEqualToString:@"true"] || [boolString isEqualToString:@"TRUE"] || [boolString isEqualToString:@"yes"] || [boolString isEqualToString:@"YES"] || [boolString boolValue];
+}
+
+ULKViewVisibility ULKViewVisibilityFromString(NSString *visibilityString) {
+    ULKViewVisibility visibility = ULKViewVisibilityVisible;
+    if ([visibilityString isEqualToString:@"visible"]) {
+        visibility = ULKViewVisibilityVisible;
+    } else if ([visibilityString isEqualToString:@"invisible"]) {
+        visibility = ULKViewVisibilityInvisible;
+    } else if ([visibilityString isEqualToString:@"gone"]) {
+        visibility = ULKViewVisibilityGone;
+    }
+    return visibility;
+}
+
+
+ULKGravity ULKGravityFromString(NSString *gravityString) {
+    ULKGravity ret = ULKGravityNone;
+    if ([gravityString isEqualToString:@"top"]) {
+        ret = ULKGravityTop;
+    } else if ([gravityString isEqualToString:@"bottom"]) {
+        ret = ULKGravityBottom;
+    } else if ([gravityString isEqualToString:@"left"]) {
+        ret = ULKGravityLeft;
+    } else if ([gravityString isEqualToString:@"right"]) {
+        ret = ULKGravityRight;
+    } else if ([gravityString isEqualToString:@"center_vertical"]) {
+        ret = ULKGravityCenterVertical;
+    } else if ([gravityString isEqualToString:@"fill_vertical"]) {
+        ret = ULKGravityFillVertical;
+    } else if ([gravityString isEqualToString:@"center_horizontal"]) {
+        ret = ULKGravityCenterHorizontal;
+    } else if ([gravityString isEqualToString:@"fill_horizontal"]) {
+        ret = ULKGravityFillHorizontal;
+    } else if ([gravityString isEqualToString:@"center"]) {
+        ret = ULKGravityCenter;
+    } else if ([gravityString isEqualToString:@"fill"]) {
+        ret = ULKGravityFill;
+    }
+    return ret;
+}
+
+ULKGravity ULKGravityFromAttribute(NSString *gravityAttribute) {
+    ULKGravity ret = ULKGravityNone;
+    if (gravityAttribute != nil) {
+        NSArray *components = [gravityAttribute componentsSeparatedByString:@"|"];
+        for (NSString *comp in components) {
+            ret |= ULKGravityFromString(comp);
+        }
+    }
+    return ret;
+}
 
 
 @implementation ULKFrameLayoutParams (ULK_XMLParser)
@@ -29,7 +89,7 @@
     self = [super initUlk_WithAttributes:attrs];
     if (self) {
         NSString *gravityString = attrs[@"layout_gravity"];
-        self.gravity = [ULKGravityUtility gravityFromAttribute:gravityString];
+        self.gravity = ULKGravityFromAttribute(gravityString);
     }
     return self;
 }
@@ -43,6 +103,49 @@
     return [[ULKFrameLayoutParams alloc] initUlk_WithAttributes:attrs];
 }
 
+@end
+
+
+@implementation ULKLayoutParams (ULK_XMLParser)
+
++ (CGFloat)sizeForLayoutSizeAttribute:(NSString *)sizeAttr {
+    CGFloat ret = 0;
+    if ([sizeAttr isEqualToString:LAYOUT_SIZE_MATCH_PARENT] || [sizeAttr isEqualToString:LAYOUT_SIZE_FILL_PARENT]) {
+        ret = ULKLayoutParamsSizeMatchParent;
+    } else if ([sizeAttr isEqualToString:LAYOUT_SIZE_WRAP_CONTENT]) {
+        ret = ULKLayoutParamsSizeWrapContent;
+    } else {
+        ret = [sizeAttr floatValue];
+    }
+    return ret;
+}
+
+- (instancetype)initUlk_WithAttributes:(NSDictionary *)attrs {
+    self = [super init];
+    if (self) {
+        NSString *widthAttr = attrs[@"layout_width"];
+        NSString *heightAttr = attrs[@"layout_height"];
+        //        if (widthAttr == nil || heightAttr == nil) {
+        //            NSAssert(0, @"You have to set the layout_width and layout_height parameters.");
+        //            return nil;
+        //        }
+        self.width = [ULKLayoutParams sizeForLayoutSizeAttribute:widthAttr];
+        self.height = [ULKLayoutParams sizeForLayoutSizeAttribute:heightAttr];
+        
+        NSString *marginString = attrs[@"layout_margin"];
+        if (marginString != nil) {
+            CGFloat margin = [marginString floatValue];
+            self.margin = UIEdgeInsetsMake(margin, margin, margin, margin);
+        } else {
+            NSString *marginLeftString = attrs[@"layout_marginLeft"];
+            NSString *marginTopString = attrs[@"layout_marginTop"];
+            NSString *marginBottomString = attrs[@"layout_marginBottom"];
+            NSString *marginRightString = attrs[@"layout_marginRight"];
+            self.margin = UIEdgeInsetsMake([marginTopString floatValue], [marginLeftString floatValue], [marginBottomString floatValue], [marginRightString floatValue]);
+        }
+    }
+    return self;
+}
 @end
 
 
@@ -60,6 +163,10 @@
 
 
 @implementation UIView (ULK_XMLParser)
+
+- (ULKLayoutParams *)ulk_generateLayoutParamsFromAttributes:(NSDictionary *)attrs {
+    return [[ULKLayoutParams alloc] initUlk_WithAttributes:attrs];
+}
 
 - (void)ulk_setupFromAttributes:(NSDictionary *)attrs {
     
@@ -291,7 +398,7 @@
     
     self.text = [attrs ulk_stringFromIDLValueForKey:@"text"];
     
-    ULKGravity gravity = [ULKGravityUtility gravityFromAttribute:attrs[@"gravity"]];
+    ULKGravity gravity = ULKGravityFromAttribute(attrs[@"gravity"]);
     if ((gravity & ULKGravityRight) == ULKGravityRight) {
         self.textAlignment = NSTextAlignmentRight;
     }
@@ -484,11 +591,34 @@ UIBarStyle ULKUIBarStyleFromString(NSString *barStyle) {
 
 @end
 
+
+@implementation ULKLayoutBridge (ULK_XMLParser)
+
+- (ULKLayoutParams *)ulk_generateLayoutParamsFromAttributes:(NSDictionary *)attrs {
+    return [[ULKLayoutParams alloc] initUlk_WithAttributes:attrs];
+}
+
+@end
+
+
+@implementation ULKFrameLayout (ULK_XMLParser)
+
+- (ULKLayoutParams *)ulk_generateLayoutParamsFromAttributes:(NSDictionary *)attrs {
+    return [[ULKFrameLayoutParams alloc] initUlk_WithAttributes:attrs];
+}
+
+@end
+
+
 @implementation ULKLinearLayout (ULK_XMLParser)
+
+- (ULKLayoutParams *)ulk_generateLayoutParamsFromAttributes:(NSDictionary *)attrs {
+    return [[ULKLinearLayoutParams alloc] initUlk_WithAttributes:attrs];
+}
 
 - (void)ulk_setupFromAttributes:(NSDictionary *)attrs {
     [super ulk_setupFromAttributes:attrs];
-    self.gravity = [ULKGravityUtility gravityFromAttribute:attrs[@"gravity"]];
+    self.gravity = ULKGravityFromAttribute(attrs[@"gravity"]);
     NSString *orientationString = attrs[@"orientation"];
     if ([orientationString isEqualToString:@"horizontal"]) {
         self.orientation = LinearLayoutOrientationHorizontal;

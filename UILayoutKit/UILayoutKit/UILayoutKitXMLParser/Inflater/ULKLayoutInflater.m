@@ -13,11 +13,11 @@
 #import "ULKXMLCache.h"
 #import "UIView+ULK_Layout.h"
 #import "TBXML.h"
-#import "ULKLayoutParams.h"
 #import "ULKBaseViewFactory.h"
 #import "ULKResourceManager.h"
 #import "TBXML+ULK.h"
 #import "ULKResourceManager+ULK_Internal.h"
+#import "UIKit+ULK_XMLParser.h"
 
 #define TAG_MERGE @"merge"
 #define TAG_INCLUDE @"include"

@@ -10,7 +10,7 @@
 //
 
 #import "ULKViewGroup.h"
-#import "ULKGravity.h"
+#import "ULKDefine.h"
 #import "ULKFrameLayout.h"
 
 #define MAX_ASCENT_DESCENT_INDEX_CENTER_VERTICAL 0

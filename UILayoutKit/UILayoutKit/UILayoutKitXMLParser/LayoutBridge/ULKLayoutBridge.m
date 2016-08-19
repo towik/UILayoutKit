@@ -11,7 +11,6 @@
 
 #import "ULKLayoutBridge.h"
 #import "UIView+ULK_Layout.h"
-#import "ULKLayoutParams.h"
 #import "ULKLayoutInflater.h"
 
 @implementation UIView (ULKLayoutBridge)
@@ -143,10 +142,6 @@
 
 -(ULKLayoutParams *)ulk_generateLayoutParamsFromLayoutParams:(ULKLayoutParams *)layoutParams {
     return [[ULKLayoutParams alloc] initWithLayoutParams:layoutParams];
-}
-
-- (ULKLayoutParams *)ulk_generateLayoutParamsFromAttributes:(NSDictionary *)attrs {
-    return [[ULKLayoutParams alloc] initUlk_WithAttributes:attrs];
 }
 
 - (void)willShowKeyboard:(NSNotification *)notification {

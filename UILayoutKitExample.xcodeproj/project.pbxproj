@@ -84,8 +84,7 @@
 		2BD4B35D1D66A4FE00CB3011 /* UITextView+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4B3511D66A4FE00CB3011 /* UITextView+ULK_View.m */; };
 		2BD4B35E1D66A4FE00CB3011 /* UIToolbar+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4B3531D66A4FE00CB3011 /* UIToolbar+ULK_View.m */; };
 		2BD4B36A1D66A54100CB3011 /* UIView+ULK_Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4B3611D66A54100CB3011 /* UIView+ULK_Layout.m */; };
-		2BD4B36C1D66A54100CB3011 /* ULKGravity.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4B3651D66A54100CB3011 /* ULKGravity.m */; };
-		2BD4B36D1D66A54100CB3011 /* ULKLayoutParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4B3671D66A54100CB3011 /* ULKLayoutParams.m */; };
+		2BD4B36C1D66A54100CB3011 /* ULKDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4B3651D66A54100CB3011 /* ULKDefine.m */; };
 		2BD4B36E1D66A54100CB3011 /* ULKViewGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4B3691D66A54100CB3011 /* ULKViewGroup.m */; };
 		DF2697F2274BB0F0445374DA /* libPods-UILayoutKitExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1CB0477A10BF8A1912094BF /* libPods-UILayoutKitExample.a */; };
 /* End PBXBuildFile section */
@@ -226,10 +225,8 @@
 		2BD4B3531D66A4FE00CB3011 /* UIToolbar+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIToolbar+ULK_View.m"; sourceTree = "<group>"; };
 		2BD4B3601D66A54100CB3011 /* UIView+ULK_Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ULK_Layout.h"; sourceTree = "<group>"; };
 		2BD4B3611D66A54100CB3011 /* UIView+ULK_Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ULK_Layout.m"; sourceTree = "<group>"; };
-		2BD4B3641D66A54100CB3011 /* ULKGravity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKGravity.h; sourceTree = "<group>"; };
-		2BD4B3651D66A54100CB3011 /* ULKGravity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKGravity.m; sourceTree = "<group>"; };
-		2BD4B3661D66A54100CB3011 /* ULKLayoutParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKLayoutParams.h; sourceTree = "<group>"; };
-		2BD4B3671D66A54100CB3011 /* ULKLayoutParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKLayoutParams.m; sourceTree = "<group>"; };
+		2BD4B3641D66A54100CB3011 /* ULKDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKDefine.h; sourceTree = "<group>"; };
+		2BD4B3651D66A54100CB3011 /* ULKDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKDefine.m; sourceTree = "<group>"; };
 		2BD4B3681D66A54100CB3011 /* ULKViewGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKViewGroup.h; sourceTree = "<group>"; };
 		2BD4B3691D66A54100CB3011 /* ULKViewGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKViewGroup.m; sourceTree = "<group>"; };
 		2BEB75611D3F666300672260 /* UILayoutKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UILayoutKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -579,10 +576,8 @@
 			children = (
 				2BD4B3601D66A54100CB3011 /* UIView+ULK_Layout.h */,
 				2BD4B3611D66A54100CB3011 /* UIView+ULK_Layout.m */,
-				2BD4B3641D66A54100CB3011 /* ULKGravity.h */,
-				2BD4B3651D66A54100CB3011 /* ULKGravity.m */,
-				2BD4B3661D66A54100CB3011 /* ULKLayoutParams.h */,
-				2BD4B3671D66A54100CB3011 /* ULKLayoutParams.m */,
+				2BD4B3641D66A54100CB3011 /* ULKDefine.h */,
+				2BD4B3651D66A54100CB3011 /* ULKDefine.m */,
 				2BD4B3681D66A54100CB3011 /* ULKViewGroup.h */,
 				2BD4B3691D66A54100CB3011 /* ULKViewGroup.m */,
 			);
@@ -776,12 +771,11 @@
 				2B1ACF5F1D60908200303BFC /* ULKResourceManager.m in Sources */,
 				2B1ACF561D60908200303BFC /* ULKColorStateItem.m in Sources */,
 				2B1ACF651D60908200303BFC /* TBXML.m in Sources */,
-				2BD4B36C1D66A54100CB3011 /* ULKGravity.m in Sources */,
+				2BD4B36C1D66A54100CB3011 /* ULKDefine.m in Sources */,
 				2B1ACF381D60908200303BFC /* ULKLinearLayout.m in Sources */,
 				2B1ACC6F1D6081DC00303BFC /* ULKAppDelegate.m in Sources */,
 				2B1ACF611D60908200303BFC /* ULKResourceValueSet.m in Sources */,
 				2B1ACF691D60908200303BFC /* UIImage+ULKNinePatch.m in Sources */,
-				2BD4B36D1D66A54100CB3011 /* ULKLayoutParams.m in Sources */,
 				2B1ACF631D60908200303BFC /* ULKStyle.m in Sources */,
 				2BD4B3541D66A4FE00CB3011 /* UIButton+ULK_View.m in Sources */,
 				2B5DEBA31D3F963F00E13C76 /* README.md in Sources */,

@@ -11,6 +11,7 @@
 
 #import "ULKBaseViewFactory.h"
 #import "UIView+ULK_Layout.h"
+#import "UIKit+ULK_XMLParser.h"
 
 @interface UIButton ()
 
