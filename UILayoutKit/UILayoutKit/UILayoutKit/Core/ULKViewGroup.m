@@ -150,7 +150,7 @@
     }
     subview.layoutParams = params;
     
-    [self ulk_requestLayout];
+    [subview ulk_requestLayout];
     
     if ([subview isKindOfClass:[UILabel class]]
         || [subview isKindOfClass:[UITextField class]]
@@ -169,7 +169,7 @@
         @throw [NSException exceptionWithName:@"UnsuportedOperationException" reason:@"Views can only be removed from ViewGroup objects" userInfo:nil];
     }
     
-    [self ulk_requestLayout];
+    [subview ulk_requestLayout];
     
     if ([subview isKindOfClass:[UILabel class]]
         || [subview isKindOfClass:[UITextField class]]
