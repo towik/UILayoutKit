@@ -17,6 +17,51 @@
 #pragma mark -
 
 
+
+@implementation ULKFrameLayoutParams
+
+- (instancetype)initWithLayoutParams:(ULKLayoutParams *)layoutParams {
+    self = [super initWithLayoutParams:layoutParams];
+    if (self) {
+        if ([layoutParams isKindOfClass:[ULKFrameLayoutParams class]]) {
+            ULKFrameLayoutParams *otherLP = (ULKFrameLayoutParams *)layoutParams;
+            self.gravity = otherLP.gravity;
+        }
+    }
+    return self;
+}
+
+@end
+
+
+@implementation UIView (ULK_FrameLayoutParams)
+
+- (void)setFrameLayoutParams:(ULKFrameLayoutParams *)frameLayoutParams {
+    self.layoutParams = frameLayoutParams;
+}
+
+- (ULKFrameLayoutParams *)frameLayoutParams {
+    ULKLayoutParams *layoutParams = self.layoutParams;
+    if (![layoutParams isKindOfClass:[ULKFrameLayoutParams class]]) {
+        layoutParams = [[ULKFrameLayoutParams alloc] initWithLayoutParams:layoutParams];
+        self.layoutParams = layoutParams;
+    }
+    
+    return (ULKFrameLayoutParams *)layoutParams;
+}
+
+- (void)setUlk_layoutGravity:(ULKViewContentGravity)layoutGravity {
+    self.frameLayoutParams.gravity = layoutGravity;
+    [self ulk_requestLayout];
+}
+
+- (ULKViewContentGravity)ulk_layoutGravity {
+    return self.frameLayoutParams.gravity;
+}
+
+@end
+
+
 @implementation ULKFrameLayout
 
 static char matchParentChildrenKey;

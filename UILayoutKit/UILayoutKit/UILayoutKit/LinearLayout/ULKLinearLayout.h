@@ -10,8 +10,8 @@
 //
 
 #import "ULKViewGroup.h"
-#import "ULKLinearLayoutParams.h"
 #import "ULKGravity.h"
+#import "ULKFrameLayout.h"
 
 #define MAX_ASCENT_DESCENT_INDEX_CENTER_VERTICAL 0
 #define MAX_ASCENT_DESCENT_INDEX_TOP 1
@@ -23,6 +23,20 @@ typedef NS_ENUM(NSInteger, LinearLayoutOrientation) {
     LinearLayoutOrientationHorizontal,
     LinearLayoutOrientationVertical
 };
+
+
+@interface ULKLinearLayoutParams : ULKFrameLayoutParams
+
+@property (nonatomic, assign) float weight;
+
+@end
+
+
+@interface UIView (ULK_LinearLayoutParams)
+
+@property (nonatomic, assign) float layoutWeight;
+
+@end
 
 
 @interface ULKLinearLayout : ULKViewGroup

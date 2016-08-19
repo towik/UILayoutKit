@@ -10,7 +10,21 @@
 //
 
 #import "ULKViewGroup.h"
-#import "ULKFrameLayoutParams.h"
+#import "ULKGravity.h"
+
+@interface ULKFrameLayoutParams : ULKLayoutParams
+
+@property (nonatomic, assign) ULKViewContentGravity gravity;
+
+@end
+
+
+@interface UIView (ULK_FrameLayoutParams)
+
+@property (nonatomic, assign) ULKViewContentGravity ulk_layoutGravity;
+
+@end
+
 
 @interface ULKFrameLayout : ULKViewGroup
 

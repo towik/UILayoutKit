@@ -13,6 +13,61 @@
 #import "UIView+ULK_Layout.h"
 
 
+
+
+@implementation ULKLinearLayoutParams
+
+- (instancetype)initWithWidth:(CGFloat)width height:(CGFloat)height {
+    self = [super initWithWidth:width height:height];
+    if (self != nil) {
+        
+    }
+    return self;
+}
+
+- (instancetype)initWithLayoutParams:(ULKLayoutParams *)layoutParams {
+    self = [super initWithLayoutParams:layoutParams];
+    if (self) {
+        if ([layoutParams isKindOfClass:[ULKLinearLayoutParams class]]) {
+            ULKLinearLayoutParams *otherLP = (ULKLinearLayoutParams *)layoutParams;
+            self.gravity = otherLP.gravity;
+            self.weight = otherLP.weight;
+        }
+    }
+    return self;
+}
+
+@end
+
+
+@implementation UIView (ULK_LinearLayoutParams)
+
+- (void)setLinearLayoutParams:(ULKLinearLayoutParams *)linearLayoutParams {
+    self.layoutParams = linearLayoutParams;
+}
+
+- (ULKLinearLayoutParams *)linearLayoutParams {
+    ULKLayoutParams *layoutParams = self.layoutParams;
+    if (![layoutParams isKindOfClass:[ULKLinearLayoutParams class]]) {
+        layoutParams = [[ULKLinearLayoutParams alloc] initWithLayoutParams:layoutParams];
+        self.layoutParams = layoutParams;
+    }
+    
+    return (ULKLinearLayoutParams *)layoutParams;
+}
+
+- (void)setLayoutWeight:(float)layoutWeight {
+    self.linearLayoutParams.weight = layoutWeight;
+    [self ulk_requestLayout];
+}
+
+- (float)layoutWeight {
+    return self.linearLayoutParams.weight;
+}
+
+@end
+
+
 @implementation ULKLinearLayout {
     CGFloat _totalLength;
     

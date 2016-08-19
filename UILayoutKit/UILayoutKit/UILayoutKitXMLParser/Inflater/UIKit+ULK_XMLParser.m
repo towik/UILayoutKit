@@ -9,8 +9,8 @@
 //  Copyright (c) 2016 towik. All rights reserved.
 //
 
-#import "ULKFrameLayoutParams.h"
-#import "ULKLinearLayoutParams.h"
+#import "ULKFrameLayout.h"
+#import "ULKLinearLayout.h"
 #import "UIButton+ULK_View.h"
 #import "UILabel+ULK_View.h"
 #import "UIView+ULK_Layout.h"

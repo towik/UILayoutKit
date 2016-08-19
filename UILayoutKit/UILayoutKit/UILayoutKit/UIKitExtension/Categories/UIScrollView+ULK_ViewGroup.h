@@ -10,7 +10,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ULKFrameLayoutParams.h"
+#import "ULKFrameLayout.h"
 
 
 @interface UIScrollView (ULK_ViewGroup)
