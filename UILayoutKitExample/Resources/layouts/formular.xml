@@ -14,46 +14,6 @@
             scaleType="centerInside"
             layout_gravity="center_horizontal"
             src="@drawable/android.jpg"/>
-        <RelativeLayout
-            layout_width="match_parent"
-            layout_height="wrap_content"
-            layout_marginBottom="10">
-            <Label
-                id="username_label"
-                layout_width="100"
-                layout_height="40"
-                layout_alignParentLeft="true"
-                layout_gravity="center_vertical"
-                gravity="left|center_vertical"
-                font="Helvetica-Bold"
-                text="@string/values.username_label"/>
-            <TextField
-                id="username"
-                layout_width="match_parent"
-                layout_height="40"
-                layout_toRightOf="username_label"
-                layout_alignParentRight="true"/>
-        </RelativeLayout>
-        <RelativeLayout
-            layout_width="match_parent"
-            layout_height="wrap_content"
-            layout_marginBottom="10">
-            <Label
-                id="password_label"
-                layout_width="100"
-                layout_height="40"
-                layout_alignParentLeft="true"
-                layout_gravity="center_vertical"
-                gravity="left|center_vertical"
-                font="Helvetica-Bold"
-                text="@string/values.password_label"/>
-            <TextField
-                id="password"
-                layout_width="match_parent"
-                layout_height="40"
-                layout_toRightOf="password_label"
-                layout_alignParentRight="true"/>    
-        </RelativeLayout>
         <Label
             layout_width="wrap_content"
             layout_height="wrap_content"

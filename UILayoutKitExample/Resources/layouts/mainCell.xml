@@ -1,4 +1,4 @@
-<RelativeLayout
+<LinearLayout
     layout_width="match_parent"
     layout_height="wrap_content"
     layout_margin="10">
@@ -18,4 +18,4 @@
         layout_marginTop="10"
         gravity="top|left"
         lines="0"/>
-</RelativeLayout>
+</LinearLayout>
