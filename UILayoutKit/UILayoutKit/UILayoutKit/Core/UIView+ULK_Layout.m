@@ -330,10 +330,20 @@ static char visibilityKey;
 - (void)ulk_requestLayout {
     [self setNeedsLayout];
     [self ulk_clearMeasuredDimensionSize];
-    if (self.superview != nil
-        && (self.superview.layoutWidth == ULKLayoutParamsSizeWrapContent
-            || self.superview.layoutHeight == ULKLayoutParamsSizeWrapContent)) {
-        [self.superview ulk_requestLayout];
+    UIView *superView = self.superview;
+    if (superView != nil) {
+        [superView setNeedsLayout];
+        [superView ulk_clearMeasuredDimensionSize];
+        
+        UIView *tmpSuperView = superView.superview;
+        while (tmpSuperView != nil
+            && (tmpSuperView.layoutWidth == ULKLayoutParamsSizeWrapContent
+                || tmpSuperView.layoutHeight == ULKLayoutParamsSizeWrapContent))
+        {
+            [tmpSuperView setNeedsLayout];
+            [tmpSuperView ulk_clearMeasuredDimensionSize];
+            tmpSuperView = tmpSuperView.superview;
+        }
     }
 }
 
