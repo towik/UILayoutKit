@@ -14,8 +14,4 @@
 
 @interface UILabel (ULK_View)
 
-- (void)ulk_setText:(NSString *)text;
-- (void)ulk_setFont:(UIFont *)font;
-- (void)ulk_setLineBreakMode:(NSLineBreakMode)lineBreakMode;
-
 @end

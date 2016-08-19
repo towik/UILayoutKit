@@ -128,8 +128,8 @@
     [self ulk_layoutWithFrame:self.frame];
 }
 
-- (void)didAddSubview:(UIView *)child {
-    ULKLayoutParams *params = child.layoutParams;
+- (void)didAddSubview:(UIView *)subview {
+    ULKLayoutParams *params = subview.layoutParams;
     if (params == nil) {
         params = [self ulk_generateDefaultLayoutParams];
         if (params == nil) {
@@ -148,18 +148,44 @@
             params = [self ulk_generateDefaultLayoutParams];
         }
     }
-    child.layoutParams = params;
+    subview.layoutParams = params;
     
     [self ulk_requestLayout];
+    
+    if ([self isKindOfClass:[UILabel class]]
+        || [self isKindOfClass:[UITextField class]]
+        || [self isKindOfClass:[UITextView class]]) {
+        [subview addObserver:self forKeyPath:@"text" options:NSKeyValueObservingOptionNew context:nil];
+        [subview addObserver:self forKeyPath:@"font" options:NSKeyValueObservingOptionNew context:nil];
+    }
+    
+    if ([self isKindOfClass:[UILabel class]]) {
+        [subview addObserver:self forKeyPath:@"lineBreakMode" options:NSKeyValueObservingOptionNew context:nil];
+    }
 }
 
-- (void)willRemoveSubview:(UIView *)view {
+- (void)willRemoveSubview:(UIView *)subview {
     if (!self.ulk_isViewGroup) {
         @throw [NSException exceptionWithName:@"UnsuportedOperationException" reason:@"Views can only be removed from ViewGroup objects" userInfo:nil];
     }
     
     [self ulk_requestLayout];
-    [self setNeedsDisplay];
+    
+    if ([self isKindOfClass:[UILabel class]]
+        || [self isKindOfClass:[UITextField class]]
+        || [self isKindOfClass:[UITextView class]]) {
+        [subview removeObserver:self forKeyPath:@"text"];
+        [subview removeObserver:self forKeyPath:@"font"];
+    }
+    
+    if ([self isKindOfClass:[UILabel class]]) {
+        [subview removeObserver:self forKeyPath:@"lineBreakMode"];
+    }
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(UIView*)object change:(NSDictionary *)change context:(void *)context
+{
+    [object ulk_requestLayout];
 }
 
 @end

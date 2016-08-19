@@ -52,14 +52,4 @@
     [self ulk_setMeasuredDimensionSize:measuredSize];
 }
 
-- (void)ulk_setText:(NSString *)text {
-    [self setText:text];
-    [self ulk_requestLayout];
-}
-
-- (void)ulk_setFont:(UIFont *)font {
-    [self setFont:font];
-    [self ulk_requestLayout];
-}
-
 @end
