@@ -14,11 +14,6 @@
 
 @implementation UITextView (ULK_View)
 
-- (void)setUlk_padding:(UIEdgeInsets)padding {
-    [super setUlk_padding:padding];
-    self.contentInset = padding;
-}
-
 - (BOOL)ulk_isViewGroup {
     return FALSE;
 }

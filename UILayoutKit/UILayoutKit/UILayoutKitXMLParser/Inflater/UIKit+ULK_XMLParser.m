@@ -73,27 +73,6 @@
         self.backgroundColor = backgroundColor;
     }
     
-    // padding
-    NSString *paddingString = attrs[@"padding"];
-    if (paddingString != nil) {
-        CGFloat padding = [paddingString floatValue];
-        self.ulk_padding = UIEdgeInsetsMake(padding, padding, padding, padding);
-    } else {
-        UIEdgeInsets padding = self.ulk_padding;
-        UIEdgeInsets initialPadding = padding;
-        NSString *paddingTopString = attrs[@"paddingTop"];
-        NSString *paddingLeftString = attrs[@"paddingLeft"];
-        NSString *paddingBottomString = attrs[@"paddingBottom"];
-        NSString *paddingRightString = attrs[@"paddingRight"];
-        if ([paddingTopString length] > 0) padding.top = [paddingTopString floatValue];
-        if ([paddingLeftString length] > 0) padding.left = [paddingLeftString floatValue];
-        if ([paddingBottomString length] > 0) padding.bottom = [paddingBottomString floatValue];
-        if ([paddingRightString length] > 0) padding.right = [paddingRightString floatValue];
-        if (!UIEdgeInsetsEqualToEdgeInsets(padding, initialPadding)) {
-            self.ulk_padding = padding;
-        }
-    }
-    
     // alpha
     NSString *alphaString = attrs[@"alpha"];
     if (alphaString != nil) {
@@ -478,6 +457,32 @@ UIBarStyle ULKUIBarStyleFromString(NSString *barStyle) {
 
 @end
 
+@implementation ULKViewGroup (ULK_XMLParser)
+
+- (void)ulk_setupFromAttributes:(NSDictionary *)attrs {
+    // padding
+    NSString *paddingString = attrs[@"padding"];
+    if (paddingString != nil) {
+        CGFloat padding = [paddingString floatValue];
+        self.ulk_padding = UIEdgeInsetsMake(padding, padding, padding, padding);
+    } else {
+        UIEdgeInsets padding = self.ulk_padding;
+        UIEdgeInsets initialPadding = padding;
+        NSString *paddingTopString = attrs[@"paddingTop"];
+        NSString *paddingLeftString = attrs[@"paddingLeft"];
+        NSString *paddingBottomString = attrs[@"paddingBottom"];
+        NSString *paddingRightString = attrs[@"paddingRight"];
+        if ([paddingTopString length] > 0) padding.top = [paddingTopString floatValue];
+        if ([paddingLeftString length] > 0) padding.left = [paddingLeftString floatValue];
+        if ([paddingBottomString length] > 0) padding.bottom = [paddingBottomString floatValue];
+        if ([paddingRightString length] > 0) padding.right = [paddingRightString floatValue];
+        if (!UIEdgeInsetsEqualToEdgeInsets(padding, initialPadding)) {
+            self.ulk_padding = padding;
+        }
+    }
+}
+
+@end
 
 @implementation ULKLinearLayout (ULK_XMLParser)
 

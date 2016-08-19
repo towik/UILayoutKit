@@ -15,6 +15,8 @@
 
 @interface ULKViewGroup : UIView
 
+@property (nonatomic, assign) UIEdgeInsets ulk_padding;
+
 + (ULKLayoutMeasureSpec)childMeasureSpecForMeasureSpec:(ULKLayoutMeasureSpec)spec padding:(CGFloat)padding childDimension:(CGFloat)childDimension;
 
 - (instancetype)initUlk_WithAttributes:(NSDictionary *)attrs NS_DESIGNATED_INITIALIZER;

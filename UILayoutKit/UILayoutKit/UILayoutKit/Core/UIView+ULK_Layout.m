@@ -52,7 +52,6 @@ BOOL ULKBOOLFromString(NSString *boolString) {
 static char identifierKey;
 static char minSizeKey;
 static char measuredSizeKey;
-static char paddingKey;
 static char isLayoutRequestedKey;
 static char visibilityKey;
 
@@ -291,22 +290,6 @@ static char visibilityKey;
     }
 }
 
-- (UIEdgeInsets)ulk_padding {
-    NSValue *value = objc_getAssociatedObject(self, &paddingKey);
-    return [value UIEdgeInsetsValue];
-}
-
-- (void)setUlk_padding:(UIEdgeInsets)padding {
-    UIEdgeInsets prevPadding = self.ulk_padding;
-    if (!UIEdgeInsetsEqualToEdgeInsets(prevPadding, padding)) {
-        objc_setAssociatedObject(self,
-                                 &paddingKey,
-                                 [NSValue valueWithUIEdgeInsets:padding],
-                                 OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-        [self ulk_requestLayout];
-    }
-}
-
 /**
  * <p>Return the offset of the widget's text baseline from the widget's top
  * boundary. If this widget does not support baseline alignment, this
@@ -454,7 +437,8 @@ static char visibilityKey;
 - (void)ulk_measureChildWithMargins:(UIView *)child parentWidthMeasureSpec:(ULKLayoutMeasureSpec)parentWidthMeasureSpec widthUsed:(CGFloat)widthUsed parentHeightMeasureSpec:(ULKLayoutMeasureSpec)parentHeightMeasureSpec heightUsed:(CGFloat)heightUsed {
     ULKLayoutParams *lp = (ULKLayoutParams *) child.layoutParams;
     UIEdgeInsets lpMargin = lp.margin;
-    UIEdgeInsets padding = self.ulk_padding;
+//    UIEdgeInsets padding = self.ulk_padding;
+    UIEdgeInsets padding = UIEdgeInsetsZero;
     ULKLayoutMeasureSpec childWidthMeasureSpec = [self ulk_childMeasureSpecWithMeasureSpec:parentWidthMeasureSpec padding:padding.left + padding.right + lpMargin.left + lpMargin.right + widthUsed childDimension:lp.width];
     ULKLayoutMeasureSpec childHeightMeasureSpec = [self ulk_childMeasureSpecWithMeasureSpec:parentHeightMeasureSpec padding:padding.top + padding.bottom + lpMargin.top + lpMargin.bottom + heightUsed childDimension:lp.height];
     
@@ -472,7 +456,8 @@ static char visibilityKey;
  */
 -(void)ulk_measureChild:(UIView *)child withParentWidthMeasureSpec:(ULKLayoutMeasureSpec)parentWidthMeasureSpec parentHeightMeasureSpec:(ULKLayoutMeasureSpec)parentHeightMeasureSpec {
     ULKLayoutParams *lp = child.layoutParams;
-    UIEdgeInsets padding = self.ulk_padding;
+//    UIEdgeInsets padding = self.ulk_padding;
+    UIEdgeInsets padding = UIEdgeInsetsZero;
     ULKLayoutMeasureSpec childWidthMeasureSpec = [self ulk_childMeasureSpecWithMeasureSpec:parentWidthMeasureSpec padding:(padding.left + padding.right) childDimension:lp.width];
     ULKLayoutMeasureSpec childHeightMeasureSpec = [self ulk_childMeasureSpecWithMeasureSpec:parentHeightMeasureSpec padding:(padding.top + padding.bottom) childDimension:lp.height];
     [child ulk_measureWithWidthMeasureSpec:childWidthMeasureSpec heightMeasureSpec:childHeightMeasureSpec];

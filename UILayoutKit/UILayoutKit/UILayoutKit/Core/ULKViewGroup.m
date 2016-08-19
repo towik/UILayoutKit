@@ -12,7 +12,40 @@
 #import "ULKViewGroup.h"
 #import "ULKLayoutParams.h"
 
+
 @implementation ULKViewGroup
+
+- (void)setUlk_padding:(UIEdgeInsets)padding {
+    _ulk_padding = padding;
+    [self ulk_requestLayout];
+}
+
+- (void)ulk_measureChildWithMargins:(UIView *)child parentWidthMeasureSpec:(ULKLayoutMeasureSpec)parentWidthMeasureSpec widthUsed:(CGFloat)widthUsed parentHeightMeasureSpec:(ULKLayoutMeasureSpec)parentHeightMeasureSpec heightUsed:(CGFloat)heightUsed {
+    ULKLayoutParams *lp = (ULKLayoutParams *) child.layoutParams;
+    UIEdgeInsets lpMargin = lp.margin;
+    UIEdgeInsets padding = self.ulk_padding;
+    ULKLayoutMeasureSpec childWidthMeasureSpec = [self ulk_childMeasureSpecWithMeasureSpec:parentWidthMeasureSpec padding:padding.left + padding.right + lpMargin.left + lpMargin.right + widthUsed childDimension:lp.width];
+    ULKLayoutMeasureSpec childHeightMeasureSpec = [self ulk_childMeasureSpecWithMeasureSpec:parentHeightMeasureSpec padding:padding.top + padding.bottom + lpMargin.top + lpMargin.bottom + heightUsed childDimension:lp.height];
+    
+    [child ulk_measureWithWidthMeasureSpec:childWidthMeasureSpec heightMeasureSpec:childHeightMeasureSpec];
+}
+
+/**
+ * Ask one of the children of this view to measure itself, taking into
+ * account both the MeasureSpec requirements for this view and its padding.
+ * The heavy lifting is done in getChildMeasureSpec.
+ *
+ * @param child The child to measure
+ * @param parentWidthMeasureSpec The width requirements for this view
+ * @param parentHeightMeasureSpec The height requirements for this view
+ */
+-(void)ulk_measureChild:(UIView *)child withParentWidthMeasureSpec:(ULKLayoutMeasureSpec)parentWidthMeasureSpec parentHeightMeasureSpec:(ULKLayoutMeasureSpec)parentHeightMeasureSpec {
+    ULKLayoutParams *lp = child.layoutParams;
+    UIEdgeInsets padding = self.ulk_padding;
+    ULKLayoutMeasureSpec childWidthMeasureSpec = [self ulk_childMeasureSpecWithMeasureSpec:parentWidthMeasureSpec padding:(padding.left + padding.right) childDimension:lp.width];
+    ULKLayoutMeasureSpec childHeightMeasureSpec = [self ulk_childMeasureSpecWithMeasureSpec:parentHeightMeasureSpec padding:(padding.top + padding.bottom) childDimension:lp.height];
+    [child ulk_measureWithWidthMeasureSpec:childWidthMeasureSpec heightMeasureSpec:childHeightMeasureSpec];
+}
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];

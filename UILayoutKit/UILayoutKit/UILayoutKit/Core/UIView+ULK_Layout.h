@@ -65,7 +65,6 @@ BOOL ULKBOOLFromString(NSString *boolString);
 @interface UIView (ULK_Layout)
 
 @property (nonatomic, assign) CGSize ulk_minSize;
-@property (nonatomic, assign) UIEdgeInsets ulk_padding;
 @property (nonatomic, readonly) CGSize ulk_measuredSize;
 @property (nonatomic, readonly) BOOL ulk_hadMeasured;
 @property (nonatomic, readonly) ULKLayoutMeasuredWidthHeightState ulk_measuredState;

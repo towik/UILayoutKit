@@ -92,7 +92,7 @@ static char matchParentChildrenKey;
 }
 
 
-+ (void)onFrameLayoutMeasure:(UIView *)measureView widthMeasureSpec:(ULKLayoutMeasureSpec)widthMeasureSpec
++ (void)onFrameLayoutMeasure:(ULKViewGroup *)measureView widthMeasureSpec:(ULKLayoutMeasureSpec)widthMeasureSpec
                              heightMeasureSpec:(ULKLayoutMeasureSpec)heightMeasureSpec {
     NSInteger count = [measureView.subviews count];
 
@@ -194,7 +194,7 @@ static char matchParentChildrenKey;
      }*/
 }
 
-+ (CGSize)onFrameLayoutLayout:(UIView *)measureView frame:(CGRect)frame didFrameChange:(BOOL)changed {
++ (CGSize)onFrameLayoutLayout:(ULKViewGroup *)measureView frame:(CGRect)frame didFrameChange:(BOOL)changed {
     NSInteger count = [measureView.subviews count];
     
     UIEdgeInsets padding = measureView.ulk_padding;

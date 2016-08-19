@@ -24,7 +24,7 @@
     ULKLayoutMeasuredSize measuredSize;
     measuredSize.width.state = ULKLayoutMeasuredStateNone;
     measuredSize.height.state = ULKLayoutMeasuredStateNone;
-    UIEdgeInsets padding = self.ulk_padding;
+    UIEdgeInsets padding = self.contentEdgeInsets;
     
     
     if (widthMode == ULKLayoutMeasureSpecModeExactly) {
@@ -52,11 +52,5 @@
     
     [self ulk_setMeasuredDimensionSize:measuredSize];
 }
-
-- (void)setUlk_padding:(UIEdgeInsets)padding {
-    [super setUlk_padding:padding];
-    self.contentEdgeInsets = padding;
-}
-
 
 @end
