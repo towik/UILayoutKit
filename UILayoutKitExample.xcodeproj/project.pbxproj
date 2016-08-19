@@ -41,13 +41,6 @@
 		2B1ACF371D60908200303BFC /* ULKFrameLayoutParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACEAE1D60908200303BFC /* ULKFrameLayoutParams.m */; };
 		2B1ACF381D60908200303BFC /* ULKLinearLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACEB21D60908200303BFC /* ULKLinearLayout.m */; };
 		2B1ACF391D60908200303BFC /* ULKLinearLayoutParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACEB41D60908200303BFC /* ULKLinearLayoutParams.m */; };
-		2B1ACF3A1D60908200303BFC /* ULKDependencyGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACEB71D60908200303BFC /* ULKDependencyGraph.m */; };
-		2B1ACF3B1D60908200303BFC /* ULKDependencyGraphNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACEB91D60908200303BFC /* ULKDependencyGraphNode.m */; };
-		2B1ACF3C1D60908200303BFC /* ULKRelativeLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACEBB1D60908200303BFC /* ULKRelativeLayout.m */; };
-		2B1ACF3D1D60908200303BFC /* ULKRelativeLayoutParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACEBD1D60908200303BFC /* ULKRelativeLayoutParams.m */; };
-		2B1ACF3E1D60908200303BFC /* ULKFinitePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACEC01D60908200303BFC /* ULKFinitePool.m */; };
-		2B1ACF3F1D60908200303BFC /* ULKPools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACEC51D60908200303BFC /* ULKPools.m */; };
-		2B1ACF401D60908200303BFC /* ULKSynchronizedPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACEC71D60908200303BFC /* ULKSynchronizedPool.m */; };
 		2B1ACF411D60908200303BFC /* UIButton+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACECB1D60908200303BFC /* UIButton+ULK_View.m */; };
 		2B1ACF421D60908200303BFC /* UIControl+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACECD1D60908200303BFC /* UIControl+ULK_View.m */; };
 		2B1ACF431D60908200303BFC /* UIImageView+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACECF1D60908200303BFC /* UIImageView+ULK_View.m */; };
@@ -148,23 +141,6 @@
 		2B1ACEB21D60908200303BFC /* ULKLinearLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKLinearLayout.m; sourceTree = "<group>"; };
 		2B1ACEB31D60908200303BFC /* ULKLinearLayoutParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKLinearLayoutParams.h; sourceTree = "<group>"; };
 		2B1ACEB41D60908200303BFC /* ULKLinearLayoutParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKLinearLayoutParams.m; sourceTree = "<group>"; };
-		2B1ACEB61D60908200303BFC /* ULKDependencyGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKDependencyGraph.h; sourceTree = "<group>"; };
-		2B1ACEB71D60908200303BFC /* ULKDependencyGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKDependencyGraph.m; sourceTree = "<group>"; };
-		2B1ACEB81D60908200303BFC /* ULKDependencyGraphNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKDependencyGraphNode.h; sourceTree = "<group>"; };
-		2B1ACEB91D60908200303BFC /* ULKDependencyGraphNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKDependencyGraphNode.m; sourceTree = "<group>"; };
-		2B1ACEBA1D60908200303BFC /* ULKRelativeLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKRelativeLayout.h; sourceTree = "<group>"; };
-		2B1ACEBB1D60908200303BFC /* ULKRelativeLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKRelativeLayout.m; sourceTree = "<group>"; };
-		2B1ACEBC1D60908200303BFC /* ULKRelativeLayoutParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKRelativeLayoutParams.h; sourceTree = "<group>"; };
-		2B1ACEBD1D60908200303BFC /* ULKRelativeLayoutParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKRelativeLayoutParams.m; sourceTree = "<group>"; };
-		2B1ACEBF1D60908200303BFC /* ULKFinitePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKFinitePool.h; sourceTree = "<group>"; };
-		2B1ACEC01D60908200303BFC /* ULKFinitePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKFinitePool.m; sourceTree = "<group>"; };
-		2B1ACEC11D60908200303BFC /* ULKPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKPool.h; sourceTree = "<group>"; };
-		2B1ACEC21D60908200303BFC /* ULKPoolable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKPoolable.h; sourceTree = "<group>"; };
-		2B1ACEC31D60908200303BFC /* ULKPoolableManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKPoolableManager.h; sourceTree = "<group>"; };
-		2B1ACEC41D60908200303BFC /* ULKPools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKPools.h; sourceTree = "<group>"; };
-		2B1ACEC51D60908200303BFC /* ULKPools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKPools.m; sourceTree = "<group>"; };
-		2B1ACEC61D60908200303BFC /* ULKSynchronizedPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKSynchronizedPool.h; sourceTree = "<group>"; };
-		2B1ACEC71D60908200303BFC /* ULKSynchronizedPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKSynchronizedPool.m; sourceTree = "<group>"; };
 		2B1ACECA1D60908200303BFC /* UIButton+ULK_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ULK_View.h"; sourceTree = "<group>"; };
 		2B1ACECB1D60908200303BFC /* UIButton+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ULK_View.m"; sourceTree = "<group>"; };
 		2B1ACECC1D60908200303BFC /* UIControl+ULK_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+ULK_View.h"; sourceTree = "<group>"; };
@@ -393,7 +369,6 @@
 				2B1ACEE91D60908200303BFC /* UILayoutKit.h */,
 				2B1ACEAA1D60908200303BFC /* FrameLayout */,
 				2B1ACEB01D60908200303BFC /* LinearLayout */,
-				2B1ACEB51D60908200303BFC /* RelativeLayout */,
 				2B1ACEC81D60908200303BFC /* UIKitExtension */,
 			);
 			path = UILayoutKit;
@@ -419,38 +394,6 @@
 				2B1ACEB41D60908200303BFC /* ULKLinearLayoutParams.m */,
 			);
 			path = LinearLayout;
-			sourceTree = "<group>";
-		};
-		2B1ACEB51D60908200303BFC /* RelativeLayout */ = {
-			isa = PBXGroup;
-			children = (
-				2B1ACEB61D60908200303BFC /* ULKDependencyGraph.h */,
-				2B1ACEB71D60908200303BFC /* ULKDependencyGraph.m */,
-				2B1ACEB81D60908200303BFC /* ULKDependencyGraphNode.h */,
-				2B1ACEB91D60908200303BFC /* ULKDependencyGraphNode.m */,
-				2B1ACEBA1D60908200303BFC /* ULKRelativeLayout.h */,
-				2B1ACEBB1D60908200303BFC /* ULKRelativeLayout.m */,
-				2B1ACEBC1D60908200303BFC /* ULKRelativeLayoutParams.h */,
-				2B1ACEBD1D60908200303BFC /* ULKRelativeLayoutParams.m */,
-				2B1ACEBE1D60908200303BFC /* Utils */,
-			);
-			path = RelativeLayout;
-			sourceTree = "<group>";
-		};
-		2B1ACEBE1D60908200303BFC /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				2B1ACEBF1D60908200303BFC /* ULKFinitePool.h */,
-				2B1ACEC01D60908200303BFC /* ULKFinitePool.m */,
-				2B1ACEC11D60908200303BFC /* ULKPool.h */,
-				2B1ACEC21D60908200303BFC /* ULKPoolable.h */,
-				2B1ACEC31D60908200303BFC /* ULKPoolableManager.h */,
-				2B1ACEC41D60908200303BFC /* ULKPools.h */,
-				2B1ACEC51D60908200303BFC /* ULKPools.m */,
-				2B1ACEC61D60908200303BFC /* ULKSynchronizedPool.h */,
-				2B1ACEC71D60908200303BFC /* ULKSynchronizedPool.m */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		2B1ACEC81D60908200303BFC /* UIKitExtension */ = {
@@ -859,13 +802,10 @@
 				2B1ACC6F1D6081DC00303BFC /* ULKAppDelegate.m in Sources */,
 				2B1ACF611D60908200303BFC /* ULKResourceValueSet.m in Sources */,
 				2B1ACF481D60908200303BFC /* UITextField+ULK_View.m in Sources */,
-				2B1ACF3C1D60908200303BFC /* ULKRelativeLayout.m in Sources */,
 				2B1ACF691D60908200303BFC /* UIImage+ULKNinePatch.m in Sources */,
 				2B1ACF4E1D60908200303BFC /* ULKLayoutParams.m in Sources */,
 				2B1ACF631D60908200303BFC /* ULKStyle.m in Sources */,
 				2B1ACF4C1D60908200303BFC /* UIView+ULK_ViewGroup.m in Sources */,
-				2B1ACF3E1D60908200303BFC /* ULKFinitePool.m in Sources */,
-				2B1ACF3B1D60908200303BFC /* ULKDependencyGraphNode.m in Sources */,
 				2B5DEBA31D3F963F00E13C76 /* README.md in Sources */,
 				2B1ACC571D6081DC00303BFC /* MainViewController.m in Sources */,
 				2B1ACF421D60908200303BFC /* UIControl+ULK_View.m in Sources */,
@@ -876,9 +816,7 @@
 				2B1ACF681D60908200303BFC /* UIImage+ULK_FromColor.m in Sources */,
 				2B1ACC551D6081DC00303BFC /* FormularViewController.m in Sources */,
 				2B1ACF6C1D60908200303BFC /* ULKLayoutViewController.m in Sources */,
-				2B1ACF3A1D60908200303BFC /* ULKDependencyGraph.m in Sources */,
 				2B1ACF671D60908200303BFC /* UIColor+ULK_ColorParser.m in Sources */,
-				2B1ACF3D1D60908200303BFC /* ULKRelativeLayoutParams.m in Sources */,
 				2B1ACF4A1D60908200303BFC /* UIToolbar+ULK_View.m in Sources */,
 				2B1ACF551D60908200303BFC /* NSDictionary+ULK_ResourceManager.m in Sources */,
 				2B1ACF531D60908200303BFC /* ULKLayoutInflater.m in Sources */,
@@ -886,10 +824,8 @@
 				2BD4B33D1D658DE100CB3011 /* UIScrollView+ULK_ViewGroup.m in Sources */,
 				2B1ACC561D6081DC00303BFC /* LayoutAnimationsViewController.m in Sources */,
 				2B1ACF411D60908200303BFC /* UIButton+ULK_View.m in Sources */,
-				2B1ACF401D60908200303BFC /* ULKSynchronizedPool.m in Sources */,
 				2B1ACF511D60908200303BFC /* UIKit+ULK_XMLParser.m in Sources */,
 				2B1ACF6A1D60908200303BFC /* ULKCollectionViewCell.m in Sources */,
-				2B1ACF3F1D60908200303BFC /* ULKPools.m in Sources */,
 				2B1ACF4D1D60908200303BFC /* ULKGravity.m in Sources */,
 				2B1ACF571D60908200303BFC /* ULKColorStateList.m in Sources */,
 				2B1ACF451D60908200303BFC /* UINavigationBar+ULK_View.m in Sources */,

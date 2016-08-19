@@ -11,12 +11,10 @@
 
 #import "ULKFrameLayoutParams.h"
 #import "ULKLinearLayoutParams.h"
-#import "ULKRelativeLayoutParams.h"
 #import "UIButton+ULK_View.h"
 #import "UILabel+ULK_View.h"
 #import "UIView+ULK_Layout.h"
 #import "UIToolbar+ULK_View.h"
-#import "ULKRelativeLayout.h"
 #import "ULKLinearLayout.h"
 #import "ULKGravity.h"
 #import "UIColor+ULK_ColorParser.h"
@@ -59,55 +57,6 @@
 }
 
 @end
-
-
-@implementation ULKRelativeLayoutParams (ULK_XMLParser)
-
-- (instancetype) initUlk_WithAttributes:(NSDictionary *)attrs {
-    self = [super initUlk_WithAttributes:attrs];
-    if (self != nil) {
-        NSString *leftOf = attrs[@"layout_toLeftOf"];
-        NSString *rightOf = attrs[@"layout_toRightOf"];
-        NSString *above = attrs[@"layout_above"];
-        NSString *below = attrs[@"layout_below"];
-        NSString *alignBaseline = attrs[@"layout_alignBaseline"];
-        NSString *alignLeft = attrs[@"layout_alignLeft"];
-        NSString *alignTop = attrs[@"layout_alignTop"];
-        NSString *alignRight = attrs[@"layout_alignRight"];
-        NSString *alignBottom = attrs[@"layout_alignBottom"];
-        
-        self.alignParentLeft = ULKBOOLFromString(attrs[@"layout_alignParentLeft"]);
-        self.alignParentTop = ULKBOOLFromString(attrs[@"layout_alignParentTop"]);
-        self.alignParentRight = ULKBOOLFromString(attrs[@"layout_alignParentRight"]);
-        self.alignParentBottom = ULKBOOLFromString(attrs[@"layout_alignParentBottom"]);
-        self.centerInParent = ULKBOOLFromString(attrs[@"layout_centerInParent"]);
-        self.centerHorizontal = ULKBOOLFromString(attrs[@"layout_centerHorizontal"]);
-        self.centerVertical = ULKBOOLFromString(attrs[@"layout_centerVertical"]);
-        
-        NSNull *null = [NSNull null];
-        self.rules = @[(leftOf==nil?null:leftOf),
-                       (rightOf==nil?null:rightOf),
-                       (above==nil?null:above),
-                       (below==nil?null:below),
-                       (alignBaseline==nil?null:alignBaseline),
-                       (alignLeft==nil?null:alignLeft),
-                       (alignTop==nil?null:alignTop),
-                       (alignRight==nil?null:alignRight),
-                       (alignBottom==nil?null:alignBottom),
-                       @(self.alignParentLeft),
-                       @(self.alignParentTop),
-                       @(self.alignParentRight),
-                       @(self.alignParentBottom),
-                       @(self.centerInParent),
-                       @(self.centerHorizontal),
-                       @(self.centerVertical)];
-    }
-    return self;
-}
-
-@end
-
-
 
 
 @implementation UIView (ULK_XMLParser)
@@ -503,17 +452,6 @@
         NSURL *url = [NSURL URLWithString:src];
         [self loadRequest:[NSURLRequest requestWithURL:url]];
     }
-}
-
-@end
-
-
-@implementation ULKRelativeLayout (ULK_XMLParser)
-
-- (void)ulk_setupFromAttributes:(NSDictionary *)attrs {
-    [super ulk_setupFromAttributes:attrs];
-    self.gravity = [ULKGravity gravityFromAttribute:attrs[@"gravity"]];
-    self.ignoreGravity = attrs[@"ignoreGravity"];
 }
 
 @end
