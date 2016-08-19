@@ -29,7 +29,7 @@
     self = [super initUlk_WithAttributes:attrs];
     if (self) {
         NSString *gravityString = attrs[@"layout_gravity"];
-        self.gravity = [ULKGravity gravityFromAttribute:gravityString];
+        self.gravity = [ULKGravityUtility gravityFromAttribute:gravityString];
     }
     return self;
 }
@@ -312,7 +312,20 @@
     
     self.text = [attrs ulk_stringFromIDLValueForKey:@"text"];
     
-    self.ulk_gravity = [ULKGravity gravityFromAttribute:attrs[@"gravity"]];
+    ULKGravity gravity = [ULKGravityUtility gravityFromAttribute:attrs[@"gravity"]];
+    if ((gravity & ULKGravityRight) == ULKGravityRight) {
+        self.textAlignment = NSTextAlignmentRight;
+    }
+    else if ((gravity & ULKGravityCenterHorizontal) == ULKGravityCenterHorizontal) {
+        self.textAlignment = NSTextAlignmentCenter;
+    }
+    else if ((gravity & ULKGravityFillHorizontal) == ULKGravityFillHorizontal) {
+        self.textAlignment = NSTextAlignmentJustified;
+    }
+    else {
+        self.textAlignment = NSTextAlignmentLeft;
+    }
+    
     NSString *lines = attrs[@"lines"];
     self.numberOfLines = [lines integerValue];
     
@@ -461,7 +474,7 @@
 
 - (void)ulk_setupFromAttributes:(NSDictionary *)attrs {
     [super ulk_setupFromAttributes:attrs];
-    self.gravity = [ULKGravity gravityFromAttribute:attrs[@"gravity"]];
+    self.gravity = [ULKGravityUtility gravityFromAttribute:attrs[@"gravity"]];
     NSString *orientationString = attrs[@"orientation"];
     if ([orientationString isEqualToString:@"horizontal"]) {
         self.orientation = LinearLayoutOrientationHorizontal;

@@ -53,16 +53,6 @@
     [self ulk_setMeasuredDimensionSize:measuredSize];
 }
 
-- (void)setUlk_gravity:(ULKViewContentGravity)gravity {
-    if ((gravity & ULKViewContentGravityTop) == ULKViewContentGravityTop) {
-        self.contentVerticalAlignment = UIControlContentVerticalAlignmentTop;
-    } else if ((gravity & ULKViewContentGravityBottom) == ULKViewContentGravityBottom) {
-        self.contentVerticalAlignment = UIControlContentVerticalAlignmentBottom;
-    } else if ((gravity & ULKViewContentGravityFillVertical) == ULKViewContentGravityFillVertical) {
-        self.contentVerticalAlignment = UIControlContentVerticalAlignmentFill;
-    }
-}
-
 - (void)setUlk_padding:(UIEdgeInsets)padding {
     [super setUlk_padding:padding];
     self.contentEdgeInsets = padding;

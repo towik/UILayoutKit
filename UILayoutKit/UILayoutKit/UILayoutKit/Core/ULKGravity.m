@@ -18,40 +18,40 @@ typedef struct Frame {
     CGFloat right;
 } Frame;
 
-@implementation ULKGravity
+@implementation ULKGravityUtility
 
-+ (ULKViewContentGravity)gravityFromString:(NSString *)gravityString {
-    ULKViewContentGravity ret = ULKViewContentGravityNone;
++ (ULKGravity)gravityFromString:(NSString *)gravityString {
+    ULKGravity ret = ULKGravityNone;
     if ([gravityString isEqualToString:@"top"]) {
-        ret = ULKViewContentGravityTop;
+        ret = ULKGravityTop;
     } else if ([gravityString isEqualToString:@"bottom"]) {
-        ret = ULKViewContentGravityBottom;
+        ret = ULKGravityBottom;
     } else if ([gravityString isEqualToString:@"left"]) {
-        ret = ULKViewContentGravityLeft;
+        ret = ULKGravityLeft;
     } else if ([gravityString isEqualToString:@"right"]) {
-        ret = ULKViewContentGravityRight;
+        ret = ULKGravityRight;
     } else if ([gravityString isEqualToString:@"center_vertical"]) {
-        ret = ULKViewContentGravityCenterVertical;
+        ret = ULKGravityCenterVertical;
     } else if ([gravityString isEqualToString:@"fill_vertical"]) {
-        ret = ULKViewContentGravityFillVertical;
+        ret = ULKGravityFillVertical;
     } else if ([gravityString isEqualToString:@"center_horizontal"]) {
-        ret = ULKViewContentGravityCenterHorizontal;
+        ret = ULKGravityCenterHorizontal;
     } else if ([gravityString isEqualToString:@"fill_horizontal"]) {
-        ret = ULKViewContentGravityFillHorizontal;
+        ret = ULKGravityFillHorizontal;
     } else if ([gravityString isEqualToString:@"center"]) {
-        ret = ULKViewContentGravityCenter;
+        ret = ULKGravityCenter;
     } else if ([gravityString isEqualToString:@"fill"]) {
-        ret = ULKViewContentGravityFill;
+        ret = ULKGravityFill;
     }
     return ret;
 }
 
-+ (ULKViewContentGravity)gravityFromAttribute:(NSString *)gravityAttribute {
-    ULKViewContentGravity ret = ULKViewContentGravityNone;
++ (ULKGravity)gravityFromAttribute:(NSString *)gravityAttribute {
+    ULKGravity ret = ULKGravityNone;
     if (gravityAttribute != nil) {
         NSArray *components = [gravityAttribute componentsSeparatedByString:@"|"];
         for (NSString *comp in components) {
-            ret |= [ULKGravity gravityFromString:comp];
+            ret |= [ULKGravityUtility gravityFromString:comp];
         }
     }
     return ret;
@@ -78,7 +78,7 @@ typedef struct Frame {
  * @param outRect Receives the computed frame of the object in its
  *                container.
  */
-+ (void)applyGravity:(ULKViewContentGravity)gravity width:(CGFloat)w height:(CGFloat)h containerRect:(CGRect *)containerCGRect xAdj:(CGFloat)xAdj yAdj:(CGFloat)yAdj outRect:(CGRect *)outCGRect {
++ (void)applyGravity:(ULKGravity)gravity width:(CGFloat)w height:(CGFloat)h containerRect:(CGRect *)containerCGRect xAdj:(CGFloat)xAdj yAdj:(CGFloat)yAdj outRect:(CGRect *)outCGRect {
     Frame container = {
         (*containerCGRect).origin.y,
         (*containerCGRect).origin.x,
@@ -194,7 +194,7 @@ typedef struct Frame {
  * @param outRect Receives the computed frame of the object in its
  *                container.
  */
-+ (void)applyGravity:(ULKViewContentGravity)gravity width:(CGFloat)w height:(CGFloat)h containerRect:(CGRect *)container outRect:(CGRect *)outRect {
++ (void)applyGravity:(ULKGravity)gravity width:(CGFloat)w height:(CGFloat)h containerRect:(CGRect *)container outRect:(CGRect *)outRect {
     [self applyGravity:gravity width:w height:h containerRect:container xAdj:0.f yAdj:0.f outRect:outRect];
 }
 

@@ -50,12 +50,12 @@
     return (ULKFrameLayoutParams *)layoutParams;
 }
 
-- (void)setUlk_layoutGravity:(ULKViewContentGravity)layoutGravity {
+- (void)setUlk_layoutGravity:(ULKGravity)layoutGravity {
     self.frameLayoutParams.gravity = layoutGravity;
     [self ulk_requestLayout];
 }
 
-- (ULKViewContentGravity)ulk_layoutGravity {
+- (ULKGravity)ulk_layoutGravity {
     return self.frameLayoutParams.gravity;
 }
 
@@ -223,17 +223,17 @@ static char matchParentChildrenKey;
                 gravity = DEFAULT_CHILD_GRAVITY;
             }
             
-            ULKViewContentGravity verticalGravity = gravity & VERTICAL_GRAVITY_MASK;
-            ULKViewContentGravity horizontalGravity = gravity & HORIZONTAL_GRAVITY_MASK;
+            ULKGravity verticalGravity = gravity & VERTICAL_GRAVITY_MASK;
+            ULKGravity horizontalGravity = gravity & HORIZONTAL_GRAVITY_MASK;
             
             switch (horizontalGravity) {
-                case ULKViewContentGravityLeft:
+                case ULKGravityLeft:
                     childLeft = parentLeft + lpMargin.left;
                     break;
-                case ULKViewContentGravityCenterHorizontal:
+                case ULKGravityCenterHorizontal:
                     childLeft = parentLeft + (parentRight - parentLeft - width) / 2 + lpMargin.left - lpMargin.right;
                     break;
-                case ULKViewContentGravityRight:
+                case ULKGravityRight:
                     childLeft = parentRight - width - lpMargin.right;
                     break;
                 default:
@@ -241,13 +241,13 @@ static char matchParentChildrenKey;
             }
             
             switch (verticalGravity) {
-                case ULKViewContentGravityTop:
+                case ULKGravityTop:
                     childTop = parentTop + lpMargin.top;
                     break;
-                case ULKViewContentGravityCenterVertical:
+                case ULKGravityCenterVertical:
                     childTop = parentTop + (parentBottom - parentTop - height) / 2 + lpMargin.top - lpMargin.bottom;
                     break;
-                case ULKViewContentGravityBottom:
+                case ULKGravityBottom:
                     childTop = parentBottom - height - lpMargin.bottom;
                     break;
                 default:

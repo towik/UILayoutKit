@@ -14,14 +14,14 @@
 
 @interface ULKFrameLayoutParams : ULKLayoutParams
 
-@property (nonatomic, assign) ULKViewContentGravity gravity;
+@property (nonatomic, assign) ULKGravity gravity;
 
 @end
 
 
 @interface UIView (ULK_FrameLayoutParams)
 
-@property (nonatomic, assign) ULKViewContentGravity ulk_layoutGravity;
+@property (nonatomic, assign) ULKGravity ulk_layoutGravity;
 
 @end
 

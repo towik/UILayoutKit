@@ -14,8 +14,6 @@
 
 @interface UILabel (ULK_View)
 
-@property (nonatomic, assign) ULKViewContentGravity ulk_gravity;
-
 - (void)ulk_setText:(NSString *)text;
 - (void)ulk_setFont:(UIFont *)font;
 - (void)ulk_setLineBreakMode:(NSLineBreakMode)lineBreakMode;

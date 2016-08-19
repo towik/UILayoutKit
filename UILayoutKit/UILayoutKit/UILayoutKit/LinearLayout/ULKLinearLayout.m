@@ -86,7 +86,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        _gravity = ULKViewContentGravityLeft | ULKViewContentGravityTop;
+        _gravity = ULKGravityLeft | ULKGravityTop;
         _orientation = LinearLayoutOrientationVertical;
         _baselineAligned = TRUE;
         _baselineAlignedChildIndex = -1;
@@ -105,14 +105,14 @@
     return self;
 }
 
-- (void)setGravity:(ULKViewContentGravity)gravity {
+- (void)setGravity:(ULKGravity)gravity {
     if (_gravity != gravity) {
         if ((gravity & RELATIVE_HORIZONTAL_GRAVITY_MASK) == 0) {
-            gravity |= ULKViewContentGravityLeft;
+            gravity |= ULKGravityLeft;
         }
         
         if ((gravity & VERTICAL_GRAVITY_MASK) == 0) {
-            gravity |= ULKViewContentGravityTop;
+            gravity |= ULKGravityTop;
         }
         
         _gravity = gravity;
@@ -162,15 +162,15 @@
     CGFloat childTop = _baselineChildTop;
     
     if (_orientation == LinearLayoutOrientationVertical) {
-        ULKViewContentGravity majorGravity = _gravity & VERTICAL_GRAVITY_MASK;
-        if (majorGravity != ULKViewContentGravityTop) {
+        ULKGravity majorGravity = _gravity & VERTICAL_GRAVITY_MASK;
+        if (majorGravity != ULKGravityTop) {
             UIEdgeInsets padding = self.ulk_padding;
             switch (majorGravity) {
-                case ULKViewContentGravityBottom:
+                case ULKGravityBottom:
                     childTop = self.frame.size.height - padding.bottom - _totalLength;
                     break;
                     
-                case ULKViewContentGravityCenterVertical:
+                case ULKGravityCenterVertical:
                     childTop += ((self.frame.size.height - padding.top - padding.bottom) - _totalLength) / 2;
                     break;
                 default:
@@ -676,7 +676,7 @@
             if (childBaseline != -1) {
                 // Translates the child's vertical gravity into an index
                 // in the range 0..VERTICAL_GRAVITY_COUNT
-                ULKViewContentGravity gravity = (lp.gravity < ULKViewContentGravityNone ? _gravity : lp.gravity) & VERTICAL_GRAVITY_MASK;
+                ULKGravity gravity = (lp.gravity < ULKGravityNone ? _gravity : lp.gravity) & VERTICAL_GRAVITY_MASK;
                 int index = ((gravity >> AXIS_Y_SHIFT)
                              & ~AXIS_SPECIFIED) >> 1;
                 
@@ -836,7 +836,7 @@
                 CGFloat childBaseline = child.ulk_baseline;
                 if (childBaseline != -1) {
                     // Translates the child's vertical gravity into an index in the range 0..2
-                    ULKViewContentGravity gravity = (lp.gravity < ULKViewContentGravityNone ? _gravity : lp.gravity) & VERTICAL_GRAVITY_MASK;
+                    ULKGravity gravity = (lp.gravity < ULKGravityNone ? _gravity : lp.gravity) & VERTICAL_GRAVITY_MASK;
                     int index = ((gravity >> AXIS_Y_SHIFT)
                                  & ~AXIS_SPECIFIED) >> 1;
                     
@@ -951,21 +951,21 @@
     
     NSInteger count = [self.subviews count];
     
-    ULKViewContentGravity majorGravity = _gravity & VERTICAL_GRAVITY_MASK;
-    ULKViewContentGravity minorGravity = _gravity & RELATIVE_HORIZONTAL_GRAVITY_MASK;
+    ULKGravity majorGravity = _gravity & VERTICAL_GRAVITY_MASK;
+    ULKGravity minorGravity = _gravity & RELATIVE_HORIZONTAL_GRAVITY_MASK;
     
     switch (majorGravity) {
-        case ULKViewContentGravityBottom:
+        case ULKGravityBottom:
             // mTotalLength contains the padding already
             childTop = padding.top + self.frame.size.height - _totalLength;
             break;
             
             // mTotalLength contains the padding already
-        case ULKViewContentGravityCenterVertical:
+        case ULKGravityCenterVertical:
             childTop = padding.top + (self.frame.size.height - _totalLength) / 2;
             break;
             
-        case ULKViewContentGravityTop:
+        case ULKGravityTop:
         default:
             childTop = padding.top;
             break;
@@ -979,21 +979,21 @@
             ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *)child.layoutParams;
             UIEdgeInsets lpMargin = lp.margin;
             
-            ULKViewContentGravity gravity = lp.gravity;
-            if (gravity < ULKViewContentGravityNone) {
+            ULKGravity gravity = lp.gravity;
+            if (gravity < ULKGravityNone) {
                 gravity = minorGravity;
             }
             switch (gravity & HORIZONTAL_GRAVITY_MASK) {
-                case ULKViewContentGravityCenterHorizontal:
+                case ULKGravityCenterHorizontal:
                     childLeft = padding.left + ((childSpace - childSize.width) / 2)
                     + lpMargin.left - lpMargin.right;
                     break;
                     
-                case ULKViewContentGravityRight:
+                case ULKGravityRight:
                     childLeft = childRight - childSize.width - lpMargin.right;
                     break;
                     
-                case ULKViewContentGravityLeft:
+                case ULKGravityLeft:
                 default:
                     childLeft = padding.left + lpMargin.left;
                     break;
@@ -1027,22 +1027,22 @@
     
     NSInteger count = [self.subviews count];
     
-    ULKViewContentGravity majorGravity = _gravity & RELATIVE_HORIZONTAL_GRAVITY_MASK;
-    ULKViewContentGravity minorGravity = _gravity & VERTICAL_GRAVITY_MASK;
+    ULKGravity majorGravity = _gravity & RELATIVE_HORIZONTAL_GRAVITY_MASK;
+    ULKGravity minorGravity = _gravity & VERTICAL_GRAVITY_MASK;
     
     BOOL baselineAligned = _baselineAligned;
     switch (majorGravity) {
-        case ULKViewContentGravityRight:
+        case ULKGravityRight:
             // mTotalLength contains the padding already
             childLeft = padding.left + self.frame.size.width - _totalLength;
             break;
             
-        case ULKViewContentGravityCenterHorizontal:
+        case ULKGravityCenterHorizontal:
             // mTotalLength contains the padding already
             childLeft = padding.left + (self.frame.size.width - _totalLength) / 2;
             break;
             
-        case ULKViewContentGravityLeft:
+        case ULKGravityLeft:
         default:
             childLeft = padding.left;
             break;
@@ -1062,24 +1062,24 @@
                 childBaseline = child.ulk_baseline;
             }
             
-            ULKViewContentGravity gravity = lp.gravity;
-            if (gravity < ULKViewContentGravityNone) {
+            ULKGravity gravity = lp.gravity;
+            if (gravity < ULKGravityNone) {
                 gravity = minorGravity;
             }
             
             switch (gravity & VERTICAL_GRAVITY_MASK) {
-                case ULKViewContentGravityTop:
+                case ULKGravityTop:
                     childTop = padding.top + lpMargin.top;
                     if (childBaseline != -1) {
                         childTop += _maxAscent[MAX_ASCENT_DESCENT_INDEX_TOP] - childBaseline;
                     }
                     break;
                     
-                case ULKViewContentGravityCenterVertical:
+                case ULKGravityCenterVertical:
                     childTop = padding.top + ((childSpace - childSize.height) / 2) + lpMargin.top - lpMargin.bottom;
                     break;
                     
-                case ULKViewContentGravityBottom:
+                case ULKGravityBottom:
                     childTop = childBottom - childSize.height - lpMargin.bottom;
                     if (childBaseline != -1) {
                         int descent = childSize.height - childBaseline;

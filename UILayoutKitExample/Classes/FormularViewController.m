@@ -35,12 +35,12 @@
     UIView *androidView = [self.view ulk_findViewById:@"android"];
     if (androidView.ulk_visibility == ULKViewVisibilityVisible) {
         ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *)androidView.layoutParams;
-        if (lp.gravity == ULKViewContentGravityLeft) {
-            lp.gravity = ULKViewContentGravityCenterHorizontal;
-        } else if (lp.gravity == ULKViewContentGravityCenterHorizontal) {
-            lp.gravity = ULKViewContentGravityRight;
+        if (lp.gravity == ULKGravityLeft) {
+            lp.gravity = ULKGravityCenterHorizontal;
+        } else if (lp.gravity == ULKGravityCenterHorizontal) {
+            lp.gravity = ULKGravityRight;
         } else {
-            lp.gravity = ULKViewContentGravityLeft;
+            lp.gravity = ULKGravityLeft;
             androidView.ulk_visibility = ULKViewVisibilityInvisible;
         }
         androidView.layoutParams = lp;
@@ -73,13 +73,13 @@
     NSString *gravity = @"";
     ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *)androidView.layoutParams;
     switch (lp.gravity) {
-        case ULKViewContentGravityLeft:
+        case ULKGravityLeft:
             gravity = @"left";
             break;
-        case ULKViewContentGravityCenterHorizontal:
+        case ULKGravityCenterHorizontal:
             gravity = @"center_horizontal";
             break;
-        case ULKViewContentGravityRight:
+        case ULKGravityRight:
             gravity = @"right";
             break;
         default:

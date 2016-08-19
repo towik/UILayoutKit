@@ -14,51 +14,6 @@
 
 @implementation UILabel (ULK_View)
 
-//+ (void)load {
-//    Class c = self;
-//    SEL origSEL = @selector(drawRect:);
-//    SEL overrideSEL = @selector(ulk_drawRect:);
-//    Method origMethod = class_getInstanceMethod(c, origSEL);
-//    Method overrideMethod = class_getInstanceMethod(c, overrideSEL);
-//    if(class_addMethod(c, origSEL, method_getImplementation(overrideMethod), method_getTypeEncoding(overrideMethod))) {
-//        class_replaceMethod(c, overrideSEL, method_getImplementation(origMethod), method_getTypeEncoding(origMethod));
-//    } else {
-//        method_exchangeImplementations(origMethod, overrideMethod);
-//    }
-//}
-
-- (ULKViewContentGravity)ulk_gravity {
-    ULKViewContentGravity ret;
-    switch (self.textAlignment) {
-        case NSTextAlignmentLeft:
-            ret = ULKViewContentGravityLeft;
-            break;
-        case NSTextAlignmentRight:
-            ret = ULKViewContentGravityRight;
-            break;
-        case NSTextAlignmentCenter:
-            ret = ULKViewContentGravityCenterHorizontal;
-            break;
-        case NSTextAlignmentJustified:
-            ret = ULKViewContentGravityFillHorizontal;
-            break;
-        default:
-            ret = ULKViewContentGravityNone;
-            break;
-    }
-    return ret;
-}
-
-- (void)setUlk_gravity:(ULKViewContentGravity)gravity {
-    if ((gravity & ULKViewContentGravityLeft) == ULKViewContentGravityLeft) {
-        self.textAlignment = NSTextAlignmentLeft;
-    } else if ((gravity & ULKViewContentGravityRight) == ULKViewContentGravityRight) {
-        self.textAlignment = NSTextAlignmentRight;
-    } else {
-        self.textAlignment = NSTextAlignmentCenter;
-    }
-}
-
 //- (void)ulk_onMeasureWithWidthMeasureSpec:(ULKLayoutMeasureSpec)widthMeasureSpec heightMeasureSpec:(ULKLayoutMeasureSpec)heightMeasureSpec {
 //    ULKLayoutMeasureSpecMode widthMode = widthMeasureSpec.mode;
 //    ULKLayoutMeasureSpecMode heightMode = heightMeasureSpec.mode;

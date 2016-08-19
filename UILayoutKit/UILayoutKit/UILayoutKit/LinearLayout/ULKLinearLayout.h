@@ -42,7 +42,7 @@ typedef NS_ENUM(NSInteger, LinearLayoutOrientation) {
 @interface ULKLinearLayout : ULKViewGroup
 
 @property (nonatomic, assign) LinearLayoutOrientation orientation;
-@property (nonatomic, assign) ULKViewContentGravity gravity;
+@property (nonatomic, assign) ULKGravity gravity;
 @property (nonatomic, assign) float weightSum;
 
 @end
