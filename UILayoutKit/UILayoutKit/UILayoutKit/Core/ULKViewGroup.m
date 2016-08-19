@@ -152,14 +152,14 @@
     
     [self ulk_requestLayout];
     
-    if ([self isKindOfClass:[UILabel class]]
-        || [self isKindOfClass:[UITextField class]]
-        || [self isKindOfClass:[UITextView class]]) {
+    if ([subview isKindOfClass:[UILabel class]]
+        || [subview isKindOfClass:[UITextField class]]
+        || [subview isKindOfClass:[UITextView class]]) {
         [subview addObserver:self forKeyPath:@"text" options:NSKeyValueObservingOptionNew context:nil];
         [subview addObserver:self forKeyPath:@"font" options:NSKeyValueObservingOptionNew context:nil];
     }
     
-    if ([self isKindOfClass:[UILabel class]]) {
+    if ([subview isKindOfClass:[UILabel class]]) {
         [subview addObserver:self forKeyPath:@"lineBreakMode" options:NSKeyValueObservingOptionNew context:nil];
     }
 }
@@ -171,14 +171,14 @@
     
     [self ulk_requestLayout];
     
-    if ([self isKindOfClass:[UILabel class]]
-        || [self isKindOfClass:[UITextField class]]
-        || [self isKindOfClass:[UITextView class]]) {
+    if ([subview isKindOfClass:[UILabel class]]
+        || [subview isKindOfClass:[UITextField class]]
+        || [subview isKindOfClass:[UITextView class]]) {
         [subview removeObserver:self forKeyPath:@"text"];
         [subview removeObserver:self forKeyPath:@"font"];
     }
     
-    if ([self isKindOfClass:[UILabel class]]) {
+    if ([subview isKindOfClass:[UILabel class]]) {
         [subview removeObserver:self forKeyPath:@"lineBreakMode"];
     }
 }
