@@ -7,7 +7,7 @@
 //
 
 #import "ULKAppDelegate.h"
-#import "MainViewController.h"
+#import "FormularViewController.h"
 
 @implementation ULKAppDelegate
 
@@ -18,7 +18,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    MainViewController *mainVC = [[MainViewController alloc] init];
+    FormularViewController *mainVC = [[FormularViewController alloc] init];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:mainVC];
     self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
