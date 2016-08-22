@@ -10,7 +10,7 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
-#import "UIView+ULK_Layout.h"
+#import "ULKViewGroup.h"
 
 #pragma mark - import libs
 #include <objc/runtime.h>
@@ -310,12 +310,12 @@ static char visibilityKey;
     [self setNeedsLayout];
     [self ulk_clearMeasuredDimensionSize];
     UIView *superView = self.superview;
-    if (superView != nil) {
+    if (superView != nil && [superView isKindOfClass:[ULKViewGroup class]]) {
         [superView setNeedsLayout];
         [superView ulk_clearMeasuredDimensionSize];
         
         UIView *tmpSuperView = superView.superview;
-        while (tmpSuperView != nil
+        while (tmpSuperView != nil && [tmpSuperView isKindOfClass:[ULKViewGroup class]]
             && (tmpSuperView.layoutWidth == ULKLayoutParamsSizeWrapContent
                 || tmpSuperView.layoutHeight == ULKLayoutParamsSizeWrapContent))
         {
