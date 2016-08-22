@@ -18,16 +18,28 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    ULKLayoutMeasureSpec widthMeasureSpec;
-    ULKLayoutMeasureSpec heightMeasureSpec;
-    widthMeasureSpec.size = self.frame.size.width;
-    heightMeasureSpec.size = self.frame.size.height;
-    widthMeasureSpec.mode = ULKLayoutMeasureSpecModeExactly;
-    heightMeasureSpec.mode = ULKLayoutMeasureSpecModeExactly;
-    if (!self.ulk_hadMeasured) {
-        [self ulk_measureWithWidthMeasureSpec:widthMeasureSpec heightMeasureSpec:heightMeasureSpec];
+    if (self.ulk_isViewGroup) {
+        ULKLayoutMeasureSpec widthMeasureSpec;
+        ULKLayoutMeasureSpec heightMeasureSpec;
+        widthMeasureSpec.size = self.frame.size.width;
+        heightMeasureSpec.size = self.frame.size.height;
+        widthMeasureSpec.mode = ULKLayoutMeasureSpecModeExactly;
+        heightMeasureSpec.mode = ULKLayoutMeasureSpecModeExactly;
+        if (!self.ulk_hadMeasured) {
+            [self ulk_measureWithWidthMeasureSpec:widthMeasureSpec heightMeasureSpec:heightMeasureSpec];
+        }
+        [self ulk_layoutWithFrame:self.frame];
     }
-    [self ulk_layoutWithFrame:self.frame];
+}
+
+- (void)ulk_measureChildWithMargins:(UIView *)child parentWidthMeasureSpec:(ULKLayoutMeasureSpec)parentWidthMeasureSpec widthUsed:(CGFloat)widthUsed parentHeightMeasureSpec:(ULKLayoutMeasureSpec)parentHeightMeasureSpec heightUsed:(CGFloat)heightUsed {
+    ULKLayoutParams *lp = (ULKLayoutParams *) child.ulk_layoutParams;
+    UIEdgeInsets lpMargin = lp.margin;
+    UIEdgeInsets padding = self.contentInset;
+    ULKLayoutMeasureSpec childWidthMeasureSpec = [self ulk_childMeasureSpecWithMeasureSpec:parentWidthMeasureSpec padding:padding.left + padding.right + lpMargin.left + lpMargin.right + widthUsed childDimension:lp.width];
+    ULKLayoutMeasureSpec childHeightMeasureSpec = [self ulk_childMeasureSpecWithMeasureSpec:parentHeightMeasureSpec padding:padding.top + padding.bottom + lpMargin.top + lpMargin.bottom + heightUsed childDimension:lp.height];
+    
+    [child ulk_measureWithWidthMeasureSpec:childWidthMeasureSpec heightMeasureSpec:childHeightMeasureSpec];
 }
 
 - (void)ulk_onMeasureWithWidthMeasureSpec:(ULKLayoutMeasureSpec)widthMeasureSpec heightMeasureSpec:(ULKLayoutMeasureSpec)heightMeasureSpec
