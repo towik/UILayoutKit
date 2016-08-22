@@ -18,8 +18,6 @@
 
 + (ULKLayoutMeasureSpec)childMeasureSpecForMeasureSpec:(ULKLayoutMeasureSpec)spec padding:(CGFloat)padding childDimension:(CGFloat)childDimension;
 
-- (instancetype)initUlk_WithAttributes:(NSDictionary *)attrs NS_DESIGNATED_INITIALIZER;
-
 /**
  * Did add a child view. If no layout parameters are already set on the child, the
  * default parameters for this ViewGroup are set on the child.

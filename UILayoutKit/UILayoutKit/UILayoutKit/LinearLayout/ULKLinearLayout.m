@@ -95,16 +95,6 @@
     return self;
 }
 
-- (instancetype)initUlk_WithAttributes:(NSDictionary *)attrs {
-    self = [super initUlk_WithAttributes:attrs];
-    if (self) {
-        _baselineAligned = TRUE;
-        _baselineAlignedChildIndex = -1;
-        _baselineChildTop = 0;
-    }
-    return self;
-}
-
 - (void)setGravity:(ULKGravity)gravity {
     if (_gravity != gravity) {
         if ((gravity & RELATIVE_HORIZONTAL_GRAVITY_MASK) == 0) {

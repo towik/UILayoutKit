@@ -162,12 +162,6 @@
 
 - (void)didAddSubview:(UIView *)subview {
     ULKLayoutParams *params = subview.layoutParams;
-    if (params == nil) {
-        params = [self ulk_generateDefaultLayoutParams];
-        if (params == nil) {
-            @throw [NSException exceptionWithName:@"IllegalArgumentException" reason:@"ulk_generateDefaultLayoutParams() cannot return nil" userInfo:nil];
-        }
-    }
     
     if (!self.ulk_isViewGroup) {
         @throw [NSException exceptionWithName:@"UnsuportedOperationException" reason:@"Views can only be added on ViewGroup objects" userInfo:nil];
