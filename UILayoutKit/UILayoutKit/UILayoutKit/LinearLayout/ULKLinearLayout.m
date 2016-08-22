@@ -56,12 +56,12 @@
     return (ULKLinearLayoutParams *)layoutParams;
 }
 
-- (void)setLayoutWeight:(float)layoutWeight {
+- (void)setUlk_layoutWeight:(float)layoutWeight {
     self.linearLayoutParams.weight = layoutWeight;
     [self ulk_requestLayout];
 }
 
-- (float)layoutWeight {
+- (float)ulk_layoutWeight {
     return self.linearLayoutParams.weight;
 }
 

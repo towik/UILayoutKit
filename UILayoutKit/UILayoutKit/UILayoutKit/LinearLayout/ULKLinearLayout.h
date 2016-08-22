@@ -34,7 +34,7 @@ typedef NS_ENUM(NSInteger, LinearLayoutOrientation) {
 
 @interface UIView (ULK_LinearLayoutParams)
 
-@property (nonatomic, assign) float layoutWeight;
+@property (nonatomic, assign) float ulk_layoutWeight;
 
 @end
 
