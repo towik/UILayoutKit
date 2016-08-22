@@ -32,9 +32,6 @@
 		2B1ACC6D1D6081DC00303BFC /* values.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2B1ACC4D1D6081DC00303BFC /* values.xml */; };
 		2B1ACC6E1D6081DC00303BFC /* LayoutFromIB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B1ACC4F1D6081DC00303BFC /* LayoutFromIB.xib */; };
 		2B1ACC6F1D6081DC00303BFC /* ULKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1ACC511D6081DC00303BFC /* ULKAppDelegate.m */; };
-		2B5DEB9F1D3F963F00E13C76 /* drawable_button_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5DEAD81D3F963F00E13C76 /* drawable_button_normal.png */; };
-		2B5DEBA01D3F963F00E13C76 /* drawable_button_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5DEAD91D3F963F00E13C76 /* drawable_button_pressed.png */; };
-		2B5DEBA11D3F963F00E13C76 /* layout_example.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5DEADA1D3F963F00E13C76 /* layout_example.png */; };
 		2B5DEBA21D3F963F00E13C76 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 2B5DEAE11D3F963F00E13C76 /* LICENSE */; };
 		2B5DEBA31D3F963F00E13C76 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEAE21D3F963F00E13C76 /* README.md */; };
 		2B5DEBEC1D3F964000E13C76 /* UILayoutKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 2B5DEB971D3F963F00E13C76 /* UILayoutKit.podspec */; };
@@ -85,9 +82,6 @@
 		2B1ACC4F1D6081DC00303BFC /* LayoutFromIB.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LayoutFromIB.xib; sourceTree = "<group>"; };
 		2B1ACC501D6081DC00303BFC /* ULKAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKAppDelegate.h; sourceTree = "<group>"; };
 		2B1ACC511D6081DC00303BFC /* ULKAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKAppDelegate.m; sourceTree = "<group>"; };
-		2B5DEAD81D3F963F00E13C76 /* drawable_button_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drawable_button_normal.png; sourceTree = "<group>"; };
-		2B5DEAD91D3F963F00E13C76 /* drawable_button_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drawable_button_pressed.png; sourceTree = "<group>"; };
-		2B5DEADA1D3F963F00E13C76 /* layout_example.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = layout_example.png; sourceTree = "<group>"; };
 		2B5DEAE11D3F963F00E13C76 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		2B5DEAE21D3F963F00E13C76 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2B5DEB971D3F963F00E13C76 /* UILayoutKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UILayoutKit.podspec; sourceTree = "<group>"; };
@@ -234,23 +228,12 @@
 		2B5DEAD61D3F963F00E13C76 /* UILayoutKit */ = {
 			isa = PBXGroup;
 			children = (
-				2B5DEAD71D3F963F00E13C76 /* Documentation */,
 				2B5DEAE11D3F963F00E13C76 /* LICENSE */,
 				2B5DEAE21D3F963F00E13C76 /* README.md */,
 				2B5DEB971D3F963F00E13C76 /* UILayoutKit.podspec */,
 				2B5DEAE71D3F963F00E13C76 /* UILayoutKit */,
 			);
 			path = UILayoutKit;
-			sourceTree = "<group>";
-		};
-		2B5DEAD71D3F963F00E13C76 /* Documentation */ = {
-			isa = PBXGroup;
-			children = (
-				2B5DEAD81D3F963F00E13C76 /* drawable_button_normal.png */,
-				2B5DEAD91D3F963F00E13C76 /* drawable_button_pressed.png */,
-				2B5DEADA1D3F963F00E13C76 /* layout_example.png */,
-			);
-			path = Documentation;
 			sourceTree = "<group>";
 		};
 		2B5DEAE71D3F963F00E13C76 /* UILayoutKit */ = {
@@ -435,11 +418,8 @@
 				2B1ACC5F1D6081DC00303BFC /* button_background.xml in Resources */,
 				2B1ACC601D6081DC00303BFC /* button_disabled.9@2x.png in Resources */,
 				2B1ACC691D6081DC00303BFC /* includeContainer.xml in Resources */,
-				2B5DEBA11D3F963F00E13C76 /* layout_example.png in Resources */,
 				2B1ACC611D6081DC00303BFC /* button_normal.9@2x.png in Resources */,
-				2B5DEB9F1D3F963F00E13C76 /* drawable_button_normal.png in Resources */,
 				2B1ACC6A1D6081DC00303BFC /* layoutFromIB.xml in Resources */,
-				2B5DEBA01D3F963F00E13C76 /* drawable_button_pressed.png in Resources */,
 				2B1ACC6C1D6081DC00303BFC /* scrollviews.xml in Resources */,
 				2B1ACC651D6081DC00303BFC /* formular.xml in Resources */,
 				2B5DEBEC1D3F964000E13C76 /* UILayoutKit.podspec in Resources */,
