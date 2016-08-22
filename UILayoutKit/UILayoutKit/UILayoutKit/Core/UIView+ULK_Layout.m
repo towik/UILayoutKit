@@ -497,11 +497,14 @@ static char layoutParamsKey;
 
 - (ULKLayoutParams *)layoutParams {
     ULKLayoutParams *layoutParams = objc_getAssociatedObject(self, &layoutParamsKey);
-    
-    //    if (![layoutParams isKindOfClass:[ULKLayoutParams class]]) {
-    //        layoutParams = [[ULKLayoutParams alloc] initWithLayoutParams:layoutParams];
-    //        self.layoutParams = layoutParams;
-    //    }
+    if (layoutParams == nil) {
+        layoutParams = [self ulk_generateDefaultLayoutParams];
+        if (layoutParams == nil) {
+            @throw [NSException exceptionWithName:@"IllegalArgumentException" reason:@"ulk_generateDefaultLayoutParams() cannot return nil" userInfo:nil];
+        }
+        
+        self.layoutParams = layoutParams;
+    }
     
     return (ULKLayoutParams *)layoutParams;
 }
