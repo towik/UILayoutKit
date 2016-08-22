@@ -90,7 +90,7 @@
     UIViewController *vc = nil;
     switch (indexPath.row) {
         case 0:
-            vc = [[FormularViewController alloc] initWithLayoutName:@"formular" bundle:nil];
+            vc = [[FormularViewController alloc] init];
             break;
         case 1:
             vc = [[LayoutAnimationsViewController alloc] initWithLayoutName:@"animations" bundle:nil];
@@ -125,13 +125,13 @@
 - (void)didPressToggleButton:(UIButton *)button {
     UILabel *textView = (UILabel *)[button.superview ulk_findViewById:@"toggleText"];
     
-    ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *) textView.layoutParams;
+    ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *) textView.ulk_layoutParams;
     if (lp.height == ULKLayoutParamsSizeWrapContent) {
         lp.height = 44;
     } else {
         lp.height = ULKLayoutParamsSizeWrapContent;
     }
-    textView.layoutParams = lp;
+    textView.ulk_layoutParams = lp;
     [UIView animateWithDuration:0.5 animations:^{
         [self.navigationController.topViewController.view layoutIfNeeded];
     }];

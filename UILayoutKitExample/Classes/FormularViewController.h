@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "ULKLayoutViewController.h"
 
-@interface FormularViewController : ULKLayoutViewController
+@interface FormularViewController : UIViewController
 
 @end
