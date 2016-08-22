@@ -24,7 +24,7 @@
 }
 
 - (void)ulk_measureChildWithMargins:(UIView *)child parentWidthMeasureSpec:(ULKLayoutMeasureSpec)parentWidthMeasureSpec widthUsed:(CGFloat)widthUsed parentHeightMeasureSpec:(ULKLayoutMeasureSpec)parentHeightMeasureSpec heightUsed:(CGFloat)heightUsed {
-    ULKLayoutParams *lp = (ULKLayoutParams *) child.layoutParams;
+    ULKLayoutParams *lp = (ULKLayoutParams *) child.ulk_layoutParams;
     UIEdgeInsets lpMargin = lp.margin;
     UIEdgeInsets padding = self.ulk_padding;
     ULKLayoutMeasureSpec childWidthMeasureSpec = [self ulk_childMeasureSpecWithMeasureSpec:parentWidthMeasureSpec padding:padding.left + padding.right + lpMargin.left + lpMargin.right + widthUsed childDimension:lp.width];
@@ -43,7 +43,7 @@
  * @param parentHeightMeasureSpec The height requirements for this view
  */
 -(void)ulk_measureChild:(UIView *)child withParentWidthMeasureSpec:(ULKLayoutMeasureSpec)parentWidthMeasureSpec parentHeightMeasureSpec:(ULKLayoutMeasureSpec)parentHeightMeasureSpec {
-    ULKLayoutParams *lp = child.layoutParams;
+    ULKLayoutParams *lp = child.ulk_layoutParams;
     UIEdgeInsets padding = self.ulk_padding;
     ULKLayoutMeasureSpec childWidthMeasureSpec = [self ulk_childMeasureSpecWithMeasureSpec:parentWidthMeasureSpec padding:(padding.left + padding.right) childDimension:lp.width];
     ULKLayoutMeasureSpec childHeightMeasureSpec = [self ulk_childMeasureSpecWithMeasureSpec:parentHeightMeasureSpec padding:(padding.top + padding.bottom) childDimension:lp.height];
@@ -156,7 +156,7 @@
 }
 
 - (void)didAddSubview:(UIView *)subview {
-    ULKLayoutParams *params = subview.layoutParams;
+    ULKLayoutParams *params = subview.ulk_layoutParams;
     
     if (!self.ulk_isViewGroup) {
         @throw [NSException exceptionWithName:@"UnsuportedOperationException" reason:@"Views can only be added on ViewGroup objects" userInfo:nil];
@@ -169,7 +169,7 @@
             params = [self ulk_generateDefaultLayoutParams];
         }
     }
-    subview.layoutParams = params;
+    subview.ulk_layoutParams = params;
     
     [subview ulk_requestLayout];
     

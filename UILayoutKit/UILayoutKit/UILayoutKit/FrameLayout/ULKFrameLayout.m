@@ -37,14 +37,14 @@
 @implementation UIView (ULK_FrameLayoutParams)
 
 - (void)setFrameLayoutParams:(ULKFrameLayoutParams *)frameLayoutParams {
-    self.layoutParams = frameLayoutParams;
+    self.ulk_layoutParams = frameLayoutParams;
 }
 
 - (ULKFrameLayoutParams *)frameLayoutParams {
-    ULKLayoutParams *layoutParams = self.layoutParams;
+    ULKLayoutParams *layoutParams = self.ulk_layoutParams;
     if (![layoutParams isKindOfClass:[ULKFrameLayoutParams class]]) {
         layoutParams = [[ULKFrameLayoutParams alloc] initWithLayoutParams:layoutParams];
-        self.layoutParams = layoutParams;
+        self.ulk_layoutParams = layoutParams;
     }
     
     return (ULKFrameLayoutParams *)layoutParams;
@@ -115,7 +115,7 @@ static char matchParentChildrenKey;
         
         if (child.ulk_visibility != ULKViewVisibilityGone) {
             [measureView ulk_measureChildWithMargins:child parentWidthMeasureSpec:widthMeasureSpec widthUsed:0 parentHeightMeasureSpec:heightMeasureSpec heightUsed:0];
-            ULKFrameLayoutParams *lp = (ULKFrameLayoutParams *)child.layoutParams;
+            ULKFrameLayoutParams *lp = (ULKFrameLayoutParams *)child.ulk_layoutParams;
             UIEdgeInsets lpMargin = lp.margin;
             maxWidth = MAX(maxWidth, child.ulk_measuredSize.width + lpMargin.left + lpMargin.right);
             maxHeight = MAX(maxHeight, child.ulk_measuredSize.height + lpMargin.top + lpMargin.bottom);
@@ -150,7 +150,7 @@ static char matchParentChildrenKey;
                 continue;
             }
             
-            ULKLayoutParams *lp = (ULKLayoutParams *)child.layoutParams;
+            ULKLayoutParams *lp = (ULKLayoutParams *)child.ulk_layoutParams;
             UIEdgeInsets lpMargin = lp.margin;
             ULKLayoutMeasureSpec childWidthMeasureSpec;
             ULKLayoutMeasureSpec childHeightMeasureSpec;
@@ -209,7 +209,7 @@ static char matchParentChildrenKey;
         UIView *child = (measureView.subviews)[i];
         
         if (child.ulk_visibility != ULKViewVisibilityGone && ![NSStringFromClass([child class]) isEqualToString:@"UIWebDocumentView"]) {
-            ULKFrameLayoutParams *lp = (ULKFrameLayoutParams *)child.layoutParams;
+            ULKFrameLayoutParams *lp = (ULKFrameLayoutParams *)child.ulk_layoutParams;
             UIEdgeInsets lpMargin = lp.margin;
             
             CGFloat width = child.ulk_measuredSize.width;

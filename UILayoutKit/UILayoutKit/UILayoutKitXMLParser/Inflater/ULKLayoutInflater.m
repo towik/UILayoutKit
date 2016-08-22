@@ -117,7 +117,7 @@
                     } else if (!validLayoutParams) {
                         layoutParams = [parentView ulk_generateDefaultLayoutParams];
                     }
-                    temp.layoutParams = layoutParams;
+                    temp.ulk_layoutParams = layoutParams;
                     
                     // Inflate all children
                     if (rootElement->firstChild != NULL) {
@@ -163,7 +163,7 @@
             } else {
                 layoutParams = [parentView ulk_generateDefaultLayoutParams];
             }
-            view.layoutParams = layoutParams;
+            view.ulk_layoutParams = layoutParams;
             if (element->firstChild != NULL) {
                 [self rInflateWithXmlElement:element->firstChild parentView:view attributes:attrs finishInflate:TRUE];
             }
@@ -201,7 +201,7 @@
             } else {
                 layoutParams = [rootView ulk_generateDefaultLayoutParams];
             }
-            temp.layoutParams = layoutParams;
+            temp.ulk_layoutParams = layoutParams;
         }
         if (rootElement->firstChild != NULL) {
             [self rInflateWithXmlElement:rootElement->firstChild parentView:temp attributes:attrs finishInflate:TRUE];

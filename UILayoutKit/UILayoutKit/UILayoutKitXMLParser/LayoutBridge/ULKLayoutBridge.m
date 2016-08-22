@@ -70,7 +70,7 @@
 
 - (CGSize)sizeThatFits:(CGSize)size {
     UIView *lastChild = self.subviews.lastObject;
-    ULKLayoutParams *layoutParams = (ULKLayoutParams *)lastChild.layoutParams;
+    ULKLayoutParams *layoutParams = (ULKLayoutParams *)lastChild.ulk_layoutParams;
     ULKLayoutMeasureSpec widthSpec;
     ULKLayoutMeasureSpec heightSpec;
     widthSpec.mode = ULKLayoutMeasureSpecModeUnspecified;
@@ -98,7 +98,7 @@
     UIView *firstChild = [self.subviews lastObject];
     if (firstChild != nil) {
         CGSize size = firstChild.ulk_measuredSize;
-        ULKLayoutParams *lp = (ULKLayoutParams *)firstChild.layoutParams;
+        ULKLayoutParams *lp = (ULKLayoutParams *)firstChild.ulk_layoutParams;
         UIEdgeInsets margin = lp.margin;
         [firstChild ulk_setFrame:CGRectMake(margin.left, margin.top, size.width, size.height)];
     }
@@ -111,7 +111,7 @@
     {
         [self ulk_measureChildWithMargins:lastChild parentWidthMeasureSpec:widthMeasureSpec widthUsed:0 parentHeightMeasureSpec:heightMeasureSpec heightUsed:0];
         lastChildSize = lastChild.ulk_measuredSize;
-        ULKLayoutParams *layoutParams = lastChild.layoutParams;
+        ULKLayoutParams *layoutParams = lastChild.ulk_layoutParams;
         if ([layoutParams isKindOfClass:[ULKLayoutParams class]])
         {
             ULKLayoutParams *marginParams = (ULKLayoutParams *)layoutParams;

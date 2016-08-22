@@ -316,8 +316,8 @@ static char visibilityKey;
         
         UIView *tmpSuperView = superView.superview;
         while (tmpSuperView != nil && [tmpSuperView isKindOfClass:[ULKViewGroup class]]
-            && (tmpSuperView.layoutWidth == ULKLayoutParamsSizeWrapContent
-                || tmpSuperView.layoutHeight == ULKLayoutParamsSizeWrapContent))
+            && (tmpSuperView.ulk_layoutWidth == ULKLayoutParamsSizeWrapContent
+                || tmpSuperView.ulk_layoutHeight == ULKLayoutParamsSizeWrapContent))
         {
             [tmpSuperView setNeedsLayout];
             [tmpSuperView ulk_clearMeasuredDimensionSize];
@@ -431,7 +431,7 @@ static char visibilityKey;
 }
 
 - (void)ulk_measureChildWithMargins:(UIView *)child parentWidthMeasureSpec:(ULKLayoutMeasureSpec)parentWidthMeasureSpec widthUsed:(CGFloat)widthUsed parentHeightMeasureSpec:(ULKLayoutMeasureSpec)parentHeightMeasureSpec heightUsed:(CGFloat)heightUsed {
-    ULKLayoutParams *lp = (ULKLayoutParams *) child.layoutParams;
+    ULKLayoutParams *lp = (ULKLayoutParams *) child.ulk_layoutParams;
     UIEdgeInsets lpMargin = lp.margin;
     //    UIEdgeInsets padding = self.ulk_padding;
     UIEdgeInsets padding = UIEdgeInsetsZero;
@@ -451,7 +451,7 @@ static char visibilityKey;
  * @param parentHeightMeasureSpec The height requirements for this view
  */
 -(void)ulk_measureChild:(UIView *)child withParentWidthMeasureSpec:(ULKLayoutMeasureSpec)parentWidthMeasureSpec parentHeightMeasureSpec:(ULKLayoutMeasureSpec)parentHeightMeasureSpec {
-    ULKLayoutParams *lp = child.layoutParams;
+    ULKLayoutParams *lp = child.ulk_layoutParams;
     //    UIEdgeInsets padding = self.ulk_padding;
     UIEdgeInsets padding = UIEdgeInsetsZero;
     ULKLayoutMeasureSpec childWidthMeasureSpec = [self ulk_childMeasureSpecWithMeasureSpec:parentWidthMeasureSpec padding:(padding.left + padding.right) childDimension:lp.width];
@@ -486,7 +486,7 @@ static char visibilityKey;
 static char layoutParamsKey;
 
 
-- (void)setLayoutParams:(ULKLayoutParams *)layoutParams {
+- (void)setUlk_layoutParams:(ULKLayoutParams *)layoutParams {
     objc_setAssociatedObject(self,
                              &layoutParamsKey,
                              layoutParams,
@@ -495,7 +495,7 @@ static char layoutParamsKey;
     
 }
 
-- (ULKLayoutParams *)layoutParams {
+- (ULKLayoutParams *)ulk_layoutParams {
     ULKLayoutParams *layoutParams = objc_getAssociatedObject(self, &layoutParamsKey);
     if (layoutParams == nil) {
         layoutParams = [self ulk_generateDefaultLayoutParams];
@@ -503,37 +503,37 @@ static char layoutParamsKey;
             @throw [NSException exceptionWithName:@"IllegalArgumentException" reason:@"ulk_generateDefaultLayoutParams() cannot return nil" userInfo:nil];
         }
         
-        self.layoutParams = layoutParams;
+        self.ulk_layoutParams = layoutParams;
     }
     
     return (ULKLayoutParams *)layoutParams;
 }
 
-- (void)setLayoutWidth:(CGFloat)layoutWidth {
-    self.layoutParams.width = layoutWidth;
+- (void)setUlk_layoutWidth:(CGFloat)layoutWidth {
+    self.ulk_layoutParams.width = layoutWidth;
     [self ulk_requestLayout];
 }
 
-- (CGFloat)layoutWidth {
-    return self.layoutParams.width;
+- (CGFloat)ulk_layoutWidth {
+    return self.ulk_layoutParams.width;
 }
 
-- (void)setLayoutHeight:(CGFloat)layoutHeight {
-    self.layoutParams.height = layoutHeight;
+- (void)setUlk_layoutHeight:(CGFloat)layoutHeight {
+    self.ulk_layoutParams.height = layoutHeight;
     [self ulk_requestLayout];
 }
 
-- (CGFloat)layoutHeight {
-    return self.layoutParams.height;
+- (CGFloat)ulk_layoutHeight {
+    return self.ulk_layoutParams.height;
 }
 
-- (void)setLayoutMargin:(UIEdgeInsets)layoutMargin {
-    self.layoutParams.margin = layoutMargin;
+- (void)setUlk_layoutMargin:(UIEdgeInsets)layoutMargin {
+    self.ulk_layoutParams.margin = layoutMargin;
     [self ulk_requestLayout];
 }
 
-- (UIEdgeInsets)layoutMargin {
-    return self.layoutParams.margin;
+- (UIEdgeInsets)ulk_layoutMargin {
+    return self.ulk_layoutParams.margin;
 }
 
 @end

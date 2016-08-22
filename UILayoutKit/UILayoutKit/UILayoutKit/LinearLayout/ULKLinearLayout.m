@@ -43,14 +43,14 @@
 @implementation UIView (ULK_LinearLayoutParams)
 
 - (void)setLinearLayoutParams:(ULKLinearLayoutParams *)linearLayoutParams {
-    self.layoutParams = linearLayoutParams;
+    self.ulk_layoutParams = linearLayoutParams;
 }
 
 - (ULKLinearLayoutParams *)linearLayoutParams {
-    ULKLayoutParams *layoutParams = self.layoutParams;
+    ULKLayoutParams *layoutParams = self.ulk_layoutParams;
     if (![layoutParams isKindOfClass:[ULKLinearLayoutParams class]]) {
         layoutParams = [[ULKLinearLayoutParams alloc] initWithLayoutParams:layoutParams];
-        self.layoutParams = layoutParams;
+        self.ulk_layoutParams = layoutParams;
     }
     
     return (ULKLinearLayoutParams *)layoutParams;
@@ -169,7 +169,7 @@
         }
     }
     
-    ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *) child.layoutParams;
+    ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *) child.ulk_layoutParams;
     return childTop + lp.margin.top + childBaseline;
 }
 
@@ -209,7 +209,7 @@
             continue;
         }
         
-        ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *)child.layoutParams;
+        ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *)child.ulk_layoutParams;
         
         if (lp.width == ULKLayoutParamsSizeMatchParent) {
             // Temporarily force children to reuse their old measured height
@@ -269,7 +269,7 @@
             continue;
         }
         
-        ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *) child.layoutParams;
+        ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *) child.ulk_layoutParams;
         UIEdgeInsets lpMargin = lp.margin;
         totalWeight += lp.weight;
         
@@ -367,7 +367,7 @@
                 i += [self childrenSkipCountAfterChild:child atIndex:i];
             }
             
-            ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *) child.layoutParams;
+            ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *) child.ulk_layoutParams;
             // Account for negative margins
             CGFloat totalLength = _totalLength;
             UIEdgeInsets lpMargin = lp.margin;
@@ -405,7 +405,7 @@
                 continue;
             }
             
-            ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *) child.layoutParams;
+            ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *) child.ulk_layoutParams;
             UIEdgeInsets lpMargin = lp.margin;
             
             float childExtra = lp.weight;
@@ -473,7 +473,7 @@
                     continue;
                 }
                 
-                ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *) child.layoutParams;
+                ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *) child.ulk_layoutParams;
                 
                 float childExtra = lp.weight;
                 if (childExtra > 0) {
@@ -521,7 +521,7 @@
             continue;
         }
         
-        ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *) child.layoutParams;
+        ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *) child.ulk_layoutParams;
         
         if (lp.height == ULKLayoutParamsSizeMatchParent) {
             // Temporarily force children to reuse their old measured width
@@ -586,7 +586,7 @@
             continue;
         }
         
-        ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *) child.layoutParams;
+        ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *) child.ulk_layoutParams;
         UIEdgeInsets lpMargin = lp.margin;
         
         totalWeight += lp.weight;
@@ -721,7 +721,7 @@
             }
             
             ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *)
-            child.layoutParams;
+            child.ulk_layoutParams;
             UIEdgeInsets lpMargin = lp.margin;
             if (isExactly) {
                 _totalLength += largestChildWidth + lpMargin.left + lpMargin.right + [self nextLocationOffsetOfChild:child];
@@ -765,7 +765,7 @@
                 continue;
             }
             
-            ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *) child.layoutParams;
+            ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *) child.ulk_layoutParams;
             UIEdgeInsets lpMargin = lp.margin;
             
             float childExtra = lp.weight;
@@ -868,7 +868,7 @@
                     continue;
                 }
                 
-                ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *) child.layoutParams;
+                ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *) child.ulk_layoutParams;
                 
                 float childExtra = lp.weight;
                 if (childExtra > 0) {
@@ -966,7 +966,7 @@
         if (child.ulk_visibility != ULKViewVisibilityGone) {
             CGSize childSize = child.ulk_measuredSize;
             
-            ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *)child.layoutParams;
+            ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *)child.ulk_layoutParams;
             UIEdgeInsets lpMargin = lp.margin;
             
             ULKGravity gravity = lp.gravity;
@@ -1045,7 +1045,7 @@
             CGSize childSize = child.ulk_measuredSize;
             CGFloat childBaseline = -1;
             
-            ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *)child.layoutParams;
+            ULKLinearLayoutParams *lp = (ULKLinearLayoutParams *)child.ulk_layoutParams;
             UIEdgeInsets lpMargin = lp.margin;
             
             if (baselineAligned && lp.height != ULKLayoutParamsSizeMatchParent) {

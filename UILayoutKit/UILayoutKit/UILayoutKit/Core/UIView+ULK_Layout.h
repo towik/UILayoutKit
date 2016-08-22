@@ -73,10 +73,10 @@
 
 @interface UIView (ULKLayoutParams)
 
-@property (nonatomic, assign) CGFloat layoutWidth;
-@property (nonatomic, assign) CGFloat layoutHeight;
-@property (nonatomic, assign) UIEdgeInsets layoutMargin;
-@property (nonatomic, strong) ULKLayoutParams *layoutParams;
+@property (nonatomic, assign) CGFloat ulk_layoutWidth;
+@property (nonatomic, assign) CGFloat ulk_layoutHeight;
+@property (nonatomic, assign) UIEdgeInsets ulk_layoutMargin;
+@property (nonatomic, strong) ULKLayoutParams *ulk_layoutParams;
 
 @end
 
