@@ -1104,23 +1104,6 @@
     return [layoutParams isKindOfClass:[ULKLinearLayoutParams class]];
 }
 
-/**
- * Returns a set of layout parameters with a width of
- * {@link android.view.ViewGroup.LayoutParams#MATCH_PARENT}
- * and a height of {@link android.view.ViewGroup.LayoutParams#WRAP_CONTENT}
- * when the layout's orientation is {@link #VERTICAL}. When the orientation is
- * {@link #HORIZONTAL}, the width is set to {@link LayoutParams#WRAP_CONTENT}
- * and the height to {@link LayoutParams#WRAP_CONTENT}.
- */
--(ULKLayoutParams *)ulk_generateDefaultLayoutParams {
-    if (_orientation == LinearLayoutOrientationHorizontal) {
-        return [[ULKLinearLayoutParams alloc] initWithWidth:ULKLayoutParamsSizeWrapContent height:ULKLayoutParamsSizeWrapContent];
-    } else if (_orientation == LinearLayoutOrientationVertical) {
-        return [[ULKLinearLayoutParams alloc] initWithWidth:ULKLayoutParamsSizeMatchParent height:ULKLayoutParamsSizeWrapContent];
-    }
-    return nil;
-}
-
 -(ULKLayoutParams *)ulk_generateLayoutParamsFromLayoutParams:(ULKLayoutParams *)layoutParams {
     return [[ULKLinearLayoutParams alloc] initWithLayoutParams:layoutParams];
 }

@@ -14,6 +14,10 @@
 
 @implementation ULKViewGroup
 
+- (ULKLayoutParams *)ulk_generateDefaultLayoutParams {
+    return [[ULKLayoutParams alloc] initWithWidth:ULKLayoutParamsSizeMatchParent height:ULKLayoutParamsSizeMatchParent];
+}
+
 - (void)setUlk_padding:(UIEdgeInsets)padding {
     _ulk_padding = padding;
     [self ulk_requestLayout];
@@ -44,15 +48,6 @@
     ULKLayoutMeasureSpec childWidthMeasureSpec = [self ulk_childMeasureSpecWithMeasureSpec:parentWidthMeasureSpec padding:(padding.left + padding.right) childDimension:lp.width];
     ULKLayoutMeasureSpec childHeightMeasureSpec = [self ulk_childMeasureSpecWithMeasureSpec:parentHeightMeasureSpec padding:(padding.top + padding.bottom) childDimension:lp.height];
     [child ulk_measureWithWidthMeasureSpec:childWidthMeasureSpec heightMeasureSpec:childHeightMeasureSpec];
-}
-
-- (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    if (self) {
-        ULKLayoutParams *layoutParams = [[ULKLayoutParams alloc] initWithWidth:ULKLayoutParamsSizeMatchParent height:ULKLayoutParamsSizeMatchParent];
-        self.layoutParams = layoutParams;
-    }
-    return self;
 }
 
 /**

@@ -19,12 +19,9 @@
 + (ULKLayoutMeasureSpec)childMeasureSpecForMeasureSpec:(ULKLayoutMeasureSpec)spec padding:(CGFloat)padding childDimension:(CGFloat)childDimension;
 
 /**
- * Did add a child view. If no layout parameters are already set on the child, the
- * default parameters for this ViewGroup are set on the child.
+ * Did add a child view.
  *
  * @param child the child view to add
- *
- * @see ulk_generateDefaultLayoutParams
  */
 - (void)didAddSubview:(UIView *)subview;
 

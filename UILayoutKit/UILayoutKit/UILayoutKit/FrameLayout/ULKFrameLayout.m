@@ -268,10 +268,6 @@ static char matchParentChildrenKey;
     return [layoutParams isKindOfClass:[ULKFrameLayoutParams class]];
 }
 
-- (ULKLayoutParams *)ulk_generateDefaultLayoutParams {
-    return [[ULKFrameLayoutParams alloc] initWithWidth:ULKLayoutParamsSizeMatchParent height:ULKLayoutParamsSizeMatchParent];
-}
-
 -(ULKLayoutParams *)ulk_generateLayoutParamsFromLayoutParams:(ULKLayoutParams *)layoutParams {
     return [[ULKFrameLayoutParams alloc] initWithLayoutParams:layoutParams];
 }

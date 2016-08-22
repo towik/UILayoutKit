@@ -133,13 +133,6 @@
     return [layoutParams isKindOfClass:[ULKLayoutParams class]];
 }
 
-- (ULKLayoutParams *)ulk_generateDefaultLayoutParams {
-    ULKLayoutParams *lp = [[ULKLayoutParams alloc] initWithWidth:ULKLayoutParamsSizeMatchParent height:ULKLayoutParamsSizeMatchParent];
-    lp.width = ULKLayoutParamsSizeMatchParent;
-    lp.height = ULKLayoutParamsSizeMatchParent;
-    return lp;
-}
-
 -(ULKLayoutParams *)ulk_generateLayoutParamsFromLayoutParams:(ULKLayoutParams *)layoutParams {
     return [[ULKLayoutParams alloc] initWithLayoutParams:layoutParams];
 }
