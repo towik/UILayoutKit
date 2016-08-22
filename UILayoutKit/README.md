@@ -1,7 +1,7 @@
 UILayoutKit 
 =============
-
-iOS 布局系统，包含框架布局和线性布局，支持 UILabel、UIButton 等原生控件的宽高设置为 "wrap"。
+UILayoutKit 是基于 **[iDroidLayout](https://github.com/tomquist/iDroidLayout)** 开发的。
+UILayoutKit 是一套 iOS 布局库，包含框架布局和线性布局，支持 UILabel、UIButton 等原生控件的宽高设置为 "wrap"。
 
 
 为什么需要它
