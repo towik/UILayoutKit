@@ -384,7 +384,9 @@
     
     // Check against our minimum height
     CGSize minSize = self.ulk_minSize;
+    CGSize maxSize = self.ulk_maxSize;
     heightSize = MAX(heightSize, minSize.height);
+    heightSize = MIN(heightSize, maxSize.height);
     
     // Reconcile our calculated size with the heightMeasureSpec
     ULKLayoutMeasuredDimension heightSizeAndState = [UIView ulk_resolveSizeAndStateForSize:heightSize measureSpec:heightMeasureSpec childMeasureState:ULKLayoutMeasuredStateNone];
@@ -498,6 +500,7 @@
     
     // Check against our minimum width
     maxWidth = MAX(maxWidth, minSize.width);
+    maxWidth = MIN(maxWidth, maxSize.width);
     
     ULKLayoutMeasuredSize measuredSize = ULKLayoutMeasuredSizeMake([UIView ulk_resolveSizeAndStateForSize:maxWidth measureSpec:widthMeasureSpec childMeasureState:childState.widthState] , heightSizeAndState);
     [self ulk_setMeasuredDimensionSize:measuredSize];
@@ -740,7 +743,9 @@
     
     // Check against our minimum width
     CGSize minSize = self.ulk_minSize;
+    CGSize maxSize = self.ulk_maxSize;
     widthSize = MAX(widthSize, minSize.width);
+    widthSize = MIN(widthSize, maxSize.width);
     
     // Reconcile our calculated size with the widthMeasureSpec
     ULKLayoutMeasuredDimension widthSizeAndState = [UIView ulk_resolveSizeAndStateForSize:widthSize measureSpec:widthMeasureSpec childMeasureState:ULKLayoutMeasuredStateNone];
@@ -892,6 +897,7 @@
     
     // Check against our minimum height
     maxHeight = MAX(maxHeight, minSize.height);
+    maxHeight = MIN(maxHeight, maxSize.height);
     
     widthSizeAndState.state |= childState.widthState;
     ULKLayoutMeasuredSize measuredSize = ULKLayoutMeasuredSizeMake(widthSizeAndState, [UIView ulk_resolveSizeAndStateForSize:maxHeight measureSpec:heightMeasureSpec childMeasureState:childState.heightState]);

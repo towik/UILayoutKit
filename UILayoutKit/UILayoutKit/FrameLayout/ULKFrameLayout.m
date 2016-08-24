@@ -134,8 +134,11 @@ static char matchParentChildrenKey;
     
     // Check against our minimum height and width
     CGSize minSize = measureView.ulk_minSize;
+    CGSize maxSize = measureView.ulk_maxSize;
     maxHeight = MAX(maxHeight, minSize.height);
+    maxHeight = MIN(maxHeight, maxSize.height);
     maxWidth = MAX(maxWidth, minSize.width);
+    maxWidth = MIN(maxWidth, maxSize.width);
     
     // Check against our foreground's minimum height and width
     ULKLayoutMeasuredSize measuredSize = ULKLayoutMeasuredSizeMake([UIView ulk_resolveSizeAndStateForSize:maxWidth measureSpec:widthMeasureSpec childMeasureState:childState.widthState], [UIView ulk_resolveSizeAndStateForSize:maxHeight measureSpec:heightMeasureSpec childMeasureState:childState.heightState]);

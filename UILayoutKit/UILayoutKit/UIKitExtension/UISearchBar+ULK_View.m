@@ -42,6 +42,7 @@
             break;
     }
     measuredSize.width.size = MAX(measuredSize.width.size, self.ulk_minSize.width);
+    measuredSize.width.size = MIN(measuredSize.width.size, self.ulk_maxSize.width);
     
     [self ulk_setMeasuredDimensionSize:measuredSize];
 }

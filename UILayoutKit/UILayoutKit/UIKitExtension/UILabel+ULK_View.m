@@ -86,7 +86,9 @@
         }
     }
     CGSize minSize = self.ulk_minSize;
+    CGSize maxSize = self.ulk_maxSize;
     measuredSize.width.size = MAX(measuredSize.width.size, minSize.width);
+    measuredSize.width.size = MIN(measuredSize.width.size, maxSize.width);
     
     if (heightMode == ULKLayoutMeasureSpecModeExactly) {
         measuredSize.height.size = heightSize;
@@ -103,6 +105,7 @@
         }
     }
     measuredSize.height.size = MAX(measuredSize.height.size, minSize.height);
+    measuredSize.height.size = MIN(measuredSize.height.size, maxSize.height);
     
     [self ulk_setMeasuredDimensionSize:measuredSize];
 }

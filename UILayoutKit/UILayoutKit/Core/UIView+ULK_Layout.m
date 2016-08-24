@@ -47,6 +47,7 @@
 
 static char identifierKey;
 static char minSizeKey;
+static char maxSizeKey;
 static char measuredSizeKey;
 static char isLayoutRequestedKey;
 static char visibilityKey;
@@ -200,9 +201,20 @@ static char visibilityKey;
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (CGSize)ulk_suggestedMinimumSize {
-    CGSize size = self.ulk_minSize;
-    return size;
+- (CGSize)ulk_maxSize {
+    CGSize ret = CGSizeZero;
+    NSValue *value = objc_getAssociatedObject(self, &maxSizeKey);
+    [value getValue:&ret];
+    return ret;
+    
+}
+
+- (void)setUlk_maxSize:(CGSize)size {
+    NSValue *v = [[NSValue alloc] initWithBytes:&size objCType:@encode(CGSize)];
+    objc_setAssociatedObject(self,
+                             &maxSizeKey,
+                             v,
+                             OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (void)ulk_setMeasuredDimensionSize:(ULKLayoutMeasuredSize)size {
@@ -239,7 +251,7 @@ static char visibilityKey;
 }
 
 - (void)ulk_onMeasureWithWidthMeasureSpec:(ULKLayoutMeasureSpec)widthMeasureSpec heightMeasureSpec:(ULKLayoutMeasureSpec)heightMeasureSpec {
-    CGSize minSize = [self ulk_suggestedMinimumSize];
+    CGSize minSize = self.ulk_minSize;
     ULKLayoutMeasuredSize size;
     size.width = [self ulk_defaultSizeForSize:minSize.width measureSpec:widthMeasureSpec];
     size.height = [self ulk_defaultSizeForSize:minSize.height measureSpec:heightMeasureSpec];
