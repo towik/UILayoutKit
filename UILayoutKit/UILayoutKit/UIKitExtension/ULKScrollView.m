@@ -9,11 +9,11 @@
 //  Copyright (c) 2016 towik. All rights reserved.
 //
 
-#import "UIScrollView+ULK_ViewGroup.h"
+#import "ULKScrollView.h"
 #import "UIView+ULK_Layout.h"
 
 
-@implementation UIScrollView (ULK_ViewGroup)
+@implementation ULKScrollView
 
 - (void)layoutSubviews {
     [super layoutSubviews];
@@ -68,11 +68,7 @@
 }
 
 - (BOOL)ulk_isViewGroup {
-    BOOL ret = FALSE;
-    if ([self class] == [UIScrollView class] || [NSStringFromClass([self class]) hasSuffix:@"UIScrollView"]) {
-        ret = TRUE;
-    }
-    return ret;
+    return TRUE;
 }
 
 @end

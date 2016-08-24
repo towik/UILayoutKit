@@ -13,6 +13,6 @@
 #import "ULKFrameLayout.h"
 
 
-@interface UIScrollView (ULK_ViewGroup)
+@interface ULKScrollView : UIScrollView
 
 @end
