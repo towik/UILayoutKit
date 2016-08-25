@@ -1064,13 +1064,6 @@
             }
             
             switch (gravity & VERTICAL_GRAVITY_MASK) {
-                case ULKGravityTop:
-                    childTop = padding.top + lpMargin.top;
-                    if (childBaseline != -1) {
-                        childTop += _maxAscent[MAX_ASCENT_DESCENT_INDEX_TOP] - childBaseline;
-                    }
-                    break;
-                    
                 case ULKGravityCenterVertical:
                     childTop = padding.top + ((childSpace - childSize.height) / 2) + lpMargin.top - lpMargin.bottom;
                     break;
@@ -1082,8 +1075,12 @@
                         childTop -= (_maxDescent[MAX_ASCENT_DESCENT_INDEX_BOTTOM] - descent);
                     }
                     break;
+                case ULKGravityTop:
                 default:
-                    childTop = padding.top;
+                    childTop = padding.top + lpMargin.top;
+                    if (childBaseline != -1) {
+                        childTop += _maxAscent[MAX_ASCENT_DESCENT_INDEX_TOP] - childBaseline;
+                    }
                     break;
             }
             
