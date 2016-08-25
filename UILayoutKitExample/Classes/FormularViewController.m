@@ -14,7 +14,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIScrollView *scrollView = [UIScrollView new];
+    ULKScrollView *scrollView = [ULKScrollView new];
     scrollView.backgroundColor = [UIColor whiteColor];
     self.view = scrollView;
     
