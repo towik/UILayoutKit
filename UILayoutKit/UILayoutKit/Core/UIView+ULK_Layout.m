@@ -202,7 +202,7 @@ static char visibilityKey;
 }
 
 - (CGSize)ulk_maxSize {
-    CGSize ret = CGSizeZero;
+    CGSize ret = CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX);
     NSValue *value = objc_getAssociatedObject(self, &maxSizeKey);
     [value getValue:&ret];
     return ret;
