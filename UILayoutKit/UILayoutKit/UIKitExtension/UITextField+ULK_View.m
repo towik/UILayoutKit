@@ -36,6 +36,7 @@
         }
     }
     CGSize minSize = self.ulk_minSize;
+    CGSize maxSize = self.ulk_maxSize;
     measuredSize.width.size = MAX(measuredSize.width.size, minSize.width);
     measuredSize.width.size = MIN(measuredSize.width.size, maxSize.width);
     

@@ -35,6 +35,7 @@
 		2B5DEBA21D3F963F00E13C76 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 2B5DEAE11D3F963F00E13C76 /* LICENSE */; };
 		2B5DEBA31D3F963F00E13C76 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 2B5DEAE21D3F963F00E13C76 /* README.md */; };
 		2B5DEBEC1D3F964000E13C76 /* UILayoutKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 2B5DEB971D3F963F00E13C76 /* UILayoutKit.podspec */; };
+		2B99EFB51D6E878400979CE1 /* ULKScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B99EFB41D6E878400979CE1 /* ULKScrollView.m */; };
 		2BAFD6311D6ADB630001DB7F /* UIView+ULK_Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFD6101D6ADB630001DB7F /* UIView+ULK_Layout.m */; };
 		2BAFD6321D6ADB630001DB7F /* ULKDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFD6121D6ADB630001DB7F /* ULKDefine.m */; };
 		2BAFD6331D6ADB630001DB7F /* ULKViewGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFD6141D6ADB630001DB7F /* ULKViewGroup.m */; };
@@ -44,7 +45,6 @@
 		2BAFD6371D6ADB630001DB7F /* UIImageView+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFD61F1D6ADB630001DB7F /* UIImageView+ULK_View.m */; };
 		2BAFD6381D6ADB630001DB7F /* UILabel+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFD6211D6ADB630001DB7F /* UILabel+ULK_View.m */; };
 		2BAFD6391D6ADB630001DB7F /* UINavigationBar+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFD6231D6ADB630001DB7F /* UINavigationBar+ULK_View.m */; };
-		2BAFD63A1D6ADB630001DB7F /* UIScrollView+ULK_ViewGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFD6251D6ADB630001DB7F /* UIScrollView+ULK_ViewGroup.m */; };
 		2BAFD63B1D6ADB630001DB7F /* UISearchBar+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFD6271D6ADB630001DB7F /* UISearchBar+ULK_View.m */; };
 		2BAFD63C1D6ADB630001DB7F /* UISwitch+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFD6291D6ADB630001DB7F /* UISwitch+ULK_View.m */; };
 		2BAFD63D1D6ADB630001DB7F /* UITextField+ULK_View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAFD62B1D6ADB630001DB7F /* UITextField+ULK_View.m */; };
@@ -85,6 +85,8 @@
 		2B5DEAE11D3F963F00E13C76 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		2B5DEAE21D3F963F00E13C76 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2B5DEB971D3F963F00E13C76 /* UILayoutKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UILayoutKit.podspec; sourceTree = "<group>"; };
+		2B99EFB31D6E878400979CE1 /* ULKScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKScrollView.h; sourceTree = "<group>"; };
+		2B99EFB41D6E878400979CE1 /* ULKScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ULKScrollView.m; sourceTree = "<group>"; };
 		2BAFD60F1D6ADB630001DB7F /* UIView+ULK_Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ULK_Layout.h"; sourceTree = "<group>"; };
 		2BAFD6101D6ADB630001DB7F /* UIView+ULK_Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ULK_Layout.m"; sourceTree = "<group>"; };
 		2BAFD6111D6ADB630001DB7F /* ULKDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ULKDefine.h; sourceTree = "<group>"; };
@@ -103,8 +105,6 @@
 		2BAFD6211D6ADB630001DB7F /* UILabel+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ULK_View.m"; sourceTree = "<group>"; };
 		2BAFD6221D6ADB630001DB7F /* UINavigationBar+ULK_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+ULK_View.h"; sourceTree = "<group>"; };
 		2BAFD6231D6ADB630001DB7F /* UINavigationBar+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+ULK_View.m"; sourceTree = "<group>"; };
-		2BAFD6241D6ADB630001DB7F /* UIScrollView+ULK_ViewGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+ULK_ViewGroup.h"; sourceTree = "<group>"; };
-		2BAFD6251D6ADB630001DB7F /* UIScrollView+ULK_ViewGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+ULK_ViewGroup.m"; sourceTree = "<group>"; };
 		2BAFD6261D6ADB630001DB7F /* UISearchBar+ULK_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+ULK_View.h"; sourceTree = "<group>"; };
 		2BAFD6271D6ADB630001DB7F /* UISearchBar+ULK_View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+ULK_View.m"; sourceTree = "<group>"; };
 		2BAFD6281D6ADB630001DB7F /* UISwitch+ULK_View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISwitch+ULK_View.h"; sourceTree = "<group>"; };
@@ -290,8 +290,6 @@
 				2BAFD6211D6ADB630001DB7F /* UILabel+ULK_View.m */,
 				2BAFD6221D6ADB630001DB7F /* UINavigationBar+ULK_View.h */,
 				2BAFD6231D6ADB630001DB7F /* UINavigationBar+ULK_View.m */,
-				2BAFD6241D6ADB630001DB7F /* UIScrollView+ULK_ViewGroup.h */,
-				2BAFD6251D6ADB630001DB7F /* UIScrollView+ULK_ViewGroup.m */,
 				2BAFD6261D6ADB630001DB7F /* UISearchBar+ULK_View.h */,
 				2BAFD6271D6ADB630001DB7F /* UISearchBar+ULK_View.m */,
 				2BAFD6281D6ADB630001DB7F /* UISwitch+ULK_View.h */,
@@ -302,6 +300,8 @@
 				2BAFD62D1D6ADB630001DB7F /* UITextView+ULK_View.m */,
 				2BAFD62E1D6ADB630001DB7F /* UIToolbar+ULK_View.h */,
 				2BAFD62F1D6ADB630001DB7F /* UIToolbar+ULK_View.m */,
+				2B99EFB31D6E878400979CE1 /* ULKScrollView.h */,
+				2B99EFB41D6E878400979CE1 /* ULKScrollView.m */,
 			);
 			path = UIKitExtension;
 			sourceTree = "<group>";
@@ -491,6 +491,7 @@
 				2BAFD63B1D6ADB630001DB7F /* UISearchBar+ULK_View.m in Sources */,
 				2B1ACC6F1D6081DC00303BFC /* ULKAppDelegate.m in Sources */,
 				2BAFD6321D6ADB630001DB7F /* ULKDefine.m in Sources */,
+				2B99EFB51D6E878400979CE1 /* ULKScrollView.m in Sources */,
 				2BAFD6351D6ADB630001DB7F /* ULKLinearLayout.m in Sources */,
 				2B5DEBA31D3F963F00E13C76 /* README.md in Sources */,
 				2BAFD6311D6ADB630001DB7F /* UIView+ULK_Layout.m in Sources */,
@@ -500,7 +501,6 @@
 				2BAFD63D1D6ADB630001DB7F /* UITextField+ULK_View.m in Sources */,
 				2B1ACC5B1D6081DC00303BFC /* main.m in Sources */,
 				2BAFD6361D6ADB630001DB7F /* UIButton+ULK_View.m in Sources */,
-				2BAFD63A1D6ADB630001DB7F /* UIScrollView+ULK_ViewGroup.m in Sources */,
 				2BAFD63C1D6ADB630001DB7F /* UISwitch+ULK_View.m in Sources */,
 				2BAFD63E1D6ADB630001DB7F /* UITextView+ULK_View.m in Sources */,
 			);
