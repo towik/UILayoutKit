@@ -27,6 +27,9 @@
             ULKFrameLayoutParams *otherLP = (ULKFrameLayoutParams *)layoutParams;
             self.gravity = otherLP.gravity;
         }
+        else {
+            self.gravity = ULKGravityLeft | ULKGravityTop;
+        }
     }
     return self;
 }
