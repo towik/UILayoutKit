@@ -24,14 +24,12 @@
     ULKLayoutMeasuredSize measuredSize;
     measuredSize.width.state = ULKLayoutMeasuredStateNone;
     measuredSize.height.state = ULKLayoutMeasuredStateNone;
-    UIEdgeInsets padding = self.contentEdgeInsets;
-    
     
     if (widthMode == ULKLayoutMeasureSpecModeExactly) {
         measuredSize.width.size = widthSize;
     } else {
-        CGSize size = [self.currentTitle sizeWithFont:self.titleLabel.font];
-        measuredSize.width.size = ceilf(size.width) + padding.left + padding.right;
+        CGSize size = [self sizeThatFits:CGSizeZero];
+        measuredSize.width.size = ceilf(size.width);
         if (widthMode == ULKLayoutMeasureSpecModeAtMost) {
             measuredSize.width.size = MIN(measuredSize.width.size, widthSize);
         }
@@ -44,8 +42,8 @@
     if (heightMode == ULKLayoutMeasureSpecModeExactly) {
         measuredSize.height.size = heightSize;
     } else {
-        CGSize size = [self.currentTitle sizeWithFont:self.titleLabel.font constrainedToSize:CGSizeMake(measuredSize.width.size - padding.left - padding.right, CGFLOAT_MAX) lineBreakMode:self.titleLabel.lineBreakMode];
-        measuredSize.height.size = ceilf(size.height) + padding.top + padding.bottom;
+        CGSize size = [self sizeThatFits:CGSizeMake(measuredSize.width.size, 0)];
+        measuredSize.height.size = ceilf(size.height);
         if (heightMode == ULKLayoutMeasureSpecModeAtMost) {
             measuredSize.height.size = MIN(measuredSize.height.size, heightSize);
         }
