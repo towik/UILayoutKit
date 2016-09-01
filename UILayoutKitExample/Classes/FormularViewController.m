@@ -14,15 +14,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    ULKScrollView *scrollView = [ULKScrollView new];
+    ULKScrollView *scrollView = [[ULKScrollView alloc] initWithFrame:self.view.bounds];
     scrollView.backgroundColor = [UIColor whiteColor];
-    self.view = scrollView;
+    scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    [self.view addSubview:scrollView];
     
-    ULKLinearLayout *linearLayout = [ULKLinearLayout new];
+    ULKLinearLayout *linearLayout = [ULKLinearLayout new]; //[[ULKLinearLayout alloc] initWithFrame:self.view.bounds];
     linearLayout.orientation = LinearLayoutOrientationVertical;
+//    linearLayout.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [scrollView addSubview:linearLayout];
 
     ULKLinearLayout *linearLayout1 = [ULKLinearLayout new];
+    linearLayout1.ulk_layoutGravity = ULKGravityRight | ULKGravityTop;
     linearLayout1.orientation = LinearLayoutOrientationVertical;
     linearLayout1.ulk_layoutHeight = 0;
     linearLayout1.ulk_layoutWeight = 1;
@@ -45,13 +48,22 @@
     [linearLayout addSubview:linearLayout2];
     UILabel *label21 = [UILabel new];
     label21.text = @"测试21";
+    label21.ulk_layoutMargin = UIEdgeInsetsMake(20, 0, 0, 0);
     [linearLayout2 addSubview:label21];
     UILabel *label22 = [UILabel new];
     label22.text = @"测试22";
     label22.ulk_layoutMargin = UIEdgeInsetsMake(20, 10, 30, 20);
     [linearLayout2 addSubview:label22];
-    UILabel *label23 = [UILabel new];
-    label23.text = @"测试23";
+    UIButton *label23 = [UIButton new];
+    label23.titleLabel.numberOfLines = 0;
+//    [label23 setTitle:@"测试说的方法是发发撒发撒发发沙发舒服撒发生发放撒" forState:UIControlStateNormal];
+    [label23 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//    label23.ulk_layoutWidth = 150;
+//    label23.ulk_layoutHeight = 150;
+//    label23.contentEdgeInsets = UIEdgeInsetsMake(0, 30, 0, 0);
+//    label23.titleEdgeInsets = UIEdgeInsetsMake(0, 30, 0, 0);
+    label23.backgroundColor = [UIColor blackColor];
+    [label23 setImage:[UIImage imageNamed:@"icon_customer_avatar"] forState:UIControlStateNormal];
     [linearLayout2 addSubview:label23];
 
     ULKFrameLayout *frameLayout = [ULKFrameLayout new];
@@ -60,7 +72,6 @@
     [linearLayout addSubview:frameLayout];
     UILabel *label31 = [UILabel new];
     label31.text = @"测试31";
-    label31.ulk_layoutGravity = ULKGravityLeft | ULKGravityTop;
     label31.ulk_layoutMargin = UIEdgeInsetsMake(20, 10, 0, 0);
     [frameLayout addSubview:label31];
     UILabel *label32 = [UILabel new];
@@ -78,10 +89,9 @@
     label34.ulk_layoutGravity = ULKGravityRight | ULKGravityBottom;
     label34.ulk_layoutMargin = UIEdgeInsetsMake(0, 0, 10, 20);
     [frameLayout addSubview:label34];
-    UILabel *label35 = [UILabel new];
-    label35.text = @"测试35";
+    UIImageView *label35 = [UIImageView new];
+    label35.image = [UIImage imageNamed:@"icon_customer_avatar"];
     label35.ulk_layoutGravity = ULKGravityCenter;
-    label35.ulk_layoutMargin = UIEdgeInsetsMake(0, 0, 0, 0);
     [frameLayout addSubview:label35];
     
 //    [self updateAndroidStatus];
