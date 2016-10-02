@@ -67,57 +67,44 @@
 
 @implementation ULKFrameLayout
 
-static char matchParentChildrenKey;
-
-
-+ (void)setMatchParentChildren:(UIView *)measureView list:(NSMutableArray *)list {
-    objc_setAssociatedObject(measureView,
-                             &matchParentChildrenKey,
+- (void)setMatchParentChildren:(NSMutableArray *)list {
+    objc_setAssociatedObject(self,
+                             @selector(matchParentChildren),
                              list,
                              OBJC_ASSOCIATION_RETAIN);
 }
 
-+ (NSMutableArray *)matchParentChildren:(UIView *)measureView {
-    NSMutableArray *list = objc_getAssociatedObject(measureView, &matchParentChildrenKey);
+- (NSMutableArray *)matchParentChildren {
+    NSMutableArray *list = objc_getAssociatedObject(self, @selector(matchParentChildren));
     if (list == nil) {
-        list = [NSMutableArray arrayWithCapacity:[measureView.subviews count]];
-        [ULKFrameLayout setMatchParentChildren:measureView list:list];
+        list = [NSMutableArray arrayWithCapacity:[self.subviews count]];
+        [self setMatchParentChildren:list];
     }
     return list;
 }
 
 - (void)ulk_onMeasureWithWidthMeasureSpec:(ULKLayoutMeasureSpec)widthMeasureSpec heightMeasureSpec:(ULKLayoutMeasureSpec)heightMeasureSpec {
-    [ULKFrameLayout onFrameLayoutMeasure:self widthMeasureSpec:widthMeasureSpec heightMeasureSpec:heightMeasureSpec];
-}
-
-- (void)ulk_onLayoutWithFrame:(CGRect)frame didFrameChange:(BOOL)changed {
-    [ULKFrameLayout onFrameLayoutLayout:self frame:frame didFrameChange:changed];
-}
-
-
-+ (void)onFrameLayoutMeasure:(ULKViewGroup *)measureView widthMeasureSpec:(ULKLayoutMeasureSpec)widthMeasureSpec
-                             heightMeasureSpec:(ULKLayoutMeasureSpec)heightMeasureSpec {
-    NSInteger count = [measureView.subviews count];
-
+    NSInteger count = [self.subviews count];
+    
     BOOL measureMatchParentChildren = widthMeasureSpec.mode != ULKLayoutMeasureSpecModeExactly || heightMeasureSpec.mode != ULKLayoutMeasureSpecModeExactly;
-    NSMutableArray *matchParentChildren = [ULKFrameLayout matchParentChildren:measureView];
+    NSMutableArray *matchParentChildren = [self matchParentChildren];
     [matchParentChildren removeAllObjects];
     
     CGFloat maxHeight = 0;
     CGFloat maxWidth = 0;
-    UIEdgeInsets padding = measureView.ulk_padding;
+    UIEdgeInsets padding = self.ulk_padding;
     ULKLayoutMeasuredWidthHeightState childState;
     childState.heightState = ULKLayoutMeasuredStateNone;
     childState.widthState = ULKLayoutMeasuredStateNone;
     
     for (int i = 0; i < count; i++) {
-        UIView *child = (measureView.subviews)[i];
+        UIView *child = (self.subviews)[i];
         if ([NSStringFromClass([child class]) isEqualToString:@"UIWebDocumentView"]) {
             continue;
         }
         
         if (child.ulk_visibility != ULKViewVisibilityGone) {
-            [measureView ulk_measureChildWithMargins:child parentWidthMeasureSpec:widthMeasureSpec widthUsed:0 parentHeightMeasureSpec:heightMeasureSpec heightUsed:0];
+            [self ulk_measureChildWithMargins:child parentWidthMeasureSpec:widthMeasureSpec widthUsed:0 parentHeightMeasureSpec:heightMeasureSpec heightUsed:0];
             ULKFrameLayoutParams *lp = (ULKFrameLayoutParams *)child.ulk_layoutParams;
             UIEdgeInsets lpMargin = lp.margin;
             maxWidth = MAX(maxWidth, child.ulk_measuredSize.width + lpMargin.left + lpMargin.right);
@@ -136,8 +123,8 @@ static char matchParentChildrenKey;
     maxHeight += padding.top + padding.bottom;
     
     // Check against our minimum height and width
-    CGSize minSize = measureView.ulk_minSize;
-    CGSize maxSize = measureView.ulk_maxSize;
+    CGSize minSize = self.ulk_minSize;
+    CGSize maxSize = self.ulk_maxSize;
     maxHeight = MAX(maxHeight, minSize.height);
     maxHeight = MIN(maxHeight, maxSize.height);
     maxWidth = MAX(maxWidth, minSize.width);
@@ -145,7 +132,7 @@ static char matchParentChildrenKey;
     
     // Check against our foreground's minimum height and width
     ULKLayoutMeasuredSize measuredSize = ULKLayoutMeasuredSizeMake([UIView ulk_resolveSizeAndStateForSize:maxWidth measureSpec:widthMeasureSpec childMeasureState:childState.widthState], [UIView ulk_resolveSizeAndStateForSize:maxHeight measureSpec:heightMeasureSpec childMeasureState:childState.heightState]);
-    [measureView ulk_setMeasuredDimensionSize:measuredSize];
+    [self ulk_setMeasuredDimensionSize:measuredSize];
     
     count = [matchParentChildren count];
     if (count > 1) {
@@ -162,17 +149,17 @@ static char matchParentChildrenKey;
             ULKLayoutMeasureSpec childHeightMeasureSpec;
             
             if (lp.width == ULKLayoutParamsSizeMatchParent) {
-                childWidthMeasureSpec.size = measureView.ulk_measuredSize.width - padding.left - padding.right - lpMargin.left - lpMargin.right;
+                childWidthMeasureSpec.size = self.ulk_measuredSize.width - padding.left - padding.right - lpMargin.left - lpMargin.right;
                 childWidthMeasureSpec.mode = ULKLayoutMeasureSpecModeExactly;
             } else {
-                childWidthMeasureSpec = [measureView ulk_childMeasureSpecWithMeasureSpec:widthMeasureSpec padding:(padding.left + padding.right + lpMargin.left + lpMargin.right) childDimension:lp.width];
+                childWidthMeasureSpec = [self ulk_childMeasureSpecWithMeasureSpec:widthMeasureSpec padding:(padding.left + padding.right + lpMargin.left + lpMargin.right) childDimension:lp.width];
             }
             
             if (lp.height == ULKLayoutParamsSizeMatchParent) {
-                childHeightMeasureSpec.size = measureView.ulk_measuredSize.height - padding.top - padding.bottom - lpMargin.top - lpMargin.bottom;
+                childHeightMeasureSpec.size = self.ulk_measuredSize.height - padding.top - padding.bottom - lpMargin.top - lpMargin.bottom;
                 childHeightMeasureSpec.mode = ULKLayoutMeasureSpecModeExactly;
             } else {
-                childHeightMeasureSpec = [measureView ulk_childMeasureSpecWithMeasureSpec:heightMeasureSpec padding:(padding.top + padding.bottom + lpMargin.top + lpMargin.bottom) childDimension:lp.height];
+                childHeightMeasureSpec = [self ulk_childMeasureSpecWithMeasureSpec:heightMeasureSpec padding:(padding.top + padding.bottom + lpMargin.top + lpMargin.bottom) childDimension:lp.height];
             }
             [child ulk_measureWithWidthMeasureSpec:childWidthMeasureSpec heightMeasureSpec:childHeightMeasureSpec];
         }
@@ -198,12 +185,14 @@ static char matchParentChildrenKey;
      [child ulk_measureWithWidthMeasureSpec:childWidthMeasureSpec heightMeasureSpec:childHeightMeasureSpec];
      }
      }*/
+
+
 }
 
-+ (CGSize)onFrameLayoutLayout:(ULKViewGroup *)measureView frame:(CGRect)frame didFrameChange:(BOOL)changed {
-    NSInteger count = [measureView.subviews count];
+- (void)ulk_onLayoutWithFrame:(CGRect)frame didFrameChange:(BOOL)changed {
+    NSInteger count = [self.subviews count];
     
-    UIEdgeInsets padding = measureView.ulk_padding;
+    UIEdgeInsets padding = self.ulk_padding;
     CGFloat parentLeft = padding.left;
     CGFloat parentRight = frame.size.width - padding.right;
     
@@ -212,7 +201,7 @@ static char matchParentChildrenKey;
     CGFloat maxX = 0;
     CGFloat maxY = 0;
     for (int i = 0; i < count; i++) {
-        UIView *child = (measureView.subviews)[i];
+        UIView *child = (self.subviews)[i];
         
         if (child.ulk_visibility != ULKViewVisibilityGone && ![NSStringFromClass([child class]) isEqualToString:@"UIWebDocumentView"]) {
             ULKFrameLayoutParams *lp = (ULKFrameLayoutParams *)child.ulk_layoutParams;
@@ -233,13 +222,13 @@ static char matchParentChildrenKey;
             ULKGravity horizontalGravity = gravity & HORIZONTAL_GRAVITY_MASK;
             
             switch (horizontalGravity) {
-                case ULKGravityLeft:
+                    case ULKGravityLeft:
                     childLeft = parentLeft + lpMargin.left;
                     break;
-                case ULKGravityCenterHorizontal:
+                    case ULKGravityCenterHorizontal:
                     childLeft = parentLeft + (parentRight - parentLeft - width) / 2 + lpMargin.left - lpMargin.right;
                     break;
-                case ULKGravityRight:
+                    case ULKGravityRight:
                     childLeft = parentRight - width - lpMargin.right;
                     break;
                 default:
@@ -247,13 +236,13 @@ static char matchParentChildrenKey;
             }
             
             switch (verticalGravity) {
-                case ULKGravityTop:
+                    case ULKGravityTop:
                     childTop = parentTop + lpMargin.top;
                     break;
-                case ULKGravityCenterVertical:
+                    case ULKGravityCenterVertical:
                     childTop = parentTop + (parentBottom - parentTop - height) / 2 + lpMargin.top - lpMargin.bottom;
                     break;
-                case ULKGravityBottom:
+                    case ULKGravityBottom:
                     childTop = parentBottom - height - lpMargin.bottom;
                     break;
                 default:
@@ -266,9 +255,9 @@ static char matchParentChildrenKey;
         }
     }
     
-    return CGSizeMake(maxX + padding.right, maxY + padding.bottom);
+//    return CGSizeMake(maxX + padding.right, maxY + padding.bottom);
+    
 }
-
 
 - (BOOL)ulk_checkLayoutParams:(ULKLayoutParams *)layoutParams {
     return [layoutParams isKindOfClass:[ULKFrameLayoutParams class]];

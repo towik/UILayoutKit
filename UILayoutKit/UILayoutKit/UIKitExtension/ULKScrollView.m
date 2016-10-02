@@ -25,9 +25,7 @@
         heightMeasureSpec.size = self.frame.size.height;
         widthMeasureSpec.mode = ULKLayoutMeasureSpecModeExactly;
         heightMeasureSpec.mode = ULKLayoutMeasureSpecModeExactly;
-        if (!self.ulk_hadMeasured) {
-            [self ulk_measureWithWidthMeasureSpec:widthMeasureSpec heightMeasureSpec:heightMeasureSpec];
-        }
+        [self ulk_measureWithWidthMeasureSpec:widthMeasureSpec heightMeasureSpec:heightMeasureSpec];
         [self ulk_layoutWithFrame:self.frame];
     }
 }

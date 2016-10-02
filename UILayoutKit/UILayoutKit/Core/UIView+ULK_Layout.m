@@ -45,13 +45,6 @@
 
 @implementation UIView (ULK_Layout)
 
-static char identifierKey;
-static char minSizeKey;
-static char maxSizeKey;
-static char measuredSizeKey;
-static char isLayoutRequestedKey;
-static char visibilityKey;
-
 - (ULKLayoutMeasuredDimension)ulk_defaultSizeForSize:(CGFloat)size measureSpec:(ULKLayoutMeasureSpec)measureSpec {
     CGFloat result = size;
     ULKLayoutMeasureSpecMode specMode = measureSpec.mode;
@@ -117,7 +110,7 @@ static char visibilityKey;
 
 - (void)setUlk_identifier:(NSString *)identifier {
     objc_setAssociatedObject(self,
-                             &identifierKey,
+                             @selector(ulk_identifier),
                              identifier,
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     static BOOL hasPixateFreestyle;
@@ -131,7 +124,7 @@ static char visibilityKey;
 }
 
 - (NSString *)ulk_identifier {
-    return objc_getAssociatedObject(self, &identifierKey);
+    return objc_getAssociatedObject(self, @selector(ulk_identifier));
 }
 
 - (void)setUlk_visibility:(ULKViewVisibility)visibility {
@@ -166,7 +159,7 @@ static char visibilityKey;
     }
 
     objc_setAssociatedObject(self,
-                             &visibilityKey,
+                             @selector(ulk_visibility),
                              newVisibilityObj,
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     if ((curVisibility != visibility) && (curVisibility == ULKViewVisibilityGone || visibility == ULKViewVisibilityGone)) {
@@ -176,7 +169,7 @@ static char visibilityKey;
 
 - (ULKViewVisibility)ulk_visibility {
     ULKViewVisibility visibility = ULKViewVisibilityVisible;
-    NSValue *value = objc_getAssociatedObject(self, &visibilityKey);
+    NSValue *value = objc_getAssociatedObject(self, @selector(ulk_visibility));
     [value getValue:&visibility];
     if (visibility == ULKViewVisibilityVisible && self.isHidden) {
         // Visibility has been set independently
@@ -187,7 +180,7 @@ static char visibilityKey;
 
 - (CGSize)ulk_minSize {
     CGSize ret = CGSizeZero;
-    NSValue *value = objc_getAssociatedObject(self, &minSizeKey);
+    NSValue *value = objc_getAssociatedObject(self, @selector(ulk_minSize));
     [value getValue:&ret];
     return ret;
 
@@ -196,14 +189,14 @@ static char visibilityKey;
 - (void)setUlk_minSize:(CGSize)size {
     NSValue *v = [[NSValue alloc] initWithBytes:&size objCType:@encode(CGSize)];
     objc_setAssociatedObject(self,
-                             &minSizeKey,
+                             @selector(ulk_minSize),
                              v,
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (CGSize)ulk_maxSize {
     CGSize ret = CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX);
-    NSValue *value = objc_getAssociatedObject(self, &maxSizeKey);
+    NSValue *value = objc_getAssociatedObject(self, @selector(ulk_maxSize));
     [value getValue:&ret];
     return ret;
     
@@ -212,7 +205,7 @@ static char visibilityKey;
 - (void)setUlk_maxSize:(CGSize)size {
     NSValue *v = [[NSValue alloc] initWithBytes:&size objCType:@encode(CGSize)];
     objc_setAssociatedObject(self,
-                             &maxSizeKey,
+                             @selector(ulk_maxSize),
                              v,
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
@@ -220,22 +213,19 @@ static char visibilityKey;
 - (void)ulk_setMeasuredDimensionSize:(ULKLayoutMeasuredSize)size {
     NSValue *value = [[NSValue alloc] initWithBytes:&size objCType:@encode(ULKLayoutMeasuredSize)];
     objc_setAssociatedObject(self,
-                             &measuredSizeKey,
+                             @selector(ulk_measuredDimensionSize),
                              value,
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (void)ulk_clearMeasuredDimensionSize
-{
-    objc_setAssociatedObject(self,
-                             &measuredSizeKey,
-                             nil,
-                             OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
 - (ULKLayoutMeasuredSize)ulk_measuredDimensionSize {
-    NSValue *value = objc_getAssociatedObject(self, &measuredSizeKey);
+    NSValue *value = objc_getAssociatedObject(self, @selector(ulk_measuredDimensionSize));
     ULKLayoutMeasuredSize ret;
+    ULKLayoutMeasuredDimension dimension;
+    dimension.size = CGFLOAT_MAX;
+    dimension.state = ULKLayoutMeasuredStateNone;
+    ret.width = dimension;
+    ret.height = dimension;
     [value getValue:&ret];
     return ret;
 }
@@ -245,9 +235,51 @@ static char visibilityKey;
     return CGSizeMake(size.width.size, size.height.size);
 }
 
+- (void)ulk_clearMeasuredDimensionSize
+{
+    objc_setAssociatedObject(self,
+                             @selector(ulk_measuredDimensionSize),
+                             nil,
+                             OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
 - (BOOL)ulk_hadMeasured {
-    NSValue *value = objc_getAssociatedObject(self, &measuredSizeKey);
+    NSValue *value = objc_getAssociatedObject(self, @selector(ulk_measuredDimensionSize));
     return value != nil;
+}
+
+- (void)ulk_setWidthMeasureSpec:(ULKLayoutMeasureSpec)widthMeasureSpec {
+    NSValue *value = [[NSValue alloc] initWithBytes:&widthMeasureSpec objCType:@encode(ULKLayoutMeasureSpec)];
+    objc_setAssociatedObject(self,
+                             @selector(ulk_widthMeasureSpec),
+                             value,
+                             OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (ULKLayoutMeasureSpec)ulk_widthMeasureSpec {
+    NSValue *value = objc_getAssociatedObject(self, @selector(ulk_widthMeasureSpec));
+    ULKLayoutMeasureSpec ret;
+    ret.size = CGFLOAT_MAX;
+    ret.mode = ULKLayoutMeasureSpecModeUnspecified;
+    [value getValue:&ret];
+    return ret;
+}
+
+- (void)ulk_setHeightMeasureSpec:(ULKLayoutMeasureSpec)heightMeasureSpec {
+    NSValue *value = [[NSValue alloc] initWithBytes:&heightMeasureSpec objCType:@encode(ULKLayoutMeasureSpec)];
+    objc_setAssociatedObject(self,
+                             @selector(ulk_heightMeasureSpec),
+                             value,
+                             OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (ULKLayoutMeasureSpec)ulk_heightMeasureSpec {
+    NSValue *value = objc_getAssociatedObject(self, @selector(ulk_heightMeasureSpec));
+    ULKLayoutMeasureSpec ret;
+    ret.size = CGFLOAT_MAX;
+    ret.mode = ULKLayoutMeasureSpecModeUnspecified;
+    [value getValue:&ret];
+    return ret;
 }
 
 - (void)ulk_onMeasureWithWidthMeasureSpec:(ULKLayoutMeasureSpec)widthMeasureSpec heightMeasureSpec:(ULKLayoutMeasureSpec)heightMeasureSpec {
@@ -259,7 +291,25 @@ static char visibilityKey;
 }
 
 - (void)ulk_measureWithWidthMeasureSpec:(ULKLayoutMeasureSpec)widthMeasureSpec heightMeasureSpec:(ULKLayoutMeasureSpec)heightMeasureSpec {
-    [self ulk_onMeasureWithWidthMeasureSpec:widthMeasureSpec heightMeasureSpec:heightMeasureSpec];
+    ULKLayoutMeasureSpec oldWidthMeasureSpec = [self ulk_widthMeasureSpec];
+    ULKLayoutMeasureSpec oldHeightMeasureSpec = [self ulk_heightMeasureSpec];
+    if (![self ulk_hadMeasured]
+        || oldWidthMeasureSpec.mode != widthMeasureSpec.mode
+        || oldWidthMeasureSpec.size != widthMeasureSpec.size
+        || oldHeightMeasureSpec.mode != heightMeasureSpec.mode
+        || oldHeightMeasureSpec.size != heightMeasureSpec.size)
+    {
+        [self ulk_onMeasureWithWidthMeasureSpec:widthMeasureSpec heightMeasureSpec:heightMeasureSpec];
+    }
+
+    if (oldWidthMeasureSpec.mode != widthMeasureSpec.mode
+        || oldWidthMeasureSpec.size != widthMeasureSpec.size) {
+        [self ulk_setWidthMeasureSpec:widthMeasureSpec];
+    }
+    if (oldHeightMeasureSpec.mode != heightMeasureSpec.mode
+        || oldHeightMeasureSpec.size != heightMeasureSpec.size) {
+        [self ulk_setHeightMeasureSpec:heightMeasureSpec];
+    }
 }
 
 - (void)ulk_onLayoutWithFrame:(CGRect)frame didFrameChange:(BOOL)changed {
@@ -453,24 +503,6 @@ static char visibilityKey;
     [child ulk_measureWithWidthMeasureSpec:childWidthMeasureSpec heightMeasureSpec:childHeightMeasureSpec];
 }
 
-/**
- * Ask one of the children of this view to measure itself, taking into
- * account both the MeasureSpec requirements for this view and its padding.
- * The heavy lifting is done in getChildMeasureSpec.
- *
- * @param child The child to measure
- * @param parentWidthMeasureSpec The width requirements for this view
- * @param parentHeightMeasureSpec The height requirements for this view
- */
--(void)ulk_measureChild:(UIView *)child withParentWidthMeasureSpec:(ULKLayoutMeasureSpec)parentWidthMeasureSpec parentHeightMeasureSpec:(ULKLayoutMeasureSpec)parentHeightMeasureSpec {
-    ULKLayoutParams *lp = child.ulk_layoutParams;
-    //    UIEdgeInsets padding = self.ulk_padding;
-    UIEdgeInsets padding = UIEdgeInsetsZero;
-    ULKLayoutMeasureSpec childWidthMeasureSpec = [self ulk_childMeasureSpecWithMeasureSpec:parentWidthMeasureSpec padding:(padding.left + padding.right) childDimension:lp.width];
-    ULKLayoutMeasureSpec childHeightMeasureSpec = [self ulk_childMeasureSpecWithMeasureSpec:parentHeightMeasureSpec padding:(padding.top + padding.bottom) childDimension:lp.height];
-    [child ulk_measureWithWidthMeasureSpec:childWidthMeasureSpec heightMeasureSpec:childHeightMeasureSpec];
-}
-
 - (UIView *)ulk_findViewTraversal:(NSString *)identifier {
     if ([self.ulk_identifier isEqualToString:identifier]) {
         return self;
@@ -495,12 +527,9 @@ static char visibilityKey;
 
 @implementation UIView (ULKLayoutParams)
 
-static char layoutParamsKey;
-
-
 - (void)setUlk_layoutParams:(ULKLayoutParams *)layoutParams {
     objc_setAssociatedObject(self,
-                             &layoutParamsKey,
+                             @selector(ulk_layoutParams),
                              layoutParams,
                              OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     [self ulk_requestLayout];
@@ -508,7 +537,7 @@ static char layoutParamsKey;
 }
 
 - (ULKLayoutParams *)ulk_layoutParams {
-    ULKLayoutParams *layoutParams = objc_getAssociatedObject(self, &layoutParamsKey);
+    ULKLayoutParams *layoutParams = objc_getAssociatedObject(self, @selector(ulk_layoutParams));
     if (layoutParams == nil) {
         layoutParams = [self ulk_generateDefaultLayoutParams];
         if (layoutParams == nil) {

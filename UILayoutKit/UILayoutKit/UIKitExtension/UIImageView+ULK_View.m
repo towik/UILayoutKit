@@ -72,7 +72,7 @@
             break;
     }
     //if (widthMode == ULKLayoutMeasureSpecModeAtMost || widthMode == ULKLayoutMeasureSpecModeUnspecified) {
-    measuredSize.width.size = MIN(measuredSize.width.size, (imageSize.height>0.f?(measuredSize.height.size/imageSize.height) * imageSize.width:0.f));
+//    measuredSize.width.size = MIN(measuredSize.width.size, (imageSize.height>0.f?(measuredSize.height.size/imageSize.height) * imageSize.width:0.f));
     //}
     [self ulk_setMeasuredDimensionSize:measuredSize];
 }

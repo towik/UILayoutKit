@@ -224,10 +224,6 @@
     }
 }
 
-- (void)ulk_measureChild:(UIView *)child atIndex:(NSInteger)index beforeLayoutWithWidthMeasureSpec:(ULKLayoutMeasureSpec)widthMeasureSpec totalWidth:(CGFloat)totalWidth heightMeasureSpec:(ULKLayoutMeasureSpec)heightMeasureSpec totalHeight:(CGFloat)totalHeight {
-    [self ulk_measureChildWithMargins:child parentWidthMeasureSpec:widthMeasureSpec widthUsed:totalWidth parentHeightMeasureSpec:heightMeasureSpec heightUsed:totalHeight];
-}
-
 /**
  * Measures the children when the orientation of this LinearLayout is set
  * to {@link #VERTICAL}.
@@ -295,7 +291,7 @@
             // previous children have given a weight, then we allow it to
             // use all available space (and we will shrink things later
             // if needed).
-            [self ulk_measureChild:child atIndex:i beforeLayoutWithWidthMeasureSpec:widthMeasureSpec totalWidth:0 heightMeasureSpec:heightMeasureSpec totalHeight:(totalWeight == 0 ? _totalLength : 0)];
+            [self ulk_measureChildWithMargins:child parentWidthMeasureSpec:widthMeasureSpec widthUsed:0 parentHeightMeasureSpec:heightMeasureSpec heightUsed:(totalWeight == 0 ? _totalLength : 0)];
             
             if (oldHeight != CGFLOAT_MIN) {
                 lp.height = oldHeight;
@@ -632,7 +628,7 @@
             // previous children have given a weight, then we allow it to
             // use all available space (and we will shrink things later
             // if needed).
-            [self ulk_measureChild:child atIndex:i beforeLayoutWithWidthMeasureSpec:widthMeasureSpec totalWidth:(totalWeight == 0 ? _totalLength : 0) heightMeasureSpec:heightMeasureSpec totalHeight:0];
+            [self ulk_measureChildWithMargins:child parentWidthMeasureSpec:widthMeasureSpec widthUsed:(totalWeight == 0 ? _totalLength : 0) parentHeightMeasureSpec:heightMeasureSpec heightUsed:0];
             
             if (oldWidth != CGFLOAT_MIN) {
                 lp.width = oldWidth;
