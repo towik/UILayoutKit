@@ -28,9 +28,4 @@
 
 @interface ULKFrameLayout : ULKViewGroup
 
-+ (void)onFrameLayoutMeasure:(UIView *)measureView widthMeasureSpec:(ULKLayoutMeasureSpec)widthMeasureSpec
-                             heightMeasureSpec:(ULKLayoutMeasureSpec)heightMeasureSpec;
-
-+ (CGSize)onFrameLayoutLayout:(UIView *)measureView frame:(CGRect)frame didFrameChange:(BOOL)changed;
-
 @end
