@@ -316,21 +316,12 @@
     
 }
 
-- (CGRect)ulk_roundFrame:(CGRect)frame {
-    frame.origin.x = ceilf(frame.origin.x);
-    frame.origin.y = ceilf(frame.origin.y);
-    frame.size.width = ceilf(frame.size.width);
-    frame.size.height = ceilf(frame.size.height);
-    return frame;
-}
-
 - (BOOL)ulk_setFrame:(CGRect)frame
 {
     CGRect oldFrame = self.frame;
-    CGRect newFrame = [self ulk_roundFrame:frame];
-    BOOL changed = !CGRectEqualToRect(oldFrame, newFrame);
+    BOOL changed = !CGRectEqualToRect(oldFrame, frame);
     if (changed) {
-        self.frame = newFrame;
+        self.frame = frame;
     }
     
     return changed;
